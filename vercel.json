@@ -2,6 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "hono",
   "functions": {
-    "src/index.ts": {}
+    "src/index.ts": {
+      "maxDuration": 30
+    }
   }
 }
