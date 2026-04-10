@@ -1,20 +1,28 @@
+/**
+ * hello-farcaster — the sample snap that every new snap copies from.
+ *
+ * Pattern:
+ *   - Each snap is a self-contained Hono sub-app at src/snaps/<name>/index.ts
+ *   - The default export is a bare Hono instance (NOT handle(app) from
+ *     hono/vercel — the parent src/index.ts mounts these directly)
+ *   - registerSnapHandler attaches GET and POST handlers at the sub-app's
+ *     "/" path. The parent mounts this sub-app at /snaps/<name>, so the
+ *     final URL is /snaps/<name>
+ *   - Use snapUrl(ctx.request, "<name>") from ../../_lib/base-url.js for
+ *     any absolute URL needed inside the snap (multi-page navigation,
+ *     submit targets, etc.)
+ */
 import { Hono } from "hono";
-import { handle } from "hono/vercel";
 import { registerSnapHandler } from "@farcaster/snap-hono";
 import type { SnapHandlerResult } from "@farcaster/snap";
 import { snapUrl } from "../../_lib/base-url.js";
 
-// Runtime is configured at the project level in vercel.json
-// (functions["api/**/*.ts"].runtime = @vercel/node@5.7.2). No per-file
-// override needed.
-
-const app = new Hono().basePath("/api/snaps/hello-farcaster");
+const app = new Hono();
 
 registerSnapHandler(app, async (ctx) => {
-  // Construct the canonical clean URL for this snap.
-  // Matters for multi-page snaps where button targets need absolute URLs.
-  // For this single-page sample, we don't actually use selfUrl as a target —
-  // it's here to demonstrate the pattern that real snaps will follow.
+  // Construct the canonical clean URL for this snap. Single-page sample
+  // doesn't actually navigate, but the import + call demonstrates the
+  // pattern every multi-page snap will follow.
   const _selfUrl = snapUrl(ctx.request, "hello-farcaster");
 
   const response: SnapHandlerResult = {
@@ -56,4 +64,4 @@ registerSnapHandler(app, async (ctx) => {
   return response;
 });
 
-export default handle(app);
+export default app;

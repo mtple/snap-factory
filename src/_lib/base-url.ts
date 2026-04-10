@@ -2,7 +2,8 @@
  * Returns the public base URL for this snap factory deployment.
  *
  * Priority:
- *   1. SNAP_PUBLIC_BASE_URL env var (set on Vercel)
+ *   1. SNAP_PUBLIC_BASE_URL env var (set on Vercel — Vercel exposes
+ *      env vars on the Edge runtime via process.env)
  *   2. Constructed from request headers (x-forwarded-host, x-forwarded-proto)
  *   3. Falls back to localhost for dev
  *
@@ -36,7 +37,7 @@ export function snapBaseUrlFromRequest(request: Request): string {
 /**
  * Returns the canonical clean URL for a given snap by name.
  * Example: snapUrl(request, "rock-paper-scissors")
- *   → "https://snap-factory.vercel.app/snaps/rock-paper-scissors"
+ *   → "https://snap-factory-ru8g.vercel.app/snaps/rock-paper-scissors"
  *
  * Always use this (rather than hardcoding paths) so URLs work in dev,
  * preview, and production without code changes.

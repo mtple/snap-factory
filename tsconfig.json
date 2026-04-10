@@ -9,10 +9,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "noEmit": true,
-    "isolatedModules": true
+    "noEmit": true
   },
-  "include": ["api/**/*.ts"],
-  "exclude": ["node_modules", ".vercel"]
+  "include": ["src/**/*", "scripts/**/*"],
+  "exclude": ["node_modules", ".vercel", "dist"]
 }
