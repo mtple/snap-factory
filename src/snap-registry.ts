@@ -5,8 +5,10 @@ import type { Hono } from "hono";
 
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
 import snap_meetSnapWizard from "./snaps/meet-snap-wizard/index.js";
+import snap_vibeCheck from "./snaps/vibe-check/index.js";
 
 export const snaps: Record<string, Hono> = {
   "hello-farcaster": snap_helloFarcaster,
   "meet-snap-wizard": snap_meetSnapWizard,
+  "vibe-check": snap_vibeCheck,
 };
