@@ -43,6 +43,10 @@ registerSnapHandler(app, async (ctx) => {
 
   // ── Initial render ──────────────────────────────────────────────────────
   if (ctx.action.type === "get") {
+    const counts = await getVibeCounts();
+    const total = (Object.values(counts) as number[]).reduce((a, b) => a + b, 0);
+    const bars = VIBE_OPTIONS.map((label) => ({ label, value: counts[label] }));
+
     const response: SnapHandlerResult = {
       version: "1.0",
       theme: { accent: "purple" },
@@ -52,18 +56,28 @@ registerSnapHandler(app, async (ctx) => {
           page: {
             type: "stack",
             props: { direction: "vertical", gap: "md" },
-            children: ["title", "subtitle", "vibe_picker", "vote_btn"],
+            children: ["title", "chart", "total_text", "sep", "vibe_picker", "vote_btn"],
           },
           title: {
             type: "text",
             props: { content: "Vibe check", weight: "bold" },
           },
-          subtitle: {
+          chart: {
+            type: "bar_chart",
+            props: { bars },
+          },
+          total_text: {
             type: "text",
             props: {
-              content: "What's your energy right now? See how Farcaster feels.",
+              content: total > 0
+                ? `${total} check-in${total !== 1 ? "s" : ""} so far — what's yours?`
+                : "No check-ins yet — be the first.",
               size: "sm",
             },
+          },
+          sep: {
+            type: "separator",
+            props: {},
           },
           vibe_picker: {
             type: "toggle_group",
