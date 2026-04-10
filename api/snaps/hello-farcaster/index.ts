@@ -4,9 +4,9 @@ import { registerSnapHandler } from "@farcaster/snap-hono";
 import type { SnapHandlerResult } from "@farcaster/snap";
 import { snapUrl } from "../../_lib/base-url.js";
 
-export const config = {
-  runtime: "nodejs",
-};
+// Runtime is configured at the project level in vercel.json
+// (functions["api/**/*.ts"].runtime = @vercel/node@5.7.2). No per-file
+// override needed.
 
 const app = new Hono().basePath("/api/snaps/hello-farcaster");
 
