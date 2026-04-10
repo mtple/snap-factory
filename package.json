@@ -7,7 +7,8 @@
   "scripts": {
     "generate": "tsx scripts/generate-registry.ts",
     "prebuild": "npm run generate",
-    "build": "tsc --noEmit",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
     "predev": "npm run generate",
     "dev": "tsx watch src/index.ts"
   },
