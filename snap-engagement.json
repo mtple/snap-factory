@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "energy-reading",
+      "cast_hash": "0x8914da78ad5953a5189425051b64b2d1bc4cd561",
+      "posted_at": "2026-04-10T18:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["absurd", "slider", "item_group", "item", "separator", "compose_cast", "pink"]
+    },
+    {
       "name": "vibe-check",
       "cast_hash": "0x4687bee0f1600a3bb98253fa5deb9eb1241dff35",
       "posted_at": "2026-04-10T14:00:00Z",
