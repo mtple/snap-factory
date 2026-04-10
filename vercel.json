@@ -4,5 +4,15 @@
     "api/**/*.ts": {
       "runtime": "@vercel/node@5.7.2"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/snaps/:name",
+      "destination": "/api/snaps/:name"
+    },
+    {
+      "source": "/snaps/:name/:path*",
+      "destination": "/api/snaps/:name/:path*"
+    }
+  ]
 }

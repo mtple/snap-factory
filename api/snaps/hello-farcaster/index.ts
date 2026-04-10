@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { handle } from "hono/vercel";
 import { registerSnapHandler } from "@farcaster/snap-hono";
 import type { SnapHandlerResult } from "@farcaster/snap";
+import { snapUrl } from "../../_lib/base-url.js";
 
 export const config = {
   runtime: "nodejs",
@@ -9,7 +10,13 @@ export const config = {
 
 const app = new Hono().basePath("/api/snaps/hello-farcaster");
 
-registerSnapHandler(app, async (_ctx) => {
+registerSnapHandler(app, async (ctx) => {
+  // Construct the canonical clean URL for this snap.
+  // Matters for multi-page snaps where button targets need absolute URLs.
+  // For this single-page sample, we don't actually use selfUrl as a target —
+  // it's here to demonstrate the pattern that real snaps will follow.
+  const _selfUrl = snapUrl(ctx.request, "hello-farcaster");
+
   const response: SnapHandlerResult = {
     version: "1.0",
     theme: { accent: "teal" },
@@ -28,7 +35,8 @@ registerSnapHandler(app, async (_ctx) => {
         body: {
           type: "text",
           props: {
-            content: "Two new snaps every day. Tap below to see what's new.",
+            content:
+              "Two new snaps every day. Dope, lit, and slightly magical.",
             size: "sm",
           },
         },
