@@ -1,3 +1,13 @@
 {
-  "snaps": []
+  "snaps": [
+    {
+      "name": "meet-snap-wizard",
+      "cast_hash": "0x8f249fff0bbc8b50eec6fe072e6d529c8cd7d981",
+      "posted_at": "2026-04-10T08:45:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["slideshow", "progress", "multi-page", "intro", "submit", "view_profile"]
+    }
+  ]
 }
