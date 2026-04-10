@@ -20,20 +20,20 @@ const store = createTursoDataStore();
 
 const SNAP_NAME = "vibe-check";
 
-const VIBES = [
-  { label: "Locked in", value: "locked-in", key: "vibe-check:locked-in" },
-  { label: "Vibing", value: "vibing", key: "vibe-check:vibing" },
-  { label: "Chaotic", value: "chaotic", key: "vibe-check:chaotic" },
-  { label: "Couch mode", value: "couch-mode", key: "vibe-check:couch-mode" },
-] as const;
+// options must be plain strings per the toggle_group spec.
+// Turso keys are derived from the label.
+const VIBE_OPTIONS = ["Locked in", "Vibing", "Chaotic", "Couch mode"] as const;
+type VibeLabel = (typeof VIBE_OPTIONS)[number];
 
-type VibeValue = (typeof VIBES)[number]["value"];
+function vibeKey(label: string): string {
+  return `vibe-check:${label.toLowerCase().replace(/\s+/g, "-")}`;
+}
 
-async function getVibeCounts(): Promise<Record<VibeValue, number>> {
-  const counts = {} as Record<VibeValue, number>;
-  for (const vibe of VIBES) {
-    const val = await store.get(vibe.key);
-    counts[vibe.value] = typeof val === "number" ? val : 0;
+async function getVibeCounts(): Promise<Record<VibeLabel, number>> {
+  const counts = {} as Record<VibeLabel, number>;
+  for (const label of VIBE_OPTIONS) {
+    const val = await store.get(vibeKey(label));
+    counts[label] = typeof val === "number" ? val : 0;
   }
   return counts;
 }
@@ -68,9 +68,9 @@ registerSnapHandler(app, async (ctx) => {
           vibe_picker: {
             type: "toggle_group",
             props: {
-              id: "vibe",
+              name: "vibe",
               label: "Pick one",
-              options: VIBES.map((v) => ({ label: v.label, value: v.value })),
+              options: [...VIBE_OPTIONS],
               orientation: "vertical",
               variant: "default",
             },
@@ -93,35 +93,34 @@ registerSnapHandler(app, async (ctx) => {
 
   // ── POST: record vote + show results ────────────────────────────────────
   const picked = ctx.action.inputs?.vibe as string | undefined;
-  const validVibe = VIBES.find((v) => v.value === picked);
+  const validPick = VIBE_OPTIONS.find((v) => v === picked);
 
-  if (validVibe) {
-    const current = await store.get(validVibe.key);
+  if (validPick) {
+    const current = await store.get(vibeKey(validPick));
     const next = (typeof current === "number" ? current : 0) + 1;
-    await store.set(validVibe.key, next);
+    await store.set(vibeKey(validPick), next);
   }
 
   const counts = await getVibeCounts();
   const total = (Object.values(counts) as number[]).reduce((a, b) => a + b, 0);
 
-  const bars = VIBES.map((vibe) => ({
-    label: vibe.label,
-    value: counts[vibe.value],
-    ...(vibe.value === picked ? { color: "purple" as const } : {}),
+  const bars = VIBE_OPTIONS.map((label) => ({
+    label,
+    value: counts[label],
+    ...(label === validPick ? { color: "purple" as const } : {}),
   }));
 
-  const pickedLabel = validVibe?.label ?? "a vibe";
   const pct =
-    total > 0
-      ? Math.round(((counts[validVibe?.value ?? "vibing"] ?? 0) / total) * 100)
+    total > 0 && validPick
+      ? Math.round((counts[validPick] / total) * 100)
       : 0;
 
-  const shareText = validVibe
-    ? `just did the vibe check on farcaster — ${pct}% of us are in "${pickedLabel}" mode right now 🐢`
+  const shareText = validPick
+    ? `just did the vibe check on farcaster — ${pct}% of us are in "${validPick}" mode right now 🐢`
     : "just did the vibe check on farcaster 🐢";
 
-  const resultTitle = validVibe
-    ? `You picked: ${pickedLabel}`
+  const resultTitle = validPick
+    ? `You picked: ${validPick}`
     : "Current vibes on Farcaster";
 
   const response: SnapHandlerResult = {
