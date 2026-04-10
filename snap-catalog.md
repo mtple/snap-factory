@@ -1,23 +1,18 @@
-# Snap Catalog
+# Snap Factory — Catalog
 
-Running log of every Farcaster Snap built by FreeTurtle.
+Running log of all snaps Snap Wizard has built. Updated automatically after each successful deploy and post.
 
-| # | Slug | Description | URL | Built | Components | Actions |
-|---|------|-------------|-----|-------|------------|---------|
-| 1 | hello-farcaster | sample snap. title, body, button to tortoise.studio | TBD | 2026-04-10 | stack, text, button | open_url |
+## Format
+
+URLs follow this pattern: `$SNAP_PUBLIC_BASE_URL/api/snaps/[name]`
+
+| # | Name | Description | URL | Cast Hash | Date | Tags |
+|---|------|-------------|-----|-----------|------|------|
+| 1 | hello-farcaster | Sample snap with welcome message and link to Tortoise | /api/snaps/hello-farcaster | (not posted) | 2026-04-09 | sample, button, stack |
 
 ## Stats
 
-- **Total snaps:** 1
-- **Components used:** stack (1), text (2), button (1)
-- **Actions used:** open_url (1)
-- **Most-used component:** text
-- **Most-used action:** open_url
-- **Accent colors used:** teal
-- **Last build:** 2026-04-10
-
-## Notes
-
-- Component coverage to chase: badge, icon, image, item, item_group, progress, separator, bar_chart, cell_grid, input, slider, switch, toggle_group
-- Action coverage to chase: submit, open_mini_app, view_cast, view_profile, compose_cast, view_token, send_token, swap_token
-- Try at least one snap per accent color across the first ~10 builds
+- Total snaps built: 1 (sample only)
+- Live snaps: 1
+- Components used so far: stack, text, button
+- Actions used so far: open_url

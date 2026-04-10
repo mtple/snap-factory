@@ -1,0 +1,3 @@
+# Shared utilities for snaps live here.
+# Files in _lib/ are NOT deployed as Vercel functions (underscore prefix).
+# Import from snaps with: import { something } from "../../_lib/something"

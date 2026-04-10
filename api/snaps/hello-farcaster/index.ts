@@ -1,15 +1,13 @@
-/**
- * hello-farcaster — the first snap. Sample / smoke test.
- *
- * Stateless. Returns a single page with a title, a body, and a button that
- * opens tortoise.studio. No POST handling needed because the only action is
- * `open_url` which the client handles directly.
- */
 import { Hono } from "hono";
+import { handle } from "hono/vercel";
 import { registerSnapHandler } from "@farcaster/snap-hono";
 import type { SnapHandlerResult } from "@farcaster/snap";
 
-const app = new Hono();
+export const config = {
+  runtime: "nodejs",
+};
+
+const app = new Hono().basePath("/api/snaps/hello-farcaster");
 
 registerSnapHandler(app, async (_ctx) => {
   const response: SnapHandlerResult = {
@@ -25,18 +23,18 @@ registerSnapHandler(app, async (_ctx) => {
         },
         title: {
           type: "text",
-          props: { content: "snap factory", weight: "bold" },
+          props: { content: "Snap Wizard", weight: "bold" },
         },
         body: {
           type: "text",
           props: {
-            content: "built by freeturtle. two new snaps every day.",
+            content: "Two new snaps every day. Tap below to see what's new.",
             size: "sm",
           },
         },
         cta: {
           type: "button",
-          props: { label: "what is this?", variant: "secondary" },
+          props: { label: "Visit Tortoise", variant: "primary" },
           on: {
             press: {
               action: "open_url",
@@ -50,4 +48,4 @@ registerSnapHandler(app, async (_ctx) => {
   return response;
 });
 
-export default app;
+export default handle(app);
