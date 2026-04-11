@@ -46,8 +46,8 @@ const GHOST_STARTS: [number, number][] = [
   [9, 5],
 ];
 const PAC_START: [number, number] = [7, 9];
-const GHOST_COLORS = ["#ff4444", "#ff88ff", "#44ffff", "#ffa500"];
-const SCARED_COLOR = "#4444ff";
+const GHOST_COLORS = ["red", "pink", "teal", "purple"] as const;
+const SCARED_COLOR = "green";
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -181,17 +181,18 @@ function processMove(state: GameState, dir: string): GameState {
 
 // ── Rendering ──────────────────────────────────────────────────────────────────
 
-type GridCell = { row: number; col: number; color: string };
+type PaletteColor = "gray" | "blue" | "red" | "amber" | "green" | "teal" | "purple" | "pink";
+type GridCell = { row: number; col: number; color: PaletteColor };
 
 function buildCells(state: GameState): GridCell[] {
   const cells: GridCell[] = [];
 
   // Build ghost color map by position
-  const ghostAt = new Map<string, string>();
+  const ghostAt = new Map<string, PaletteColor>();
   state.ghosts.forEach(([gc, gr], i) => {
     ghostAt.set(
       `${gc},${gr}`,
-      state.powerTimer > 0 ? SCARED_COLOR : (GHOST_COLORS[i] ?? "#ff4444"),
+      state.powerTimer > 0 ? SCARED_COLOR : (GHOST_COLORS[i] ?? "red"),
     );
   });
 
@@ -199,24 +200,20 @@ function buildCells(state: GameState): GridCell[] {
 
   for (let row = 0; row < ROWS; row++) {
     for (let col = 0; col < COLS; col++) {
-      let color: string;
-
       if (pc === col && pr === row) {
-        color = "#ffff00"; // Pac-Man
+        cells.push({ row, col, color: "amber" }); // Pac-Man
       } else {
         const ghostColor = ghostAt.get(`${col},${row}`);
         if (ghostColor) {
-          color = ghostColor;
+          cells.push({ row, col, color: ghostColor });
         } else {
           const cell = state.dotsGrid[row][col];
-          if (cell === 1) color = "#1a1aff"; // wall
-          else if (cell === 2) color = "#cccccc"; // dot (light gray — visible but subtle)
-          else if (cell === 3) color = "#ff69b4"; // power pellet
-          else color = "#111111"; // empty
+          if (cell === 1) cells.push({ row, col, color: "blue" });   // wall
+          else if (cell === 2) cells.push({ row, col, color: "gray" }); // dot
+          else if (cell === 3) cells.push({ row, col, color: "pink" }); // power pellet
+          // empty cells (0) are not pushed — transparent background
         }
       }
-
-      cells.push({ row, col, color });
     }
   }
 
@@ -245,7 +242,7 @@ function renderPlaying(state: GameState, self: string): SnapHandlerResult {
         },
         grid: {
           type: "cell_grid",
-          props: { cols: COLS, rows: ROWS, rowHeight: 24, cells },
+          props: { cols: COLS, rows: ROWS, rowHeight: 20, cells },
         },
         controls: {
           type: "stack",
@@ -327,7 +324,7 @@ function renderEndScreen(state: GameState, self: string): SnapHandlerResult {
           props: {
             cols: COLS,
             rows: ROWS,
-            rowHeight: 24,
+            rowHeight: 20,
             cells: buildCells(state),
           },
         },
