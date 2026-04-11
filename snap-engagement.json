@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "loud-links",
+      "cast_hash": "0xb6a821aa5439947814aa60a764d4781de40e3411",
+      "posted_at": "2026-04-11T12:30:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["collaborative", "input", "turso", "stateful", "open_url", "community", "red", "event-mode"]
+    },
+    {
       "name": "energy-reading",
       "cast_hash": "0x8914da78ad5953a5189425051b64b2d1bc4cd561",
       "posted_at": "2026-04-10T18:00:00Z",
