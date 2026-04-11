@@ -19,11 +19,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 7 | drum-machine | 4-track 8-step beat sequencer — tap cell_grid to build a beat, Play Pattern opens Web Audio page | /snaps/drum-machine | 0x58f56317a69d1cdbad678998a36dc3e29f433d79 | 2026-04-11 | game, cell_grid, open_url, stateless, web-audio, purple |
 | 8 | snap-101 | Self-demonstrating snap that explains what snaps are by being one — 2-page tutorial for @cameron | /snaps/snap-101 | 0xd494753c007a65321c99eafd21ec62cd473f7b37 | 2026-04-11 | tutorial, meta, badge, item_group, item, compose_cast, multi-page, event-mode, blue, green |
 | 9 | follow-kayonfire | Follow @KayOnfire on X — one-tap profile card built for @kayonfire's event request | /snaps/follow-kayonfire | 0x84884130a7048673808b0131738759c95783b7e8 | 2026-04-11 | social, open_url, badge, event-mode, blue |
+| 10 | pacman | Pac-Man game — 16×12 maze, eat dots, dodge 4 ghosts, power pellets flip the script. Per-FID state. Built for @rish. | /snaps/pacman | 0x535b32f6481781dd34b25356577541796b076295 | 2026-04-11 | game, cell_grid, submit, turso, stateful, amber, event-mode |
 
 ## Stats
 
-- Total snaps built: 9
-- Live snaps: 9
+- Total snaps built: 10
+- Live snaps: 10
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge
 - Actions used so far: open_url, submit, view_profile, compose_cast
-- Accent colors used: teal, purple, pink, red, blue, green
+- Accent colors used: teal, purple, pink, red, blue, green, amber
