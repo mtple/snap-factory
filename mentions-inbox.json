@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x2fdd8b6c2c7588389edd3ffc07e6bd4410486ff8",
       "author_fid": 616,
@@ -8,10 +9,10 @@
       "text": "@freeturtle make me a raffle snap where I can put in a list of people and then randomly choose one to win a raffle",
       "parent_hash": null,
       "received_at": "2026-04-11T22:25:18.367Z",
-      "user_score": 0.99
-    }
-  ],
-  "processed": [
+      "user_score": 0.99,
+      "status": "built",
+      "root_cast_hash": "0x26f6c6618675dc2eec0971461ebba36fbcf1e33d"
+    },
     {
       "cast_hash": "0x999c5eed9a8a749e48d7b2c6eec6fa7f7098ec1f",
       "author_fid": 15211,

@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "raffle",
+      "cast_hash": "0x26f6c6618675dc2eec0971461ebba36fbcf1e33d",
+      "posted_at": "2026-04-11T22:50:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["utility", "input", "submit", "stateless", "confetti", "amber", "event-mode"]
+    },
+    {
       "name": "creature-summoner",
       "cast_hash": "0x86fbaa9d239ec697c697014194840efee7393286",
       "posted_at": "2026-04-11T22:30:00Z",

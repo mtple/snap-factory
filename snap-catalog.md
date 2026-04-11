@@ -24,11 +24,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 12 | natal-chart | Birth chart generator — enter birth date and hour, get sun sign, approximate moon and rising signs with traits. Built for @statuette. | /snaps/natal-chart | 0x694d967cee000e51b6f3fe60a36341f17949f05a | 2026-04-11 | utility, input, separator, astrology, multi-page, purple, event-mode |
 | 13 | natal-chart-v2 | Improved natal chart — adds birth city display and UTC offset for accurate sidereal-time rising sign. Rebuilt for @statuette. | /snaps/natal-chart-v2 | 0x5472ee4306f0684197524b57f3191b45e2d11124 | 2026-04-11 | utility, input, separator, astrology, multi-page, purple, event-mode |
 | 14 | creature-summoner | Configure 4 trait switches (era, size, element, realm) and summon one of 16 unique wizard creatures | /snaps/creature-summoner | 0x86fbaa9d239ec697c697014194840efee7393286 | 2026-04-11 | absurd, switch, badge, separator, submit, stateless, gray, playful |
+| 15 | raffle | Enter a list of names separated by commas, draw a random winner with confetti. Built for @dylsteck.eth. | /snaps/raffle | 0x26f6c6618675dc2eec0971461ebba36fbcf1e33d | 2026-04-11 | utility, input, submit, stateless, confetti, amber, event-mode |
 
 ## Stats
 
-- Total snaps built: 14
-- Live snaps: 14
+- Total snaps built: 15
+- Live snaps: 15
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
