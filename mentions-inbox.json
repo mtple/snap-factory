@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x4cc1bef6593027f47eb17dfcd76456c90caff20a",
       "author_fid": 230238,
@@ -8,10 +9,10 @@
       "text": "hey @freeturtle can you make a snap that showcases all my miniapps with their name, a brief description and a deeplink to open them immediately from the snap",
       "parent_hash": null,
       "received_at": "2026-04-11T20:24:40.371Z",
-      "user_score": 1
-    }
-  ],
-  "processed": [
+      "user_score": 1,
+      "status": "built",
+      "root_cast_hash": "0x9ae2207c5f20e6cc2f13ca366073ef28d0389796"
+    },
     {
       "cast_hash": "0xf818d988673bcac55a2dfee0a28cf9090bed4186",
       "author_fid": 194,

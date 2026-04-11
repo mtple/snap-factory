@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "mvr-showcase",
+      "cast_hash": "0x9ae2207c5f20e6cc2f13ca366073ef28d0389796",
+      "posted_at": "2026-04-11T20:45:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["showcase", "item", "open_mini_app", "amber", "event-mode", "stateless"]
+    },
+    {
       "name": "pacman",
       "cast_hash": "0x535b32f6481781dd34b25356577541796b076295",
       "posted_at": "2026-04-11T20:30:00Z",
