@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "creature-summoner",
+      "cast_hash": "0x86fbaa9d239ec697c697014194840efee7393286",
+      "posted_at": "2026-04-11T22:30:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["absurd", "switch", "badge", "separator", "submit", "stateless", "gray", "playful"]
+    },
+    {
       "name": "natal-chart-v2",
       "cast_hash": "0x5472ee4306f0684197524b57f3191b45e2d11124",
       "posted_at": "2026-04-11T21:50:00Z",

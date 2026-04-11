@@ -23,11 +23,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 11 | mvr-showcase | Showcase of @mvr's hamst.art miniapps — HamScout + Tipopolis with descriptions and direct deeplinks. Built for @mvr. | /snaps/mvr-showcase | 0x9ae2207c5f20e6cc2f13ca366073ef28d0389796 | 2026-04-11 | showcase, item, open_mini_app, amber, event-mode, stateless |
 | 12 | natal-chart | Birth chart generator — enter birth date and hour, get sun sign, approximate moon and rising signs with traits. Built for @statuette. | /snaps/natal-chart | 0x694d967cee000e51b6f3fe60a36341f17949f05a | 2026-04-11 | utility, input, separator, astrology, multi-page, purple, event-mode |
 | 13 | natal-chart-v2 | Improved natal chart — adds birth city display and UTC offset for accurate sidereal-time rising sign. Rebuilt for @statuette. | /snaps/natal-chart-v2 | 0x5472ee4306f0684197524b57f3191b45e2d11124 | 2026-04-11 | utility, input, separator, astrology, multi-page, purple, event-mode |
+| 14 | creature-summoner | Configure 4 trait switches (era, size, element, realm) and summon one of 16 unique wizard creatures | /snaps/creature-summoner | 0x86fbaa9d239ec697c697014194840efee7393286 | 2026-04-11 | absurd, switch, badge, separator, submit, stateless, gray, playful |
 
 ## Stats
 
-- Total snaps built: 13
-- Live snaps: 13
-- Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge
+- Total snaps built: 14
+- Live snaps: 14
+- Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app
-- Accent colors used: teal, purple, pink, red, blue, green, amber
+- Accent colors used: teal, purple, pink, red, blue, green, amber, gray
