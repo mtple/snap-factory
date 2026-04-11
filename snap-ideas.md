@@ -12,7 +12,7 @@ This file is Snap Wizard's working reference for coming up with new snaps. It ha
 
 _Ideas to build next. Matt adds to the top. Snap Wizard pulls from here before generating new ideas._
 
-(empty — generate from categories)
+- **Drum machine** — cell_grid with multi-select. Columns = time steps (8 or 16), rows = drum sounds (kick, snare, hi-hat, clap). Tap cells to place hits, then a "Play" button uses open_url to a page that plays the beat back using Web Audio API. Encode the beat pattern in the URL query string so the playback page is stateless. The playback page lives at a separate route in snap-factory (e.g. /snaps/drum-machine/play?pattern=...) and renders a simple HTML page with Web Audio synthesis. Priority: build this next. (from Matt)
 
 ---
 
