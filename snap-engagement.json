@@ -1,40 +1,110 @@
 {
   "snaps": [
     {
+      "name": "snapathon",
+      "cast_hash": "0xcacc8f13f3e8e51bdc9d0e80098723974bb836f9",
+      "posted_at": "2026-04-11T13:00:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "announcement",
+        "compose_cast",
+        "event-mode",
+        "purple"
+      ]
+    },
+    {
       "name": "loud-links",
       "cast_hash": "0xb6a821aa5439947814aa60a764d4781de40e3411",
       "posted_at": "2026-04-11T12:30:00Z",
       "last_checked": null,
-      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
       "score": 0,
-      "tags": ["collaborative", "input", "turso", "stateful", "open_url", "community", "red", "event-mode"]
+      "tags": [
+        "collaborative",
+        "input",
+        "turso",
+        "stateful",
+        "open_url",
+        "community",
+        "red",
+        "event-mode"
+      ]
     },
     {
       "name": "energy-reading",
       "cast_hash": "0x8914da78ad5953a5189425051b64b2d1bc4cd561",
       "posted_at": "2026-04-10T18:00:00Z",
       "last_checked": null,
-      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
       "score": 0,
-      "tags": ["absurd", "slider", "item_group", "item", "separator", "compose_cast", "pink"]
+      "tags": [
+        "absurd",
+        "slider",
+        "item_group",
+        "item",
+        "separator",
+        "compose_cast",
+        "pink"
+      ]
     },
     {
       "name": "vibe-check",
       "cast_hash": "0x4687bee0f1600a3bb98253fa5deb9eb1241dff35",
       "posted_at": "2026-04-10T14:00:00Z",
       "last_checked": null,
-      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
       "score": 0,
-      "tags": ["poll", "toggle_group", "bar_chart", "compose_cast", "stateful", "turso"]
+      "tags": [
+        "poll",
+        "toggle_group",
+        "bar_chart",
+        "compose_cast",
+        "stateful",
+        "turso"
+      ]
     },
     {
       "name": "meet-snap-wizard",
       "cast_hash": "0x8f249fff0bbc8b50eec6fe072e6d529c8cd7d981",
       "posted_at": "2026-04-10T08:45:00Z",
       "last_checked": null,
-      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
       "score": 0,
-      "tags": ["slideshow", "progress", "multi-page", "intro", "submit", "view_profile"]
+      "tags": [
+        "slideshow",
+        "progress",
+        "multi-page",
+        "intro",
+        "submit",
+        "view_profile"
+      ]
     }
   ]
 }

@@ -15,11 +15,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 3 | vibe-check | Community vibe poll — pick your energy, see live bar chart of how Farcaster is feeling | /snaps/vibe-check | 0x4687bee0f1600a3bb98253fa5deb9eb1241dff35 | 2026-04-10 | poll, toggle_group, bar_chart, compose_cast, stateful, turso |
 | 4 | energy-reading | Wizard reads your energy — set two sliders (energy + chaos), get a personalised reading | /snaps/energy-reading | 0x8914da78ad5953a5189425051b64b2d1bc4cd561 | 2026-04-10 | absurd, slider, item_group, item, separator, compose_cast, pink |
 | 5 | loud-links | Community YouTube link pool — drop a link, get a random one back | /snaps/loud-links | 0xb6a821aa5439947814aa60a764d4781de40e3411 | 2026-04-11 | collaborative, input, turso, stateful, open_url, community, red, event-mode |
+| 6 | snapathon | Free snap request announcement with compose_cast CTA | /snaps/snapathon | 0xcacc8f13f3e8e51bdc9d0e80098723974bb836f9 | 2026-04-11 | announcement, compose_cast, event-mode, purple |
 
 ## Stats
 
-- Total snaps built: 5
-- Live snaps: 5
+- Total snaps built: 6
+- Live snaps: 6
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input
 - Actions used so far: open_url, submit, view_profile, compose_cast
 - Accent colors used: teal, purple, pink, red
