@@ -2,15 +2,15 @@
  * drum-machine — 4-track, 8-step beat sequencer
  *
  * Shows a 4×8 cell_grid (rows = Kick, Snare, Hi-hat, Clap; cols = 8 steps).
- * Users tap cells to select beats, hit "Toggle Selected" to activate/deactivate
- * them, then "Play Pattern" to open a Web Audio playback page in the browser.
+ * State is encoded as a 32-bit hex string in the submit target URL — stateless.
  *
- * State is encoded as a 32-bit hex string in the submit target URL — fully
- * stateless, no Turso needed.
+ * Flow:
+ *   GET / POST ?mode=edit  → edit view: grid + "Apply Beats" + "Play →" + "Clear"
+ *   POST ?mode=play        → ready view: updated grid + "▶ Open Player" (open_url) + "Edit"
  *
- * New components: cell_grid (multi-select)
- * New actions:    open_url with pattern-in-URL state
- * Play page:      /snaps/drum-machine/play?p=<hex> — real Web Audio synthesis
+ * Fixes:
+ *   - All 32 cells are always rendered (gray = inactive, colored = active)
+ *   - "Play →" goes through a server submit so the hex is always current
  */
 import { Hono } from "hono";
 import { registerSnapHandler } from "@farcaster/snap-hono";
@@ -23,49 +23,52 @@ const app = new Hono();
 
 const ROWS = 4;
 const COLS = 8;
-// Named palette colors per row (top → bottom: Kick, Snare, Hi-hat, Clap)
 const ROW_COLORS = ["red", "blue", "amber", "green"] as const;
 type RowColor = (typeof ROW_COLORS)[number];
 
+const ROW_LABELS = ["Kick", "Snare", "Hi-hat", "Clap"];
+
 // ── State helpers ─────────────────────────────────────────────────────────────
 
-/** Returns true if cell (row, col) is active in the 32-bit state integer. */
 function isCellOn(state: number, row: number, col: number): boolean {
   return Boolean((state >>> (row * COLS + col)) & 1);
 }
 
-/** Encodes state as an 8-char lowercase hex string. */
 function stateToHex(state: number): string {
   return (state >>> 0).toString(16).padStart(8, "0");
 }
 
-/** Builds the sparse cells array for cell_grid (only "on" cells are listed). */
-function buildCells(state: number): Array<{ row: number; col: number; color: RowColor }> {
-  const cells: Array<{ row: number; col: number; color: RowColor }> = [];
+/**
+ * Builds the full 32-cell array for cell_grid.
+ * Inactive cells use "gray" so the grid structure is always visible.
+ */
+function buildCells(
+  state: number,
+): Array<{ row: number; col: number; color: RowColor | "gray" }> {
+  const cells: Array<{ row: number; col: number; color: RowColor | "gray" }> =
+    [];
   for (let r = 0; r < ROWS; r++) {
     for (let c = 0; c < COLS; c++) {
-      if (isCellOn(state, r, c)) {
-        cells.push({ row: r, col: c, color: ROW_COLORS[r] });
-      }
+      cells.push({
+        row: r,
+        col: c,
+        color: isCellOn(state, r, c) ? ROW_COLORS[r] : "gray",
+      });
     }
   }
   return cells;
 }
 
-/**
- * Parses the pipe-delimited "row,col|row,col" string that cell_grid with
- * select="multiple" writes to inputs["grid_tap"].
- */
 function parseSelection(raw: unknown): Array<[number, number]> {
   if (typeof raw !== "string" || !raw) return [];
   return raw
     .split("|")
     .map((s) => {
       const parts = s.split(",");
-      return [parseInt(parts[0] ?? "", 10), parseInt(parts[1] ?? "", 10)] as [
-        number,
-        number,
-      ];
+      return [
+        parseInt(parts[0] ?? "", 10),
+        parseInt(parts[1] ?? "", 10),
+      ] as [number, number];
     })
     .filter(
       ([r, c]) =>
@@ -84,14 +87,11 @@ app.get("/play", (c) => {
   const patHex = c.req.query("p") ?? "00000000";
   const state = (parseInt(patHex, 16) || 0) >>> 0;
 
-  // Build a 4×8 boolean matrix for the JS playback script.
   const grid: boolean[][] = Array.from({ length: ROWS }, (_, r) =>
     Array.from({ length: COLS }, (_, col) => isCellOn(state, r, col)),
   );
 
-  const rowCss = ["#ef4444", "#3b82f6", "#f59e0b", "#22c55e"]; // red, blue, amber, green
-  const rowNames = ["Kick", "Snare", "Hi-hat", "Clap"];
-
+  const rowCss = ["#ef4444", "#3b82f6", "#f59e0b", "#22c55e"];
   const stepNums = Array.from(
     { length: COLS },
     (_, i) => `<div class="sn">${i + 1}</div>`,
@@ -99,7 +99,7 @@ app.get("/play", (c) => {
 
   const gridHtml = grid
     .map((row, r) => {
-      const label = `<div class="rl" style="color:${rowCss[r]}">${rowNames[r]}</div>`;
+      const label = `<div class="rl" style="color:${rowCss[r]}">${ROW_LABELS[r]}</div>`;
       const beats = row
         .map(
           (on, col) =>
@@ -147,7 +147,7 @@ input[type=range]{flex:1;accent-color:#7c3aed}
 <body>
 <div class="wrap">
   <h1>Drum Machine</h1>
-  <div class="sub">${isEmpty ? "empty pattern — build one in the snap" : patHex}</div>
+  <div class="sub">${isEmpty ? "empty pattern — go back and build one" : patHex}</div>
   <div class="sn-row">${stepNums}</div>
   <div id="grid">${gridHtml}</div>
   <div class="controls">
@@ -209,6 +209,7 @@ registerSnapHandler(app, async (ctx) => {
   const reqUrl = new URL(ctx.request.url);
 
   let state = 0;
+  const mode = reqUrl.searchParams.get("mode") ?? "edit";
 
   if (ctx.action.type === "post") {
     const isClear = reqUrl.searchParams.get("clear") === "1";
@@ -217,8 +218,9 @@ registerSnapHandler(app, async (ctx) => {
     } else {
       const hexParam = reqUrl.searchParams.get("s") ?? "00000000";
       state = (parseInt(hexParam, 16) || 0) >>> 0;
-      // Toggle every cell the user selected in this round
-      const rawSel = (ctx.action.inputs as Record<string, unknown>)?.["grid_tap"];
+      const rawSel = (ctx.action.inputs as Record<string, unknown>)?.[
+        "grid_tap"
+      ];
       for (const [r, c] of parseSelection(rawSel)) {
         const bit = r * COLS + c;
         state = (state ^ (1 << bit)) >>> 0;
@@ -227,10 +229,65 @@ registerSnapHandler(app, async (ctx) => {
   }
 
   const hex = stateToHex(state);
-  const submitTarget = `${self}?s=${hex}`;
-  const clearTarget = `${self}?clear=1`;
-  const playTarget = `${self}/play?p=${hex}`;
   const cells = buildCells(state);
+  const activeCount = cells.filter((c) => c.color !== "gray").length;
+
+  // ── Play-ready screen ─────────────────────────────────────────────────────
+  if (mode === "play" && ctx.action.type === "post") {
+    const playTarget = `${self}/play?p=${hex}`;
+    const editTarget = `${self}?s=${hex}&mode=edit`;
+
+    const response: SnapHandlerResult = {
+      version: "1.0",
+      theme: { accent: "purple" },
+      ui: {
+        root: "page",
+        elements: {
+          page: {
+            type: "stack",
+            props: { direction: "vertical", gap: "sm" },
+            children: ["title", "grid", "status", "play_btn", "edit_btn"],
+          },
+          title: {
+            type: "text",
+            props: { content: "Drum Machine", weight: "bold" },
+          },
+          grid: {
+            type: "cell_grid",
+            props: { cols: COLS, rows: ROWS, rowHeight: 28, cells, select: "off" },
+          },
+          status: {
+            type: "text",
+            props: {
+              content:
+                activeCount > 0
+                  ? `${activeCount} beat${activeCount !== 1 ? "s" : ""} set — open in browser to play`
+                  : "No beats set yet — go back and tap some cells",
+              size: "sm",
+            },
+          },
+          play_btn: {
+            type: "button",
+            props: { label: "▶ Open Player", variant: "primary" },
+            on: { press: { action: "open_url", params: { target: playTarget } } },
+          },
+          edit_btn: {
+            type: "button",
+            props: { label: "← Edit Pattern", variant: "secondary" },
+            on: {
+              press: { action: "submit", params: { target: editTarget } },
+            },
+          },
+        },
+      },
+    };
+    return response;
+  }
+
+  // ── Edit screen ───────────────────────────────────────────────────────────
+  const applyTarget = `${self}?s=${hex}&mode=edit`;
+  const playSubmitTarget = `${self}?s=${hex}&mode=play`;
+  const clearTarget = `${self}?clear=1&mode=edit`;
 
   const response: SnapHandlerResult = {
     version: "1.0",
@@ -241,53 +298,49 @@ registerSnapHandler(app, async (ctx) => {
         page: {
           type: "stack",
           props: { direction: "vertical", gap: "sm" },
-          children: ["title", "grid", "legend", "action_row", "play_btn"],
+          children: ["title", "subtitle", "grid", "action_row", "play_btn"],
         },
         title: {
           type: "text",
           props: { content: "Drum Machine", weight: "bold" },
+        },
+        subtitle: {
+          type: "text",
+          props: {
+            content: "Kick · Snare · Hi-hat · Clap — tap cells, hit Apply",
+            size: "sm",
+          },
         },
         grid: {
           type: "cell_grid",
           props: {
             cols: COLS,
             rows: ROWS,
-            rowHeight: 34,
+            rowHeight: 28,
             cells,
             select: "multiple",
-          },
-        },
-        legend: {
-          type: "text",
-          props: {
-            content: "Rows: Kick · Snare · Hi-hat · Clap — tap cells, then Toggle",
-            size: "sm",
           },
         },
         action_row: {
           type: "stack",
           props: { direction: "horizontal", gap: "sm" },
-          children: ["toggle_btn", "clear_btn"],
+          children: ["apply_btn", "clear_btn"],
         },
-        toggle_btn: {
+        apply_btn: {
           type: "button",
-          props: { label: "Toggle Selected", variant: "secondary" },
-          on: {
-            press: { action: "submit", params: { target: submitTarget } },
-          },
+          props: { label: "Apply Beats", variant: "secondary" },
+          on: { press: { action: "submit", params: { target: applyTarget } } },
         },
         clear_btn: {
           type: "button",
-          props: { label: "Clear All", variant: "secondary" },
-          on: {
-            press: { action: "submit", params: { target: clearTarget } },
-          },
+          props: { label: "Clear", variant: "secondary" },
+          on: { press: { action: "submit", params: { target: clearTarget } } },
         },
         play_btn: {
           type: "button",
-          props: { label: "Play Pattern", variant: "primary" },
+          props: { label: "Play →", variant: "primary" },
           on: {
-            press: { action: "open_url", params: { target: playTarget } },
+            press: { action: "submit", params: { target: playSubmitTarget } },
           },
         },
       },
