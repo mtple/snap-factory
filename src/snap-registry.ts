@@ -3,6 +3,7 @@
 
 import type { Hono } from "hono";
 
+import snap_creatureSummoner from "./snaps/creature-summoner/index.js";
 import snap_doNotPress from "./snaps/do-not-press/index.js";
 import snap_drumMachine from "./snaps/drum-machine/index.js";
 import snap_energyReading from "./snaps/energy-reading/index.js";
@@ -21,6 +22,7 @@ import snap_stumble from "./snaps/stumble/index.js";
 import snap_vibeCheck from "./snaps/vibe-check/index.js";
 
 export const snaps: Record<string, Hono> = {
+  "creature-summoner": snap_creatureSummoner,
   "do-not-press": snap_doNotPress,
   "drum-machine": snap_drumMachine,
   "energy-reading": snap_energyReading,
