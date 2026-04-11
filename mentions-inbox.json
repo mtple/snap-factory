@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0xf90f81f4b797364e7b6cbd67d6a429ce5727cc20",
       "author_fid": 15513,
@@ -8,10 +9,10 @@
       "text": "Hey @freeturtle can you make a StumbleUpon inspired Snap. Only requirement is a \"stumble\" button that functions as a randomizer. Results should be either a user, channel, cast, or miniapp.",
       "parent_hash": null,
       "received_at": "2026-04-11T19:25:36.954Z",
-      "user_score": 0.99
-    }
-  ],
-  "processed": [
+      "user_score": 0.99,
+      "status": "built",
+      "root_cast_hash": "0x8d3f5b55e01270341964ab53311e4b08e2a89f78"
+    },
     {
       "cast_hash": "0x77d875ce9ab23357ad1f1c4f1802de103ff907cf",
       "author_fid": 617,
