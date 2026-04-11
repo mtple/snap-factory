@@ -1,6 +1,27 @@
 {
   "snaps": [
     {
+      "name": "drum-machine",
+      "cast_hash": "0x58f56317a69d1cdbad678998a36dc3e29f433d79",
+      "posted_at": "2026-04-11T18:00:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "game",
+        "cell_grid",
+        "open_url",
+        "stateless",
+        "web-audio",
+        "purple"
+      ]
+    },
+    {
       "name": "snapathon",
       "cast_hash": "0xcacc8f13f3e8e51bdc9d0e80098723974bb836f9",
       "posted_at": "2026-04-11T13:00:00Z",
