@@ -12,6 +12,7 @@ import snap_loudLinks from "./snaps/loud-links/index.js";
 import snap_meetSnapWizard from "./snaps/meet-snap-wizard/index.js";
 import snap_mvrShowcase from "./snaps/mvr-showcase/index.js";
 import snap_natalChart from "./snaps/natal-chart/index.js";
+import snap_natalChartV2 from "./snaps/natal-chart-v2/index.js";
 import snap_pacman from "./snaps/pacman/index.js";
 import snap_snap101 from "./snaps/snap-101/index.js";
 import snap_snapShowcase from "./snaps/snap-showcase/index.js";
@@ -29,6 +30,7 @@ export const snaps: Record<string, Hono> = {
   "meet-snap-wizard": snap_meetSnapWizard,
   "mvr-showcase": snap_mvrShowcase,
   "natal-chart": snap_natalChart,
+  "natal-chart-v2": snap_natalChartV2,
   "pacman": snap_pacman,
   "snap-101": snap_snap101,
   "snap-showcase": snap_snapShowcase,
