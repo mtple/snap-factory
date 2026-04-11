@@ -189,10 +189,12 @@ function sched_loop(){
 }
 function toggle(){
   if(!ctx)ctx=new(window.AudioContext||window.webkitAudioContext)();
-  playing=!playing;
   const b=document.getElementById('pbtn');
-  if(playing){step=0;nxt=ctx.currentTime+.05;sched_loop();requestAnimationFrame(raf);b.innerHTML='&#9632; Stop';b.classList.add('on');}
-  else{clearTimeout(tid);b.innerHTML='&#9654; Play';b.classList.remove('on');}
+  ctx.resume().then(function(){
+    playing=!playing;
+    if(playing){step=0;nxt=ctx.currentTime+.05;sched_loop();requestAnimationFrame(raf);b.innerHTML='&#9632; Stop';b.classList.add('on');}
+    else{clearTimeout(tid);b.innerHTML='&#9654; Play';b.classList.remove('on');}
+  });
 }
 document.getElementById('pbtn').onclick=toggle;
 </script>
