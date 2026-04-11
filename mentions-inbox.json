@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x77d875ce9ab23357ad1f1c4f1802de103ff907cf",
       "author_fid": 617,
@@ -8,10 +9,10 @@
       "text": "@freeturtle can you make another snap showing off how complex snaps can be? Like showcase a bunch of stuff",
       "parent_hash": "0xd494753c007a65321c99eafd21ec62cd473f7b37",
       "received_at": "2026-04-11T15:23:03.559Z",
-      "user_score": 1
-    }
-  ],
-  "processed": [
+      "user_score": 1,
+      "status": "built",
+      "root_cast_hash": "0xb201e2987ffb21ef53180648639e4da5fa24e941"
+    },
     {
       "cast_hash": "0x4143b08e81ee24514587cb40560411749eabe8b3",
       "author_fid": 24204,
