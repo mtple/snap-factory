@@ -1,5 +1,16 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0x2fdd8b6c2c7588389edd3ffc07e6bd4410486ff8",
+      "author_fid": 616,
+      "author_username": "dylsteck.eth",
+      "author_display_name": "dylan",
+      "text": "@freeturtle make me a raffle snap where I can put in a list of people and then randomly choose one to win a raffle",
+      "parent_hash": null,
+      "received_at": "2026-04-11T22:25:18.367Z",
+      "user_score": 0.99
+    }
+  ],
   "processed": [
     {
       "cast_hash": "0x999c5eed9a8a749e48d7b2c6eec6fa7f7098ec1f",
