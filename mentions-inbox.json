@@ -1,5 +1,16 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0xb5e9b30da2bbde827228e19846ac61caa65ba49f",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "GM and happy snapathon\n\nI am giving everyone two free snap requests from the Snap Wizard @ freeturtle \n\nHow it works: tag freeturtle and describe the snap you want. The wizard will build it, post it in /snaps, and tag you. I give full credit to the requestor for the snaps they create, so you can use it to submit to the snapathon. \n\nHere's an example:\n\n@freeturtle put the above announcement in snap",
+      "parent_hash": null,
+      "received_at": "2026-04-11T12:15:54.074Z",
+      "user_score": 0.98
+    }
+  ],
   "processed": [
     {
       "cast_hash": "0x0081496abe67daab2fa15fbe80a07fc4260d8ec9",

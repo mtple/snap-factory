@@ -8,6 +8,7 @@ import snap_energyReading from "./snaps/energy-reading/index.js";
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
 import snap_loudLinks from "./snaps/loud-links/index.js";
 import snap_meetSnapWizard from "./snaps/meet-snap-wizard/index.js";
+import snap_snapathon from "./snaps/snapathon/index.js";
 import snap_vibeCheck from "./snaps/vibe-check/index.js";
 
 export const snaps: Record<string, Hono> = {
@@ -16,5 +17,6 @@ export const snaps: Record<string, Hono> = {
   "hello-farcaster": snap_helloFarcaster,
   "loud-links": snap_loudLinks,
   "meet-snap-wizard": snap_meetSnapWizard,
+  "snapathon": snap_snapathon,
   "vibe-check": snap_vibeCheck,
 };
