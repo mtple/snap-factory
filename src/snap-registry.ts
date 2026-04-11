@@ -3,12 +3,14 @@
 
 import type { Hono } from "hono";
 
+import snap_doNotPress from "./snaps/do-not-press/index.js";
 import snap_energyReading from "./snaps/energy-reading/index.js";
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
 import snap_meetSnapWizard from "./snaps/meet-snap-wizard/index.js";
 import snap_vibeCheck from "./snaps/vibe-check/index.js";
 
 export const snaps: Record<string, Hono> = {
+  "do-not-press": snap_doNotPress,
   "energy-reading": snap_energyReading,
   "hello-farcaster": snap_helloFarcaster,
   "meet-snap-wizard": snap_meetSnapWizard,
