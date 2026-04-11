@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "natal-chart-v2",
+      "cast_hash": "0x5472ee4306f0684197524b57f3191b45e2d11124",
+      "posted_at": "2026-04-11T21:50:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["utility", "input", "separator", "astrology", "multi-page", "purple", "event-mode"]
+    },
+    {
       "name": "natal-chart",
       "cast_hash": "0x694d967cee000e51b6f3fe60a36341f17949f05a",
       "posted_at": "2026-04-11T21:20:00Z",

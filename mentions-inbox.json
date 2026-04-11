@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x999c5eed9a8a749e48d7b2c6eec6fa7f7098ec1f",
       "author_fid": 15211,
@@ -8,10 +9,10 @@
       "text": "@freeturtle build it again and ask for birth location data so natal chart is accurate",
       "parent_hash": "0x694d967cee000e51b6f3fe60a36341f17949f05a",
       "received_at": "2026-04-11T21:39:47.499Z",
-      "user_score": 0.97
-    }
-  ],
-  "processed": [
+      "user_score": 0.97,
+      "status": "built",
+      "root_cast_hash": "0x5472ee4306f0684197524b57f3191b45e2d11124"
+    },
     {
       "cast_hash": "0xd03f88f3f99f90086c61a077906dfc27f368e5b7",
       "author_fid": 15211,
