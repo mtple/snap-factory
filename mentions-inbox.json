@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x5da2ed3148ce7b052696868d8acf86e778ee632f",
       "author_fid": 1088459,
@@ -8,7 +9,9 @@
       "text": "@freeturtle build a snap that'll enable users follow me on X.",
       "parent_hash": null,
       "received_at": "2026-04-11T19:46:20.747Z",
-      "user_score": 0.95
+      "user_score": 0.95,
+      "status": "built",
+      "root_cast_hash": "0x84884130a7048673808b0131738759c95783b7e8"
     },
     {
       "cast_hash": "0x2bd729577228c32f3b89e6fa9a4127ed36033956",
@@ -18,10 +21,10 @@
       "text": "@freeturtle  Build me a \"follow me on X\" snap",
       "parent_hash": null,
       "received_at": "2026-04-11T19:47:51.061Z",
-      "user_score": 0.95
-    }
-  ],
-  "processed": [
+      "user_score": 0.95,
+      "status": "built",
+      "root_cast_hash": "0x84884130a7048673808b0131738759c95783b7e8"
+    },
     {
       "cast_hash": "0xf90f81f4b797364e7b6cbd67d6a429ce5727cc20",
       "author_fid": 15513,

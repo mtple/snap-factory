@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "follow-kayonfire",
+      "cast_hash": "0x84884130a7048673808b0131738759c95783b7e8",
+      "posted_at": "2026-04-11T20:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["social", "open_url", "badge", "event-mode", "blue", "stateless"]
+    },
+    {
       "name": "snap-101",
       "cast_hash": "0xd494753c007a65321c99eafd21ec62cd473f7b37",
       "posted_at": "2026-04-11T16:00:00Z",
