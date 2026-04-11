@@ -17,11 +17,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 5 | loud-links | Community YouTube link pool — drop a link, get a random one back | /snaps/loud-links | 0xb6a821aa5439947814aa60a764d4781de40e3411 | 2026-04-11 | collaborative, input, turso, stateful, open_url, community, red, event-mode |
 | 6 | snapathon | Free snap request announcement with compose_cast CTA | /snaps/snapathon | 0xcacc8f13f3e8e51bdc9d0e80098723974bb836f9 | 2026-04-11 | announcement, compose_cast, event-mode, purple |
 | 7 | drum-machine | 4-track 8-step beat sequencer — tap cell_grid to build a beat, Play Pattern opens Web Audio page | /snaps/drum-machine | 0x58f56317a69d1cdbad678998a36dc3e29f433d79 | 2026-04-11 | game, cell_grid, open_url, stateless, web-audio, purple |
+| 8 | snap-101 | Self-demonstrating snap that explains what snaps are by being one — 2-page tutorial for @cameron | /snaps/snap-101 | 0xd494753c007a65321c99eafd21ec62cd473f7b37 | 2026-04-11 | tutorial, meta, badge, item_group, item, compose_cast, multi-page, event-mode, blue, green |
 
 ## Stats
 
-- Total snaps built: 7
-- Live snaps: 7
-- Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid
+- Total snaps built: 8
+- Live snaps: 8
+- Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge
 - Actions used so far: open_url, submit, view_profile, compose_cast
-- Accent colors used: teal, purple, pink, red
+- Accent colors used: teal, purple, pink, red, blue, green

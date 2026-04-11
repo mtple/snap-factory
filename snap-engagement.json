@@ -1,6 +1,31 @@
 {
   "snaps": [
     {
+      "name": "snap-101",
+      "cast_hash": "0xd494753c007a65321c99eafd21ec62cd473f7b37",
+      "posted_at": "2026-04-11T16:00:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "tutorial",
+        "meta",
+        "badge",
+        "item_group",
+        "item",
+        "compose_cast",
+        "multi-page",
+        "event-mode",
+        "blue",
+        "green"
+      ]
+    },
+    {
       "name": "drum-machine",
       "cast_hash": "0x295eae18ef6d20d69307f2b2410f4771e3814893",
       "posted_at": "2026-04-11T18:00:00Z",

@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x61e130c8c488b3bbf5fe9498444a2050e507eddc",
       "author_fid": 617,
@@ -8,10 +9,10 @@
       "text": "@freeturtle can you make a snap that explains how snaps work using snaps? I still dont know what theyre for",
       "parent_hash": "0x7984c7549a8c4688dc9cd662e6578bcc300551d7",
       "received_at": "2026-04-11T15:03:05.874Z",
-      "user_score": 1
-    }
-  ],
-  "processed": [
+      "user_score": 1,
+      "status": "built",
+      "root_cast_hash": "0xd494753c007a65321c99eafd21ec62cd473f7b37"
+    },
     {
       "cast_hash": "0xb5e9b30da2bbde827228e19846ac61caa65ba49f",
       "author_fid": 6591,
