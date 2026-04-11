@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0xcb93f7df630239329c01d29cc919af474fe6ceb9",
       "author_fid": 6591,
@@ -9,9 +10,10 @@
       "parent_hash": null,
       "is_reply": false,
       "received_at": "2026-04-11T11:41:12.196Z",
-      "user_score": 0.98
+      "user_score": 0.98,
+      "status": "built",
+      "root_cast_hash": "0x3960fa15e95fae485e8518b715bc32976b3703b6"
     }
   ],
-  "processed": [],
   "backlog": []
 }
