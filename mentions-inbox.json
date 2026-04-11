@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0xd03f88f3f99f90086c61a077906dfc27f368e5b7",
       "author_fid": 15211,
@@ -8,10 +9,10 @@
       "text": "@freeturtle go to this url: https://astro.cafeastrology.com/natal.php\nMake a natal chart generator snap based on it.",
       "parent_hash": null,
       "received_at": "2026-04-11T21:12:17.566Z",
-      "user_score": 0.97
-    }
-  ],
-  "processed": [
+      "user_score": 0.97,
+      "status": "built",
+      "root_cast_hash": "0x694d967cee000e51b6f3fe60a36341f17949f05a"
+    },
     {
       "cast_hash": "0x4cc1bef6593027f47eb17dfcd76456c90caff20a",
       "author_fid": 230238,
