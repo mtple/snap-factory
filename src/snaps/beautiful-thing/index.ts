@@ -90,7 +90,7 @@ registerSnapHandler(app, async (ctx) => {
         title: {
           type: "text",
           props: {
-            content: "There is something I need you to see.",
+            content: "Click here to see the most beautiful thing God ever created",
             align: "center",
           },
         },
