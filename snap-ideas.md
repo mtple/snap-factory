@@ -14,6 +14,10 @@ _Ideas to build next. Matt adds to the top. Snap Wizard pulls from here before g
 
 - **Drum machine** — cell_grid with multi-select. Columns = time steps (8 or 16), rows = drum sounds (kick, snare, hi-hat, clap). Tap cells to place hits, then a "Play" button uses open_url to a page that plays the beat back using Web Audio API. Encode the beat pattern in the URL query string so the playback page is stateless. The playback page lives at a separate route in snap-factory (e.g. /snaps/drum-machine/play?pattern=...) and renders a simple HTML page with Web Audio synthesis. Priority: build this next. (from Matt)
 
+### Blocked — waiting on dependencies
+
+- **Collaborative music collab** (from Matt) — 4-layer pass-the-snap music game. Layer 1: drums sequencer. Layer 2: bass sequencer (C major scale). Layer 3: harmony chord picker (C major chords). Layer 4: melody sequencer (C major scale). Each person adds a layer and shares via compose_cast, tagging all previous contributors. State + contributor FIDs encoded in URL. **BLOCKED: needs NEYNAR_API_KEY added to Vercel env vars** so the snap server can resolve FIDs to @usernames for tagging. Matt will add it — build this immediately when he confirms it's set.
+
 ---
 
 ## Categories
