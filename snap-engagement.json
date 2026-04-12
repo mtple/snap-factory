@@ -251,5 +251,15 @@
         "view_profile"
       ]
     }
+  ,
+    {
+      "name": "wizard-trivia",
+      "cast_hash": "0xc3c95cc8d335149c8ce7f7e64ad6b2b22eecce9b",
+      "posted_at": "2026-04-12T18:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["trivia", "quiz", "toggle_group", "progress", "item_group", "item", "separator", "turso", "stateful", "amber", "daily"]
+    }
   ]
 }
