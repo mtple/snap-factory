@@ -1,10 +1,10 @@
 /**
  * tip-calculator — enter a bill, pick your tip % and how many people, get the split.
  *
- * Two-page snap: form (shows chosen values inline) → result.
+ * Two-page snap: form → result.
  * Stateless — all math happens server-side on POST.
  *
- * Components: text, input, slider (x2), button, item_group, item, separator
+ * Components: text, input, toggle_group (x2), button, item_group, item, separator
  * Actions: submit, compose_cast
  * Accent: teal
  */
@@ -19,23 +19,23 @@ const SNAP_NAME = "tip-calculator";
 
 type Elements = Record<string, SnapElementInput>;
 
+const TIP_OPTIONS = ["15%", "18%", "20%", "22%", "25%"];
+const SPLIT_OPTIONS = ["1", "2", "3", "4", "5", "6"];
+
 // ── Page 1: input form ────────────────────────────────────────────────────
 
 interface FormOpts {
   errorMsg?: string;
-  tipPct?: number;   // current tip % to display (default 18)
-  split?: number;    // current split count to display (default 1)
+  tipPct?: string;   // selected tip option string, e.g. "18%"
+  split?: string;    // selected split option string, e.g. "1"
 }
 
 function renderForm(opts: FormOpts = {}): SnapHandlerResult {
-  const { errorMsg, tipPct = 18, split = 1 } = opts;
-
-  const tipNote = `${tipPct}%`;
-  const splitNote = `${split} ${split === 1 ? "person" : "people"}`;
+  const { errorMsg, tipPct = "18%", split = "1" } = opts;
 
   const children = ["title", "subtitle", "sep"];
   if (errorMsg) children.push("err_msg");
-  children.push("bill", "tip_pct", "tip_note", "split_count", "split_note", "calc_btn", "share_btn");
+  children.push("bill", "tip_pct", "split_count", "calc_btn", "share_btn");
 
   const elements: Elements = {
     page: {
@@ -63,34 +63,26 @@ function renderForm(opts: FormOpts = {}): SnapHandlerResult {
       },
     },
     tip_pct: {
-      type: "slider",
+      type: "toggle_group",
       props: {
         name: "tip_pct",
-        label: "Tip % (0–30)",
-        min: 0,
-        max: 30,
-        step: 1,
+        label: "Tip percentage",
+        options: TIP_OPTIONS,
+        orientation: "horizontal",
+        variant: "outline",
         defaultValue: tipPct,
       },
     },
-    tip_note: {
-      type: "text",
-      props: { content: `Tip: ${tipNote}`, size: "sm" },
-    },
     split_count: {
-      type: "slider",
+      type: "toggle_group",
       props: {
         name: "split_count",
-        label: "Split between (1–8)",
-        min: 1,
-        max: 8,
-        step: 1,
+        label: "Split between (people)",
+        options: SPLIT_OPTIONS,
+        orientation: "horizontal",
+        variant: "outline",
         defaultValue: split,
       },
-    },
-    split_note: {
-      type: "text",
-      props: { content: `Splitting: ${splitNote}`, size: "sm" },
     },
     calc_btn: {
       type: "button",
@@ -247,28 +239,37 @@ registerSnapHandler(app, async (ctx) => {
 
   // POST: form submitted — validate and go directly to result
   const inputs = ctx.action.inputs ?? {};
-  const billRaw = inputs["bill"] as string | undefined;
 
-  // Empty inputs = "Calculate again" tapped from result page — show form
-  if (!billRaw || billRaw.trim() === "") {
+  // bill may arrive as string or number depending on client — normalise to string
+  const billStr = inputs["bill"] != null ? String(inputs["bill"]).trim() : "";
+
+  // Empty bill = "Calculate again" tapped from result page — show fresh form
+  if (!billStr) {
     return makeForm();
   }
 
-  const bill = parseFloat(billRaw);
+  // toggle_group (single) returns the selected option string
+  const tipOption = (inputs["tip_pct"] as string | undefined) ?? "18%";
+  const splitOption = (inputs["split_count"] as string | undefined) ?? "1";
 
-  const tipPctRaw = inputs["tip_pct"];
-  const splitRaw = inputs["split_count"];
-  const tipPct = typeof tipPctRaw === "number" ? Math.round(tipPctRaw) : 18;
-  const split = typeof splitRaw === "number" ? Math.round(splitRaw) : 1;
-  const safeTip = Math.max(0, Math.min(30, tipPct));
-  const safeSplit = Math.max(1, Math.min(8, split));
+  // Validate that options are in our known sets (guard against tampered payloads)
+  const safeTipOption = TIP_OPTIONS.includes(tipOption) ? tipOption : "18%";
+  const safeSplitOption = SPLIT_OPTIONS.includes(splitOption) ? splitOption : "1";
 
+  const bill = parseFloat(billStr);
   if (isNaN(bill) || bill <= 0 || bill > 100_000) {
-    return makeForm({ errorMsg: "Enter a valid bill amount (e.g. 42.00).", tipPct: safeTip, split: safeSplit });
+    return makeForm({
+      errorMsg: "Enter a valid bill amount (e.g. 42.00).",
+      tipPct: safeTipOption,
+      split: safeSplitOption,
+    });
   }
 
-  // Go directly to results — no confirm page
-  return renderResult(bill, safeTip, safeSplit, self);
+  // Parse numeric values from option strings
+  const tipPct = parseInt(safeTipOption.replace("%", ""), 10);
+  const split = parseInt(safeSplitOption, 10);
+
+  return renderResult(bill, tipPct, split, self);
 });
 
 export default app;
