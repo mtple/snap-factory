@@ -159,7 +159,7 @@ function renderMenu(self: string): SnapHandlerResult {
         page: {
           type: "stack",
           props: { direction: "vertical", gap: "lg" },
-          children: ["title", "subtitle", "sep", "mode_picker", "start_btn"],
+          children: ["title", "subtitle", "sep", "mode_picker", "start_btn", "share_btn"],
         },
         title: {
           type: "text",
@@ -195,6 +195,19 @@ function renderMenu(self: string): SnapHandlerResult {
             press: {
               action: "submit",
               params: { target: self },
+            },
+          },
+        },
+        share_btn: {
+          type: "button",
+          props: { label: "Share", variant: "secondary" },
+          on: {
+            press: {
+              action: "compose_cast",
+              params: {
+                text: "play tic-tac-toe on @freeturtle",
+                embeds: [self],
+              },
             },
           },
         },

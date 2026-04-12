@@ -80,6 +80,34 @@ Both `/snaps/[name]` and `/api/snaps/[name]` resolve to the same function — th
 - **Never share state keys across snaps.** Namespace Turso keys with the snap name.
 - **Never assume other snaps exist.** A snap deployment should not break if another snap is removed.
 
+## Share Button (Required on Every Screen)
+
+**Every snap must include a share button on every screen/page.** This is a hard requirement — Matt confirmed it. No exceptions.
+
+The share button is always:
+- A `button` with `variant: "secondary"`
+- Label: `"Share"` or `"Share snap"`
+- Action: `compose_cast` with the snap URL pre-filled in `embeds`
+- Placed at the bottom of the screen
+
+```typescript
+share_btn: {
+  type: "button",
+  props: { label: "Share", variant: "secondary" },
+  on: {
+    press: {
+      action: "compose_cast",
+      params: {
+        text: "check this out on @freeturtle",
+        embeds: [self],  // self = snapUrl(ctx.request, "your-snap-name")
+      },
+    },
+  },
+},
+```
+
+Add `"share_btn"` to the `children` array of every page's root stack. Do this for **every screen** — menu, playing, result, etc. Before committing, grep for `compose_cast` in your snap file and count: it should appear once per distinct screen/page you render.
+
 ## Constraints (from the Farcaster Snaps spec)
 
 ### Text content
