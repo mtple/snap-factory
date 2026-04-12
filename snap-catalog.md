@@ -30,11 +30,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 18 | flappy-bird | Flappy Bird — tap to flap, survive the pipes. Fully stateless, state encoded in URL params. Built for @andrewrose. | /snaps/flappy-bird | 0x42350ce21344ed4a054d84f275da3aaff8065ff3 | 2026-04-12 | game, cell_grid, submit, stateless, amber, event-mode |
 | 19 | tic-tac-toe | Tic-tac-toe with vs AI (minimax, unbeatable) or Pass & Play modes. Stateless, state URL-encoded. Built for @kruukruu. | /snaps/tic-tac-toe | 0xead3c1044fca48ee41354335a5026b367d84f8a0 | 2026-04-12 | game, button, toggle_group, submit, stateless, blue, ai, event-mode |
 | 20 | wizard-trivia | Daily web3 & culture trivia — one question per day, submit your answer, track score, compete on leaderboard | /snaps/wizard-trivia | 0xc3c95cc8d335149c8ce7f7e64ad6b2b22eecce9b | 2026-04-12 | trivia, quiz, toggle_group, progress, item_group, item, separator, turso, stateful, amber, daily |
+| 21 | tip-calculator | Tip calculator — enter bill, drag tip % and split sliders, get per-person total with confetti | /snaps/tip-calculator | 0x8047693c76d3eeec7ba96b0bf0535432a7d87e21 | 2026-04-12 | utility, input, slider, item_group, item, separator, submit, compose_cast, stateless, teal |
 
 ## Stats
 
-- Total snaps built: 20
-- Live snaps: 20
+- Total snaps built: 21
+- Live snaps: 21
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

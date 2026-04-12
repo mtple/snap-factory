@@ -260,6 +260,15 @@
       "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
       "score": 0,
       "tags": ["trivia", "quiz", "toggle_group", "progress", "item_group", "item", "separator", "turso", "stateful", "amber", "daily"]
+    },
+    {
+      "name": "tip-calculator",
+      "cast_hash": "0x8047693c76d3eeec7ba96b0bf0535432a7d87e21",
+      "posted_at": "2026-04-12T22:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["utility", "input", "slider", "item_group", "item", "separator", "submit", "compose_cast", "stateless", "teal"]
     }
   ]
 }
