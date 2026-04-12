@@ -1,16 +1,5 @@
 {
-  "pending": [
-    {
-      "cast_hash": "0xa2fb543f93d34e910275328ff6b2dfba7c124cdb",
-      "author_fid": 6591,
-      "author_username": "mattlee",
-      "author_display_name": "Matt",
-      "text": "@freeturtle instead of having a confirm page, just actually display the numbers on the edit page",
-      "parent_hash": "0x4af2eee8df4b95ec5b81b1345a70434e6cadd063",
-      "received_at": "2026-04-12T22:20:55.833Z",
-      "user_score": 0.98
-    }
-  ],
+  "pending": [],
   "processed": [
     {
       "cast_hash": "0x097e0d86a8159859d3222062501c6d32d266b7d2",
@@ -120,6 +109,15 @@
       "received_at": "2026-04-12T22:16:53.863Z",
       "status": "skipped",
       "note": "not a snap idea — user celebrating beating tic-tac-toe AI. no buildable request."
+    },
+    {
+      "cast_hash": "0xa2fb543f93d34e910275328ff6b2dfba7c124cdb",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "received_at": "2026-04-12T22:20:55.833Z",
+      "status": "fixed",
+      "note": "tip-calculator: removed confirm page, form now shows tip % and split count inline, Calculate goes directly to results",
+      "reply_cast_hash": "0xaed0ab3c546ec76525054f47e4367cf434079f80"
     }
   ],
   "backlog": []
