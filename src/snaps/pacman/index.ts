@@ -130,6 +130,9 @@ function processMove(state: GameState, dir: string): GameState {
     }
   }
 
+  // Save ghost positions before moving (for crossing-collision detection)
+  const oldGhostPositions = s.ghosts.map(([c, r]) => [c, r] as [number, number]);
+
   // Move ghosts (random valid direction each)
   const DIRS: [number, number][] = [
     [0, -1],
@@ -147,11 +150,15 @@ function processMove(state: GameState, dir: string): GameState {
   // Decrease power timer
   if (s.powerTimer > 0) s.powerTimer--;
 
-  // Check collisions (after both Pac-Man and ghosts moved)
+  // Check collisions: same cell OR crossed paths (odd-Manhattan-distance swap bug fix)
   const [npc, npr] = s.pac;
   for (let i = 0; i < s.ghosts.length; i++) {
     const [gc, gr] = s.ghosts[i];
-    if (gc === npc && gr === npr) {
+    const [ogc, ogr] = oldGhostPositions[i];
+    // Direct overlap after move, OR Pac-Man and ghost swapped cells (passed through each other)
+    const directCollision = gc === npc && gr === npr;
+    const crossing = npc === ogc && npr === ogr && gc === pc && gr === pr;
+    if (directCollision || crossing) {
       if (s.powerTimer > 0) {
         // Eat scared ghost
         s.score += 200;
