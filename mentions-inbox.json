@@ -1,16 +1,5 @@
 {
-  "pending": [
-    {
-      "cast_hash": "0x965ce037f0be351619a5255a5c9ffdff4fd1b18b",
-      "author_fid": 616,
-      "author_username": "dylsteck.eth",
-      "author_display_name": "dylan",
-      "text": "@freeturtle make me a snap that looks at the rss feed for dylansteck.com (repo: github.com/dylsteck/dylsteck) and makes a gallery snap of all the articles on it - with a button to open it up(I had a similar framev1 back in the day)",
-      "parent_hash": null,
-      "received_at": "2026-04-12T03:05:37.191Z",
-      "user_score": 0.99
-    }
-  ],
+  "pending": [],
   "processed": [
     {
       "cast_hash": "0x097e0d86a8159859d3222062501c6d32d266b7d2",
@@ -24,10 +13,18 @@
       "cast_hash": "0x06f970c4c86dced50242ac5f91eb864953838311",
       "author_fid": 1059075,
       "author_username": "sugarz.eth",
-      "received_at": "2026-04-12T01:39:21.350Z",
+      "received_at": "2026-04-12T01:39:21.000Z",
       "status": "built",
       "root_cast_hash": "0xd4e3c98e6e54a67ff48016c41728d2c5ef6265a0",
       "note": "duplicate of 0x097e — same snap already built and posted"
+    },
+    {
+      "cast_hash": "0x965ce037f0be351619a5255a5c9ffdff4fd1b18b",
+      "author_fid": 616,
+      "author_username": "dylsteck.eth",
+      "received_at": "2026-04-12T03:05:37.191Z",
+      "status": "built",
+      "root_cast_hash": "0xfd71fac1712b1a730a9da4c5f4b10ae0f3d51e81"
     }
   ],
   "backlog": []
