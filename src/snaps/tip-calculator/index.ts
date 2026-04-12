@@ -1,7 +1,7 @@
 /**
  * tip-calculator — enter a bill, pick your tip % and how many people, get the split.
  *
- * Three-page snap: form → confirm (shows chosen values) → result.
+ * Two-page snap: form (shows chosen values inline) → result.
  * Stateless — all math happens server-side on POST.
  *
  * Components: text, input, slider (x2), button, item_group, item, separator
@@ -21,15 +21,27 @@ type Elements = Record<string, SnapElementInput>;
 
 // ── Page 1: input form ────────────────────────────────────────────────────
 
-function renderForm(errorMsg?: string): SnapHandlerResult {
-  const baseChildren = ["title", "subtitle", "sep", "bill", "tip_pct", "split_count", "calc_btn", "share_btn"];
+interface FormOpts {
+  errorMsg?: string;
+  tipPct?: number;   // current tip % to display (default 18)
+  split?: number;    // current split count to display (default 1)
+}
+
+function renderForm(opts: FormOpts = {}): SnapHandlerResult {
+  const { errorMsg, tipPct = 18, split = 1 } = opts;
+
+  const tipNote = `${tipPct}%`;
+  const splitNote = `${split} ${split === 1 ? "person" : "people"}`;
+
+  const children = ["title", "subtitle", "sep"];
+  if (errorMsg) children.push("err_msg");
+  children.push("bill", "tip_pct", "tip_note", "split_count", "split_note", "calc_btn", "share_btn");
+
   const elements: Elements = {
     page: {
       type: "stack",
-      props: { direction: "vertical", gap: "md" },
-      children: errorMsg
-        ? ["title", "subtitle", "sep", "err_msg", "bill", "tip_pct", "split_count", "calc_btn", "share_btn"]
-        : baseChildren,
+      props: { direction: "vertical", gap: "sm" },
+      children,
     },
     title: {
       type: "text",
@@ -54,23 +66,31 @@ function renderForm(errorMsg?: string): SnapHandlerResult {
       type: "slider",
       props: {
         name: "tip_pct",
-        label: "Tip percentage (0–30%, default 18%)",
+        label: "Tip % (0–30)",
         min: 0,
         max: 30,
         step: 1,
-        defaultValue: 18,
+        defaultValue: tipPct,
       },
+    },
+    tip_note: {
+      type: "text",
+      props: { content: `Tip: ${tipNote}`, size: "sm" },
     },
     split_count: {
       type: "slider",
       props: {
         name: "split_count",
-        label: "Split between (1–8 people, default 1)",
+        label: "Split between (1–8)",
         min: 1,
         max: 8,
         step: 1,
-        defaultValue: 1,
+        defaultValue: split,
       },
+    },
+    split_note: {
+      type: "text",
+      props: { content: `Splitting: ${splitNote}`, size: "sm" },
     },
     calc_btn: {
       type: "button",
@@ -111,87 +131,7 @@ function renderForm(errorMsg?: string): SnapHandlerResult {
   };
 }
 
-// ── Page 2: confirm — shows chosen values before calculating ──────────────
-
-function renderConfirm(
-  bill: number,
-  tipPct: number,
-  split: number,
-  self: string,
-): SnapHandlerResult {
-  const tipAmt = bill * (tipPct / 100);
-
-  const elements: Elements = {
-    page: {
-      type: "stack",
-      props: { direction: "vertical", gap: "md" },
-      children: ["title", "subtitle", "sep", "confirm_group", "sep2", "calc_btn", "edit_btn"],
-    },
-    title: {
-      type: "text",
-      props: { content: "Confirm your split", weight: "bold" },
-    },
-    subtitle: {
-      type: "text",
-      props: { content: "Does this look right?", size: "sm" },
-    },
-    sep: { type: "separator", props: {} },
-    bill_item: {
-      type: "item",
-      props: { title: "Bill total", description: `$${bill.toFixed(2)}` },
-    },
-    tip_item: {
-      type: "item",
-      props: {
-        title: "Tip",
-        description: `${tipPct}% = $${tipAmt.toFixed(2)}`,
-      },
-    },
-    split_item: {
-      type: "item",
-      props: {
-        title: "Splitting between",
-        description: `${split} ${split === 1 ? "person" : "people"}`,
-      },
-    },
-    confirm_group: {
-      type: "item_group",
-      props: {},
-      children: ["bill_item", "tip_item", "split_item"],
-    },
-    sep2: { type: "separator", props: {} },
-    calc_btn: {
-      type: "button",
-      props: { label: "Calculate →", variant: "primary" },
-      on: {
-        press: {
-          action: "submit",
-          params: {
-            target: `${self}?phase=result&bill=${bill}&tip=${tipPct}&split=${split}`,
-          },
-        },
-      },
-    },
-    edit_btn: {
-      type: "button",
-      props: { label: "← Edit", variant: "secondary" },
-      on: {
-        press: {
-          action: "submit",
-          params: { target: self },
-        },
-      },
-    },
-  };
-
-  return {
-    version: "1.0",
-    theme: { accent: "teal" },
-    ui: { root: "page", elements },
-  };
-}
-
-// ── Page 3: result ────────────────────────────────────────────────────────
+// ── Page 2: result ────────────────────────────────────────────────────────
 
 function renderResult(
   bill: number,
@@ -290,42 +230,22 @@ function renderResult(
 
 registerSnapHandler(app, async (ctx) => {
   const self = snapUrl(ctx.request, SNAP_NAME);
-  const url = new URL(ctx.request.url);
-  const p = url.searchParams;
 
   // Patch self into the form's button targets
-  function makeForm(errorMsg?: string): SnapHandlerResult {
-    const snap = renderForm(errorMsg);
+  function makeForm(opts: FormOpts = {}): SnapHandlerResult {
+    const snap = renderForm(opts);
     const els = snap.ui.elements as Elements;
     (els["calc_btn"] as SnapElementInput & { on: { press: { params: { target: string } } } }).on.press.params.target = self;
     (els["share_btn"] as SnapElementInput & { on: { press: { params: { embeds: string[] } } } }).on.press.params.embeds = [self];
     return snap;
   }
 
-  // GET: show the form
+  // GET: show the form with defaults
   if (ctx.action.type === "get") {
     return makeForm();
   }
 
-  // POST — check phase param on the URL
-  const phase = p.get("phase");
-
-  // Phase: result — show results (coming from confirm page)
-  if (phase === "result") {
-    const bill = parseFloat(p.get("bill") ?? "0");
-    const tipPct = parseInt(p.get("tip") ?? "18", 10);
-    const split = parseInt(p.get("split") ?? "1", 10);
-
-    if (!isNaN(bill) && bill > 0) {
-      const safeTip = Math.max(0, Math.min(30, tipPct));
-      const safeSplit = Math.max(1, Math.min(8, split));
-      return renderResult(bill, safeTip, safeSplit, self);
-    }
-    // Fallback if params missing
-    return makeForm();
-  }
-
-  // No phase: form submitted — validate and go to confirm
+  // POST: form submitted — validate and go directly to result
   const inputs = ctx.action.inputs ?? {};
   const billRaw = inputs["bill"] as string | undefined;
 
@@ -335,20 +255,20 @@ registerSnapHandler(app, async (ctx) => {
   }
 
   const bill = parseFloat(billRaw);
-  if (isNaN(bill) || bill <= 0 || bill > 100_000) {
-    return makeForm("Enter a valid bill amount (e.g. 42.00).");
-  }
 
   const tipPctRaw = inputs["tip_pct"];
   const splitRaw = inputs["split_count"];
-
   const tipPct = typeof tipPctRaw === "number" ? Math.round(tipPctRaw) : 18;
   const split = typeof splitRaw === "number" ? Math.round(splitRaw) : 1;
   const safeTip = Math.max(0, Math.min(30, tipPct));
   const safeSplit = Math.max(1, Math.min(8, split));
 
-  // Show confirm page with chosen values
-  return renderConfirm(bill, safeTip, safeSplit, self);
+  if (isNaN(bill) || bill <= 0 || bill > 100_000) {
+    return makeForm({ errorMsg: "Enter a valid bill amount (e.g. 42.00).", tipPct: safeTip, split: safeSplit });
+  }
+
+  // Go directly to results — no confirm page
+  return renderResult(bill, safeTip, safeSplit, self);
 });
 
 export default app;
