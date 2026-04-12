@@ -27,11 +27,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 15 | raffle | Enter a list of names separated by commas, draw a random winner with confetti. Built for @dylsteck.eth. | /snaps/raffle | 0x26f6c6618675dc2eec0971461ebba36fbcf1e33d | 2026-04-11 | utility, input, submit, stateless, confetti, amber, event-mode |
 | 16 | duo-do-song-quiz | "Which Dúo Dø song are you?" — 3-page mood quiz matching users to a song from the Tortoise catalog. Built for @duodomusica. | /snaps/duo-do-song-quiz | 0xc88ad2e025c67bc63209a5d123cc8588d75100be | 2026-04-12 | quiz, toggle_group, open_url, multi-page, stateless, pink, music, event-mode, tortoise |
 | 17 | rug-floor-is-lava | Crypto survival platformer — jump platforms as red candle lava rises from the floor, HODL = instant death. Built for @sugarz.eth. | /snaps/rug-floor-is-lava | 0xd4e3c98e6e54a67ff48016c41728d2c5ef6265a0 | 2026-04-12 | game, cell_grid, submit, multi-page, stateless, red, crypto, event-mode, compose_cast |
+| 18 | flappy-bird | Flappy Bird — tap to flap, survive the pipes. Fully stateless, state encoded in URL params. Built for @andrewrose. | /snaps/flappy-bird | 0x42350ce21344ed4a054d84f275da3aaff8065ff3 | 2026-04-12 | game, cell_grid, submit, stateless, amber, event-mode |
 
 ## Stats
 
-- Total snaps built: 17
-- Live snaps: 17
+- Total snaps built: 18
+- Live snaps: 18
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
