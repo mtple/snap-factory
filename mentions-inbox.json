@@ -1,26 +1,5 @@
 {
-  "pending": [
-    {
-      "cast_hash": "0x09355987ceac5f3facacaafed161f08db1e1a462",
-      "author_fid": 6591,
-      "author_username": "mattlee",
-      "author_display_name": "Matt",
-      "text": "@freeturtle now it doesn't calculate at all and it still does not tell you the value you are picking while you slide the scrubber",
-      "parent_hash": "0xaed0ab3c546ec76525054f47e4367cf434079f80",
-      "received_at": "2026-04-12T22:29:50.942Z",
-      "user_score": 0.98
-    },
-    {
-      "cast_hash": "0xc2edace02f592a990a1156e7004f3841b10aa10f",
-      "author_fid": 4167,
-      "author_username": "nounishprof",
-      "author_display_name": "Nounish Prof ⌐◧-◧🎩",
-      "text": "just beat the AI at tic-tac-toe on @freeturtle 🎉",
-      "parent_hash": null,
-      "received_at": "2026-04-12T22:34:39.122Z",
-      "user_score": 0.98
-    }
-  ],
+  "pending": [],
   "processed": [
     {
       "cast_hash": "0x097e0d86a8159859d3222062501c6d32d266b7d2",
@@ -139,6 +118,23 @@
       "status": "fixed",
       "note": "tip-calculator: removed confirm page, form now shows tip % and split count inline, Calculate goes directly to results",
       "reply_cast_hash": "0xaed0ab3c546ec76525054f47e4367cf434079f80"
+    },
+    {
+      "cast_hash": "0x09355987ceac5f3facacaafed161f08db1e1a462",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "received_at": "2026-04-12T22:29:50.942Z",
+      "status": "fixed",
+      "note": "tip-calculator: replaced sliders with toggle_groups for visible selection; fixed bill input parsing bug (number vs string)",
+      "reply_cast_hash": "0x54010c69344f164b5427a9d8a8e5f8dae9cf7541"
+    },
+    {
+      "cast_hash": "0xc2edace02f592a990a1156e7004f3841b10aa10f",
+      "author_fid": 4167,
+      "author_username": "nounishprof",
+      "received_at": "2026-04-12T22:34:39.122Z",
+      "status": "skipped",
+      "note": "not a snap idea — user celebrating beating tic-tac-toe AI. no buildable request."
     }
   ],
   "backlog": []
