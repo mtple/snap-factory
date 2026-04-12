@@ -5,7 +5,7 @@
       "cast_hash": "0x097e0d86a8159859d3222062501c6d32d266b7d2",
       "author_fid": 1059075,
       "author_username": "sugarz.eth",
-      "received_at": "2026-04-12T01:37:59.061Z",
+      "received_at": "2026-04-12T01:37:59.021Z",
       "status": "built",
       "root_cast_hash": "0xd4e3c98e6e54a67ff48016c41728d2c5ef6265a0"
     },
@@ -25,6 +25,14 @@
       "received_at": "2026-04-12T03:05:37.191Z",
       "status": "built",
       "root_cast_hash": "0xfd71fac1712b1a730a9da4c5f4b10ae0f3d51e81"
+    },
+    {
+      "cast_hash": "0xf0aa9627853fc484e9c06019cdae800d5c4d0c24",
+      "author_fid": 230238,
+      "author_username": "mvr",
+      "received_at": "2026-04-12T03:28:11.963Z",
+      "status": "skipped",
+      "note": "not a snap idea — user was correcting a list of miniapps/missing entries, no buildable request"
     }
   ],
   "backlog": []
