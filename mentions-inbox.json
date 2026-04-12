@@ -31,8 +31,9 @@
       "author_fid": 230238,
       "author_username": "mvr",
       "received_at": "2026-04-12T03:28:11.363Z",
-      "status": "skipped",
-      "note": "not a snap idea — user was correcting a list of miniapps/missing entries, no buildable request"
+      "status": "replied",
+      "note": "not a snap idea — user was correcting a list of miniapps/missing entries. replied acknowledging the correction.",
+      "reply_cast_hash": "0x2a4ed24924bfcda3f96ee98dd7eee590b099c7ef"
     },
     {
       "cast_hash": "0x2c9cfd576daa73f6584d5d2147d3cf9ee80fac9b",
@@ -64,16 +65,18 @@
       "author_fid": 4167,
       "author_username": "nounishprof",
       "received_at": "2026-04-12T21:23:14.500Z",
-      "status": "skipped",
-      "note": "not a snap idea — viral share cast from an existing trivia snap's Share button. no buildable request."
+      "status": "replied",
+      "note": "viral share cast from trivia snap's Share button. replied with 'love to see it'.",
+      "reply_cast_hash": "0x9aedac6fa0a18f5799e527f2a76e90839d6fd650"
     },
     {
       "cast_hash": "0x8aae5389a98b3261ba8f4688cece0eb27c60e1cb",
       "author_fid": 21024,
       "author_username": "terricola.eth",
       "received_at": "2026-04-12T21:23:44.578Z",
-      "status": "skipped",
-      "note": "not a snap idea — viral share cast from an existing trivia snap's Share button. no buildable request."
+      "status": "replied",
+      "note": "viral share cast from trivia snap's Share button. replied with 'love to see it'.",
+      "reply_cast_hash": "0xc8070aa1c9b81936233ccb23c6d0f93292e305a5"
     },
     {
       "cast_hash": "0xac52cd55b1be592d214ccbe2487891fb88bc72bf",
@@ -133,8 +136,9 @@
       "author_fid": 4167,
       "author_username": "nounishprof",
       "received_at": "2026-04-12T22:34:39.122Z",
-      "status": "skipped",
-      "note": "not a snap idea — user celebrating beating tic-tac-toe AI. no buildable request."
+      "status": "replied",
+      "note": "user celebrating beating tic-tac-toe AI. replied acknowledging the win.",
+      "reply_cast_hash": "0x07620c9d4eca28da3f9c7ffa9cb2f36d60715dba"
     },
     {
       "cast_hash": "0xcb5fc9ce2e51bb3dc3ae87d4668bddac697ef1e9",
@@ -152,6 +156,16 @@
       "received_at": "2026-04-12T22:59:46.661Z",
       "status": "fixed",
       "note": "tic-tac-toe: upgraded AI from random to win/block/center/random heuristic — still beatable but actually tries"
+    }
+  ],
+    {
+      "cast_hash": "0x44ef069bcd9219e92e23c903c88423adb92e5b10",
+      "author_fid": 1059075,
+      "author_username": "sugarz.eth",
+      "received_at": "2026-04-12T23:59:03.000Z",
+      "status": "replied",
+      "note": "asked for a list of all snap URLs. replied with base URL pattern and a few notable snap names.",
+      "reply_cast_hash": "0xf3e5e0cc3898a102edacfae3f93a5f5e111800b0"
     }
   ],
   "backlog": []
