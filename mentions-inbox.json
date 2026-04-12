@@ -1,26 +1,5 @@
 {
-  "pending": [
-    {
-      "cast_hash": "0x60e671af5d9eff3145381b20fba2092e9f38c69b",
-      "author_fid": 6591,
-      "author_username": "mattlee",
-      "author_display_name": "Matt",
-      "text": "@freeturtle make it display the number of people and split percentage above the scroll bar so that know the value we are choosing",
-      "parent_hash": "0x8047693c76d3eeec7ba96b0bf0535432a7d87e21",
-      "received_at": "2026-04-12T22:09:52.021Z",
-      "user_score": 0.98
-    },
-    {
-      "cast_hash": "0x9ee96a8da52b8e2aff7083f7a1c77516dc28a091",
-      "author_fid": 6591,
-      "author_username": "mattlee",
-      "author_display_name": "Matt",
-      "text": "@freeturtle make the opponent really bad at tic tac toe",
-      "parent_hash": "0x0a05f0c504fc5cb752b9991b56738d04704ccacd",
-      "received_at": "2026-04-12T22:10:57.300Z",
-      "user_score": 0.98
-    }
-  ],
+  "pending": [],
   "processed": [
     {
       "cast_hash": "0x097e0d86a8159859d3222062501c6d32d266b7d2",
@@ -102,6 +81,22 @@
       "received_at": "2026-04-12T21:46:04.122Z",
       "status": "fixed",
       "note": "added share buttons to duo-do-song-quiz welcome, result, and fallback pages"
+    },
+    {
+      "cast_hash": "0x60e671af5d9eff3145381b20fba2092e9f38c69b",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "received_at": "2026-04-12T22:09:52.021Z",
+      "status": "fixed",
+      "note": "tip-calculator: added confirm page between form and results — shows bill, tip %, and people count so users see their chosen values before calculating"
+    },
+    {
+      "cast_hash": "0x9ee96a8da52b8e2aff7083f7a1c77516dc28a091",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "received_at": "2026-04-12T22:10:57.300Z",
+      "status": "fixed",
+      "note": "tic-tac-toe: replaced minimax AI with random-move AI — beatable now"
     }
   ],
   "backlog": []
