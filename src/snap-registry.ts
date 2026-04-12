@@ -17,6 +17,7 @@ import snap_natalChart from "./snaps/natal-chart/index.js";
 import snap_natalChartV2 from "./snaps/natal-chart-v2/index.js";
 import snap_pacman from "./snaps/pacman/index.js";
 import snap_raffle from "./snaps/raffle/index.js";
+import snap_rugFloorIsLava from "./snaps/rug-floor-is-lava/index.js";
 import snap_snap101 from "./snaps/snap-101/index.js";
 import snap_snapShowcase from "./snaps/snap-showcase/index.js";
 import snap_snapathon from "./snaps/snapathon/index.js";
@@ -38,6 +39,7 @@ export const snaps: Record<string, Hono> = {
   "natal-chart-v2": snap_natalChartV2,
   "pacman": snap_pacman,
   "raffle": snap_raffle,
+  "rug-floor-is-lava": snap_rugFloorIsLava,
   "snap-101": snap_snap101,
   "snap-showcase": snap_snapShowcase,
   "snapathon": snap_snapathon,
