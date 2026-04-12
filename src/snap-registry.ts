@@ -25,6 +25,7 @@ import snap_snapShowcase from "./snaps/snap-showcase/index.js";
 import snap_snapathon from "./snaps/snapathon/index.js";
 import snap_stumble from "./snaps/stumble/index.js";
 import snap_ticTacToe from "./snaps/tic-tac-toe/index.js";
+import snap_tipCalculator from "./snaps/tip-calculator/index.js";
 import snap_vibeCheck from "./snaps/vibe-check/index.js";
 import snap_wizardTrivia from "./snaps/wizard-trivia/index.js";
 
@@ -51,6 +52,7 @@ export const snaps: Record<string, Hono> = {
   "snapathon": snap_snapathon,
   "stumble": snap_stumble,
   "tic-tac-toe": snap_ticTacToe,
+  "tip-calculator": snap_tipCalculator,
   "vibe-check": snap_vibeCheck,
   "wizard-trivia": snap_wizardTrivia,
 };
