@@ -1,16 +1,5 @@
 {
-  "pending": [
-    {
-      "cast_hash": "0x5419708f55ba8aabcd1be668ce1ea65021451777",
-      "author_fid": 13323,
-      "author_username": "speakup",
-      "author_display_name": "Speakup 🎩",
-      "text": "just beat the AI at tic-tac-toe on @freeturtle  🎉",
-      "parent_hash": null,
-      "received_at": "2026-04-12T22:16:53.863Z",
-      "user_score": 1
-    }
-  ],
+  "pending": [],
   "processed": [
     {
       "cast_hash": "0x097e0d86a8159859d3222062501c6d32d266b7d2",
@@ -58,8 +47,9 @@
       "author_fid": 3854,
       "author_username": "darrylyeo",
       "received_at": "2026-04-12T18:38:13.387Z",
-      "status": "skipped",
-      "note": "not a snap idea — user reporting a collision bug in existing PAC-MAN snap (odd Manhattan distance parity). bug fixed in same cycle."
+      "status": "fixed",
+      "note": "PAC-MAN collision bug fixed. reply 404'd (cast expired), fell back to root cast tagging @darrylyeo",
+      "reply_cast_hash": "0x561c5db3326ef9c438af2cc3e8b2510205b86cff"
     },
     {
       "cast_hash": "0xe7cf4c14f41f08ff8e3c0f1b2978bd7309a01442",
@@ -67,7 +57,7 @@
       "author_username": "darrylyeo",
       "received_at": "2026-04-12T18:39:38.823Z",
       "status": "skipped",
-      "note": "follow-up clarifying same bug (odd not even Manhattan distance). already fixed."
+      "note": "follow-up clarifying same bug (odd not even Manhattan distance). already fixed and replied via root cast."
     },
     {
       "cast_hash": "0xa45fe28aab63015210ad2bc427cb51378782a291",
@@ -91,7 +81,8 @@
       "author_username": "mattlee",
       "received_at": "2026-04-12T21:46:04.122Z",
       "status": "fixed",
-      "note": "added share buttons to duo-do-song-quiz welcome, result, and fallback pages"
+      "note": "added share buttons to duo-do-song-quiz welcome, result, and fallback pages",
+      "reply_cast_hash": "0xe9b002d594bc117853b84abeb8fed167e9badb66"
     },
     {
       "cast_hash": "0x60e671af5d9eff3145381b20fba2092e9f38c69b",
@@ -99,7 +90,8 @@
       "author_username": "mattlee",
       "received_at": "2026-04-12T22:09:52.021Z",
       "status": "fixed",
-      "note": "tip-calculator: added confirm page between form and results — shows bill, tip %, and people count so users see their chosen values before calculating"
+      "note": "tip-calculator: added confirm page between form and results — shows bill, tip %, and people count so users see their chosen values before calculating",
+      "reply_cast_hash": "0x4af2eee8df4b95ec5b81b1345a70434e6cadd063"
     },
     {
       "cast_hash": "0x9ee96a8da52b8e2aff7083f7a1c77516dc28a091",
@@ -107,7 +99,16 @@
       "author_username": "mattlee",
       "received_at": "2026-04-12T22:10:57.300Z",
       "status": "fixed",
-      "note": "tic-tac-toe: replaced minimax AI with random-move AI — beatable now"
+      "note": "tic-tac-toe: replaced minimax AI with random-move AI — beatable now",
+      "reply_cast_hash": "0x54de1f58005428072c50369b6b1d3cf090b73527"
+    },
+    {
+      "cast_hash": "0x5419708f55ba8aabcd1be668ce1ea65021451777",
+      "author_fid": 13323,
+      "author_username": "speakup",
+      "received_at": "2026-04-12T22:16:53.863Z",
+      "status": "skipped",
+      "note": "not a snap idea — user celebrating beating tic-tac-toe AI. no buildable request."
     }
   ],
   "backlog": []
