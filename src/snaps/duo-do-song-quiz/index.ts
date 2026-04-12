@@ -147,7 +147,7 @@ registerSnapHandler(app, async (ctx) => {
           page: {
             type: "stack",
             props: { direction: "vertical", gap: "lg" },
-            children: ["title", "sub", "sep", "btn"],
+            children: ["title", "sub", "sep", "btn", "shareBtn"],
           },
           title: {
             type: "text",
@@ -177,6 +177,19 @@ registerSnapHandler(app, async (ctx) => {
               press: {
                 action: "submit",
                 params: { target: `${self}?page=2` },
+              },
+            },
+          },
+          shareBtn: {
+            type: "button",
+            props: { label: "Share snap", variant: "secondary" },
+            on: {
+              press: {
+                action: "compose_cast",
+                params: {
+                  text: "Which Dúo Dø song are you? Find out →",
+                  embeds: [self],
+                },
               },
             },
           },
@@ -251,7 +264,7 @@ registerSnapHandler(app, async (ctx) => {
           page: {
             type: "stack",
             props: { direction: "vertical", gap: "md" },
-            children: ["label", "songName", "tagline", "desc", "sep", "listenBtn", "againBtn"],
+            children: ["label", "songName", "tagline", "desc", "sep", "listenBtn", "againBtn", "shareBtn"],
           },
           label: {
             type: "text",
@@ -309,6 +322,19 @@ registerSnapHandler(app, async (ctx) => {
               },
             },
           },
+          shareBtn: {
+            type: "button",
+            props: { label: "Share snap", variant: "secondary" },
+            on: {
+              press: {
+                action: "compose_cast",
+                params: {
+                  text: `I got "${song.name}" on the Dúo Dø song quiz ✨ find yours →`,
+                  embeds: [self],
+                },
+              },
+            },
+          },
         },
       },
     };
@@ -325,7 +351,7 @@ registerSnapHandler(app, async (ctx) => {
         page: {
           type: "stack",
           props: { direction: "vertical", gap: "lg" },
-          children: ["title", "btn"],
+          children: ["title", "btn", "shareBtn"],
         },
         title: {
           type: "text",
@@ -342,6 +368,19 @@ registerSnapHandler(app, async (ctx) => {
             press: {
               action: "submit",
               params: { target: `${self}?page=2` },
+            },
+          },
+        },
+        shareBtn: {
+          type: "button",
+          props: { label: "Share snap", variant: "secondary" },
+          on: {
+            press: {
+              action: "compose_cast",
+              params: {
+                text: "Which Dúo Dø song are you? Find out →",
+                embeds: [self],
+              },
             },
           },
         },
