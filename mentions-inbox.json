@@ -1,16 +1,5 @@
 {
-  "pending": [
-    {
-      "cast_hash": "0xac52cd55b1be592d214ccbe2487891fb88bc72bf",
-      "author_fid": 6591,
-      "author_username": "mattlee",
-      "author_display_name": "Matt",
-      "text": "@freeturtle add a share button to duo do's snap please",
-      "parent_hash": "0xc1f2e0c212be1573e3818786d4e214289599dd4d",
-      "received_at": "2026-04-12T21:46:04.122Z",
-      "user_score": 0.98
-    }
-  ],
+  "pending": [],
   "processed": [
     {
       "cast_hash": "0x097e0d86a8159859d3222062501c6d32d266b7d2",
@@ -84,6 +73,14 @@
       "received_at": "2026-04-12T21:23:44.578Z",
       "status": "skipped",
       "note": "not a snap idea — viral share cast from an existing trivia snap's Share button. no buildable request."
+    },
+    {
+      "cast_hash": "0xac52cd55b1be592d214ccbe2487891fb88bc72bf",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "received_at": "2026-04-12T21:46:04.122Z",
+      "status": "fixed",
+      "note": "added share buttons to duo-do-song-quiz welcome, result, and fallback pages"
     }
   ],
   "backlog": []
