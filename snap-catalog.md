@@ -25,11 +25,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 13 | natal-chart-v2 | Improved natal chart — adds birth city display and UTC offset for accurate sidereal-time rising sign. Rebuilt for @statuette. | /snaps/natal-chart-v2 | 0x5472ee4306f0684197524b57f3191b45e2d11124 | 2026-04-11 | utility, input, separator, astrology, multi-page, purple, event-mode |
 | 14 | creature-summoner | Configure 4 trait switches (era, size, element, realm) and summon one of 16 unique wizard creatures | /snaps/creature-summoner | 0x86fbaa9d239ec697c697014194840efee7393286 | 2026-04-11 | absurd, switch, badge, separator, submit, stateless, gray, playful |
 | 15 | raffle | Enter a list of names separated by commas, draw a random winner with confetti. Built for @dylsteck.eth. | /snaps/raffle | 0x26f6c6618675dc2eec0971461ebba36fbcf1e33d | 2026-04-11 | utility, input, submit, stateless, confetti, amber, event-mode |
+| 16 | duo-do-song-quiz | "Which Dúo Dø song are you?" — 3-page mood quiz matching users to a song from the Tortoise catalog. Built for @duodomusica. | /snaps/duo-do-song-quiz | 0xc88ad2e025c67bc63209a5d123cc8588d75100be | 2026-04-12 | quiz, toggle_group, open_url, multi-page, stateless, pink, music, event-mode, tortoise |
 
 ## Stats
 
-- Total snaps built: 15
-- Live snaps: 15
+- Total snaps built: 16
+- Live snaps: 16
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

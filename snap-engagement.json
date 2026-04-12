@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "duo-do-song-quiz",
+      "cast_hash": "0xc88ad2e025c67bc63209a5d123cc8588d75100be",
+      "posted_at": "2026-04-12T01:50:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["quiz", "toggle_group", "open_url", "multi-page", "stateless", "pink", "music", "event-mode", "tortoise"]
+    },
+    {
       "name": "raffle",
       "cast_hash": "0x26f6c6618675dc2eec0971461ebba36fbcf1e33d",
       "posted_at": "2026-04-11T22:50:00Z",
