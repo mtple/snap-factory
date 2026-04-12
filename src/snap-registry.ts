@@ -6,6 +6,7 @@ import type { Hono } from "hono";
 import snap_creatureSummoner from "./snaps/creature-summoner/index.js";
 import snap_doNotPress from "./snaps/do-not-press/index.js";
 import snap_drumMachine from "./snaps/drum-machine/index.js";
+import snap_duoDoSongQuiz from "./snaps/duo-do-song-quiz/index.js";
 import snap_energyReading from "./snaps/energy-reading/index.js";
 import snap_followKayonfire from "./snaps/follow-kayonfire/index.js";
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
@@ -26,6 +27,7 @@ export const snaps: Record<string, Hono> = {
   "creature-summoner": snap_creatureSummoner,
   "do-not-press": snap_doNotPress,
   "drum-machine": snap_drumMachine,
+  "duo-do-song-quiz": snap_duoDoSongQuiz,
   "energy-reading": snap_energyReading,
   "follow-kayonfire": snap_followKayonfire,
   "hello-farcaster": snap_helloFarcaster,

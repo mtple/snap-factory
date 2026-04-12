@@ -1,5 +1,16 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0x62d16705a4b3bf54c14946b8f7701ca72a3679c6",
+      "author_fid": 355566,
+      "author_username": "duodomusica",
+      "author_display_name": "Dúo Dø ♬₊˚⌐◨-◨",
+      "text": "@freeturtle  create a snap called “which song of Dúo Dø are you?” based on the users Farcaster profile.\nFirst User clicks: “tell me”\nYou analize his Farcaster profile and all time casts to choose a song of Dúo Dø available in Tortoise mini-app.\nYou analize an emotion of the profile and give as a result a song with equal, similar or familiar emotion.\nAs a result you share the song in Tortoise so the user can collect it! \nThis is the list of song, emotions and links to connect :\nSong name - emotion - song link\nYAMA - legacy, proud, story - https://tortoise.studio/song/yama\nJuro que… (Acoustic) - friendship, sensitivity, grateful - https://tortoise.studio/song/juro-que-acoustic\nJuro que… - community, love, care - https://tortoise.studio/song/juro-que\nPalomas y Cordajes (Acoustic) - sensual, heartbreak, elegant - https://tortoise.studio/song/palomas-y-cordajes-acoustic\nPalomas y Cordajes - melancholy, nostalgic, sensual - https://tortoise.studio/song/palomas-y-cordajes\nSoy - identity, proud - https://tortoise.studio/song/soy\nFire - dark, melancholy, violent - https://tortoise.studio/song/fire\nFragmentos - community, bigger, complex - https://tortoise.studio/song/fragmentos\nMi gravedad - grief, melancholy, anger - https://www.tortoise.studio/song/mi-gravedad\nAmarillo - love, bravery - https://tortoise.studio/song/amarillo\nGuerrera - nostalgic, thankful - https://tortoise.studio//song/guerrera\nCaminando - healing, love, patience - https://tortoise.studio?id=6261a354-ff3b-456a-b8f6-141d41b8b729&img=bafybeiejdvhwmvhf6jmaf6fgeebatdn3fmbd5rgtq4ypkclqluf52sjgse\nArde - explicit, sexy, sensual, love - https://tortoise.studio?id=9bfee81e-babb-4851-b801-ac8806ba7b97&img=bafybeiejdvhwmvhf6jmaf6fgeebatdn3fmbd5rgtq4ypkclqluf52sjgse\nMientras no salga el sol - happy, love, cute, bright - https://tortoise.studio?id=d8b174cf-826a-4e16-977f-745054206516&img=bafybeiejdvhwmvhf6jmaf6fgeebatdn3fmbd5rgtq4ypkclqluf52sjgse\nTorii - reflective, life lessons, spirituality - https://tortoise.studio?id=a692bb77-5dcd-496a-be54-4456a2154451&img=bafkreihc334bvmungqgecd6wtsum75ruba2i3e5kddqkuntfxvyzamehqy\nRain - sadness, lost - https://tortoise.studio?id=d7b44836-690b-45a9-ab19-840992e87c8b&img=bafybeidbuogbgn7322v5rt6rf45ru2yoa2rpn5tztataximzlnsejsvhve\n\nWhen you give the result, you show the songs name and below a bottom that says listen.\nWhen user clicks that button you open the tortoise mini-app with that song to listen and collect.",
+      "parent_hash": null,
+      "received_at": "2026-04-12T01:31:48.470Z",
+      "user_score": 1
+    }
+  ],
   "processed": [
     {
       "cast_hash": "0x2fdd8b6c2c7588389edd3ffc07e6bd4410486ff8",
