@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "rug-floor-is-lava",
+      "cast_hash": "0xd4e3c98e6e54a67ff48016c41728d2c5ef6265a0",
+      "posted_at": "2026-04-12T02:10:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["game", "cell_grid", "submit", "multi-page", "stateless", "red", "crypto", "event-mode", "compose_cast"]
+    },
+    {
       "name": "duo-do-song-quiz",
       "cast_hash": "0xc88ad2e025c67bc63209a5d123cc8588d75100be",
       "posted_at": "2026-04-12T01:50:00Z",

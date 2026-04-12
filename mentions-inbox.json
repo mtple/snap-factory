@@ -1,26 +1,23 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x097e0d86a8159859d3222062501c6d32d266b7d2",
       "author_fid": 1059075,
       "author_username": "sugarz.eth",
-      "author_display_name": "Sugarz",
-      "text": "@freeturtle please make me a snap called  “RUG FLOOR IS LAVA”\nSide view.\n\nRed candles rise from bottom (floor is lava).\nGreen candles fall from top.\n\nJump between floating platforms (tweets).\n\nSurvive 10 seconds without touching rug floor.\n\nShare: “Didn’t get rugged today.”\n\nCrypto-native. Visually dramatic.",
-      "parent_hash": null,
       "received_at": "2026-04-12T01:37:59.061Z",
-      "user_score": 0.89
+      "status": "built",
+      "root_cast_hash": "0xd4e3c98e6e54a67ff48016c41728d2c5ef6265a0"
     },
     {
       "cast_hash": "0x06f970c4c86dced50242ac5f91eb864953838311",
       "author_fid": 1059075,
       "author_username": "sugarz.eth",
-      "author_display_name": "Sugarz",
-      "text": "@freeturtle please make me a snap called  “RUG FLOOR IS LAVA”\nSide view.\n\nRed candles rise from bottom (floor is lava).\nGreen candles fall from top.\n\nJump between floating platforms (tweets).\n\nSurvive 10 seconds without touching rug floor.\n\nShare: “Didn’t get rugged today.”\n\nCrypto-native. Visually dramatic.",
-      "parent_hash": null,
       "received_at": "2026-04-12T01:39:21.350Z",
-      "user_score": 0.89
+      "status": "built",
+      "root_cast_hash": "0xd4e3c98e6e54a67ff48016c41728d2c5ef6265a0",
+      "note": "duplicate of 0x097e — same snap already built and posted"
     }
   ],
-  "processed": [],
   "backlog": []
 }
