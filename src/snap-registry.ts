@@ -8,6 +8,7 @@ import snap_doNotPress from "./snaps/do-not-press/index.js";
 import snap_drumMachine from "./snaps/drum-machine/index.js";
 import snap_duoDoSongQuiz from "./snaps/duo-do-song-quiz/index.js";
 import snap_energyReading from "./snaps/energy-reading/index.js";
+import snap_flappyBird from "./snaps/flappy-bird/index.js";
 import snap_followKayonfire from "./snaps/follow-kayonfire/index.js";
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
 import snap_loudLinks from "./snaps/loud-links/index.js";
@@ -30,6 +31,7 @@ export const snaps: Record<string, Hono> = {
   "drum-machine": snap_drumMachine,
   "duo-do-song-quiz": snap_duoDoSongQuiz,
   "energy-reading": snap_energyReading,
+  "flappy-bird": snap_flappyBird,
   "follow-kayonfire": snap_followKayonfire,
   "hello-farcaster": snap_helloFarcaster,
   "loud-links": snap_loudLinks,
