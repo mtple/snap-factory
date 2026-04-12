@@ -26,6 +26,7 @@ import snap_snapathon from "./snaps/snapathon/index.js";
 import snap_stumble from "./snaps/stumble/index.js";
 import snap_ticTacToe from "./snaps/tic-tac-toe/index.js";
 import snap_vibeCheck from "./snaps/vibe-check/index.js";
+import snap_wizardTrivia from "./snaps/wizard-trivia/index.js";
 
 export const snaps: Record<string, Hono> = {
   "creature-summoner": snap_creatureSummoner,
@@ -51,4 +52,5 @@ export const snaps: Record<string, Hono> = {
   "stumble": snap_stumble,
   "tic-tac-toe": snap_ticTacToe,
   "vibe-check": snap_vibeCheck,
+  "wizard-trivia": snap_wizardTrivia,
 };
