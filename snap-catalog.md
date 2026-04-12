@@ -28,11 +28,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 16 | duo-do-song-quiz | "Which Dúo Dø song are you?" — 3-page mood quiz matching users to a song from the Tortoise catalog. Built for @duodomusica. | /snaps/duo-do-song-quiz | 0xc88ad2e025c67bc63209a5d123cc8588d75100be | 2026-04-12 | quiz, toggle_group, open_url, multi-page, stateless, pink, music, event-mode, tortoise |
 | 17 | rug-floor-is-lava | Crypto survival platformer — jump platforms as red candle lava rises from the floor, HODL = instant death. Built for @sugarz.eth. | /snaps/rug-floor-is-lava | 0xd4e3c98e6e54a67ff48016c41728d2c5ef6265a0 | 2026-04-12 | game, cell_grid, submit, multi-page, stateless, red, crypto, event-mode, compose_cast |
 | 18 | flappy-bird | Flappy Bird — tap to flap, survive the pipes. Fully stateless, state encoded in URL params. Built for @andrewrose. | /snaps/flappy-bird | 0x42350ce21344ed4a054d84f275da3aaff8065ff3 | 2026-04-12 | game, cell_grid, submit, stateless, amber, event-mode |
+| 19 | tic-tac-toe | Tic-tac-toe with vs AI (minimax, unbeatable) or Pass & Play modes. Stateless, state URL-encoded. Built for @kruukruu. | /snaps/tic-tac-toe | 0xead3c1044fca48ee41354335a5026b367d84f8a0 | 2026-04-12 | game, button, toggle_group, submit, stateless, blue, ai, event-mode |
 
 ## Stats
 
-- Total snaps built: 18
-- Live snaps: 18
+- Total snaps built: 19
+- Live snaps: 19
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

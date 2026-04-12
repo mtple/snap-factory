@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "tic-tac-toe",
+      "cast_hash": "0xead3c1044fca48ee41354335a5026b367d84f8a0",
+      "posted_at": "2026-04-12T05:55:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["game", "button", "toggle_group", "submit", "stateless", "blue", "ai", "event-mode"]
+    },
+    {
       "name": "flappy-bird",
       "cast_hash": "0x42350ce21344ed4a054d84f275da3aaff8065ff3",
       "posted_at": "2026-04-12T03:00:00Z",
