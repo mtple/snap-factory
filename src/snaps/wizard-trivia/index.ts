@@ -134,19 +134,19 @@ const QUESTIONS: Question[] = [
   },
   {
     q: "What is 'proof of work'?",
-    options: ["Staking tokens as collateral", "Solving puzzles to validate blocks", "A KYC process", "A DAO vote mechanism"],
+    options: ["Staking tokens as collateral", "Solve hash puzzles, mint blocks", "A KYC process", "A DAO vote mechanism"],
     correct: 1,
     fact: "PoW = miners compete to solve hash puzzles. Bitcoin uses it.",
   },
   {
     q: "What does 'airdrop' mean in crypto?",
-    options: ["Token price crash", "Free tokens distributed", "A hardware wallet attack", "Sending tokens to a burn address"],
+    options: ["Token price crash", "Free tokens distributed", "A hardware wallet attack", "Send tokens to burn address"],
     correct: 1,
     fact: "Airdrops distribute free tokens, often as a reward or launch.",
   },
   {
     q: "What is a 'seed phrase'?",
-    options: ["A trading signal", "Words that recover your wallet", "A smart contract function", "An NFT metadata field"],
+    options: ["A trading signal", "Words that restore your wallet", "A smart contract function", "An NFT metadata field"],
     correct: 1,
     fact: "Your seed phrase (12-24 words) is the master key to your wallet.",
   },
@@ -281,10 +281,10 @@ function renderQuestion(
     props: {
       name: "answer",
       label: "Pick your answer",
-      options: question.options.map((o, i) => ({ label: o, value: String(i) })),
+      options: [...question.options],
       orientation: "vertical",
       variant: "outline",
-      defaultValue: "0",
+      defaultValue: question.options[0],
     },
   };
   elements["submit_btn"] = {
@@ -446,10 +446,10 @@ registerSnapHandler(app, async (ctx) => {
     return renderQuestion(question, dayIndex, true, self);
   }
 
-  // Parse chosen answer index
+  // Parse chosen answer — toggle_group returns the selected option string
   const rawAnswer = ctx.action.inputs?.["answer"] as string | undefined;
-  const parsed = rawAnswer !== undefined ? parseInt(rawAnswer, 10) : 0;
-  const chosenIdx = ([0, 1, 2, 3].includes(parsed) ? parsed : 0) as 0 | 1 | 2 | 3;
+  const foundIdx = rawAnswer !== undefined ? question.options.indexOf(rawAnswer) : -1;
+  const chosenIdx = (foundIdx >= 0 ? foundIdx : 0) as 0 | 1 | 2 | 3;
 
   const isCorrect = chosenIdx === question.correct;
 
