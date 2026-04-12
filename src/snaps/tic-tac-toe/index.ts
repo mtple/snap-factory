@@ -1,6 +1,6 @@
 /**
  * tic-tac-toe — classic grid game with two modes:
- *   vs AI (plays randomly, very beatable) or Pass & Play (two humans, one device).
+ *   vs AI (wins if it can, blocks if it must, otherwise random) or Pass & Play (two humans, one device).
  *
  * State is fully URL-encoded — no Turso needed. Every button embeds the
  * entire game state in its submit target URL, so each request is stateless.
@@ -49,14 +49,40 @@ function checkResult(board: string[]): "X" | "O" | "draw" | null {
   return null;
 }
 
-// ── Bad AI — picks a random empty cell ───────────────────────────────────
+// ── AI — wins if possible, blocks if needed, otherwise random ────────────
 
-function badAIMove(board: string[]): number {
+/** Return the index of a winning move for `player`, or -1 if none. */
+function findWinningMove(board: string[], player: string): number {
+  for (const [a, b, c] of WIN_LINES) {
+    const cells = [board[a], board[b], board[c]];
+    const emptyCount = cells.filter((v) => v === ".").length;
+    const playerCount = cells.filter((v) => v === player).length;
+    if (playerCount === 2 && emptyCount === 1) {
+      const emptyIdx = [a, b, c][cells.indexOf(".")];
+      return emptyIdx;
+    }
+  }
+  return -1;
+}
+
+function aiMove(board: string[]): number {
   const empties = board
     .map((v, i) => (v === "." ? i : -1))
     .filter((i) => i >= 0);
   if (empties.length === 0) return -1;
-  // Truly random — pick any empty cell with equal probability
+
+  // 1. Take a winning move
+  const win = findWinningMove(board, "O");
+  if (win >= 0) return win;
+
+  // 2. Block the human's winning move
+  const block = findWinningMove(board, "X");
+  if (block >= 0) return block;
+
+  // 3. Prefer center
+  if (board[4] === ".") return 4;
+
+  // 4. Random from remaining
   return empties[Math.floor(Math.random() * empties.length)];
 }
 
@@ -131,7 +157,7 @@ function renderMenu(self: string): SnapHandlerResult {
         subtitle: {
           type: "text",
           props: {
-            content: "Classic 3×3. The AI is not very smart.",
+            content: "Classic 3×3. The AI will block you. Still beatable.",
             size: "sm",
             align: "center",
           },
@@ -351,9 +377,9 @@ registerSnapHandler(app, async (ctx) => {
 
       const nextTurn = turn === "X" ? "O" : "X";
 
-      // AI takes its turn immediately (random move — very beatable)
+      // AI takes its turn immediately
       if (mode === "ai" && nextTurn === "O") {
-        const aiIdx = badAIMove([...board]);
+        const aiIdx = aiMove([...board]);
         if (aiIdx >= 0 && aiIdx < 9) {
           board[aiIdx] = "O";
           const aiResult = checkResult(board);
