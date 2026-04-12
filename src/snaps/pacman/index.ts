@@ -241,7 +241,7 @@ function renderPlaying(state: GameState, self: string): SnapHandlerResult {
         page: {
           type: "stack",
           props: { direction: "vertical", gap: "sm" },
-          children: ["hud", "grid", "controls", "new_btn"],
+          children: ["hud", "grid", "controls", "new_btn", "share_btn"],
         },
         hud: {
           type: "text",
@@ -291,6 +291,16 @@ function renderPlaying(state: GameState, self: string): SnapHandlerResult {
           props: { label: "New game", variant: "secondary" },
           on: { press: { action: "submit", params: { target: `${self}?dir=new` } } },
         },
+        share_btn: {
+          type: "button",
+          props: { label: "Share", variant: "secondary" },
+          on: {
+            press: {
+              action: "compose_cast",
+              params: { text: "playing pac-man on @freeturtle", embeds: [self] },
+            },
+          },
+        },
       },
     },
   };
@@ -308,7 +318,7 @@ function renderEndScreen(state: GameState, self: string): SnapHandlerResult {
         end_page: {
           type: "stack",
           props: { direction: "vertical", gap: "lg", justify: "center" },
-          children: ["title", "score_text", "grid", "play_btn"],
+          children: ["title", "score_text", "grid", "play_btn", "share_btn"],
         },
         title: {
           type: "text",
@@ -339,6 +349,21 @@ function renderEndScreen(state: GameState, self: string): SnapHandlerResult {
           type: "button",
           props: { label: "Play again", variant: "primary" },
           on: { press: { action: "submit", params: { target: `${self}?dir=new` } } },
+        },
+        share_btn: {
+          type: "button",
+          props: { label: "Share", variant: "secondary" },
+          on: {
+            press: {
+              action: "compose_cast",
+              params: {
+                text: isWon
+                  ? `just cleared pac-man on @freeturtle — score: ${state.score}`
+                  : `just played pac-man on @freeturtle — score: ${state.score}`,
+                embeds: [self],
+              },
+            },
+          },
         },
       },
     },
