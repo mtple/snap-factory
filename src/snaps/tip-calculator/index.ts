@@ -1,7 +1,7 @@
 /**
  * tip-calculator — enter a bill, pick your tip % and how many people, get the split.
  *
- * Two-page snap: form → result.
+ * Three-page snap: form → confirm (shows chosen values) → result.
  * Stateless — all math happens server-side on POST.
  *
  * Components: text, input, slider (x2), button, item_group, item, separator
@@ -22,12 +22,14 @@ type Elements = Record<string, SnapElementInput>;
 // ── Page 1: input form ────────────────────────────────────────────────────
 
 function renderForm(errorMsg?: string): SnapHandlerResult {
-  const children = ["title", "subtitle", "sep", "bill", "tip_pct", "split_count", "calc_btn", "share_btn"];
+  const baseChildren = ["title", "subtitle", "sep", "bill", "tip_pct", "split_count", "calc_btn", "share_btn"];
   const elements: Elements = {
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "md" },
-      children: errorMsg ? ["title", "subtitle", "sep", "err_msg", "bill", "tip_pct", "split_count", "calc_btn", "share_btn"] : children,
+      children: errorMsg
+        ? ["title", "subtitle", "sep", "err_msg", "bill", "tip_pct", "split_count", "calc_btn", "share_btn"]
+        : baseChildren,
     },
     title: {
       type: "text",
@@ -52,7 +54,7 @@ function renderForm(errorMsg?: string): SnapHandlerResult {
       type: "slider",
       props: {
         name: "tip_pct",
-        label: "Tip percentage (0–30%)",
+        label: "Tip percentage (0–30%, default 18%)",
         min: 0,
         max: 30,
         step: 1,
@@ -63,7 +65,7 @@ function renderForm(errorMsg?: string): SnapHandlerResult {
       type: "slider",
       props: {
         name: "split_count",
-        label: "Split between (1–8 people)",
+        label: "Split between (1–8 people, default 1)",
         min: 1,
         max: 8,
         step: 1,
@@ -109,7 +111,87 @@ function renderForm(errorMsg?: string): SnapHandlerResult {
   };
 }
 
-// ── Page 2: result ────────────────────────────────────────────────────────
+// ── Page 2: confirm — shows chosen values before calculating ──────────────
+
+function renderConfirm(
+  bill: number,
+  tipPct: number,
+  split: number,
+  self: string,
+): SnapHandlerResult {
+  const tipAmt = bill * (tipPct / 100);
+
+  const elements: Elements = {
+    page: {
+      type: "stack",
+      props: { direction: "vertical", gap: "md" },
+      children: ["title", "subtitle", "sep", "confirm_group", "sep2", "calc_btn", "edit_btn"],
+    },
+    title: {
+      type: "text",
+      props: { content: "Confirm your split", weight: "bold" },
+    },
+    subtitle: {
+      type: "text",
+      props: { content: "Does this look right?", size: "sm" },
+    },
+    sep: { type: "separator", props: {} },
+    bill_item: {
+      type: "item",
+      props: { title: "Bill total", description: `$${bill.toFixed(2)}` },
+    },
+    tip_item: {
+      type: "item",
+      props: {
+        title: "Tip",
+        description: `${tipPct}% = $${tipAmt.toFixed(2)}`,
+      },
+    },
+    split_item: {
+      type: "item",
+      props: {
+        title: "Splitting between",
+        description: `${split} ${split === 1 ? "person" : "people"}`,
+      },
+    },
+    confirm_group: {
+      type: "item_group",
+      props: {},
+      children: ["bill_item", "tip_item", "split_item"],
+    },
+    sep2: { type: "separator", props: {} },
+    calc_btn: {
+      type: "button",
+      props: { label: "Calculate →", variant: "primary" },
+      on: {
+        press: {
+          action: "submit",
+          params: {
+            target: `${self}?phase=result&bill=${bill}&tip=${tipPct}&split=${split}`,
+          },
+        },
+      },
+    },
+    edit_btn: {
+      type: "button",
+      props: { label: "← Edit", variant: "secondary" },
+      on: {
+        press: {
+          action: "submit",
+          params: { target: self },
+        },
+      },
+    },
+  };
+
+  return {
+    version: "1.0",
+    theme: { accent: "teal" },
+    ui: { root: "page", elements },
+  };
+}
+
+// ── Page 3: result ────────────────────────────────────────────────────────
 
 function renderResult(
   bill: number,
@@ -133,13 +215,11 @@ function renderResult(
       ? `split ${split} ways: ${splitLabel} — calculated with @freeturtle's tip calculator`
       : `total with ${tipPct}% tip: ${fmt(total)} — @freeturtle's tip calculator`;
 
-  const pageChildren = ["title", "sep", "result_group", "sep2", "recalc_btn", "share_btn"];
-
   const elements: Elements = {
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "md" },
-      children: pageChildren,
+      children: ["title", "sep", "result_group", "sep2", "recalc_btn", "share_btn"],
     },
     title: {
       type: "text",
@@ -210,8 +290,10 @@ function renderResult(
 
 registerSnapHandler(app, async (ctx) => {
   const self = snapUrl(ctx.request, SNAP_NAME);
+  const url = new URL(ctx.request.url);
+  const p = url.searchParams;
 
-  // Patch self into the form's button targets (needed for submit + compose_cast)
+  // Patch self into the form's button targets
   function makeForm(errorMsg?: string): SnapHandlerResult {
     const snap = renderForm(errorMsg);
     const els = snap.ui.elements as Elements;
@@ -225,7 +307,25 @@ registerSnapHandler(app, async (ctx) => {
     return makeForm();
   }
 
-  // POST: check if any form fields were submitted
+  // POST — check phase param on the URL
+  const phase = p.get("phase");
+
+  // Phase: result — show results (coming from confirm page)
+  if (phase === "result") {
+    const bill = parseFloat(p.get("bill") ?? "0");
+    const tipPct = parseInt(p.get("tip") ?? "18", 10);
+    const split = parseInt(p.get("split") ?? "1", 10);
+
+    if (!isNaN(bill) && bill > 0) {
+      const safeTip = Math.max(0, Math.min(30, tipPct));
+      const safeSplit = Math.max(1, Math.min(8, split));
+      return renderResult(bill, safeTip, safeSplit, self);
+    }
+    // Fallback if params missing
+    return makeForm();
+  }
+
+  // No phase: form submitted — validate and go to confirm
   const inputs = ctx.action.inputs ?? {};
   const billRaw = inputs["bill"] as string | undefined;
 
@@ -247,7 +347,8 @@ registerSnapHandler(app, async (ctx) => {
   const safeTip = Math.max(0, Math.min(30, tipPct));
   const safeSplit = Math.max(1, Math.min(8, split));
 
-  return renderResult(bill, safeTip, safeSplit, self);
+  // Show confirm page with chosen values
+  return renderConfirm(bill, safeTip, safeSplit, self);
 });
 
 export default app;

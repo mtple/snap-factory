@@ -1,6 +1,6 @@
 /**
  * tic-tac-toe — classic grid game with two modes:
- *   vs AI (minimax, never loses) or Pass & Play (two humans, one device).
+ *   vs AI (plays randomly, very beatable) or Pass & Play (two humans, one device).
  *
  * State is fully URL-encoded — no Turso needed. Every button embeds the
  * entire game state in its submit target URL, so each request is stateless.
@@ -49,52 +49,15 @@ function checkResult(board: string[]): "X" | "O" | "draw" | null {
   return null;
 }
 
-// ── Minimax AI ───────────────────────────────────────────────────────────
+// ── Bad AI — picks a random empty cell ───────────────────────────────────
 
-function minimax(board: string[], depth: number, isMaximizing: boolean): number {
-  const result = checkResult(board);
-  if (result === "O") return 10 - depth; // AI wins
-  if (result === "X") return depth - 10; // Human wins
-  if (result === "draw") return 0;
-
+function badAIMove(board: string[]): number {
   const empties = board
     .map((v, i) => (v === "." ? i : -1))
     .filter((i) => i >= 0);
-
-  if (isMaximizing) {
-    let best = -Infinity;
-    for (const i of empties) {
-      board[i] = "O";
-      best = Math.max(best, minimax(board, depth + 1, false));
-      board[i] = ".";
-    }
-    return best;
-  } else {
-    let best = Infinity;
-    for (const i of empties) {
-      board[i] = "X";
-      best = Math.min(best, minimax(board, depth + 1, true));
-      board[i] = ".";
-    }
-    return best;
-  }
-}
-
-function bestAIMove(board: string[]): number {
-  let best = -Infinity;
-  let bestIdx = board.indexOf("."); // fallback: first empty cell
-  for (let i = 0; i < 9; i++) {
-    if (board[i] === ".") {
-      board[i] = "O";
-      const score = minimax(board, 0, false);
-      board[i] = ".";
-      if (score > best) {
-        best = score;
-        bestIdx = i;
-      }
-    }
-  }
-  return bestIdx;
+  if (empties.length === 0) return -1;
+  // Truly random — pick any empty cell with equal probability
+  return empties[Math.floor(Math.random() * empties.length)];
 }
 
 // ── Rendering helpers ─────────────────────────────────────────────────────
@@ -168,7 +131,7 @@ function renderMenu(self: string): SnapHandlerResult {
         subtitle: {
           type: "text",
           props: {
-            content: "Classic 3×3. First to three in a row wins.",
+            content: "Classic 3×3. The AI is not very smart.",
             size: "sm",
             align: "center",
           },
@@ -284,8 +247,8 @@ function renderDone(
       ? "It's a draw!"
       : mode === "ai"
         ? result === "X"
-          ? "You win! 🎉"
-          : "AI wins."
+          ? "You beat the AI! 🎉"
+          : "AI wins. Somehow."
         : `${result} wins!`;
 
   elements["title"] = {
@@ -317,7 +280,7 @@ function renderDone(
             result === "draw"
               ? "just drew a tic-tac-toe game on @freeturtle"
               : mode === "ai" && result === "X"
-                ? "just beat the AI at tic-tac-toe on @freeturtle"
+                ? "just beat the AI at tic-tac-toe on @freeturtle 🎉"
                 : "playing tic-tac-toe on @freeturtle",
           embeds: [self],
         },
@@ -388,9 +351,9 @@ registerSnapHandler(app, async (ctx) => {
 
       const nextTurn = turn === "X" ? "O" : "X";
 
-      // AI takes its turn immediately
+      // AI takes its turn immediately (random move — very beatable)
       if (mode === "ai" && nextTurn === "O") {
-        const aiIdx = bestAIMove([...board]);
+        const aiIdx = badAIMove([...board]);
         if (aiIdx >= 0 && aiIdx < 9) {
           board[aiIdx] = "O";
           const aiResult = checkResult(board);
