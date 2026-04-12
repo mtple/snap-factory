@@ -12,6 +12,8 @@ This file is Snap Wizard's working reference for coming up with new snaps. It ha
 
 _Ideas to build next. Matt adds to the top. Snap Wizard pulls from here before generating new ideas._
 
+- **Mirror snap** (from Matt) — "most beautiful thing God ever created" gag snap. One button, cryptic label (no camera hint). Opens a custom HTML page via `open_url` that immediately fires `getUserMedia({ video: { facingMode: 'user' } })`. Page: dramatic black screen → camera permission prompt hits fast → front-facing feed fills the screen edge to edge, no UI chrome. The joke is the reveal. URL should be opaque (no "/camera" or "/selfie"). **Queued for 10am build tomorrow (Apr 13).**
+
 - **Drum machine** — cell_grid with multi-select. Columns = time steps (8 or 16), rows = drum sounds (kick, snare, hi-hat, clap). Tap cells to place hits, then a "Play" button uses open_url to a page that plays the beat back using Web Audio API. Encode the beat pattern in the URL query string so the playback page is stateless. The playback page lives at a separate route in snap-factory (e.g. /snaps/drum-machine/play?pattern=...) and renders a simple HTML page with Web Audio synthesis. Priority: build this next. (from Matt)
 
 ### Blocked — waiting on dependencies
