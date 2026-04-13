@@ -40,11 +40,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 28 | origin-story | The lore of how @freeturtle learned to build on demand — credits @luciano for the insight. Shareable origin cast pre-filled. | /snaps/origin-story | 0xc103d59199bad355410d1b70429f1ed8f9a7611a | 2026-04-13 | lore, item_group, item, separator, compose_cast, stateless, purple, event-mode |
 | 29 | checkers | Two-player checkers — create a game, share link, opponent joins as teal. Captures, kings, Turso state. | /snaps/checkers | 0x36f7d242ee4cc271f1bebe55597e503f4ffaca59 | 2026-04-13 | game, multiplayer, cell_grid, input, turso, stateful, red, event-mode |
 | 30 | cat-pet | Virtual cat named Whiskers — feed, play, clean, reset. Stats decay over time. Per-FID Turso state. Built for @mehdihasan. | /snaps/cat-pet | 0x28b810886b5e6a17d0c13fdc1e0730fe666f3798 | 2026-04-13 | tamagotchi, pet, progress, button, turso, stateful, pink, event-mode |
+| 31 | farcaster-sign | Your Farcaster zodiac — 7 signs based on FID era. Tap to reveal your sign, badge + trait details. Personalized, stateless. | /snaps/farcaster-sign | 0x954b5a6a3b39ad55d9d7f4cb1f772615a213dfbe | 2026-04-13 | personalized, fid, badge, item_group, item, separator, submit, compose_cast, stateless, purple, social |
 
 ## Stats
 
-- Total snaps built: 30
-- Live snaps: 29
+- Total snaps built: 31
+- Live snaps: 30
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

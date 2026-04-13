@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "farcaster-sign",
+      "cast_hash": "0x954b5a6a3b39ad55d9d7f4cb1f772615a213dfbe",
+      "posted_at": "2026-04-13T22:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["personalized", "fid", "badge", "item_group", "separator", "submit", "compose_cast", "stateless", "social"]
+    },
+    {
       "name": "cat-pet",
       "cast_hash": "0x28b810886b5e6a17d0c13fdc1e0730fe666f3798",
       "posted_at": "2026-04-13T20:15:00Z",
