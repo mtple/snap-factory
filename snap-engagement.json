@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "would-you-rather",
+      "cast_hash": "0x906d2979283164b705c321692e0f3b9945fc8306",
+      "posted_at": "2026-04-13T10:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["poll", "toggle_group", "bar_chart", "compose_cast", "stateful", "turso", "green", "daily"]
+    },
+    {
       "name": "random-fc-pic",
       "cast_hash": "(event-mode reply)",
       "posted_at": "2026-04-13T07:05:00Z",
