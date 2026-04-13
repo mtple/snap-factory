@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x3e1dfef93604efa0b34c3e2852b344b83959755b",
+      "author_fid": 1059075,
+      "author_username": "sugarz.eth",
+      "author_display_name": "Sugarz",
+      "text": "maintaining my virtual house on @freeturtle health: 100/100",
+      "parent_hash": null,
+      "received_at": "2026-04-13T04:12:02.389Z",
+      "user_score": 0.9,
+      "status": "replied",
+      "processed_at": "2026-04-13T04:20:00.000Z",
+      "reply_hash": "0xcb2ea1fc4a6ea38fa13e3500e3174601c672371b"
+    },
+    {
       "cast_hash": "0xc7a6d37c32dcab17abf6442340b05ebb903465a5",
       "author_fid": 11984,
       "author_username": "chamaquito.eth",
