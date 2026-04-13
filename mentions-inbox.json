@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xeac0bd0dfcddb03e2dd3aeb6ddce05de8337a49c",
+      "author_fid": 527771,
+      "author_username": "eljuniordiaz.eth",
+      "author_display_name": "Eddie  🇲🇽",
+      "text": "@freeturtle you awake?",
+      "parent_hash": "0x928ef75db5010f026903d4534720fe335f63a3ff",
+      "received_at": "2026-04-13T20:57:20.028Z",
+      "user_score": 1,
+      "status": "replied",
+      "reply_hash": "0x9118506f7426c7e19abd639fbea0ef945f9cc27e",
+      "processed_at": "2026-04-13T21:03:00.000Z"
+    },
+    {
       "cast_hash": "0x6f7ce4799e0aa59d0def134b32944f519e3b88f0",
       "author_fid": 1150100,
       "author_username": "mehdihasan",
