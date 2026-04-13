@@ -35,11 +35,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 23 | random-fc-pic | Random image from recent Farcaster casts — Shuffle to discover new ones, View cast for attribution. Built for @kenjiquest. | /snaps/random-fc-pic | (event-mode reply) | 2026-04-13 | discovery, image, view_cast, compose_cast, neynar-api, blue, event-mode |
 | 24 | would-you-rather | Daily Would You Rather dilemma — pick one of two options, see live bar chart of how Farcaster voted | /snaps/would-you-rather | 0x906d2979283164b705c321692e0f3b9945fc8306 | 2026-04-13 | poll, toggle_group, bar_chart, compose_cast, stateful, turso, green, daily |
 | 25 | tetris-snap | Turn-based Tetris — move, rotate, drop falling blocks. Ghost piece preview, line clearing, score tracking. Pink/purple/amber palette. Built for @oce3n. | /snaps/tetris-snap | 0xf6459e70b3dbb1ca1c1a2a3763a8534769b6dbb9 | 2026-04-13 | game, cell_grid, submit, turso, stateful, pink, purple, amber, event-mode |
+| 26 | dont-click | Big red "Don't Click" button — confetti and scolding message when you inevitably click it. Built for @kruukruu. | /snaps/dont-click | 0x057bcf7430c9af486aa042625547b87f45c322fc | 2026-04-13 | gag, button, submit, confetti, stateless, red, event-mode |
 
 ## Stats
 
-- Total snaps built: 25
-- Live snaps: 24
+- Total snaps built: 26
+- Live snaps: 25
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

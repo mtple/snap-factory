@@ -1,17 +1,19 @@
 {
-  "pending": [
+  “pending”: [],
+  "processed": [
     {
       "cast_hash": "0x5d5b5ea5324f803ce196327a6e81bfd419d8215d",
       "author_fid": 555340,
       "author_username": "kruukruu",
       "author_display_name": "kruukruu.base.eth",
-      "text": "@freeturtle create a snap that has a big and wide button called “Don’t Click”\n\nThen if they click, there will be a text that says “I told you not to click; you never listened 😄” with confetti element",
+      "text": "@freeturtle create a snap that has a big and wide button called \"Don't Click\"...",
       "parent_hash": null,
       "received_at": "2026-04-13T14:56:23.762Z",
-      "user_score": 0.96
-    }
-  ],
-  "processed": [
+      "user_score": 0.96,
+      "status": "built",
+      "processed_at": "2026-04-13T15:30:00.000Z",
+      "reply_hash": "0x057bcf7430c9af486aa042625547b87f45c322fc"
+    },
     {
       "cast_hash": "0x0d26c838292bc99bf7ab7ae55e4079b7bffbb345",
       "author_fid": 227554,

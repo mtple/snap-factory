@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "dont-click",
+      "cast_hash": "0x057bcf7430c9af486aa042625547b87f45c322fc",
+      "posted_at": "2026-04-13T15:30:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["gag", "button", "submit", "confetti", "stateless", "red", "event-mode"]
+    },
+    {
       "name": "tetris-snap",
       "cast_hash": "0xf6459e70b3dbb1ca1c1a2a3763a8534769b6dbb9",
       "posted_at": "2026-04-13T15:00:00Z",
