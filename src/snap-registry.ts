@@ -16,6 +16,7 @@ import snap_followKayonfire from "./snaps/follow-kayonfire/index.js";
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
 import snap_loudLinks from "./snaps/loud-links/index.js";
 import snap_meetSnapWizard from "./snaps/meet-snap-wizard/index.js";
+import snap_monaLisa from "./snaps/mona-lisa/index.js";
 import snap_mvrShowcase from "./snaps/mvr-showcase/index.js";
 import snap_natalChart from "./snaps/natal-chart/index.js";
 import snap_natalChartV2 from "./snaps/natal-chart-v2/index.js";
@@ -49,6 +50,7 @@ export const snaps: Record<string, Hono> = {
   "hello-farcaster": snap_helloFarcaster,
   "loud-links": snap_loudLinks,
   "meet-snap-wizard": snap_meetSnapWizard,
+  "mona-lisa": snap_monaLisa,
   "mvr-showcase": snap_mvrShowcase,
   "natal-chart": snap_natalChart,
   "natal-chart-v2": snap_natalChartV2,
