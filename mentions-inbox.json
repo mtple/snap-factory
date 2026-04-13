@@ -1,24 +1,31 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x11fea0a183e7fb3867afd5dee87604cc46179456",
       "author_fid": 3316638,
       "author_username": "qualitycont3138",
       "author_display_name": "QualityControlAce✅",
-      "text": "@freeturtle 💰 Airdrop alert friends! 🎉\n💰 Grab the event prize directly via the App. FCFS.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
+      "text": "@freeturtle airdrop spam",
       "parent_hash": "0xca973ee5fde639faf10e63e1469098fc7dfea996",
       "received_at": "2026-04-13T17:29:57.591Z",
-      "user_score": 0.39
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-04-13T17:50:00.000Z",
+      "note": "spam — airdrop scam bot with suspicious link"
     },
     {
       "cast_hash": "0x0795cf76ff5999bb69ba664e1dbc3230cb955ea7",
       "author_fid": 3316576,
       "author_username": "cryptoking9504",
       "author_display_name": "CryptoKing🔥",
-      "text": "@freeturtle 🔔 Major update for all users! 📈\n📲 Hunt down this massive bonus in the attached Mini-App. For a short time.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
+      "text": "@freeturtle airdrop spam",
       "parent_hash": "0xca973ee5fde639faf10e63e1469098fc7dfea996",
       "received_at": "2026-04-13T17:30:14.796Z",
-      "user_score": 0.41
+      "user_score": 0.41,
+      "status": "skipped",
+      "processed_at": "2026-04-13T17:50:00.000Z",
+      "note": "spam — airdrop scam bot with suspicious link"
     },
     {
       "cast_hash": "0x813bd40902493e312fd7a39d5805b31197ef1a24",
@@ -28,7 +35,11 @@
       "text": "@freeturtle its just a blank square I don't see the mona lisa",
       "parent_hash": "0xb266efd6d87a3b4454f782625946638e87cfc832",
       "received_at": "2026-04-13T17:30:52.215Z",
-      "user_score": 0.98
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_hash": "0x5a122eb8849a40ddc740482ee728818344a3494c",
+      "processed_at": "2026-04-13T17:45:00.000Z",
+      "note": "bug fix 1: cell_grid cells were a Record (wrong format) instead of array of {row,col,color}"
     },
     {
       "cast_hash": "0xc786869fd01cc9e823bf05664048950fb7c3f505",
@@ -38,10 +49,12 @@
       "text": "@freeturtle I don't see the mona lisa its just a uniform orange grid",
       "parent_hash": "0x5a122eb8849a40ddc740482ee728818344a3494c",
       "received_at": "2026-04-13T17:34:56.112Z",
-      "user_score": 0.98
-    }
-  ],
-  "processed": [
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_hash": "0x0fcb8737807191d7b10e3d373f0e3770cbc3ba1f",
+      "processed_at": "2026-04-13T17:50:00.000Z",
+      "note": "bug fix 2: cell_grid does NOT accept hex colors — only named palette colors. rewrote with 8 named palette colors"
+    },
     {
       "cast_hash": "0xb85eccf4341369ddbccd00f8ea701cc5f9ac69a6",
       "author_fid": 227554,
@@ -54,7 +67,7 @@
       "status": "built",
       "reply_hash": "0xca973ee5fde639faf10e63e1469098fc7dfea996",
       "processed_at": "2026-04-13T17:35:00.000Z",
-      "note": "used existing tetris-snap (already deployed). posted root cast in /snaps tagging @oce3n"
+      "note": "used existing tetris-snap. posted root cast in /snaps tagging @oce3n"
     },
     {
       "cast_hash": "0x54780a7e1366cd04f1eefc8d6947d2781862a76a",
@@ -68,7 +81,7 @@
       "status": "built",
       "reply_hash": "0xb266efd6d87a3b4454f782625946638e87cfc832",
       "processed_at": "2026-04-13T17:00:00.000Z",
-      "note": "built mona-lisa snap — 32x16 cell_grid pixel art portrait, sfumato palette, no images"
+      "note": "built mona-lisa snap — 32x16 cell_grid pixel art portrait"
     },
     {
       "cast_hash": "0xd3aff643b1c516b526d5baf5dc87352e41251d16",
@@ -82,7 +95,7 @@
       "status": "built",
       "reply_hash": "0xc103d59199bad355410d1b70429f1ed8f9a7611a",
       "processed_at": "2026-04-13T17:10:00.000Z",
-      "note": "built origin-story snap — lore snap crediting @luciano with shareable compose_cast"
+      "note": "built origin-story snap"
     },
     {
       "cast_hash": "0x997730c58fa97d74f2b4218e01380826cf8be827",
@@ -159,7 +172,7 @@
       "status": "built",
       "reply_hash": "0xa21da8b34c619fec1c2c08320eb64fd148953b4d",
       "processed_at": "2026-04-13T16:35:00.000Z",
-      "note": "used existing tetris-snap (already deployed). posted root cast in /snaps tagging @nounishprof"
+      "note": "used existing tetris-snap. posted root cast in /snaps tagging @nounishprof"
     },
     {
       "cast_hash": "0x714961b7e9d3f320e455a9dafc4f3731e45b7966",
