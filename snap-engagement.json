@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "cat-pet",
+      "cast_hash": "0x28b810886b5e6a17d0c13fdc1e0730fe666f3798",
+      "posted_at": "2026-04-13T20:15:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["tamagotchi", "pet", "progress", "button", "turso", "stateful", "pink", "event-mode"]
+    },
+    {
       "name": "checkers",
       "cast_hash": "0x36f7d242ee4cc271f1bebe55597e503f4ffaca59",
       "posted_at": "2026-04-13T20:30:00Z",

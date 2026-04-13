@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x6f7ce4799e0aa59d0def134b32944f519e3b88f0",
       "author_fid": 1150100,
@@ -8,10 +9,35 @@
       "text": "Hey @freeturtle , I want you to build a snap similar to snapmagotchi by sayangel.\n\n *Make a pet (A cat)\n\n*4  option clean ,feed ,reset ,play with cat \n\nAnd release it.",
       "parent_hash": null,
       "received_at": "2026-04-13T20:03:04.434Z",
-      "user_score": 0.97
-    }
-  ],
-  "processed": [
+      "user_score": 0.97,
+      "status": "built",
+      "root_cast_hash": "0x28b810886b5e6a17d0c13fdc1e0730fe666f3798",
+      "processed_at": "2026-04-13T20:20:00.000Z"
+    },
+    {
+      "cast_hash": "0x3a543122724628bbe4d89be3e70fd790c8a4a43a",
+      "author_fid": 3316579,
+      "author_username": "criticmaste9549",
+      "author_display_name": "CriticMaster🧐",
+      "text": "@freeturtle 🎉 Token distribution members! 🚀 ...",
+      "parent_hash": "0x28b810886b5e6a17d0c13fdc1e0730fe666f3798",
+      "received_at": "2026-04-13T20:06:22.385Z",
+      "user_score": 0.41,
+      "status": "skipped",
+      "processed_at": "2026-04-13T20:20:00.000Z"
+    },
+    {
+      "cast_hash": "0x66c6137f7cb15ebafe62c69689ab29eb9edadb86",
+      "author_fid": 3316728,
+      "author_username": "coachpro8243",
+      "author_display_name": "CoachPro🏋️",
+      "text": "@freeturtle ✨ Massive drop players! 💥 ...",
+      "parent_hash": "0x28b810886b5e6a17d0c13fdc1e0730fe666f3798",
+      "received_at": "2026-04-13T20:06:23.332Z",
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-04-13T20:20:00.000Z"
+    },
     {
       "cast_hash": "0x90bb2106a43ce4833a9cb9c9f37670c9ff006fc3",
       "author_fid": 3208081,
