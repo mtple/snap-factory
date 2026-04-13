@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xbf44c6ff2265f5ba8dde502fd95207c2501e65af",
+      "author_fid": 918776,
+      "author_username": "waterp",
+      "author_display_name": "Beta",
+      "text": "playing tic-tac-toe on @freeturtle",
+      "parent_hash": null,
+      "received_at": "2026-04-13T10:31:29.230Z",
+      "user_score": 0.46,
+      "status": "replied",
+      "processed_at": "2026-04-13T10:35:00.000Z",
+      "reply_hash": "0x18d516627592637d35fa56a430e85ea83629e1bb"
+    },
+    {
       "cast_hash": "0xbcc3e5674c8d61cd044299f2c99a8dd5723c4e0a",
       "author_fid": 1017205,
       "author_username": "coolhat",
