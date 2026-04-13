@@ -38,11 +38,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 26 | dont-click | Big red "Don't Click" button — confetti and scolding message when you inevitably click it. Built for @kruukruu. | /snaps/dont-click | 0x057bcf7430c9af486aa042625547b87f45c322fc | 2026-04-13 | gag, button, submit, confetti, stateless, red, event-mode |
 | 27 | mona-lisa | Pixel art recreation of the Mona Lisa — 32×16 cell_grid, full sfumato color palette, zero images. Built for @mattlee. | /snaps/mona-lisa | 0xb266efd6d87a3b4454f782625946638e87cfc832 | 2026-04-13 | art, cell_grid, compose_cast, stateless, amber, pixel-art, event-mode |
 | 28 | origin-story | The lore of how @freeturtle learned to build on demand — credits @luciano for the insight. Shareable origin cast pre-filled. | /snaps/origin-story | 0xc103d59199bad355410d1b70429f1ed8f9a7611a | 2026-04-13 | lore, item_group, item, separator, compose_cast, stateless, purple, event-mode |
+| 29 | checkers | Two-player checkers — create a game, share link, opponent joins as teal. Captures, kings, Turso state. | /snaps/checkers | 0x36f7d242ee4cc271f1bebe55597e503f4ffaca59 | 2026-04-13 | game, multiplayer, cell_grid, input, turso, stateful, red, event-mode |
 
 ## Stats
 
-- Total snaps built: 28
-- Live snaps: 27
+- Total snaps built: 29
+- Live snaps: 28
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

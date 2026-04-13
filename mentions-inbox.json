@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x928ef75db5010f026903d4534720fe335f63a3ff",
       "author_fid": 527771,
@@ -8,10 +9,39 @@
       "text": "@freeturtle create a snap to play checkers against somebody else where you take turns and choose your opponent from your Farcaster followers.",
       "parent_hash": null,
       "received_at": "2026-04-13T19:45:10.167Z",
-      "user_score": 1
-    }
-  ],
-  "processed": [
+      "user_score": 1,
+      "status": "built",
+      "reply_hash": "0x36f7d242ee4cc271f1bebe55597e503f4ffaca59",
+      "processed_at": "2026-04-13T20:30:00.000Z",
+      "note": "built two-player checkers snap with Turso state, cell_grid board, captures, kings"
+    },
+    {
+      "cast_hash": "0x4dae279b155e5ea4f326a83c5961058e96d1c87f",
+      "author_fid": 3316610,
+      "author_username": "substackkin3669",
+      "author_display_name": "SubstackKing📑",
+      "text": "@freeturtle airdrop spam",
+      "parent_hash": "0x36f7d242ee4cc271f1bebe55597e503f4ffaca59",
+      "received_at": "2026-04-13T19:55:54.968Z",
+      "user_score": 0.41,
+      "status": "skipped",
+      "processed_at": "2026-04-13T20:30:00.000Z",
+      "note": "spam — airdrop scam bot"
+    },
+    {
+      "cast_hash": "0x21ee1097ca71fa321a6e3c30a6154249a39554ab",
+      "author_fid": 3316615,
+      "author_username": "scholarking9583",
+      "author_display_name": "ScholarKing📚",
+      "text": "@freeturtle airdrop spam",
+      "parent_hash": "0x36f7d242ee4cc271f1bebe55597e503f4ffaca59",
+      "received_at": "2026-04-13T19:55:56.900Z",
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-04-13T20:30:00.000Z",
+      "note": "spam — airdrop scam bot"
+    },
+    {
     {
       "cast_hash": "0xa0f6ac8195a2d2c57c6147d9d32ba80dcb9c502d",
       "author_fid": 6591,
