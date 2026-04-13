@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x0d26c838292bc99bf7ab7ae55e4079b7bffbb345",
       "author_fid": 227554,
@@ -8,10 +9,11 @@
       "text": "Hey @freeturtle  please build me a Tetris style game snap with a pink, purple, orange color scheme",
       "parent_hash": null,
       "received_at": "2026-04-13T14:41:32.138Z",
-      "user_score": 0.88
-    }
-  ],
-  "processed": [
+      "user_score": 0.88,
+      "status": "built",
+      "processed_at": "2026-04-13T15:00:00.000Z",
+      "reply_hash": "0xf6459e70b3dbb1ca1c1a2a3763a8534769b6dbb9"
+    },
     {
       "cast_hash": "0xeafca21ecfde8ac04505bfbb5435589b01811087",
       "author_fid": 879602,
