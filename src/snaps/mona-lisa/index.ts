@@ -56,7 +56,9 @@ const C = {
   BG:     "#2d3828",   // general background fill
 };
 
-function buildCells(): Record<string, { color: string }> {
+type CellEntry = { row: number; col: number; color: string };
+
+function buildCells(): CellEntry[] {
   const W = 32, H = 16;
 
   // Initialize full grid with dark background
@@ -221,11 +223,11 @@ function buildCells(): Record<string, { color: string }> {
     }
   }
 
-  // Convert 2D grid to sparse cell_grid format
-  const cells: Record<string, { color: string }> = {};
+  // Convert 2D grid to cell array format: [{ row, col, color }, ...]
+  const cells: CellEntry[] = [];
   for (let r = 0; r < H; r++) {
     for (let c = 0; c < W; c++) {
-      cells[`${r},${c}`] = { color: g[r][c] };
+      cells.push({ row: r, col: c, color: g[r][c] });
     }
   }
   return cells;
