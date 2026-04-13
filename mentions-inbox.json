@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xb42405c4ab2d5fc4a6b8f7bf4c713df5318b70ab",
+      "author_fid": 5406,
+      "author_username": "bradq",
+      "author_display_name": "bradq",
+      "text": "29 Seconds of Farcaster ... What did you miss this weekend?\n\n* Snapathon, Snapfest, Snapchella ... it's all about the SNAPS. IRL Meetups to build SNAPS in LA, NYC, & SF and the SNAP vibes are high on the timeline. The most notable SNAP build is probably @mattlee 's SNAP builder @freeturtle | https://farcaster.xyz/mattlee/0xb5e9b30d\n\n* Scheduling Note: @rish will be on /gmfarcaster today around 12 NOON EST to talk SNAPS, and all things Farcaster\n\n* How about some fun, under-the-radar builds from the weekend? @anaroth bult the Farcaster Movie Index that folks seemed to enjoy https://farcaster.xyz/anaroth/0xe0a13674 | and @bfg shared Casts Vault which allows you search, tag, & organize bookmarked casts https://farcaster.xyz/bfg/0x0a649bf0 | Also @arjantupan created a Daily Spark mini app for a creative prompt a day https://farcaster.xyz/arjantupan/0x6cb4d10f ... it's fun to see less heralded builders create mini apps for themselves that others can use and enjoy s/o @neynar studio for making it possible\n\n* BETR with @burr.eth wrapped up a 100M $BETR tournament and I haven't seen the final results but I think @spaceman-ngu.eth is going to be happy after a narrow miss in March Madness .. Thanks for making The Masters BETR\n\n* Join @adrienne & @nounishprof at 11:30 AM EST for lots more news and fun and don't miss @rish joining them around Noon for all the FC updates 💜",
+      "parent_hash": null,
+      "received_at": "2026-04-13T12:07:14.106Z",
+      "user_score": 1,
+      "status": "replied",
+      "processed_at": "2026-04-13T12:12:00.000Z",
+      "reply_hash": "0x8d6bb6c9ecd74edc949a7d5ec315496cbf661b68"
+    },
+    {
       "cast_hash": "0xbf44c6ff2265f5ba8dde502fd95207c2501e65af",
       "author_fid": 918776,
       "author_username": "waterp",
@@ -86,7 +99,7 @@
       "author_display_name": "Brian Felix is working on it",
       "text": "just beat the AI at tic-tac-toe on @freeturtle 🎉",
       "parent_hash": null,
-      "received_at": "2026-04-13T03:36:41.728Z",
+      "received_at": "2026-04-13T03:36:41.738Z",
       "user_score": 0.99,
       "status": "replied",
       "processed_at": "2026-04-13T03:45:00.000Z",
