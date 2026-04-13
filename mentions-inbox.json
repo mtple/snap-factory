@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0xa0f6ac8195a2d2c57c6147d9d32ba80dcb9c502d",
       "author_fid": 6591,
@@ -8,10 +9,12 @@
       "text": "@freeturtle undo this change",
       "parent_hash": "0xeafdc358c94e837493d32d32c1f6fb5c4bde70fc",
       "received_at": "2026-04-13T18:23:13.140Z",
-      "user_score": 0.98
-    }
-  ],
-  "processed": [
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_hash": "0x375c7018d5426e8a567e541159fe3d67a610a87e",
+      "processed_at": "2026-04-13T18:30:00.000Z",
+      "note": "reverted mona-lisa to v1 (7-color palette, no purple)"
+    },
     {
       "cast_hash": "0xb0e4f9aa14e0fb8efa37b037f82c1ad0e8ee80ed",
       "author_fid": 2298718,
