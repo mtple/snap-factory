@@ -1,6 +1,41 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0x0d26c838292bc99bf7ab7ae55e4079b7bffbb345",
+      "author_fid": 227554,
+      "author_username": "oce3n",
+      "author_display_name": "Ocean",
+      "text": "Hey @freeturtle  please build me a Tetris style game snap with a pink, purple, orange color scheme",
+      "parent_hash": null,
+      "received_at": "2026-04-13T14:41:32.138Z",
+      "user_score": 0.88
+    }
+  ],
   "processed": [
+    {
+      "cast_hash": "0xeafca21ecfde8ac04505bfbb5435589b01811087",
+      "author_fid": 879602,
+      "author_username": "jutta",
+      "author_display_name": "Just Unfolding The True Art",
+      "text": "NFT tip failed to @freeturtle: unknown error.",
+      "parent_hash": "0x987c71815e4fad5f74024731747e276eea257a9c",
+      "received_at": "2026-04-13T14:08:28.442Z",
+      "user_score": 0.74,
+      "status": "skipped",
+      "processed_at": "2026-04-13T14:20:00.000Z"
+    },
+    {
+      "cast_hash": "0x3d623ba154f093db919d6e9c099145d3e37b432c",
+      "author_fid": 879602,
+      "author_username": "jutta",
+      "author_display_name": "Just Unfolding The True Art",
+      "text": "@mvr tipped neon mvr (ArtDrop Collection) to @freeturtle!\n\n778 artworks left to tip",
+      "parent_hash": "0x906d2979283164b705c321692e0f3b9945fc8306",
+      "received_at": "2026-04-13T14:08:31.401Z",
+      "user_score": 0.74,
+      "status": "skipped",
+      "processed_at": "2026-04-13T14:20:00.000Z"
+    },
     {
       "cast_hash": "0xbc6cf8b5f06ed957636ad7a87e5f508674679e64",
       "author_fid": 3315968,
@@ -97,7 +132,7 @@
       "author_display_name": "rhynout",
       "text": "just beat the AI at tic-tac-toe on @freeturtle 🎉",
       "parent_hash": null,
-      "received_at": "2026-04-13T06:55:06.650Z",
+      "received_at": "2026-04-13T06:55:06.558Z",
       "user_score": 0.18,
       "status": "replied",
       "processed_at": "2026-04-13T07:15:00.000Z",

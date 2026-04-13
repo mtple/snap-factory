@@ -27,6 +27,7 @@ import snap_snapShowcase from "./snaps/snap-showcase/index.js";
 import snap_snapagotchiHouse from "./snaps/snapagotchi-house/index.js";
 import snap_snapathon from "./snaps/snapathon/index.js";
 import snap_stumble from "./snaps/stumble/index.js";
+import snap_tetrisSnap from "./snaps/tetris-snap/index.js";
 import snap_ticTacToe from "./snaps/tic-tac-toe/index.js";
 import snap_tipCalculator from "./snaps/tip-calculator/index.js";
 import snap_vibeCheck from "./snaps/vibe-check/index.js";
@@ -58,6 +59,7 @@ export const snaps: Record<string, Hono> = {
   "snapagotchi-house": snap_snapagotchiHouse,
   "snapathon": snap_snapathon,
   "stumble": snap_stumble,
+  "tetris-snap": snap_tetrisSnap,
   "tic-tac-toe": snap_ticTacToe,
   "tip-calculator": snap_tipCalculator,
   "vibe-check": snap_vibeCheck,
