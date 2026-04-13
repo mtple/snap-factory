@@ -31,6 +31,7 @@ import snap_ticTacToe from "./snaps/tic-tac-toe/index.js";
 import snap_tipCalculator from "./snaps/tip-calculator/index.js";
 import snap_vibeCheck from "./snaps/vibe-check/index.js";
 import snap_wizardTrivia from "./snaps/wizard-trivia/index.js";
+import snap_wouldYouRather from "./snaps/would-you-rather/index.js";
 
 export const snaps: Record<string, Hono> = {
   "beautiful-thing": snap_beautifulThing,
@@ -61,4 +62,5 @@ export const snaps: Record<string, Hono> = {
   "tip-calculator": snap_tipCalculator,
   "vibe-check": snap_vibeCheck,
   "wizard-trivia": snap_wizardTrivia,
+  "would-you-rather": snap_wouldYouRather,
 };

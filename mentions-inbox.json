@@ -1,6 +1,30 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0xbc6cf8b5f06ed957636ad7a87e5f508674679e64",
+      "author_fid": 3315968,
+      "author_username": "nptvdbts",
+      "author_display_name": "Bella_danger",
+      "text": "@freeturtle",
+      "parent_hash": "0x6c45ed55c50a81802283a23d720bff702181b974",
+      "received_at": "2026-04-13T14:02:37.045Z",
+      "user_score": 0.54
+    }
+  ],
   "processed": [
+    {
+      "cast_hash": "0x2e377560d18ecdfd7573c29da5914711eae864c6",
+      "author_fid": 883930,
+      "author_username": "motherlizard",
+      "author_display_name": "Maia",
+      "text": "just beat the AI at tic-tac-toe on @freeturtle 🎉",
+      "parent_hash": null,
+      "received_at": "2026-04-13T12:53:02.609Z",
+      "user_score": 0.93,
+      "status": "replied",
+      "processed_at": "2026-04-13T13:00:00.000Z",
+      "reply_hash": "0xe7e8f025eed56979e679f9215ad888b13bf32295"
+    },
     {
       "cast_hash": "0xb42405c4ab2d5fc4a6b8f7bf4c713df5318b70ab",
       "author_fid": 5406,
