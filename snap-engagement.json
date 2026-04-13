@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "mona-lisa",
+      "cast_hash": "0xb266efd6d87a3b4454f782625946638e87cfc832",
+      "posted_at": "2026-04-13T17:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["art", "cell_grid", "compose_cast", "stateless", "amber", "pixel-art", "event-mode"]
+    },
+    {
       "name": "dont-click",
       "cast_hash": "0x057bcf7430c9af486aa042625547b87f45c322fc",
       "posted_at": "2026-04-13T15:30:00Z",

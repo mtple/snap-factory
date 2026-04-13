@@ -20,6 +20,7 @@ import snap_monaLisa from "./snaps/mona-lisa/index.js";
 import snap_mvrShowcase from "./snaps/mvr-showcase/index.js";
 import snap_natalChart from "./snaps/natal-chart/index.js";
 import snap_natalChartV2 from "./snaps/natal-chart-v2/index.js";
+import snap_originStory from "./snaps/origin-story/index.js";
 import snap_pacman from "./snaps/pacman/index.js";
 import snap_raffle from "./snaps/raffle/index.js";
 import snap_randomFcPic from "./snaps/random-fc-pic/index.js";
@@ -54,6 +55,7 @@ export const snaps: Record<string, Hono> = {
   "mvr-showcase": snap_mvrShowcase,
   "natal-chart": snap_natalChart,
   "natal-chart-v2": snap_natalChartV2,
+  "origin-story": snap_originStory,
   "pacman": snap_pacman,
   "raffle": snap_raffle,
   "random-fc-pic": snap_randomFcPic,
