@@ -1,31 +1,18 @@
 /**
- * mona-lisa — Detailed pixel art recreation of Leonardo da Vinci's Mona Lisa
+ * mona-lisa — Pixel art recreation of Leonardo da Vinci's Mona Lisa
  * using ONLY snap UI elements (cell_grid). No images. No hex colors.
- * Uses all 8 named palette colors for maximum tonal range.
+ * Uses 8 named palette colors to compose the portrait.
+ * Built for @mattlee.
  *
- * Palette:
- *   B = blue   → sky
- *   G = green  → landscape (distant hills / trees)
- *   T = teal   → sfumato mid-ground (atmospheric haze)
- *   U = purple → deepest shadows (hair mass, eye sockets, dark clothing)
- *   H = gray   → hair mid-tone, shadow under brows, upper clothing
- *   F = amber  → skin base (warm sfumato tone)
- *   P = pink   → skin highlights / sfumato light
- *   R = red    → lips, warm nostril corners
- *
- * Grid: 32 cols × 16 rows
- * Standard row zones (0-indexed columns):
- *   0–5  : left landscape  (G×6)
- *   6–8  : left sfumato    (T×3)
- *   9    : left hair edge  (U×1)  — deep shadow where hair meets bg
- *  10–11 : left hair       (H×2)
- *  12–19 : face / figure   (8 cols — the portrait's core)
- *  20–21 : right hair      (H×2)
- *   22   : right hair edge (U×1)
- *  23–25 : right sfumato   (T×3)
- *  26–31 : right landscape (G×6)
- *
- * Total per standard row: 6+3+1+2+8+2+1+3+6 = 32 ✓
+ * Palette mapping:
+ *   blue   → sky
+ *   green  → landscape
+ *   teal   → sfumato mid-ground / architectural bg
+ *   gray   → hair, dark clothing, deep shadow
+ *   amber  → skin / face (warm sfumato tone)
+ *   pink   → light skin highlights, lip corners
+ *   red    → lips, warm nostril shadow
+ *   purple → (unused — reserved)
  */
 import { Hono } from "hono";
 import { registerSnapHandler } from "@farcaster/snap-hono";
@@ -34,23 +21,14 @@ import { snapUrl } from "../../_lib/base-url.js";
 
 const app = new Hono();
 
-type PalColor =
-  | "blue"
-  | "green"
-  | "teal"
-  | "purple"
-  | "gray"
-  | "amber"
-  | "pink"
-  | "red";
-
+type PalColor = "blue" | "green" | "teal" | "gray" | "amber" | "pink" | "red";
 type CellEntry = { row: number; col: number; color: PalColor };
 
+// Character → palette color (null = transparent / no cell)
 const KEY: Record<string, PalColor | null> = {
   B: "blue",
   G: "green",
   T: "teal",
-  U: "purple", // deepest shadow
   H: "gray",
   F: "amber",
   P: "pink",
@@ -59,39 +37,35 @@ const KEY: Record<string, PalColor | null> = {
 };
 
 /**
- * 16 rows × 32 cols — every string is EXACTLY 32 characters.
+ * 16 rows × 32 cols grid, encoded as strings.
+ * Every string is exactly 32 characters.
  *
- * Face columns 12–19 breakdown per row:
- *   r5  FFFFFFFF  forehead (pure amber skin)
- *   r6  FPPPPPPF  forehead sfumato highlight
- *   r7  FUPFFPUF  eyes — U = purple iris/pupil, P = brow highlight
- *   r8  FFHFFHFF  nose — H = nostril wing shadow
- *   r9  FRPPPPPRF  ... wait: FRPPPPRP — see actual: FRPPPPRPF wait
- *        Actually face r9 = FRPPPPRP? No, let me be precise:
- *        FRPPPPRP = 8: F R P P P P R F — the smile corners (R) with pink lips
- *   r10 FPPPPPPF  chin (pink highlight — soft round chin)
- *   r11 FFPPPPFF  lower chin (highlight narrows)
- *   r12 FFFFFFFF  neck (amber skin)
+ * Layout zones (col indices, 0-based):
+ *   0–5   pure left landscape (G)
+ *   6–8   left transition (T)
+ *   9–11  left hair (H) / background
+ *  12–19  face / figure center (F/P/R/H eyes)
+ *  20–22  right hair (H) / background
+ *  23–25  right transition (T)
+ *  26–31  pure right landscape (G)
  */
 const ROWS: string[] = [
-  //         0         1         2         3
-  //         0123456789012345678901234567890 1
-  /* r0  */ "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", // sky
-  /* r1  */ "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", // sky
-  /* r2  */ "GGGGGGBBBBBBBBBBBBBBBBBBBBGGGGGG", // distant landscape + open sky
-  /* r3  */ "GGGGGGTTTTTTTTTTTTTTTTTTTTGGGGGG", // sfumato haze (Leonardo's signature)
-  /* r4  */ "GGGGGGTTTUUUUUUUUUUUUUUUUTTTGGGG", // dark hair mass crowning the figure
-  /* r5  */ "GGGGGGTTTUHHFFFFFFFFHHUTTTGGGGGG", // forehead — warm amber skin
-  /* r6  */ "GGGGGGTTTUHHFPPPPPPFHHUTTTGGGGGG", // sfumato highlight on brow / upper face
-  /* r7  */ "GGGGGGTTTUHHFUPFFPUFHHUTTTGGGGGG", // eyes — purple iris, P = inner-corner light
-  /* r8  */ "GGGGGGTTTUHHFFHFFHFFHHUTTTGGGGGG", // nose — H = nostril-wing shadows
-  /* r9  */ "GGGGGGTTTUHHFRPPPPRFHHUTTTGGGGGG", // the smile — R corners, pink lips
-  /* r10 */ "GGGGGGTTTUHHFPPPPPPFHHUTTTGGGGGG", // chin highlight
-  /* r11 */ "GGGGGGTTTUHHFFPPPPFFHHUTTTGGGGGG", // lower chin (highlight narrows)
-  /* r12 */ "GGGGGGTTTUHHFFFFFFFFHHUTTTGGGGGG", // neck (amber skin)
-  /* r13 */ "GGGGGGTTTUHHHFFFFFFHHHUTTTGGGGGG", // collar — neck narrows, H closes in
-  /* r14 */ "GGGGGGTTTHHUUUUUUUUUUHHTTTGGGGGG", // dark clothing (purple mass)
-  /* r15 */ "GGGGGGGGTTTTTTTTTTTTTTTTGGGGGGGG", // base — landscape widens, figure merges
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", //  0 — sky
+  "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB", //  1 — sky
+  "GGGGGGGGBBBBBBBBBBBBBBBBGGGGGGGG", //  2 — landscape peeks, sky center
+  "GGGGGGTTTTTTTTTTTTTTTTTTTTGGGGGG", //  3 — sfumato background behind figure
+  "GGGGGGTTTHHHHHHHHHHHHHHTTTGGGGGG", //  4 — hair silhouette
+  "GGGGGGTTTHHHFFFFFFFFHHHTTTGGGGGG", //  5 — forehead
+  "GGGGGGTTTHHHFFFFFFFFHHHTTTGGGGGG", //  6 — brow (no eyebrows — historically accurate)
+  "GGGGGGTTTHHHFHHFFHHFHHHTTTGGGGGG", //  7 — eyes
+  "GGGGGGTTTHHHFFRFFRFFHHHTTTGGGGGG", //  8 — nose (nostril shadow)
+  "GGGGGGTTTHHHFFRPPRFFHHHTTTGGGGGG", //  9 — mouth / the smile
+  "GGGGGGTTTHHHFFPPPPFFHHHTTTGGGGGG", // 10 — chin (highlight)
+  "GGGGGGTTTHHHHFFFFFFHHHHTTTGGGGGG", // 11 — lower chin (narrows)
+  "GGGGGGTTTHHHHHFFFFHHHHHTTTGGGGGG", // 12 — neck
+  "GGGGGGTTTHHHHHHFFHHHHHHTTTGGGGGG", // 13 — neckline / collar
+  "GGGGGGTTTHHHHHHHHHHHHHHTTTGGGGGG", // 14 — clothing (same silhouette as row 4)
+  "GGGGGGGGGHHHHHHHHHHHHHHGGGGGGGGG", // 15 — clothing bottom (landscape widens)
 ];
 
 function buildCells(): CellEntry[] {
@@ -143,8 +117,7 @@ registerSnapHandler(app, async (ctx) => {
         caption: {
           type: "text",
           props: {
-            content:
-              "Leonardo da Vinci, c. 1503 · all 8 palette colors · snap UI only",
+            content: "Leonardo da Vinci, c. 1503 · snap UI only, zero images",
             size: "sm",
             align: "center",
           },
