@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x5c02de57da4575ec3d43befcbf4ae7ac96794b32",
       "author_fid": 1059075,
@@ -8,10 +9,11 @@
       "text": "@freeturtle make me a house snap I envision mini maintenance actions. Like a snapmagotchi mini pet snap we need every day maintain it or it dies make sure snap has share and leaderboard buttons Ali g with a play/start",
       "parent_hash": "0x69a3d6087e64f403a47fdaebc100b0feaf6b5f0c",
       "received_at": "2026-04-13T03:07:05.516Z",
-      "user_score": 0.9
-    }
-  ],
-  "processed": [
+      "user_score": 0.9,
+      "status": "built",
+      "processed_at": "2026-04-13T03:30:00.000Z",
+      "reply_hash": "0xc7772fa04564431fea9e7f16ca4ff82f29173bba"
+    },
     {
       "cast_hash": "0x47a01fbca97c8215e81a129c754fd89041d02715",
       "author_fid": 3316299,
