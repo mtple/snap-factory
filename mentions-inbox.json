@@ -1,5 +1,16 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0x928ef75db5010f026903d4534720fe335f63a3ff",
+      "author_fid": 527771,
+      "author_username": "eljuniordiaz.eth",
+      "author_display_name": "Eddie  🇲🇽",
+      "text": "@freeturtle create a snap to play checkers against somebody else where you take turns and choose your opponent from your Farcaster followers.",
+      "parent_hash": null,
+      "received_at": "2026-04-13T19:45:10.167Z",
+      "user_score": 1
+    }
+  ],
   "processed": [
     {
       "cast_hash": "0xa0f6ac8195a2d2c57c6147d9d32ba80dcb9c502d",
