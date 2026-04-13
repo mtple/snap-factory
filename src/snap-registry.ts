@@ -4,6 +4,7 @@
 import type { Hono } from "hono";
 
 import snap_beautifulThing from "./snaps/beautiful-thing/index.js";
+import snap_catPet from "./snaps/cat-pet/index.js";
 import snap_checkers from "./snaps/checkers/index.js";
 import snap_creatureSummoner from "./snaps/creature-summoner/index.js";
 import snap_doNotPress from "./snaps/do-not-press/index.js";
@@ -40,6 +41,7 @@ import snap_wouldYouRather from "./snaps/would-you-rather/index.js";
 
 export const snaps: Record<string, Hono> = {
   "beautiful-thing": snap_beautifulThing,
+  "cat-pet": snap_catPet,
   "checkers": snap_checkers,
   "creature-summoner": snap_creatureSummoner,
   "do-not-press": snap_doNotPress,
