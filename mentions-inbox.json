@@ -39,6 +39,44 @@
       "status": "built",
       "reply_hash": "0xc45da395f6bfa1646509b2fe440d24b66e285617",
       "processed_at": "2026-04-13T16:30:00.000Z"
+    },
+    {
+      "cast_hash": "0x6c45ed55c50a81802283a23d720bff702181b974",
+      "author_fid": 4167,
+      "author_username": "nounishprof",
+      "author_display_name": "Nounish Prof",
+      "text": "Hey @freeturtle please build me a Tetris style game snap with a pink, purple, orange color scheme",
+      "parent_hash": null,
+      "received_at": "2026-04-13T16:10:57.000Z",
+      "user_score": 0.83,
+      "status": "built",
+      "reply_hash": "0xa21da8b34c619fec1c2c08320eb64fd148953b4d",
+      "processed_at": "2026-04-13T16:35:00.000Z",
+      "note": "used existing tetris-snap (already deployed). posted root cast in /snaps tagging @nounishprof per Matt's protocol"
+    },
+    {
+      "cast_hash": "0x714961b7e9d3f320e455a9dafc4f3731e45b7966",
+      "author_fid": 3316696,
+      "author_username": "bullrunhero5915",
+      "author_display_name": "BullRunHero🐂",
+      "text": "@freeturtle 🔔 Important update hunters! 👀\n📲 Secure this epic reward through the portal. Act fast.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
+      "parent_hash": "0xa21da8b34c619fec1c2c08320eb64fd148953b4d",
+      "received_at": "2026-04-13T16:30:30.411Z",
+      "user_score": 0.39,
+      "status": "skipped",
+      "note": "spam — airdrop scam bot"
+    },
+    {
+      "cast_hash": "0x09aa3787469898d0c6da19b904a17d19b36b0183",
+      "author_fid": 3316590,
+      "author_username": "proofofstak3135",
+      "author_display_name": "ProofOfStake🥩",
+      "text": "@freeturtle 🏆 Exclusive giveaway for all users! 🚨\n💸 Score your portion via the new Mini-App. Don't sleep on this.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
+      "parent_hash": "0xa21da8b34c619fec1c2c08320eb64fd148953b4d",
+      "received_at": "2026-04-13T16:30:50.583Z",
+      "user_score": 0.39,
+      "status": "skipped",
+      "note": "spam — airdrop scam bot"
     }
   ],
   "backlog": []
