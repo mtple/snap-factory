@@ -29,6 +29,16 @@
       "parent_hash": "0xb266efd6d87a3b4454f782625946638e87cfc832",
       "received_at": "2026-04-13T17:30:52.215Z",
       "user_score": 0.98
+    },
+    {
+      "cast_hash": "0xc786869fd01cc9e823bf05664048950fb7c3f505",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "@freeturtle I don't see the mona lisa its just a uniform orange grid",
+      "parent_hash": "0x5a122eb8849a40ddc740482ee728818344a3494c",
+      "received_at": "2026-04-13T17:34:56.112Z",
+      "user_score": 0.98
     }
   ],
   "processed": [
