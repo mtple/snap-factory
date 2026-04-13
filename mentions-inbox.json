@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xc7a6d37c32dcab17abf6442340b05ebb903465a5",
+      "author_fid": 11984,
+      "author_username": "chamaquito.eth",
+      "author_display_name": "Brian Felix is working on it",
+      "text": "just beat the AI at tic-tac-toe on @freeturtle 🎉",
+      "parent_hash": null,
+      "received_at": "2026-04-13T03:36:41.728Z",
+      "user_score": 0.99,
+      "status": "replied",
+      "processed_at": "2026-04-13T03:45:00.000Z",
+      "reply_hash": "0xe3b304b91a0db805c288aac7d1d325a00fcdb91a"
+    },
+    {
       "cast_hash": "0x5c02de57da4575ec3d43befcbf4ae7ac96794b32",
       "author_fid": 1059075,
       "author_username": "sugarz.eth",
