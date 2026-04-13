@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x6e67f777a9bdc05b2a0c7c9081adf91d6d98ba02",
+      "author_fid": 15513,
+      "author_username": "unclehodl.eth",
+      "author_display_name": "Uncle HODL",
+      "text": "just got today's wizard trivia right — can you beat my score on @freeturtle?",
+      "parent_hash": null,
+      "received_at": "2026-04-13T05:59:26.550Z",
+      "user_score": 0.99,
+      "status": "replied",
+      "processed_at": "2026-04-13T06:05:00.000Z",
+      "reply_hash": "0x32f1adb97f5fbd6a0fef3074e834ac794b338d16"
+    },
+    {
       "cast_hash": "0x3e1dfef93604efa0b34c3e2852b344b83959755b",
       "author_fid": 1059075,
       "author_username": "sugarz.eth",
