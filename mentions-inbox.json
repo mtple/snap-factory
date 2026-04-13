@@ -1,26 +1,5 @@
 {
-  "pending": [
-    {
-      "cast_hash": "0x13e04ae86b760490ebff6afd3a35e805d6c81c16",
-      "author_fid": 3316671,
-      "author_username": "styleicon3878",
-      "author_display_name": "StyleIcon🕶️",
-      "text": "@freeturtle 🔹 Token distribution early adopters! 🎁\n🚀 Get the event prize via the new Mini-App. Grab it now.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
-      "parent_hash": "0x954b5a6a3b39ad55d9d7f4cb1f772615a213dfbe",
-      "received_at": "2026-04-13T22:05:52.530Z",
-      "user_score": 0.39
-    },
-    {
-      "cast_hash": "0x1ea40a78e49bdf945f4a6f0299af70da0f224620",
-      "author_fid": 3316675,
-      "author_username": "whitehatpro4694",
-      "author_display_name": "WhiteHatPro🎩",
-      "text": "@freeturtle ⚡️ Breaking news for all users! 👇\n🕹 Claim free crypto using the web3 app. For a short time.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
-      "parent_hash": "0x954b5a6a3b39ad55d9d7f4cb1f772615a213dfbe",
-      "received_at": "2026-04-13T22:05:56.526Z",
-      "user_score": 0.39
-    }
-  ],
+  "pending": [],
   "processed": [
     {
       "cast_hash": "0xeac0bd0dfcddb03e2dd3aeb6ddce05de8337a49c",
@@ -84,6 +63,30 @@
       "status": "replied",
       "reply_hash": "0xfcbc7ebc4ced89edd0c28949d790547b4e312383",
       "processed_at": "2026-04-13T20:05:00.000Z"
+    },
+    {
+      "cast_hash": "0x13e04ae86b760490ebff6afd3a35e805d6c81c16",
+      "author_fid": 3316671,
+      "author_username": "styleicon3878",
+      "author_display_name": "StyleIcon🕶️",
+      "text": "@freeturtle 🔹 Token distribution early adopters! 🎁\n🚀 Get the event prize via the new Mini-App. Grab it now.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
+      "parent_hash": "0x954b5a6a3b39ad55d9d7f4cb1f772615a213dfbe",
+      "received_at": "2026-04-13T22:05:52.530Z",
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-04-13T22:06:00.000Z"
+    },
+    {
+      "cast_hash": "0x1ea40a78e49bdf945f4a6f0299af70da0f224620",
+      "author_fid": 3316675,
+      "author_username": "whitehatpro4694",
+      "author_display_name": "WhiteHatPro🎩",
+      "text": "@freeturtle ⚡️ Breaking news for all users! 👇\n🕹 Claim free crypto using the web3 app. For a short time.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
+      "parent_hash": "0x954b5a6a3b39ad55d9d7f4cb1f772615a213dfbe",
+      "received_at": "2026-04-13T22:05:56.526Z",
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-04-13T22:06:00.000Z"
     }
   ],
   "backlog": []
