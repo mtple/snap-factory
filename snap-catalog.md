@@ -32,11 +32,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 20 | wizard-trivia | Daily web3 & culture trivia — one question per day, submit your answer, track score, compete on leaderboard | /snaps/wizard-trivia | 0xc3c95cc8d335149c8ce7f7e64ad6b2b22eecce9b | 2026-04-12 | trivia, quiz, toggle_group, progress, item_group, item, separator, turso, stateful, amber, daily |
 | 21 | tip-calculator | Tip calculator — enter bill, drag tip % and split sliders, get per-person total with confetti | /snaps/tip-calculator | 0x8047693c76d3eeec7ba96b0bf0535432a7d87e21 | 2026-04-12 | utility, input, slider, item_group, item, separator, submit, compose_cast, stateless, teal |
 | 22 | beautiful-thing | Mystery selfie snap — one cryptic button, opens front-facing camera fullscreen. The reveal is you. | /snaps/beautiful-thing | 0xaf4ff68fc4781617f52db948c4a2e0afc1aab321 | 2026-04-12 | gag, open_url, html-page, camera, gray, compose_cast |
+| 23 | random-fc-pic | Random image from recent Farcaster casts — Shuffle to discover new ones, View cast for attribution. Built for @kenjiquest. | /snaps/random-fc-pic | (event-mode reply) | 2026-04-13 | discovery, image, view_cast, compose_cast, neynar-api, blue, event-mode |
 
 ## Stats
 
-- Total snaps built: 22
-- Live snaps: 22
-- Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch
-- Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app
+- Total snaps built: 23
+- Live snaps: 23
+- Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
+- Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

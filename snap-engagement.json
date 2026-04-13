@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "random-fc-pic",
+      "cast_hash": "(event-mode reply)",
+      "posted_at": "2026-04-13T07:05:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["discovery", "image", "view_cast", "compose_cast", "neynar-api", "blue", "event-mode"]
+    },
+    {
       "name": "beautiful-thing",
       "cast_hash": "0xaf4ff68fc4781617f52db948c4a2e0afc1aab321",
       "posted_at": "2026-04-12T22:30:00Z",
