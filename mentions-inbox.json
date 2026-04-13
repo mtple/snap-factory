@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xdec4b31728ababba74b79c0640a1543813637d04",
+      "author_fid": 1455866,
+      "author_username": "rhynout",
+      "author_display_name": "rhynout",
+      "text": "just beat the AI at tic-tac-toe on @freeturtle 🎉",
+      "parent_hash": null,
+      "received_at": "2026-04-13T06:55:06.650Z",
+      "user_score": 0.18,
+      "status": "replied",
+      "processed_at": "2026-04-13T07:15:00.000Z",
+      "reply_hash": "0x9edc49fd7bc4e57f13927df2d8edcc40a1ea33c1"
+    },
+    {
       "cast_hash": "0x8e85ee6511afa74c2182a146a841c00ad4e34232",
       "author_fid": 426167,
       "author_username": "kenjiquest",
