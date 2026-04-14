@@ -15,6 +15,7 @@ import snap_duoDoSongQuiz from "./snaps/duo-do-song-quiz/index.js";
 import snap_dylsteckArticles from "./snaps/dylsteck-articles/index.js";
 import snap_energyReading from "./snaps/energy-reading/index.js";
 import snap_farcasterSign from "./snaps/farcaster-sign/index.js";
+import snap_fcType from "./snaps/fc-type/index.js";
 import snap_flappyBird from "./snaps/flappy-bird/index.js";
 import snap_followKayonfire from "./snaps/follow-kayonfire/index.js";
 import snap_fortuneCookie from "./snaps/fortune-cookie/index.js";
@@ -57,6 +58,7 @@ export const snaps: Record<string, Hono> = {
   "dylsteck-articles": snap_dylsteckArticles,
   "energy-reading": snap_energyReading,
   "farcaster-sign": snap_farcasterSign,
+  "fc-type": snap_fcType,
   "flappy-bird": snap_flappyBird,
   "follow-kayonfire": snap_followKayonfire,
   "fortune-cookie": snap_fortuneCookie,
