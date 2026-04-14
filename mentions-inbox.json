@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xbbcb12e7b3cd432349dac1abf26c7e3194e8d763",
+      "author_fid": 497696,
+      "author_username": "maxlife",
+      "author_display_name": "Maxlife",
+      "text": "@freeturtle  can you create a snap that posts content daily from https://support-local-businesses.com/admin/social",
+      "parent_hash": null,
+      "received_at": "2026-04-14T14:51:39.698Z",
+      "user_score": 0.76,
+      "status": "replied",
+      "reply_hash": "0x9183cabcc574de1d6bd4cc7f9abeaa26d6e5e564",
+      "processed_at": "2026-04-14T15:00:00.000Z"
+    },
+    {
       "cast_hash": "0x8429377d336be09c9749148ced204e34b0fe1c37",
       "author_fid": 497696,
       "author_username": "maxlife",
