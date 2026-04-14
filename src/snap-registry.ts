@@ -36,6 +36,7 @@ import snap_stumble from "./snaps/stumble/index.js";
 import snap_tetrisSnap from "./snaps/tetris-snap/index.js";
 import snap_ticTacToe from "./snaps/tic-tac-toe/index.js";
 import snap_tipCalculator from "./snaps/tip-calculator/index.js";
+import snap_trendingCast from "./snaps/trending-cast/index.js";
 import snap_vibeCheck from "./snaps/vibe-check/index.js";
 import snap_wizardTrivia from "./snaps/wizard-trivia/index.js";
 import snap_wouldYouRather from "./snaps/would-you-rather/index.js";
@@ -74,6 +75,7 @@ export const snaps: Record<string, Hono> = {
   "tetris-snap": snap_tetrisSnap,
   "tic-tac-toe": snap_ticTacToe,
   "tip-calculator": snap_tipCalculator,
+  "trending-cast": snap_trendingCast,
   "vibe-check": snap_vibeCheck,
   "wizard-trivia": snap_wizardTrivia,
   "would-you-rather": snap_wouldYouRather,

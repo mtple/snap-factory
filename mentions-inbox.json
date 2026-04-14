@@ -1,5 +1,16 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0xd8444390d181f6f55bde799f0be4e67596f2b9d9",
+      "author_fid": 426167,
+      "author_username": "kenjiquest",
+      "author_display_name": "Kenji",
+      "text": "Hey @freeturtle \nCan you make a snap that looks through the user's casts past and present and highlight's their most popular cast calculated by their recasts, likes and replies? \nThe snap can be called \"Your most trending cast\"",
+      "parent_hash": null,
+      "received_at": "2026-04-14T06:02:19.959Z",
+      "user_score": 1
+    }
+  ],
   "processed": [
     {
       "cast_hash": "0xc8d9051caab8a0b25ab4933af76e8648f201c48c",
