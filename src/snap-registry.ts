@@ -17,6 +17,7 @@ import snap_energyReading from "./snaps/energy-reading/index.js";
 import snap_farcasterSign from "./snaps/farcaster-sign/index.js";
 import snap_flappyBird from "./snaps/flappy-bird/index.js";
 import snap_followKayonfire from "./snaps/follow-kayonfire/index.js";
+import snap_fortuneCookie from "./snaps/fortune-cookie/index.js";
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
 import snap_localBizSearch from "./snaps/local-biz-search/index.js";
 import snap_loudLinks from "./snaps/loud-links/index.js";
@@ -58,6 +59,7 @@ export const snaps: Record<string, Hono> = {
   "farcaster-sign": snap_farcasterSign,
   "flappy-bird": snap_flappyBird,
   "follow-kayonfire": snap_followKayonfire,
+  "fortune-cookie": snap_fortuneCookie,
   "hello-farcaster": snap_helloFarcaster,
   "local-biz-search": snap_localBizSearch,
   "loud-links": snap_loudLinks,
