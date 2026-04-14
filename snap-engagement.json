@@ -395,6 +395,15 @@
       "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
       "score": 0,
       "tags": ["daily", "fortune", "badge", "text", "separator", "submit", "compose_cast", "stateless", "purple", "event-mode"]
+    },
+    {
+      "name": "fc-type",
+      "cast_hash": "0x15d729ecd5ab421ba8a0c8c0579b59857eac19f2",
+      "posted_at": "2026-04-14T22:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["personality", "toggle_group", "badge", "separator", "submit", "compose_cast", "stateless", "teal"]
     }
   ]
 }
