@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x36e16b2e0594225ed0e4594e65285942af54a65e",
+      "author_fid": 709495,
+      "author_username": "jawirnft.eth",
+      "author_display_name": "0xzvan.base.eth",
+      "text": "\"The version of you from a year ago would be impressed.\" — my fortune today on @freeturtle",
+      "parent_hash": null,
+      "received_at": "2026-04-14T18:53:50.106Z",
+      "user_score": 0.84,
+      "status": "replied",
+      "reply_hash": "0xb1916beb6e8a4426cfec9dee45694d3f9faa279f",
+      "processed_at": "2026-04-14T19:00:00.000Z"
+    },
+    {
       "cast_hash": "0x1a4b211159fcc03b80624e127b94097b114bcb72",
       "author_fid": 1059075,
       "author_username": "sugarz.eth",
