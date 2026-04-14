@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "cooked-check",
+      "cast_hash": "0x823f0073c8ccb579c91a2f698bd1fe49f821d58d",
+      "posted_at": "2026-04-14T10:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["absurd", "slider", "progress", "badge", "item_group", "item", "separator", "submit", "compose_cast", "stateless", "amber", "crypto"]
+    },
+    {
       "name": "trending-cast",
       "cast_hash": "0x1c0b53a066473d238a4bd7b565bfeb5fb86163a8",
       "posted_at": "2026-04-14T06:30:00Z",

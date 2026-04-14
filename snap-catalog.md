@@ -42,11 +42,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 30 | cat-pet | Virtual cat named Whiskers — feed, play, clean, reset. Stats decay over time. Per-FID Turso state. Built for @mehdihasan. | /snaps/cat-pet | 0x28b810886b5e6a17d0c13fdc1e0730fe666f3798 | 2026-04-13 | tamagotchi, pet, progress, button, turso, stateful, pink, event-mode |
 | 31 | farcaster-sign | Your Farcaster zodiac — 7 signs based on FID era. Tap to reveal your sign, badge + trait details. Personalized, stateless. | /snaps/farcaster-sign | 0x954b5a6a3b39ad55d9d7f4cb1f772615a213dfbe | 2026-04-13 | personalized, fid, badge, item_group, item, separator, submit, compose_cast, stateless, purple, social |
 | 32 | trending-cast | Find your most trending Farcaster cast — scored by likes × 3 + recasts × 5 + replies × 2. Fetches up to 150 recent casts via Neynar API. Built for @kenjiquest. | /snaps/trending-cast | 0x1c0b53a066473d238a4bd7b565bfeb5fb86163a8 | 2026-04-14 | discovery, neynar-api, view_cast, badge, compose_cast, stateless, teal, event-mode |
+| 33 | cooked-check | Crypto market vibes diagnostic — three sliders (Fear/Greed, FOMO, Diamond hands), get a cooked-ness score with progress bar + badge + custom reading | /snaps/cooked-check | 0x823f0073c8ccb579c91a2f698bd1fe49f821d58d | 2026-04-14 | absurd, slider, progress, badge, item_group, item, separator, submit, compose_cast, stateless, amber, crypto |
 
 ## Stats
 
-- Total snaps built: 32
-- Live snaps: 31
+- Total snaps built: 33
+- Live snaps: 32
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
