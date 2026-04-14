@@ -46,11 +46,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 34 | local-biz-search | Search 6.4M+ local business listings by name, category, or ZIP — powered by support-local-businesses.com. Built for @maxlife. | /snaps/local-biz-search | 0x9574598cc232d55eff66298e31400e0a177fbadf | 2026-04-14 | utility, input, submit, open_url, stateless, green, event-mode, directory |
 | 35 | fortune-cookie | Break open a daily fortune cookie — personalized fortune + lucky numbers based on FID + date. Built for @sugarz.eth. | /snaps/fortune-cookie | 0x5ccbd3b215a9d4ea3b73de328e392a3d0b853f47 | 2026-04-14 | daily, fortune, badge, text, separator, submit, compose_cast, stateless, purple, event-mode |
 | 36 | fc-type | What's your Farcaster type? Pick style (Builder/Degen/Curator/Lurker) + energy (Mystic/Chaos/Diamond/Wave) → one of 16 unique archetypes | /snaps/fc-type | 0x15d729ecd5ab421ba8a0c8c0579b59857eac19f2 | 2026-04-14 | personality, toggle_group, badge, separator, submit, compose_cast, stateless, teal |
+| 37 | world-cup-countdown | FIFA World Cup 2026 countdown — days/hours/minutes to kickoff, progress bar, confetti fires when tournament goes live. Built for @n3zz. | /snaps/world-cup-countdown | 0xc5988ce8d03c480b6bb49811f69362fd0ce50ac8 | 2026-04-14 | utility, countdown, progress, badge, separator, compose_cast, stateless, green, event-mode, sports |
 
 ## Stats
 
-- Total snaps built: 36
-- Live snaps: 35
+- Total snaps built: 37
+- Live snaps: 36
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "world-cup-countdown",
+      "cast_hash": "0xc5988ce8d03c480b6bb49811f69362fd0ce50ac8",
+      "posted_at": "2026-04-14T23:10:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["utility", "countdown", "progress", "badge", "separator", "compose_cast", "stateless", "green", "event-mode", "sports"]
+    },
+    {
       "name": "local-biz-search",
       "cast_hash": "0x9574598cc232d55eff66298e31400e0a177fbadf",
       "posted_at": "2026-04-14T14:15:00Z",
