@@ -386,6 +386,15 @@
       "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
       "score": 0,
       "tags": ["utility", "input", "slider", "item_group", "item", "separator", "submit", "compose_cast", "stateless", "teal"]
+    },
+    {
+      "name": "fortune-cookie",
+      "cast_hash": "0x5ccbd3b215a9d4ea3b73de328e392a3d0b853f47",
+      "posted_at": "2026-04-14T18:30:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["daily", "fortune", "badge", "text", "separator", "submit", "compose_cast", "stateless", "purple", "event-mode"]
     }
   ]
 }
