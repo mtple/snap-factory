@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "trending-cast",
+      "cast_hash": "0x1c0b53a066473d238a4bd7b565bfeb5fb86163a8",
+      "posted_at": "2026-04-14T06:30:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["discovery", "neynar-api", "view_cast", "badge", "compose_cast", "stateless", "teal", "event-mode"]
+    },
+    {
       "name": "farcaster-sign",
       "cast_hash": "0x954b5a6a3b39ad55d9d7f4cb1f772615a213dfbe",
       "posted_at": "2026-04-13T22:00:00Z",

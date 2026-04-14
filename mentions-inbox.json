@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0xd8444390d181f6f55bde799f0be4e67596f2b9d9",
       "author_fid": 426167,
@@ -8,10 +9,35 @@
       "text": "Hey @freeturtle \nCan you make a snap that looks through the user's casts past and present and highlight's their most popular cast calculated by their recasts, likes and replies? \nThe snap can be called \"Your most trending cast\"",
       "parent_hash": null,
       "received_at": "2026-04-14T06:02:19.959Z",
-      "user_score": 1
-    }
-  ],
-  "processed": [
+      "user_score": 1,
+      "status": "built",
+      "root_cast_hash": "0x1c0b53a066473d238a4bd7b565bfeb5fb86163a8",
+      "processed_at": "2026-04-14T06:35:00.000Z"
+    },
+    {
+      "cast_hash": "0xf536eff9eb1f64ac46f50dceafad7dd9aae5d0b1",
+      "author_fid": 3316647,
+      "author_username": "fitnesscryp7424",
+      "author_display_name": "FitnessCryptoGuy💪",
+      "text": "@freeturtle 📣 Major update today! 🤯\n✨ Collect your welcome bonus through the portal. Time is ticking.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
+      "parent_hash": "0x1c0b53a066473d238a4bd7b565bfeb5fb86163a8",
+      "received_at": "2026-04-14T06:05:44.136Z",
+      "user_score": 0.31,
+      "status": "skipped",
+      "processed_at": "2026-04-14T06:35:00.000Z"
+    },
+    {
+      "cast_hash": "0xa47709d2661438824abfd0aee03a789f097e98f3",
+      "author_fid": 3316692,
+      "author_username": "icohunter4692",
+      "author_display_name": "IcoHunter🔎",
+      "text": "@freeturtle 💰 Attention everyone guys! 🚨\n🚀 Redeem this huge airdrop inside the Mini-App. Only today.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
+      "parent_hash": "0x1c0b53a066473d238a4bd7b565bfeb5fb86163a8",
+      "received_at": "2026-04-14T06:05:46.123Z",
+      "user_score": 0.27,
+      "status": "skipped",
+      "processed_at": "2026-04-14T06:35:00.000Z"
+    },
     {
       "cast_hash": "0xc8d9051caab8a0b25ab4933af76e8648f201c48c",
       "author_fid": 6793,
