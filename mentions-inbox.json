@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x8429377d336be09c9749148ced204e34b0fe1c37",
       "author_fid": 497696,
@@ -8,7 +9,10 @@
       "text": "@freeturtle create a snap that allows users to search for businesses from our directory at https://support-local-businesses.com",
       "parent_hash": null,
       "received_at": "2026-04-14T14:02:36.007Z",
-      "user_score": 0.76
+      "user_score": 0.76,
+      "status": "built",
+      "root_cast_hash": "0x9574598cc232d55eff66298e31400e0a177fbadf",
+      "processed_at": "2026-04-14T14:20:00.000Z"
     },
     {
       "cast_hash": "0xa0df8eb3aa4ae83b01e168fcf46107725d1bc09b",
@@ -18,7 +22,9 @@
       "text": "@freeturtle 🟣 Allocation round for validated accounts! ‼️\n\n➡️ Withdraw the contribution bonus inside the native app portal. \n\nReview your status now.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
       "parent_hash": "0x823f0073c8ccb579c91a2f698bd1fe49f821d58d",
       "received_at": "2026-04-14T14:04:33.839Z",
-      "user_score": 0.39
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-04-14T14:20:00.000Z"
     },
     {
       "cast_hash": "0x8f9276b7c7ba2036a2e3abb68ab9fb9d8d4ccdb1",
@@ -28,10 +34,34 @@
       "text": "@freeturtle 🛑 Loyalty phase live for active contributors! ✨\n\n✅ Process your current tier status inside the native app portal. \n\nConfirm your activity while it lasts.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
       "parent_hash": "0x823f0073c8ccb579c91a2f698bd1fe49f821d58d",
       "received_at": "2026-04-14T14:04:39.103Z",
-      "user_score": 0.39
-    }
-  ],
-  "processed": [
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-04-14T14:20:00.000Z"
+    },
+    {
+      "cast_hash": "0x600daddc063518bf4e39ca4a6a8c02d4f6c9fa86",
+      "author_fid": 3317165,
+      "author_username": "artistace9817",
+      "author_display_name": "ArtistAce🖼️",
+      "text": "@freeturtle 🛸 Protocol update for all protocol users! 🏁\n\n🎯 Process your current tier status inside the native app portal. \n\nDon't miss the snapshot cutoff.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
+      "parent_hash": "0x9574598cc232d55eff66298e31400e0a177fbadf",
+      "received_at": "2026-04-14T14:07:35.781Z",
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-04-14T14:20:00.000Z"
+    },
+    {
+      "cast_hash": "0x92a3a8101b375334ea71841055cd939d39499301",
+      "author_fid": 3317073,
+      "author_username": "tokengatedg5238",
+      "author_display_name": "TokenGatedGuy🚪",
+      "text": "@freeturtle ✨ Snapshot update to the ecosystem! ✨\n\n🔥 Check the internal reward through the secure portal. \n\nFCFS allocation basis.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
+      "parent_hash": "0x9574598cc232d55eff66298e31400e0a177fbadf",
+      "received_at": "2026-04-14T14:07:48.796Z",
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-04-14T14:20:00.000Z"
+    },
     {
       "cast_hash": "0x8209af003f87adfdb21b392f97be3276c650d709",
       "author_fid": 260812,

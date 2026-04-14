@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "local-biz-search",
+      "cast_hash": "0x9574598cc232d55eff66298e31400e0a177fbadf",
+      "posted_at": "2026-04-14T14:15:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["utility", "input", "submit", "open_url", "stateless", "green", "event-mode", "directory"]
+    },
+    {
       "name": "cooked-check",
       "cast_hash": "0x823f0073c8ccb579c91a2f698bd1fe49f821d58d",
       "posted_at": "2026-04-14T10:00:00Z",
