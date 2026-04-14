@@ -1,6 +1,41 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0x9c6fc18c53538b77f8ce2cb0c944fe5c176559a8",
+      "author_fid": 501966,
+      "author_username": "n3zz",
+      "author_display_name": "N 3 Z Z ✦",
+      "text": "@freeturtle build me a snap that shows the world cup 2026 countdown with a share button, trigger the confetti effect when the countdown gets to zero",
+      "parent_hash": "0xc3fa3768115226df6df977ebde36f52a8f189d4c",
+      "received_at": "2026-04-14T22:50:39.499Z",
+      "user_score": 0.89
+    }
+  ],
   "processed": [
+    {
+      "cast_hash": "0x0f330f945b477ccfba6d02bdb8484e3971079635",
+      "author_fid": 3316913,
+      "author_username": "foodiepro2785",
+      "author_display_name": "FoodiePro🍔",
+      "text": "@freeturtle 🪐 Farcaster legends listen close.\n\n👀 Purple Power Badge — 30 days on us. Launch the Farcaster Mini-App and consent to rules. Nothing to pay.\n\n💡 Revel in enhanced tools in the app. 🎉\nhttps://farsaster.xyz/",
+      "parent_hash": "0x15d729ecd5ab421ba8a0c8c0579b59857eac19f2",
+      "received_at": "2026-04-14T22:06:00.453Z",
+      "user_score": 0.38,
+      "status": "skipped",
+      "processed_at": "2026-04-14T22:10:00.000Z"
+    },
+    {
+      "cast_hash": "0x08540b5f252a360d3c19edb2d44bea5f60a7f682",
+      "author_fid": 3317039,
+      "author_username": "privatesale8990",
+      "author_display_name": "PrivateSaleGod🤫",
+      "text": "@freeturtle 🌐 Farcaster network fresh news.\n\n🌐 Power upgrade — one month gratis. Enter the Farcaster Mini-App and approve the terms. No cost.\n\n🧊 Appreciate top tier in the feed. 🟣\nhttps://farsaster.xyz/",
+      "parent_hash": "0x15d729ecd5ab421ba8a0c8c0579b59857eac19f2",
+      "received_at": "2026-04-14T22:06:10.467Z",
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-04-14T22:10:00.000Z"
+    },
     {
       "cast_hash": "0x36e16b2e0594225ed0e4594e65285942af54a65e",
       "author_fid": 709495,
@@ -46,7 +81,7 @@
       "author_display_name": "Sugarz",
       "text": "@freeturtle do your magic make a clean lil snap 🫰",
       "parent_hash": null,
-      "received_at": "2026-04-14T18:14:21.487Z",
+      "received_at": "2026-04-14T18:14:21.496Z",
       "user_score": 0.9,
       "status": "built",
       "root_cast_hash": "0x5ccbd3b215a9d4ea3b73de328e392a3d0b853f47",
@@ -72,7 +107,7 @@
       "author_display_name": "Maxlife",
       "text": "@freeturtle  can you create a snap that posts content daily from https://support-local-businesses.com/admin/social",
       "parent_hash": null,
-      "received_at": "2026-04-14T14:51:39.698Z",
+      "received_at": "2026-04-14T14:51:39.678Z",
       "user_score": 0.76,
       "status": "replied",
       "reply_hash": "0x9183cabcc574de1d6bd4cc7f9abeaa26d6e5e564",
@@ -98,7 +133,7 @@
       "author_display_name": "NodeOperator🌐",
       "text": "@freeturtle 🟣 Allocation round for validated accounts! ‼️\n\n➡️ Withdraw the contribution bonus inside the native app portal. \n\nReview your status now.\nhttps://farcaster.xyz/miniapps/fhACWSns2mMg/farcaster-airdrop",
       "parent_hash": "0x823f0073c8ccb579c91a2f698bd1fe49f821d58d",
-      "received_at": "2026-04-14T14:04:33.839Z",
+      "received_at": "2026-04-14T14:04:33.838Z",
       "user_score": 0.39,
       "status": "skipped",
       "processed_at": "2026-04-14T14:20:00.000Z"
