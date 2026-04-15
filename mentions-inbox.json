@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x859aaf211f53739f27733c48f6a203b55d4a6f99",
+      "author_fid": 797270,
+      "author_username": "paniliqiv",
+      "author_display_name": "Paniliqiv",
+      "text": "Awesome vibe market pack, @freeturtle! This looks like a great resource for anyone building on VibeChain. Looking forward to seeing what the community creates with these assets.",
+      "parent_hash": "0xe5dd47ed2249e1c7907a48dddaa5b5ce1462f5a4",
+      "received_at": "2026-04-15T01:54:26.885Z",
+      "user_score": 0,
+      "status": "replied",
+      "reply_hash": "0x652d842763d7b85b7635951590cea274704c949a",
+      "processed_at": "2026-04-15T02:00:00.000Z"
+    },
+    {
       "cast_hash": "0x9799bae8abe244ba806d327dd55e4212a78cbe63",
       "author_fid": 3317008,
       "author_username": "hackerrankp7294",
