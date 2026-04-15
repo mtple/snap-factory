@@ -1,12 +1,24 @@
+/**
+ * airdrop-checker — mock Farcaster airdrop eligibility checker.
+ *
+ * Based on community rumors and speculation — clearly satirical.
+ * Users answer 4 yes/no criteria questions and get a mock eligibility
+ * score (0-100) with a tiered result. Not official, not financial advice.
+ *
+ * Built for @degencaso.
+ *
+ * Components: text, toggle_group, progress, badge, separator, button, stack
+ * Actions: submit, compose_cast
+ * Accent: amber
+ */
+
 import { Hono } from "hono";
-import { handle } from "hono/vercel";
 import { registerSnapHandler } from "@farcaster/snap-hono";
 import type { SnapHandlerResult } from "@farcaster/snap";
 import { snapUrl } from "../../_lib/base-url.js";
 
-export const config = { runtime: "nodejs" };
-
-const app = new Hono().basePath("/api/snaps/airdrop-checker");
+const app = new Hono();
+const SNAP_NAME = "airdrop-checker";
 
 function buildGetView(self: string): SnapHandlerResult {
   return {
@@ -124,15 +136,13 @@ function buildGetView(self: string): SnapHandlerResult {
 }
 
 registerSnapHandler(app, async (ctx) => {
-  const self = snapUrl(ctx.request, "airdrop-checker");
-  const resetUrl = `${self}?v=get`;
+  const self = snapUrl(ctx.request, SNAP_NAME);
 
-  // GET or reset from result page
   if (ctx.action.type === "get") {
     return buildGetView(self);
   }
 
-  // If the try-again button was pressed, return the initial view
+  // If the "Try again" button posted back, return the initial view
   const url = new URL(ctx.request.url);
   if (url.searchParams.get("v") === "get") {
     return buildGetView(self);
@@ -146,7 +156,12 @@ registerSnapHandler(app, async (ctx) => {
   if (inputs.wallet === "yes") score += 25;
   if (inputs.nft === "yes") score += 25;
 
-  type Tier = "Diamond tier" | "Gold tier" | "Silver tier" | "Bronze tier" | "Waitlist tier";
+  type Tier =
+    | "Diamond tier"
+    | "Gold tier"
+    | "Silver tier"
+    | "Bronze tier"
+    | "Waitlist tier";
 
   let tier: Tier;
   let verdict: string;
@@ -155,26 +170,27 @@ registerSnapHandler(app, async (ctx) => {
   if (score === 100) {
     tier = "Diamond tier";
     verdict =
-      "All boxes checked. If this were real, you'd be sitting pretty. The rumors say this is the profile that qualifies. No promises though — it's all made up.";
+      "All boxes checked. If this were real, you'd be set. The rumors say this is the profile that qualifies. No promises though — it's all made up.";
   } else if (score === 75) {
     tier = "Gold tier";
     verdict =
-      "Solid. You're missing one box. Go back and find out which one. Or accept 75% and hope the snapshot is generous.";
+      "Solid. You're missing one box — go back and figure out which. Or just accept 75% and hope the snapshot is generous.";
   } else if (score === 50) {
     tier = "Silver tier";
     verdict =
-      "Half qualified. Most airdrop rumors include a 'everyone gets something' tier. That tier is usually tiny. Keep building.";
+      "Half qualified. Most airdrop rumors include a small 'everyone gets something' tier. That tier is usually tiny. Keep building.";
   } else if (score === 25) {
     tier = "Bronze tier";
     verdict =
-      "One box checked. Start casting more, connect a wallet, grab an NFT. You know the drill.";
+      "One box checked. Start casting more, connect a wallet, grab an NFT. You know what to do.";
   } else {
     tier = "Waitlist tier";
     verdict =
-      "Nothing checked off yet. The good news: there is no confirmed airdrop anyway. This is all made up. You're free.";
+      "Nothing checked off yet. The good news: there's no confirmed airdrop anyway. This is all made up. You're free.";
   }
 
   const shareText = `I scored ${score}/100 on @freeturtle's mock Farcaster airdrop checker — ${tier}`;
+  const resetUrl = `${self}?v=get`;
 
   const result: SnapHandlerResult = {
     version: "1.0",
@@ -251,4 +267,4 @@ registerSnapHandler(app, async (ctx) => {
   return result;
 });
 
-export default handle(app);
+export default app;
