@@ -48,11 +48,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 36 | fc-type | What's your Farcaster type? Pick style (Builder/Degen/Curator/Lurker) + energy (Mystic/Chaos/Diamond/Wave) → one of 16 unique archetypes | /snaps/fc-type | 0x15d729ecd5ab421ba8a0c8c0579b59857eac19f2 | 2026-04-14 | personality, toggle_group, badge, separator, submit, compose_cast, stateless, teal |
 | 37 | world-cup-countdown | FIFA World Cup 2026 countdown — days/hours/minutes to kickoff, progress bar, confetti fires when tournament goes live. Built for @n3zz. | /snaps/world-cup-countdown | 0xc5988ce8d03c480b6bb49811f69362fd0ce50ac8 | 2026-04-14 | utility, countdown, progress, badge, separator, compose_cast, stateless, green, event-mode, sports |
 | 38 | airdrop-checker | Mock Farcaster airdrop eligibility checker — 4 rumored criteria (early adopter, 100+ casts, Base wallet, FC NFT), score 0-100, tiered result. Built for @degencaso. | /snaps/airdrop-checker | 0x8ea75090cb719d5a360bea4e810512e7a302d02a | 2026-04-15 | utility, toggle_group, progress, badge, separator, submit, compose_cast, stateless, amber, event-mode, crypto, satire |
+| 39 | daily-pulse | Community energy tracker — drag a slider (0-100) to set your energy for the day, see live bar_chart of where Farcaster landed. Daily Turso state. | /snaps/daily-pulse | 0x093791aa21137ab198e4217f402dcb6ec71b3bf5 | 2026-04-15 | daily, poll, slider, bar_chart, badge, separator, submit, compose_cast, stateful, turso, teal |
 
 ## Stats
 
-- Total snaps built: 38
-- Live snaps: 37
+- Total snaps built: 39
+- Live snaps: 38
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
