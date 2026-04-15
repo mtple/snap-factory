@@ -14,6 +14,20 @@
       "root_cast_hash": "0xd98a058f465c3caba1ee1e071328dc4c1a875c0d",
       "processed_at": "2026-04-15T17:55:00.000Z",
       "note": "Snap already existed (world-cup-countdown), shared existing URL"
+    },
+    {
+      "cast_hash": "0xb5011db50df2d57ea774d081fb978f1d5efcfba2",
+      "author_fid": 3208081,
+      "author_username": "amarkerkarine",
+      "author_display_name": "samy",
+      "text": "days until World Cup 2026 ⚽ — @freeturtle's countdown",
+      "parent_hash": null,
+      "received_at": "2026-04-15T18:04:53.258Z",
+      "user_score": 0.28,
+      "status": "built",
+      "root_cast_hash": "0xd831de5d40b9d69ce410ae8c8e2b4f07186e0046",
+      "processed_at": "2026-04-15T18:10:00.000Z",
+      "note": "Snap already existed (world-cup-countdown), shared existing URL"
     }
   ],
   "backlog": []
