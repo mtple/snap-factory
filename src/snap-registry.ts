@@ -24,6 +24,7 @@ import snap_fortuneCookie from "./snaps/fortune-cookie/index.js";
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
 import snap_localBizSearch from "./snaps/local-biz-search/index.js";
 import snap_loudLinks from "./snaps/loud-links/index.js";
+import snap_magicMirror from "./snaps/magic-mirror/index.js";
 import snap_meetSnapWizard from "./snaps/meet-snap-wizard/index.js";
 import snap_monaLisa from "./snaps/mona-lisa/index.js";
 import snap_mvrShowcase from "./snaps/mvr-showcase/index.js";
@@ -70,6 +71,7 @@ export const snaps: Record<string, Hono> = {
   "hello-farcaster": snap_helloFarcaster,
   "local-biz-search": snap_localBizSearch,
   "loud-links": snap_loudLinks,
+  "magic-mirror": snap_magicMirror,
   "meet-snap-wizard": snap_meetSnapWizard,
   "mona-lisa": snap_monaLisa,
   "mvr-showcase": snap_mvrShowcase,
