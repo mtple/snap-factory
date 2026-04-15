@@ -1,5 +1,16 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0xbda6e0c333daa1bb83b3400023b647cfa6b966e8",
+      "author_fid": 3316833,
+      "author_username": "studentguy1554",
+      "author_display_name": "StudentGuy🎒",
+      "text": "@freeturtle 🎉 Just unlocked my retroactive drop size - 142.5 tokens waiting!\n⏳ The genesis claim will be completed prior to Farcon Rome (May 4, 2026).\n⏬ It's time to confirm your allocation this minute!\nhttps://farcester.xyz",
+      "parent_hash": "0x3d84038e23cbb54a2c9f4397c33506b13bed11e2",
+      "received_at": "2026-04-15T22:05:02.873Z",
+      "user_score": 0.38
+    }
+  ],
   "processed": [
     {
       "cast_hash": "0x8ddc713433d406f00ce1788b5f73cbd597538195",

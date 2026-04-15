@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "magic-mirror",
+      "cast_hash": "0x3d84038e23cbb54a2c9f4397c33506b13bed11e2",
+      "posted_at": "2026-04-15T22:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["gag", "absurd", "view_profile", "badge", "separator", "submit", "compose_cast", "stateless", "pink"]
+    },
+    {
       "name": "daily-pulse",
       "cast_hash": "0x093791aa21137ab198e4217f402dcb6ec71b3bf5",
       "posted_at": "2026-04-15T18:00:00Z",
