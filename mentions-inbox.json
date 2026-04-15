@@ -8,7 +8,7 @@
       "author_display_name": "Bukola🍖🎩🔵🎭📖",
       "text": "days until World Cup 2026 ⚽ — @freeturtle's countdown",
       "parent_hash": null,
-      "received_at": "2026-04-15T17:49:34.682Z",
+      "received_at": "2026-04-15T17:49:34.742Z",
       "user_score": 0.84,
       "status": "built",
       "root_cast_hash": "0xd98a058f465c3caba1ee1e071328dc4c1a875c0d",
@@ -28,6 +28,32 @@
       "root_cast_hash": "0xd831de5d40b9d69ce410ae8c8e2b4f07186e0046",
       "processed_at": "2026-04-15T18:10:00.000Z",
       "note": "Snap already existed (world-cup-countdown), shared existing URL"
+    },
+    {
+      "cast_hash": "0x5d63f90e662bb4bd61db857a42a3cb6f6f33b6e0",
+      "author_fid": 3316697,
+      "author_username": "technicalan2633",
+      "author_display_name": "TechnicalAnalyst📊",
+      "text": "@freeturtle 🌟 Farcaster whales eyes here...",
+      "parent_hash": "0xd831de5d40b9d69ce410ae8c8e2b4f07186e0046",
+      "received_at": "2026-04-15T18:06:03.742Z",
+      "user_score": 0.25,
+      "status": "skipped",
+      "processed_at": "2026-04-15T18:15:00.000Z",
+      "note": "Spam/phishing — fake 'Power Badge' with misspelled domain farsaster.xyz"
+    },
+    {
+      "cast_hash": "0xfaf63278bbf0e2d3d0697b7acb5cae9ee77c6723",
+      "author_fid": 3316859,
+      "author_username": "creativemin1542",
+      "author_display_name": "CreativeMind💡",
+      "text": "@freeturtle 🥳 Verified my $FC token estimate...",
+      "parent_hash": "0xd831de5d40b9d69ce410ae8c8e2b4f07186e0046",
+      "received_at": "2026-04-15T18:06:05.724Z",
+      "user_score": 0.13,
+      "status": "skipped",
+      "processed_at": "2026-04-15T18:15:00.000Z",
+      "note": "Spam/phishing — fake token airdrop claim with misspelled domain farcester.xyz"
     }
   ],
   "backlog": []
