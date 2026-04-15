@@ -47,11 +47,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 35 | fortune-cookie | Break open a daily fortune cookie — personalized fortune + lucky numbers based on FID + date. Built for @sugarz.eth. | /snaps/fortune-cookie | 0x5ccbd3b215a9d4ea3b73de328e392a3d0b853f47 | 2026-04-14 | daily, fortune, badge, text, separator, submit, compose_cast, stateless, purple, event-mode |
 | 36 | fc-type | What's your Farcaster type? Pick style (Builder/Degen/Curator/Lurker) + energy (Mystic/Chaos/Diamond/Wave) → one of 16 unique archetypes | /snaps/fc-type | 0x15d729ecd5ab421ba8a0c8c0579b59857eac19f2 | 2026-04-14 | personality, toggle_group, badge, separator, submit, compose_cast, stateless, teal |
 | 37 | world-cup-countdown | FIFA World Cup 2026 countdown — days/hours/minutes to kickoff, progress bar, confetti fires when tournament goes live. Built for @n3zz. | /snaps/world-cup-countdown | 0xc5988ce8d03c480b6bb49811f69362fd0ce50ac8 | 2026-04-14 | utility, countdown, progress, badge, separator, compose_cast, stateless, green, event-mode, sports |
+| 38 | airdrop-checker | Mock Farcaster airdrop eligibility checker — 4 rumored criteria (early adopter, 100+ casts, Base wallet, FC NFT), score 0-100, tiered result. Built for @degencaso. | /snaps/airdrop-checker | 0x8ea75090cb719d5a360bea4e810512e7a302d02a | 2026-04-15 | utility, toggle_group, progress, badge, separator, submit, compose_cast, stateless, amber, event-mode, crypto, satire |
 
 ## Stats
 
-- Total snaps built: 37
-- Live snaps: 36
+- Total snaps built: 38
+- Live snaps: 37
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

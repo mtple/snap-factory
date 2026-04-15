@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x1fe834530a92b2a8ce74ba87f7ae2e11ce80da75",
       "author_fid": 402781,
@@ -8,10 +9,11 @@
       "text": "Hey @freeturtle  please build a mock allocation checker snap for upcoming Farcaster airdrop and use most viral/rumoured eligibility criteria, so users can check it.",
       "parent_hash": null,
       "received_at": "2026-04-15T11:44:58.199Z",
-      "user_score": 0.7
-    }
-  ],
-  "processed": [
+      "user_score": 0.7,
+      "status": "built",
+      "root_cast_hash": "0x8ea75090cb719d5a360bea4e810512e7a302d02a",
+      "processed_at": "2026-04-15T12:15:00Z"
+    },
     {
       "cast_hash": "0x7f01fdf8c7a933e25d8dfed127d89a81dccbdbde",
       "author_fid": 1528748,

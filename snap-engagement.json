@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "airdrop-checker",
+      "cast_hash": "0x8ea75090cb719d5a360bea4e810512e7a302d02a",
+      "posted_at": "2026-04-15T12:15:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["utility", "toggle_group", "progress", "badge", "separator", "submit", "compose_cast", "stateless", "amber", "event-mode", "crypto", "satire"]
+    },
+    {
       "name": "world-cup-countdown",
       "cast_hash": "0xc5988ce8d03c480b6bb49811f69362fd0ce50ac8",
       "posted_at": "2026-04-14T23:10:00Z",
