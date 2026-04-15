@@ -2,6 +2,31 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xf2dfcceb4dc592975baa5c103d4cec47a41081a7",
+      "author_fid": 3316742,
+      "author_username": "hypecollect5532",
+      "author_display_name": "HypeCollector📣",
+      "text": "@freeturtle 👀 Flash drop early adopters! 🤯\n✨ Access your activity bonus using the Farcaster App. Clock is ticking.\nhttps://farcester.xyz/",
+      "parent_hash": "0x093791aa21137ab198e4217f402dcb6ec71b3bf5",
+      "received_at": "2026-04-15T14:05:28.919Z",
+      "user_score": 0.22,
+      "status": "skipped",
+      "processed_at": "2026-04-15T14:10:00.000Z"
+    },
+    {
+      "cast_hash": "0x1395399bcaa4178d3a1c8b44caa5682c188b3897",
+      "author_fid": 3316584,
+      "author_username": "seedroundpr3407",
+      "author_display_name": "SeedRoundPro🌱",
+      "text": "@freeturtle 🚀 Exclusive giveaway folks! 🎉\n⬇️ Score the event prize through our Mini-App. Available now.\nhttps://farcester.xyz/",
+      "parent_hash": "0x093791aa21137ab198e4217f402dcb6ec71b3bf5",
+      "received_at": "2026-04-15T14:05:30.839Z",
+      "user_score": 0.25,
+      "status": "skipped",
+      "processed_at": "2026-04-15T14:10:00.000Z"
+    },
+    {
+    {
       "cast_hash": "0x1fe834530a92b2a8ce74ba87f7ae2e11ce80da75",
       "author_fid": 402781,
       "author_username": "degencaso",
