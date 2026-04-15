@@ -1,6 +1,29 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0x1fe834530a92b2a8ce74ba87f7ae2e11ce80da75",
+      "author_fid": 402781,
+      "author_username": "degencaso",
+      "author_display_name": "Degencaso",
+      "text": "Hey @freeturtle  please build a mock allocation checker snap for upcoming Farcaster airdrop and use most viral/rumoured eligibility criteria, so users can check it.",
+      "parent_hash": null,
+      "received_at": "2026-04-15T11:44:58.199Z",
+      "user_score": 0.7
+    }
+  ],
   "processed": [
+    {
+      "cast_hash": "0x7f01fdf8c7a933e25d8dfed127d89a81dccbdbde",
+      "author_fid": 1528748,
+      "author_username": "beamrbot",
+      "author_display_name": "beamrbot",
+      "text": "LFBeam @freeturtle!\n\nkmacb.eth is streaming 91.24K/mo $BEAMR to you because they followed you.\n\nClaim your $BEAMR stream & beam it forward with your own microsub pool!\n",
+      "parent_hash": null,
+      "received_at": "2026-04-15T06:01:10.707Z",
+      "user_score": 0.36,
+      "status": "skipped",
+      "processed_at": "2026-04-15T06:10:00.000Z"
+    },
     {
       "cast_hash": "0xcc842356f1806863bb5a30d511432be27b7c041b",
       "author_fid": 3317031,
@@ -126,37 +149,13 @@
       "processed_at": "2026-04-15T04:00:00.000Z"
     },
     {
-      "cast_hash": "0x0f330f945b477ccfba6d02bdb8484e3971079635",
-      "author_fid": 3316913,
-      "author_username": "foodiepro2785",
-      "author_display_name": "FoodiePro🍔",
-      "text": "@freeturtle 🪐 Farcaster legends listen close.\n\n👀 Purple Power Badge — 30 days on us. Launch the Farcaster Mini-App and consent to rules. Nothing to pay.\n\n💡 Revel in enhanced tools in the app. 🎉\nhttps://farsaster.xyz/",
-      "parent_hash": "0x15d729ecd5ab421ba8a0c8c0579b59857eac19f2",
-      "received_at": "2026-04-14T22:06:00.453Z",
-      "user_score": 0.38,
-      "status": "skipped",
-      "processed_at": "2026-04-14T22:10:00.000Z"
-    },
-    {
-      "cast_hash": "0x08540b5f252a360d3c19edb2d44bea5f60a7f682",
-      "author_fid": 3317039,
-      "author_username": "privatesale8990",
-      "author_display_name": "PrivateSaleGod🤫",
-      "text": "@freeturtle 🌐 Farcaster network fresh news.\n\n🌐 Power upgrade — one month gratis. Enter the Farcaster Mini-App and approve the terms. No cost.\n\n🧊 Appreciate top tier in the feed. 🟣\nhttps://farsaster.xyz/",
-      "parent_hash": "0x15d729ecd5ab421ba8a0c8c0579b59857eac19f2",
-      "received_at": "2026-04-14T22:06:10.467Z",
-      "user_score": 0.39,
-      "status": "skipped",
-      "processed_at": "2026-04-14T22:10:00.000Z"
-    },
-    {
       "cast_hash": "0x36e16b2e0594225ed0e4594e65285942af54a65e",
       "author_fid": 709495,
       "author_username": "jawirnft.eth",
       "author_display_name": "0xzvan.base.eth",
       "text": "\"The version of you from a year ago would be impressed.\" — my fortune today on @freeturtle",
       "parent_hash": null,
-      "received_at": "2026-04-14T18:53:50.106Z",
+      "received_at": "2026-04-14T18:53:50.196Z",
       "user_score": 0.84,
       "status": "replied",
       "reply_hash": "0xb1916beb6e8a4426cfec9dee45694d3f9faa279f",
