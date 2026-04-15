@@ -9,6 +9,7 @@ import snap_catPet from "./snaps/cat-pet/index.js";
 import snap_checkers from "./snaps/checkers/index.js";
 import snap_cookedCheck from "./snaps/cooked-check/index.js";
 import snap_creatureSummoner from "./snaps/creature-summoner/index.js";
+import snap_dailyPulse from "./snaps/daily-pulse/index.js";
 import snap_doNotPress from "./snaps/do-not-press/index.js";
 import snap_dontClick from "./snaps/dont-click/index.js";
 import snap_drumMachine from "./snaps/drum-machine/index.js";
@@ -54,6 +55,7 @@ export const snaps: Record<string, Hono> = {
   "checkers": snap_checkers,
   "cooked-check": snap_cookedCheck,
   "creature-summoner": snap_creatureSummoner,
+  "daily-pulse": snap_dailyPulse,
   "do-not-press": snap_doNotPress,
   "dont-click": snap_dontClick,
   "drum-machine": snap_drumMachine,
