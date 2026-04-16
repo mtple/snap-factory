@@ -45,6 +45,7 @@ import snap_ticTacToe from "./snaps/tic-tac-toe/index.js";
 import snap_tipCalculator from "./snaps/tip-calculator/index.js";
 import snap_trendingCast from "./snaps/trending-cast/index.js";
 import snap_vibeCheck from "./snaps/vibe-check/index.js";
+import snap_wizardRps from "./snaps/wizard-rps/index.js";
 import snap_wizardTrivia from "./snaps/wizard-trivia/index.js";
 import snap_worldCupCountdown from "./snaps/world-cup-countdown/index.js";
 import snap_wouldYouRather from "./snaps/would-you-rather/index.js";
@@ -92,6 +93,7 @@ export const snaps: Record<string, Hono> = {
   "tip-calculator": snap_tipCalculator,
   "trending-cast": snap_trendingCast,
   "vibe-check": snap_vibeCheck,
+  "wizard-rps": snap_wizardRps,
   "wizard-trivia": snap_wizardTrivia,
   "world-cup-countdown": snap_worldCupCountdown,
   "would-you-rather": snap_wouldYouRather,
