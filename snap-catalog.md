@@ -51,10 +51,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 39 | daily-pulse | Community energy tracker — drag a slider (0-100) to set your energy for the day, see live bar_chart of where Farcaster landed. Daily Turso state. | /snaps/daily-pulse | 0x093791aa21137ab198e4217f402dcb6ec71b3bf5 | 2026-04-15 | daily, poll, slider, bar_chart, badge, separator, submit, compose_cast, stateful, turso, teal |
 | 40 | magic-mirror | Gag snap — ask the magic mirror what it sees. It always sees you. Reveal screen has view_profile button with the user's own FID. | /snaps/magic-mirror | 0x3d84038e23cbb54a2c9f4397c33506b13bed11e2 | 2026-04-15 | gag, absurd, view_profile, badge, separator, submit, compose_cast, stateless, pink |
 
+| 41 | wizard-rps | Rock Paper Scissors vs the wizard — pick Rock/Paper/Scissors, wizard picks randomly, W/L/D tracked per FID via Turso | /snaps/wizard-rps | 0xfaf2146bbb44b7c46de79ff1fae341e1e89c9c89 | 2026-04-16 | game, rps, toggle_group, badge, separator, submit, compose_cast, stateful, turso, purple, replayable |
+
 ## Stats
 
-- Total snaps built: 40
-- Live snaps: 39
+- Total snaps built: 41
+- Live snaps: 40
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

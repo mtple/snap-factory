@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "wizard-rps",
+      "cast_hash": "0xfaf2146bbb44b7c46de79ff1fae341e1e89c9c89",
+      "posted_at": "2026-04-16T10:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["game", "rps", "toggle_group", "badge", "separator", "submit", "compose_cast", "stateful", "turso", "purple", "replayable"]
+    },
+    {
       "name": "magic-mirror",
       "cast_hash": "0x3d84038e23cbb54a2c9f4397c33506b13bed11e2",
       "posted_at": "2026-04-15T22:00:00Z",
