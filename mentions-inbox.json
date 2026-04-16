@@ -1,16 +1,5 @@
 {
-  "pending": [
-    {
-      "cast_hash": "0xbda6e0c333daa1bb83b3400023b647cfa6b966e8",
-      "author_fid": 3316833,
-      "author_username": "studentguy1554",
-      "author_display_name": "StudentGuy🎒",
-      "text": "@freeturtle 🎉 Just unlocked my retroactive drop size - 142.5 tokens waiting!\n⏳ The genesis claim will be completed prior to Farcon Rome (May 4, 2026).\n⏬ It's time to confirm your allocation this minute!\nhttps://farcester.xyz",
-      "parent_hash": "0x3d84038e23cbb54a2c9f4397c33506b13bed11e2",
-      "received_at": "2026-04-15T22:05:02.873Z",
-      "user_score": 0.38
-    }
-  ],
+  "pending": [],
   "processed": [
     {
       "cast_hash": "0x8ddc713433d406f00ce1788b5f73cbd597538195",
@@ -79,6 +68,46 @@
       "reply_cast_hash": "0xf324a193733caf2fd3437b10ab8e18868dd62ed1",
       "processed_at": "2026-04-15T22:00:00.000Z",
       "note": "Comment/question — asked them to drop the link since couldn't load parent cast context (Neynar now requires auth for reads)"
+    },
+    {
+      "cast_hash": "0xbda6e0c333daa1bb83b3400023b647cfa6b966e8",
+      "author_fid": 3316833,
+      "author_username": "studentguy1554",
+      "author_display_name": "StudentGuy🎒",
+      "text": "@freeturtle 🎉 Just unlocked my retroactive drop size...",
+      "parent_hash": "0x3d84038e23cbb54a2c9f4397c33506b13bed11e2",
+      "received_at": "2026-04-15T22:05:02.873Z",
+      "user_score": 0.38,
+      "status": "skipped",
+      "processed_at": "2026-04-15T22:08:00.000Z",
+      "note": "Spam/phishing — fake airdrop claim with misspelled domain farcester.xyz"
+    },
+    {
+      "cast_hash": "0x3e47b84342f089457a7a5de5e332475a317c0eb8",
+      "author_fid": 3316603,
+      "author_username": "holderguy8358",
+      "author_display_name": "HolderGuy💎",
+      "text": "@freeturtle 🪂 purple app for real...",
+      "parent_hash": "0x3d84038e23cbb54a2c9f4397c33506b13bed11e2",
+      "received_at": "2026-04-15T22:05:16.928Z",
+      "user_score": 0.25,
+      "status": "skipped",
+      "processed_at": "2026-04-15T22:08:00.000Z",
+      "note": "Spam/phishing — fake 'Alpha badge' promotion with misspelled domain farsaster.xyz"
+    },
+    {
+      "cast_hash": "0x38f8bfd20eca6391b841f3aa318d58bafcdfc67f",
+      "author_fid": 282926,
+      "author_username": "snrcaptain",
+      "author_display_name": "snrcaptain.base.eth 🎩🟧",
+      "text": "just beat the AI at tic-tac-toe on @freeturtle 🎉",
+      "parent_hash": null,
+      "received_at": "2026-04-16T13:04:56.901Z",
+      "user_score": 0.79,
+      "status": "replied",
+      "reply_cast_hash": "0xe63ee9a76a1d274c50e4f75091582eea2211848a",
+      "processed_at": "2026-04-16T13:10:00.000Z",
+      "note": "Comment/reaction — celebrating beating the AI at tic-tac-toe. Replied with short friendly response."
     }
   ],
   "backlog": []
