@@ -108,6 +108,19 @@
       "reply_cast_hash": "0xe63ee9a76a1d274c50e4f75091582eea2211848a",
       "processed_at": "2026-04-16T13:10:00.000Z",
       "note": "Comment/reaction — celebrating beating the AI at tic-tac-toe. Replied with short friendly response."
+    },
+    {
+      "cast_hash": "0xf875cb9ebbe79af58bb627b6b56239f9012a364c",
+      "author_fid": 3316827,
+      "author_username": "socialbutte6579",
+      "author_display_name": "SocialButterfly🦋",
+      "text": "@freeturtle ⚡ Glanced at my expected bag size > 8750.0 tokens expected!...",
+      "parent_hash": "0xfaf2146bbb44b7c46de79ff1fae341e1e89c9c89",
+      "received_at": "2026-04-16T14:06:23.240Z",
+      "user_score": 0.25,
+      "status": "skipped",
+      "processed_at": "2026-04-16T14:15:00.000Z",
+      "note": "Spam/phishing — fake airdrop/token claim with misspelled domain farcester.xyz"
     }
   ],
   "backlog": []

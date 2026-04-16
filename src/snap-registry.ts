@@ -27,6 +27,7 @@ import snap_loudLinks from "./snaps/loud-links/index.js";
 import snap_magicMirror from "./snaps/magic-mirror/index.js";
 import snap_meetSnapWizard from "./snaps/meet-snap-wizard/index.js";
 import snap_monaLisa from "./snaps/mona-lisa/index.js";
+import snap_morningRitual from "./snaps/morning-ritual/index.js";
 import snap_mvrShowcase from "./snaps/mvr-showcase/index.js";
 import snap_natalChart from "./snaps/natal-chart/index.js";
 import snap_natalChartV2 from "./snaps/natal-chart-v2/index.js";
@@ -75,6 +76,7 @@ export const snaps: Record<string, Hono> = {
   "magic-mirror": snap_magicMirror,
   "meet-snap-wizard": snap_meetSnapWizard,
   "mona-lisa": snap_monaLisa,
+  "morning-ritual": snap_morningRitual,
   "mvr-showcase": snap_mvrShowcase,
   "natal-chart": snap_natalChart,
   "natal-chart-v2": snap_natalChartV2,
