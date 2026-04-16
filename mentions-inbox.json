@@ -1,5 +1,16 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0x5b0ee5b3957dd2f636a6469498e03d4c1ab348b6",
+      "author_fid": 3317163,
+      "author_username": "backendpro2138",
+      "author_display_name": "BackendPro⚙️",
+      "text": "@freeturtle 📣 Got to see my early adopter reward > 13500.0 tokens predicted!\n📌 The official drop is projected prior to Farcon Rome - May 4, 2026.\n📌 Go ahead and calculate your drop via the checker!\nhttps://farcester.xyz",
+      "parent_hash": "0x91f0663411c4e63061c06789358020a39f1fb5a2",
+      "received_at": "2026-04-16T22:05:22.999Z",
+      "user_score": 0.31
+    }
+  ],
   "processed": [
     {
       "cast_hash": "0x8ddc713433d406f00ce1788b5f73cbd597538195",

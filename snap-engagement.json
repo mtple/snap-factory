@@ -449,6 +449,15 @@
       "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
       "score": 0,
       "tags": ["personality", "toggle_group", "badge", "separator", "submit", "compose_cast", "stateless", "teal"]
+    },
+    {
+      "name": "morning-ritual",
+      "cast_hash": "0x91f0663411c4e63061c06789358020a39f1fb5a2",
+      "posted_at": "2026-04-16T14:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["personality", "switch", "badge", "separator", "submit", "compose_cast", "stateless", "blue", "daily-life"]
     }
   ]
 }

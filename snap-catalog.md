@@ -52,11 +52,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 40 | magic-mirror | Gag snap — ask the magic mirror what it sees. It always sees you. Reveal screen has view_profile button with the user's own FID. | /snaps/magic-mirror | 0x3d84038e23cbb54a2c9f4397c33506b13bed11e2 | 2026-04-15 | gag, absurd, view_profile, badge, separator, submit, compose_cast, stateless, pink |
 
 | 41 | wizard-rps | Rock Paper Scissors vs the wizard — pick Rock/Paper/Scissors, wizard picks randomly, W/L/D tracked per FID via Turso | /snaps/wizard-rps | 0xfaf2146bbb44b7c46de79ff1fae341e1e89c9c89 | 2026-04-16 | game, rps, toggle_group, badge, separator, submit, compose_cast, stateful, turso, purple, replayable |
+| 42 | morning-ritual | Build your morning ritual — 5 switches (coffee, workout, quiet, news, music) → one of 9 archetypes with description + share | /snaps/morning-ritual | 0x91f0663411c4e63061c06789358020a39f1fb5a2 | 2026-04-16 | personality, switch, badge, separator, submit, compose_cast, stateless, blue, daily-life |
 
 ## Stats
 
-- Total snaps built: 41
-- Live snaps: 40
+- Total snaps built: 42
+- Live snaps: 41
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
