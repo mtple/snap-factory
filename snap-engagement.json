@@ -467,6 +467,15 @@
       "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
       "score": 0,
       "tags": ["music", "toggle_group-multiple", "open_url", "item_group", "item", "separator", "stateless", "web-audio", "green", "tortoise"]
+    },
+    {
+      "name": "wizard-dice",
+      "cast_hash": "0x0af75f1ed91540a81e6abac9f48b50f355773fff",
+      "posted_at": "2026-04-17T18:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["game", "utility", "toggle_group", "badge", "separator", "submit", "compose_cast", "stateless", "amber", "replayable"]
     }
   ]
 }

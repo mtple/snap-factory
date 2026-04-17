@@ -54,11 +54,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 41 | wizard-rps | Rock Paper Scissors vs the wizard — pick Rock/Paper/Scissors, wizard picks randomly, W/L/D tracked per FID via Turso | /snaps/wizard-rps | 0xfaf2146bbb44b7c46de79ff1fae341e1e89c9c89 | 2026-04-16 | game, rps, toggle_group, badge, separator, submit, compose_cast, stateful, turso, purple, replayable |
 | 42 | morning-ritual | Build your morning ritual — 5 switches (coffee, workout, quiet, news, music) → one of 9 archetypes with description + share | /snaps/morning-ritual | 0x91f0663411c4e63061c06789358020a39f1fb5a2 | 2026-04-16 | personality, switch, badge, separator, submit, compose_cast, stateless, blue, daily-life |
 | 43 | drum-machine | 4-step beat builder — multi-select toggle_groups for Kick/Snare/Hi-hat/Clap, hit Play to open a Web Audio browser player | /snaps/drum-machine | 0x1898caa562aa7141812125f86c6a2676f566e37e | 2026-04-17 | music, toggle_group-multiple, open_url, item_group, item, separator, stateless, web-audio, green, tortoise |
+| 44 | wizard-dice | Roll polyhedral dice (d4–d20) in one tap — pick your die, roll, get confetti on a natural max | /snaps/wizard-dice | 0x0af75f1ed91540a81e6abac9f48b50f355773fff | 2026-04-17 | game, utility, toggle_group, badge, separator, submit, compose_cast, stateless, amber, replayable |
 
 ## Stats
 
-- Total snaps built: 43
-- Live snaps: 42
+- Total snaps built: 44
+- Live snaps: 43
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
