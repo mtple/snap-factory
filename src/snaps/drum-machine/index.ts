@@ -1,16 +1,17 @@
 /**
- * drum-machine — 4-track, 8-step beat sequencer
+ * drum-machine — Build a 4-step beat in Farcaster, then play it in your browser.
  *
- * Shows a 4×8 cell_grid (rows = Kick, Snare, Hi-hat, Clap; cols = 8 steps).
- * State is encoded as a 32-bit hex string in the submit target URL — stateless.
+ * GET:     Show beat builder with 4 multi-select toggle_groups
+ *          (Kick, Snare, Hi-hat, Clap), each with 4 step slots.
+ *          Defaults to a classic rock beat so there's always something to hear.
+ * POST:    Encode the selected steps as a binary string per instrument,
+ *          build a player URL, and return a "Play in browser" open_url button.
+ * /player: Serve a standalone HTML + Web Audio page that plays the beat.
  *
- * Flow:
- *   GET / POST ?mode=edit  → edit view: grid + "Apply Beats" + "Play →" + "Clear"
- *   POST ?mode=play        → ready view: updated grid + "▶ Open Player" (open_url) + "Edit"
- *
- * Fixes:
- *   - All 32 cells are always rendered (gray = inactive, colored = active)
- *   - "Play →" goes through a server submit so the hex is always current
+ * Components: toggle_group (multiple), text, button, item, item_group,
+ *             separator, stack
+ * Actions:    submit, open_url, compose_cast
+ * State:      stateless — pattern lives in the query string
  */
 import { Hono } from "hono";
 import { registerSnapHandler } from "@farcaster/snap-hono";
@@ -18,337 +19,353 @@ import type { SnapHandlerResult } from "@farcaster/snap";
 import { snapUrl } from "../../_lib/base-url.js";
 
 const app = new Hono();
+const SNAP_NAME = "drum-machine";
 
-// ── Constants ────────────────────────────────────────────────────────────────
+// ── Helpers ───────────────────────────────────────────────────────────────────
 
-const ROWS = 4;
-const COLS = 8;
-const ROW_COLORS = ["red", "blue", "amber", "green"] as const;
-type RowColor = (typeof ROW_COLORS)[number];
+type Inputs = Record<string, string | string[] | undefined>;
 
-const ROW_LABELS = ["Kick", "Snare", "Hi-hat", "Clap"];
-
-// ── State helpers ─────────────────────────────────────────────────────────────
-
-function isCellOn(state: number, row: number, col: number): boolean {
-  return Boolean((state >>> (row * COLS + col)) & 1);
+/** Convert a toggle_group multi-select result to a 4-char binary string. */
+function toBinary(selected: string | string[] | undefined): string {
+  if (!selected) return "0000";
+  const arr = Array.isArray(selected) ? selected : [selected];
+  return ["1", "2", "3", "4"].map(step => arr.includes(step) ? "1" : "0").join("");
 }
 
-function stateToHex(state: number): string {
-  return (state >>> 0).toString(16).padStart(8, "0");
+/** Convert binary string to a dot-display: "1010" → "●  ·  ●  ·" */
+function toDisplay(pattern: string): string {
+  return pattern.split("").map(b => b === "1" ? "●" : "·").join("  ");
 }
 
-/**
- * Builds the full 32-cell array for cell_grid.
- * Inactive cells use "gray" so the grid structure is always visible.
- */
-function buildCells(
-  state: number,
-): Array<{ row: number; col: number; color: RowColor | "gray" }> {
-  const cells: Array<{ row: number; col: number; color: RowColor | "gray" }> =
-    [];
-  for (let r = 0; r < ROWS; r++) {
-    for (let c = 0; c < COLS; c++) {
-      cells.push({
-        row: r,
-        col: c,
-        color: isCellOn(state, r, c) ? ROW_COLORS[r] : "gray",
-      });
-    }
-  }
-  return cells;
-}
+// ── HTML player — served at /player?k=&s=&h=&c= ───────────────────────────────
+// Registered before registerSnapHandler so Hono routes it first.
+app.get("/player", (c) => {
+  const clean = (v: string | undefined) =>
+    (v ?? "0000").replace(/[^01]/g, "0").padEnd(4, "0").slice(0, 4);
+  const k  = clean(c.req.query("k"));
+  const s  = clean(c.req.query("s"));
+  const h  = clean(c.req.query("h"));
+  const cl = clean(c.req.query("c"));
+  return c.html(buildPlayerHtml(k, s, h, cl));
+});
 
-function parseSelection(raw: unknown): Array<[number, number]> {
-  if (typeof raw !== "string" || !raw) return [];
-  return raw
-    .split("|")
-    .map((s) => {
-      const parts = s.split(",");
-      return [
-        parseInt(parts[0] ?? "", 10),
-        parseInt(parts[1] ?? "", 10),
-      ] as [number, number];
-    })
-    .filter(
-      ([r, c]) =>
-        Number.isFinite(r) &&
-        Number.isFinite(c) &&
-        r >= 0 &&
-        r < ROWS &&
-        c >= 0 &&
-        c < COLS,
-    );
-}
-
-// ── Play page (HTML + Web Audio) ─────────────────────────────────────────────
-
-app.get("/play", (c) => {
-  const patHex = c.req.query("p") ?? "00000000";
-  const state = (parseInt(patHex, 16) || 0) >>> 0;
-
-  const grid: boolean[][] = Array.from({ length: ROWS }, (_, r) =>
-    Array.from({ length: COLS }, (_, col) => isCellOn(state, r, col)),
-  );
-
-  const rowCss = ["#ef4444", "#3b82f6", "#f59e0b", "#22c55e"];
-  const stepNums = Array.from(
-    { length: COLS },
-    (_, i) => `<div class="sn">${i + 1}</div>`,
-  ).join("");
-
-  const gridHtml = grid
-    .map((row, r) => {
-      const label = `<div class="rl" style="color:${rowCss[r]}">${ROW_LABELS[r]}</div>`;
-      const beats = row
-        .map(
-          (on, col) =>
-            `<div class="bc${on ? " on" : ""}" data-r="${r}" data-c="${col}" style="${on ? `background:${rowCss[r]};border-color:${rowCss[r]}` : ""}"></div>`,
-        )
-        .join("");
-      return `<div class="dr">${label}${beats}</div>`;
-    })
-    .join("");
-
-  const isEmpty = state === 0;
-
-  const html = `<!DOCTYPE html>
+function buildPlayerHtml(k: string, s: string, h: string, cl: string): string {
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Drum Machine — Snap Wizard</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#0f172a;color:#f1f5f9;font-family:system-ui,-apple-system,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
-.wrap{max-width:400px;width:100%}
-h1{font-size:20px;font-weight:700;margin-bottom:2px}
-.sub{font-size:11px;color:#475569;font-family:monospace;margin-bottom:18px}
-.sn-row{display:flex;gap:4px;margin-bottom:4px;padding-left:52px}
-.sn{width:30px;text-align:center;font-size:9px;color:#475569}
-.dr{display:flex;align-items:center;gap:4px;margin-bottom:4px}
-.rl{width:44px;font-size:10px;font-weight:600;flex-shrink:0;text-align:right;padding-right:4px}
-.bc{width:30px;height:30px;border-radius:4px;background:#1e293b;border:2px solid #334155;transition:border-color .08s}
-.bc.on{opacity:1}
-.bc:not(.on){opacity:.22}
-.bc.cur{border-color:#fff!important;transform:scale(1.12);opacity:1!important}
-.controls{margin-top:18px;display:flex;flex-direction:column;gap:10px}
-.brow{display:flex;align-items:center;gap:10px}
-.bl{font-size:11px;color:#64748b;width:28px}
-input[type=range]{flex:1;accent-color:#7c3aed}
-.bv{font-size:11px;color:#e2e8f0;width:56px;text-align:right}
-.pbtn{width:100%;padding:12px;background:#7c3aed;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;letter-spacing:.02em}
-.pbtn:hover{background:#6d28d9}
-.pbtn.on{background:#dc2626}
-.pbtn.on:hover{background:#b91c1c}
-.hint{font-size:11px;color:#475569;text-align:center;margin-top:8px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0d0d0d;color:#f0f0f0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;gap:1.5rem}
+h1{font-size:1.5rem}
+.sub{color:#555;font-size:.85rem}
+.grid{display:grid;grid-template-columns:56px repeat(4,1fr);gap:8px;width:100%;max-width:380px}
+.lbl{display:flex;align-items:center;font-size:.8rem;font-weight:600;color:#888}
+.cell{height:52px;border-radius:8px;border:2px solid #222;background:#1a1a1a;transition:all .08s ease}
+.active.kick{background:#ef4444;border-color:#ef4444}
+.active.snare{background:#3b82f6;border-color:#3b82f6}
+.active.hihat{background:#10b981;border-color:#10b981}
+.active.clap{background:#f59e0b;border-color:#f59e0b}
+.flash{opacity:.35!important;transform:scale(.9)}
+.dot-row{grid-column:2/-1;display:flex;gap:8px;justify-content:space-around;padding:4px 0}
+.dot{width:10px;height:10px;border-radius:50%;background:#222;transition:background .06s}
+.dot.lit{background:#8b5cf6}
+.controls{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;justify-content:center}
+#pb{padding:.7rem 2rem;border-radius:8px;border:none;cursor:pointer;font-size:1rem;font-weight:600;background:#8b5cf6;color:#fff;transition:opacity .15s}
+#pb:hover{opacity:.85}
+#pb.on{background:#dc2626}
+.bpm{display:flex;align-items:center;gap:.5rem;color:#666;font-size:.9rem}
+input[type=range]{width:90px;accent-color:#8b5cf6}
+.foot{color:#333;font-size:.75rem}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>Drum Machine</h1>
-  <div class="sub">${isEmpty ? "empty pattern — go back and build one" : patHex}</div>
-  <div class="sn-row">${stepNums}</div>
-  <div id="grid">${gridHtml}</div>
-  <div class="controls">
-    <div class="brow">
-      <span class="bl">BPM</span>
-      <input type="range" id="bsl" min="60" max="200" value="120">
-      <span class="bv" id="bv">120 BPM</span>
-    </div>
-    <button class="pbtn" id="pbtn">&#9654; Play</button>
+<h1>Drum Machine</h1>
+<p class="sub">Built with Snap Wizard on Farcaster</p>
+<div class="grid">
+  <div></div>
+  <div class="dot-row">
+    <div class="dot" id="d0"></div><div class="dot" id="d1"></div>
+    <div class="dot" id="d2"></div><div class="dot" id="d3"></div>
   </div>
-  <div class="hint">built with Snap Wizard 🐢</div>
+  <div class="lbl">Kick</div>
+  <div class="cell kick ${k[0]==='1'?'active':''}" id="k0"></div>
+  <div class="cell kick ${k[1]==='1'?'active':''}" id="k1"></div>
+  <div class="cell kick ${k[2]==='1'?'active':''}" id="k2"></div>
+  <div class="cell kick ${k[3]==='1'?'active':''}" id="k3"></div>
+  <div class="lbl">Snare</div>
+  <div class="cell snare ${s[0]==='1'?'active':''}" id="s0"></div>
+  <div class="cell snare ${s[1]==='1'?'active':''}" id="s1"></div>
+  <div class="cell snare ${s[2]==='1'?'active':''}" id="s2"></div>
+  <div class="cell snare ${s[3]==='1'?'active':''}" id="s3"></div>
+  <div class="lbl">Hi-hat</div>
+  <div class="cell hihat ${h[0]==='1'?'active':''}" id="h0"></div>
+  <div class="cell hihat ${h[1]==='1'?'active':''}" id="h1"></div>
+  <div class="cell hihat ${h[2]==='1'?'active':''}" id="h2"></div>
+  <div class="cell hihat ${h[3]==='1'?'active':''}" id="h3"></div>
+  <div class="lbl">Clap</div>
+  <div class="cell clap ${cl[0]==='1'?'active':''}" id="c0"></div>
+  <div class="cell clap ${cl[1]==='1'?'active':''}" id="c1"></div>
+  <div class="cell clap ${cl[2]==='1'?'active':''}" id="c2"></div>
+  <div class="cell clap ${cl[3]==='1'?'active':''}" id="c3"></div>
 </div>
+<div class="controls">
+  <button id="pb">&#9654; Play</button>
+  <div class="bpm">
+    <span id="bv">120 BPM</span>
+    <input type="range" id="bs" min="60" max="200" value="120">
+  </div>
+</div>
+<p class="foot">snap wizard 🐢</p>
 <script>
-const GRID=${JSON.stringify(grid)};
-let ctx=null,playing=false,step=0,nxt=0,tid=null,bpm=120;
-document.getElementById('bsl').oninput=function(){bpm=+this.value;document.getElementById('bv').textContent=bpm+' BPM';};
-function si(){return 60/bpm/2}
-function noise(c,dur){const n=Math.ceil(c.sampleRate*dur),b=c.createBuffer(1,n,c.sampleRate),d=b.getChannelData(0);for(let i=0;i<n;i++)d[i]=Math.random()*2-1;return b;}
-function kick(c,t){const o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.setValueAtTime(155,t);o.frequency.exponentialRampToValueAtTime(0.01,t+0.28);g.gain.setValueAtTime(1,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.28);o.start(t);o.stop(t+0.32);}
-function snare(c,t){const b=noise(c,.16),s=c.createBufferSource(),g=c.createGain();s.buffer=b;s.connect(g);g.connect(c.destination);g.gain.setValueAtTime(.55,t);g.gain.exponentialRampToValueAtTime(.001,t+.16);s.start(t);s.stop(t+.18);}
-function hihat(c,t){const b=noise(c,.04),s=c.createBufferSource(),f=c.createBiquadFilter(),g=c.createGain();s.buffer=b;f.type='highpass';f.frequency.value=7000;s.connect(f);f.connect(g);g.connect(c.destination);g.gain.setValueAtTime(.28,t);g.gain.exponentialRampToValueAtTime(.001,t+.04);s.start(t);s.stop(t+.05);}
-function clap(c,t){for(let i=0;i<3;i++){const b=noise(c,.04),s=c.createBufferSource(),f=c.createBiquadFilter(),g=c.createGain();s.buffer=b;f.type='bandpass';f.frequency.value=1100;s.connect(f);f.connect(g);g.connect(c.destination);g.gain.setValueAtTime(.38,t+i*.012);g.gain.exponentialRampToValueAtTime(.001,t+i*.012+.04);s.start(t+i*.012);s.stop(t+i*.012+.05);}}
-const SND=[kick,snare,hihat,clap];
-let sched=[];
-function doStep(s,t){for(let r=0;r<4;r++)if(GRID[r][s])SND[r](ctx,t);sched.push({s,t});}
-function raf(){
-  if(!playing)return;
-  const now=ctx.currentTime;
-  const cur=sched.filter(x=>x.t<=now+si()*.5&&x.t>now-si()).map(x=>x.s);
-  document.querySelectorAll('.bc').forEach(el=>{
-    const c=+el.dataset.c;el.classList.toggle('cur',cur.includes(c));
-  });
-  sched=sched.filter(x=>x.t>now-.2);
-  requestAnimationFrame(raf);
+var P={k:"${k}",s:"${s}",h:"${h}",c:"${cl}"};
+var ac=null,play=false,cur=0,tid=null,bpm=120;
+function ms(){return 60/bpm*1000;}
+document.getElementById('bs').oninput=function(){bpm=+this.value;document.getElementById('bv').textContent=bpm+' BPM';if(play){clearInterval(tid);tid=setInterval(tick,ms());}};
+document.getElementById('pb').onclick=tog;
+function ea(){if(!ac)ac=new(window.AudioContext||window.webkitAudioContext)();if(ac.state==='suspended')ac.resume();}
+function nb(d){var n=Math.ceil(ac.sampleRate*d),b=ac.createBuffer(1,n,ac.sampleRate),dd=b.getChannelData(0);for(var i=0;i<n;i++)dd[i]=Math.random()*2-1;return b;}
+function kick(t){var o=ac.createOscillator(),g=ac.createGain();o.connect(g);g.connect(ac.destination);o.frequency.setValueAtTime(150,t);o.frequency.exponentialRampToValueAtTime(0.01,t+0.3);g.gain.setValueAtTime(1,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.3);o.start(t);o.stop(t+0.35);}
+function snare(t){var s=ac.createBufferSource(),g=ac.createGain();s.buffer=nb(0.16);s.connect(g);g.connect(ac.destination);g.gain.setValueAtTime(0.6,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.16);s.start(t);s.stop(t+0.18);}
+function hihat(t){var s=ac.createBufferSource(),f=ac.createBiquadFilter(),g=ac.createGain();s.buffer=nb(0.04);f.type='highpass';f.frequency.value=7000;s.connect(f);f.connect(g);g.connect(ac.destination);g.gain.setValueAtTime(0.3,t);g.gain.exponentialRampToValueAtTime(0.001,t+0.04);s.start(t);s.stop(t+0.05);}
+function clap(t){for(var i=0;i<3;i++){var s=ac.createBufferSource(),f=ac.createBiquadFilter(),g=ac.createGain();s.buffer=nb(0.04);f.type='bandpass';f.frequency.value=1100;s.connect(f);f.connect(g);g.connect(ac.destination);g.gain.setValueAtTime(0.4,t+i*0.013);g.gain.exponentialRampToValueAtTime(0.001,t+i*0.013+0.04);s.start(t+i*0.013);s.stop(t+i*0.013+0.05);}}
+var SND={k:kick,s:snare,h:hihat,c:clap};
+var TRS=['k','s','h','c'];
+function tick(){
+  var now=ac.currentTime;
+  TRS.forEach(function(tr){if(P[tr][cur]==='1')SND[tr](now);});
+  TRS.forEach(function(tr){var el=document.getElementById(tr+cur);if(el&&el.classList.contains('active')){el.classList.add('flash');setTimeout(function(){el.classList.remove('flash');},80);}});
+  for(var i=0;i<4;i++)document.getElementById('d'+i).classList.toggle('lit',i===cur);
+  cur=(cur+1)%4;
 }
-function sched_loop(){
-  while(nxt<ctx.currentTime+.1){doStep(step,nxt);step=(step+1)%8;nxt+=si();}
-  tid=setTimeout(sched_loop,25);
+function tog(){
+  ea();
+  var b=document.getElementById('pb');
+  if(play){
+    clearInterval(tid);play=false;cur=0;
+    b.innerHTML='&#9654; Play';b.classList.remove('on');
+    for(var i=0;i<4;i++)document.getElementById('d'+i).classList.remove('lit');
+  } else {
+    play=true;b.innerHTML='&#9632; Stop';b.classList.add('on');
+    tick();tid=setInterval(tick,ms());
+  }
 }
-function toggle(){
-  if(!ctx)ctx=new(window.AudioContext||window.webkitAudioContext)();
-  const b=document.getElementById('pbtn');
-  ctx.resume().then(function(){
-    playing=!playing;
-    if(playing){step=0;nxt=ctx.currentTime+.05;sched_loop();requestAnimationFrame(raf);b.innerHTML='&#9632; Stop';b.classList.add('on');}
-    else{clearTimeout(tid);b.innerHTML='&#9654; Play';b.classList.remove('on');}
-  });
-}
-document.getElementById('pbtn').onclick=toggle;
 </script>
 </body>
 </html>`;
-
-  return c.html(html);
-});
+}
 
 // ── Snap handler ──────────────────────────────────────────────────────────────
 
-registerSnapHandler(app, async (ctx) => {
-  const self = snapUrl(ctx.request, "drum-machine");
-  const reqUrl = new URL(ctx.request.url);
-
-  let state = 0;
-  const mode = reqUrl.searchParams.get("mode") ?? "edit";
-
-  if (ctx.action.type === "post") {
-    const isClear = reqUrl.searchParams.get("clear") === "1";
-    if (isClear) {
-      state = 0;
-    } else {
-      const hexParam = reqUrl.searchParams.get("s") ?? "00000000";
-      state = (parseInt(hexParam, 16) || 0) >>> 0;
-      const rawSel = (ctx.action.inputs as Record<string, unknown>)?.[
-        "grid_tap"
-      ];
-      for (const [r, c] of parseSelection(rawSel)) {
-        const bit = r * COLS + c;
-        state = (state ^ (1 << bit)) >>> 0;
-      }
-    }
-  }
-
-  const hex = stateToHex(state);
-  const cells = buildCells(state);
-  const activeCount = cells.filter((c) => c.color !== "gray").length;
-
-  // ── Play-ready screen ─────────────────────────────────────────────────────
-  if (mode === "play" && ctx.action.type === "post") {
-    const playTarget = `${self}/play?p=${hex}`;
-    const editTarget = `${self}?s=${hex}&mode=edit`;
-
-    const response: SnapHandlerResult = {
-      version: "1.0",
-      theme: { accent: "purple" },
-      ui: {
-        root: "page",
-        elements: {
-          page: {
-            type: "stack",
-            props: { direction: "vertical", gap: "sm" },
-            children: ["title", "grid", "status", "play_btn", "edit_btn"],
-          },
-          title: {
-            type: "text",
-            props: { content: "Drum Machine", weight: "bold" },
-          },
-          grid: {
-            type: "cell_grid",
-            props: { cols: COLS, rows: ROWS, rowHeight: 28, cells, select: "off" },
-          },
-          status: {
-            type: "text",
-            props: {
-              content:
-                activeCount > 0
-                  ? `${activeCount} beat${activeCount !== 1 ? "s" : ""} set — open in browser to play`
-                  : "No beats set yet — go back and tap some cells",
-              size: "sm",
-            },
-          },
-          play_btn: {
-            type: "button",
-            props: { label: "▶ Open Player", variant: "primary" },
-            on: { press: { action: "open_url", params: { target: playTarget } } },
-          },
-          edit_btn: {
-            type: "button",
-            props: { label: "← Edit Pattern", variant: "secondary" },
-            on: {
-              press: { action: "submit", params: { target: editTarget } },
-            },
-          },
-        },
-      },
-    };
-    return response;
-  }
-
-  // ── Edit screen ───────────────────────────────────────────────────────────
-  const applyTarget = `${self}?s=${hex}&mode=edit`;
-  const playSubmitTarget = `${self}?s=${hex}&mode=play`;
-  const clearTarget = `${self}?clear=1&mode=edit`;
-
-  const response: SnapHandlerResult = {
+function buildPickerScreen(self: string): SnapHandlerResult {
+  return {
     version: "1.0",
-    theme: { accent: "purple" },
+    theme: { accent: "green" },
     ui: {
       root: "page",
       elements: {
         page: {
           type: "stack",
-          props: { direction: "vertical", gap: "sm" },
-          children: ["title", "subtitle", "grid", "action_row", "play_btn"],
+          props: { direction: "vertical", gap: "md" },
+          children: [
+            "title", "subtitle",
+            "kick_g", "snare_g", "hihat_g", "clap_g",
+            "play_btn", "share_btn",
+          ],
         },
         title: {
           type: "text",
-          props: { content: "Drum Machine", weight: "bold" },
+          props: { content: "Drum Machine", weight: "bold", align: "center" },
         },
         subtitle: {
           type: "text",
           props: {
-            content: "Kick · Snare · Hi-hat · Clap — tap cells, hit Apply",
+            content: "Pick steps for each drum, then hit Play",
             size: "sm",
+            align: "center",
           },
         },
-        grid: {
-          type: "cell_grid",
+        kick_g: {
+          type: "toggle_group",
           props: {
-            cols: COLS,
-            rows: ROWS,
-            rowHeight: 28,
-            cells,
-            select: "multiple",
+            name: "kick",
+            label: "Kick",
+            options: ["1", "2", "3", "4"],
+            orientation: "horizontal",
+            variant: "outline",
+            multiple: true,
+            defaultValue: ["1", "3"],
           },
         },
-        action_row: {
-          type: "stack",
-          props: { direction: "horizontal", gap: "sm" },
-          children: ["apply_btn", "clear_btn"],
+        snare_g: {
+          type: "toggle_group",
+          props: {
+            name: "snare",
+            label: "Snare",
+            options: ["1", "2", "3", "4"],
+            orientation: "horizontal",
+            variant: "outline",
+            multiple: true,
+            defaultValue: ["2", "4"],
+          },
         },
-        apply_btn: {
-          type: "button",
-          props: { label: "Apply Beats", variant: "secondary" },
-          on: { press: { action: "submit", params: { target: applyTarget } } },
+        hihat_g: {
+          type: "toggle_group",
+          props: {
+            name: "hihat",
+            label: "Hi-hat",
+            options: ["1", "2", "3", "4"],
+            orientation: "horizontal",
+            variant: "outline",
+            multiple: true,
+            defaultValue: ["1", "2", "3", "4"],
+          },
         },
-        clear_btn: {
-          type: "button",
-          props: { label: "Clear", variant: "secondary" },
-          on: { press: { action: "submit", params: { target: clearTarget } } },
+        clap_g: {
+          type: "toggle_group",
+          props: {
+            name: "clap",
+            label: "Clap",
+            options: ["1", "2", "3", "4"],
+            orientation: "horizontal",
+            variant: "outline",
+            multiple: true,
+            defaultValue: ["4"],
+          },
         },
         play_btn: {
           type: "button",
-          props: { label: "Play →", variant: "primary" },
+          props: { label: "Play beat", variant: "primary" },
           on: {
-            press: { action: "submit", params: { target: playSubmitTarget } },
+            press: { action: "submit", params: { target: self } },
+          },
+        },
+        share_btn: {
+          type: "button",
+          props: { label: "Share snap", variant: "secondary" },
+          on: {
+            press: {
+              action: "compose_cast",
+              params: {
+                text: "build a drum beat in Farcaster 🥁",
+                embeds: [self],
+              },
+            },
           },
         },
       },
     },
   };
+}
 
+registerSnapHandler(app, async (ctx) => {
+  const self = snapUrl(ctx.request, SNAP_NAME);
+
+  if (ctx.action.type === "get") {
+    return buildPickerScreen(self);
+  }
+
+  // POST: encode the selected steps and show the play screen
+  const inputs = ctx.action.inputs as Inputs;
+  const k  = toBinary(inputs.kick);
+  const s  = toBinary(inputs.snare);
+  const h  = toBinary(inputs.hihat);
+  const cl = toBinary(inputs.clap);
+
+  // Fall back to a classic rock beat if nothing was selected
+  const hasBeat = [k, s, h, cl].some(p => p.includes("1"));
+  const fK  = hasBeat ? k  : "1010";
+  const fS  = hasBeat ? s  : "0101";
+  const fH  = hasBeat ? h  : "1111";
+  const fCl = hasBeat ? cl : "0001";
+
+  const playerUrl = `${self}/player?k=${fK}&s=${fS}&h=${fH}&c=${fCl}`;
+
+  const response: SnapHandlerResult = {
+    version: "1.0",
+    theme: { accent: "green" },
+    ui: {
+      root: "page",
+      elements: {
+        page: {
+          type: "stack",
+          props: { direction: "vertical", gap: "md" },
+          children: [
+            "title", "subtitle",
+            "pattern_group",
+            "sep",
+            "listen_btn", "reset_btn", "share_btn",
+          ],
+        },
+        title: {
+          type: "text",
+          props: { content: "Your beat 🥁", weight: "bold", align: "center" },
+        },
+        subtitle: {
+          type: "text",
+          props: {
+            content: "Open in your browser to hear it play",
+            size: "sm",
+            align: "center",
+          },
+        },
+        pattern_group: {
+          type: "item_group",
+          props: {},
+          children: ["kick_row", "snare_row", "hihat_row", "clap_row"],
+        },
+        kick_row: {
+          type: "item",
+          props: { title: "Kick", description: toDisplay(fK) },
+        },
+        snare_row: {
+          type: "item",
+          props: { title: "Snare", description: toDisplay(fS) },
+        },
+        hihat_row: {
+          type: "item",
+          props: { title: "Hi-hat", description: toDisplay(fH) },
+        },
+        clap_row: {
+          type: "item",
+          props: { title: "Clap", description: toDisplay(fCl) },
+        },
+        sep: {
+          type: "separator",
+          props: {},
+        },
+        listen_btn: {
+          type: "button",
+          props: { label: "Open player in browser", variant: "primary" },
+          on: {
+            press: { action: "open_url", params: { target: playerUrl } },
+          },
+        },
+        reset_btn: {
+          type: "button",
+          props: { label: "Build another beat", variant: "secondary" },
+          on: {
+            press: { action: "submit", params: { target: self } },
+          },
+        },
+        share_btn: {
+          type: "button",
+          props: { label: "Share snap", variant: "secondary" },
+          on: {
+            press: {
+              action: "compose_cast",
+              params: {
+                text: "built a drum beat with snap wizard 🥁",
+                embeds: [self],
+              },
+            },
+          },
+        },
+      },
+    },
+  };
   return response;
 });
 
