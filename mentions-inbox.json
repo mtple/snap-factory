@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x289bb7ff1822d21378ccad14122dfb487d8d313a",
       "author_fid": 3317149,
@@ -8,10 +9,11 @@
       "text": "@freeturtle 🚀 Confirmed my FC airdrop estimate 1250.0 coins estimated!\n✍️ The genesis claim is going down leading up to Farcon on May 4, 2026.\n🎯 Don't ignore this, verify your profile below!\nhttps://farcester.xyz",
       "parent_hash": "0x0af75f1ed91540a81e6abac9f48b50f355773fff",
       "received_at": "2026-04-17T22:05:50.574Z",
-      "user_score": 0.25
-    }
-  ],
-  "processed": [
+      "user_score": 0.25,
+      "status": "skipped",
+      "processed_at": "2026-04-17T22:10:00.000Z",
+      "note": "Spam/phishing — fake FC airdrop claim with misspelled domain farcester.xyz (same pattern as multiple previous skips)"
+    },
     {
       "cast_hash": "0x4b781710759b844091f1bd52618647e607c6cb22",
       "author_fid": 3316894,
