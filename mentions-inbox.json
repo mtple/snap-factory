@@ -1,5 +1,16 @@
 {
-  "pending": [],
+  "pending": [
+    {
+      "cast_hash": "0x4b781710759b844091f1bd52618647e607c6cb22",
+      "author_fid": 3316894,
+      "author_username": "growthinves9790",
+      "author_display_name": "GrowthInvestor🌱",
+      "text": "@freeturtle 🌟 Just saw my user allocation 19999.9 tokens in the bag!\n🛑 The upcoming drop takes place leading up to Farcon by May 4, 2026.\n🏃‍♂️ Hurry up, claim your spot as soon as possible!\nhttps://farcester.xyz",
+      "parent_hash": "0x1898caa562aa7141812125f86c6a2676f566e37e",
+      "received_at": "2026-04-17T14:11:13.387Z",
+      "user_score": 0.3
+    }
+  ],
   "processed": [
     {
       "cast_hash": "0x8ddc713433d406f00ce1788b5f73cbd597538195",

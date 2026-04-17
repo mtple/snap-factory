@@ -458,6 +458,15 @@
       "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
       "score": 0,
       "tags": ["personality", "switch", "badge", "separator", "submit", "compose_cast", "stateless", "blue", "daily-life"]
+    },
+    {
+      "name": "drum-machine",
+      "cast_hash": "0x1898caa562aa7141812125f86c6a2676f566e37e",
+      "posted_at": "2026-04-17T10:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["music", "toggle_group-multiple", "open_url", "item_group", "item", "separator", "stateless", "web-audio", "green", "tortoise"]
     }
   ]
 }
