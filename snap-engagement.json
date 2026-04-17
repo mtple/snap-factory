@@ -476,6 +476,15 @@
       "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
       "score": 0,
       "tags": ["game", "utility", "toggle_group", "badge", "separator", "submit", "compose_cast", "stateless", "amber", "replayable"]
+    },
+    {
+      "name": "music-collab",
+      "cast_hash": "0x4cefbfc8ae9bef8e1c1ad952b10a7918377c5f3f",
+      "posted_at": "2026-04-17T22:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["music", "collaborative", "toggle_group", "badge", "compose_cast", "submit", "stateless", "url-params", "purple", "teal", "neynar"]
     }
   ]
 }

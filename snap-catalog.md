@@ -56,10 +56,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 43 | drum-machine | 4-step beat builder — multi-select toggle_groups for Kick/Snare/Hi-hat/Clap, hit Play to open a Web Audio browser player | /snaps/drum-machine | 0x1898caa562aa7141812125f86c6a2676f566e37e | 2026-04-17 | music, toggle_group-multiple, open_url, item_group, item, separator, stateless, web-audio, green, tortoise |
 | 44 | wizard-dice | Roll polyhedral dice (d4–d20) in one tap — pick your die, roll, get confetti on a natural max | /snaps/wizard-dice | 0x0af75f1ed91540a81e6abac9f48b50f355773fff | 2026-04-17 | game, utility, toggle_group, badge, separator, submit, compose_cast, stateless, amber, replayable |
 
+| 45 | music-collab | 4-person collaborative track builder — pick drums, bass, chords, vibe one layer at a time, pass via compose_cast, final page resolves @usernames via Neynar | /snaps/music-collab | 0x4cefbfc8ae9bef8e1c1ad952b10a7918377c5f3f | 2026-04-17 | music, collaborative, toggle_group, badge, separator, submit, compose_cast, stateless, url-params, purple, teal, neynar, tortoise |
+
 ## Stats
 
-- Total snaps built: 44
-- Live snaps: 43
+- Total snaps built: 45
+- Live snaps: 44
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
