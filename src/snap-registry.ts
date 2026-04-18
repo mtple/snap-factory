@@ -17,6 +17,7 @@ import snap_duoDoSongQuiz from "./snaps/duo-do-song-quiz/index.js";
 import snap_dylsteckArticles from "./snaps/dylsteck-articles/index.js";
 import snap_energyReading from "./snaps/energy-reading/index.js";
 import snap_farcasterSign from "./snaps/farcaster-sign/index.js";
+import snap_fcConfessions from "./snaps/fc-confessions/index.js";
 import snap_fcType from "./snaps/fc-type/index.js";
 import snap_flappyBird from "./snaps/flappy-bird/index.js";
 import snap_followKayonfire from "./snaps/follow-kayonfire/index.js";
@@ -50,7 +51,6 @@ import snap_vibeCheck from "./snaps/vibe-check/index.js";
 import snap_wizardDice from "./snaps/wizard-dice/index.js";
 import snap_wizardRps from "./snaps/wizard-rps/index.js";
 import snap_wizardTrivia from "./snaps/wizard-trivia/index.js";
-import snap_wordOfTheDay from "./snaps/word-of-the-day/index.js";
 import snap_worldCupCountdown from "./snaps/world-cup-countdown/index.js";
 import snap_wouldYouRather from "./snaps/would-you-rather/index.js";
 
@@ -69,6 +69,7 @@ export const snaps: Record<string, Hono> = {
   "dylsteck-articles": snap_dylsteckArticles,
   "energy-reading": snap_energyReading,
   "farcaster-sign": snap_farcasterSign,
+  "fc-confessions": snap_fcConfessions,
   "fc-type": snap_fcType,
   "flappy-bird": snap_flappyBird,
   "follow-kayonfire": snap_followKayonfire,
@@ -102,7 +103,6 @@ export const snaps: Record<string, Hono> = {
   "wizard-dice": snap_wizardDice,
   "wizard-rps": snap_wizardRps,
   "wizard-trivia": snap_wizardTrivia,
-  "word-of-the-day": snap_wordOfTheDay,
   "world-cup-countdown": snap_worldCupCountdown,
   "would-you-rather": snap_wouldYouRather,
 };

@@ -57,12 +57,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 44 | wizard-dice | Roll polyhedral dice (d4–d20) in one tap — pick your die, roll, get confetti on a natural max | /snaps/wizard-dice | 0x0af75f1ed91540a81e6abac9f48b50f355773fff | 2026-04-17 | game, utility, toggle_group, badge, separator, submit, compose_cast, stateless, amber, replayable |
 
 | 45 | music-collab | 4-person collaborative track builder — pick drums, bass, chords, vibe one layer at a time, pass via compose_cast, final page resolves @usernames via Neynar | /snaps/music-collab | 0x4cefbfc8ae9bef8e1c1ad952b10a7918377c5f3f | 2026-04-17 | music, collaborative, toggle_group, badge, separator, submit, compose_cast, stateless, url-params, purple, teal, neynar, tortoise |
-| 46 | word-of-the-day | Daily vocabulary snap — a rare/interesting word with definition, pronunciation, and example sentence. Vote on familiarity, see live bar chart of how Farcaster scores on vocab. | /snaps/word-of-the-day | 0xdc18ad88cb13a320f733cbd94f421dfabc9d42d3 | 2026-04-18 | daily, vocabulary, educational, toggle_group, bar_chart, badge, item, separator, submit, compose_cast, stateful, turso, teal |
+| ~~46~~ | ~~word-of-the-day~~ | ~~taken down by Matt~~ | ~~removed~~ | ~~0xdc18ad88cb13a320f733cbd94f421dfabc9d42d3~~ | 2026-04-18 | taken-down |
 
 ## Stats
 
 - Total snaps built: 46
-- Live snaps: 45
+- Live snaps: 44
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

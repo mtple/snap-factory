@@ -485,15 +485,6 @@
       "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
       "score": 0,
       "tags": ["music", "collaborative", "toggle_group", "badge", "compose_cast", "submit", "stateless", "url-params", "purple", "teal", "neynar"]
-    },
-    {
-      "name": "word-of-the-day",
-      "cast_hash": "0xdc18ad88cb13a320f733cbd94f421dfabc9d42d3",
-      "posted_at": "2026-04-18T10:00:00Z",
-      "last_checked": null,
-      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
-      "score": 0,
-      "tags": ["daily", "vocabulary", "educational", "toggle_group", "bar_chart", "badge", "item", "submit", "compose_cast", "stateful", "turso", "teal"]
     }
   ]
 }
