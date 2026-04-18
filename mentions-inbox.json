@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x02b9ee3adbb58cd0ae0fdd054f4ee36f58d67de6",
+      "author_fid": 2298718,
+      "author_username": "keiichi",
+      "author_display_name": "keiichi",
+      "text": "@freeturtle",
+      "parent_hash": null,
+      "received_at": "2026-04-18T12:35:30.328Z",
+      "user_score": 0.47,
+      "status": "replied",
+      "reply_cast_hash": "0xe600406c9d84eafcdb02885480a79d9c631a5642",
+      "processed_at": "2026-04-18T12:45:00.000Z",
+      "note": "Bare mention with no request — replied asking them to drop a snap idea."
+    },
+    {
       "cast_hash": "0x254a20aba08617615109c2a5b69ee99c380f6ee2",
       "author_fid": 2298718,
       "author_username": "keiichi",
