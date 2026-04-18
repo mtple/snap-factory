@@ -60,11 +60,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | ~~46~~ | ~~word-of-the-day~~ | ~~taken down by Matt~~ | ~~removed~~ | ~~0xdc18ad88cb13a320f733cbd94f421dfabc9d42d3~~ | 2026-04-18 | taken-down |
 | 47 | fc-confessions | Pick your most relatable Farcaster confession from 4 options, see live bar chart of how the community split via Turso | /snaps/fc-confessions | 0x65890b1774513602a57f75254f3ce90c0617fa18 | 2026-04-18 | poll, confession, toggle_group, bar_chart, badge, separator, submit, compose_cast, stateful, turso, pink |
 | 48 | farcaster-artists | Curated Farcaster artists starter pack — cycle through 10 notable visual/digital artists one at a time, tap to view their Warpcast profile. Requested by @luciano during Snaps event. | /snaps/farcaster-artists | 0x85c5c24a585e3d45798931d4918f4f4172b274dc | 2026-04-18 | discovery, artists, open_url, submit, compose_cast, stateless, url-params, pink, event-mode, directory |
+| 49 | number-wizard | Daily higher/lower number guessing game — same number for everyone each day, 7 guesses, slider narrows the range, progress bar counts down remaining guesses, confetti on win | /snaps/number-wizard | 0xd10ad02e3563b37a2de444631c29aaa9d0d844da | 2026-04-18 | game, daily, slider, progress, badge, separator, submit, compose_cast, stateless, url-params, teal, replayable |
 
 ## Stats
 
-- Total snaps built: 48
-- Live snaps: 46
+- Total snaps built: 49
+- Live snaps: 47
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

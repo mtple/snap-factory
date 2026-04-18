@@ -503,6 +503,15 @@
       "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
       "score": 0,
       "tags": ["discovery", "artists", "open_url", "submit", "compose_cast", "stateless", "url-params", "pink", "event-mode", "directory"]
+    },
+    {
+      "name": "number-wizard",
+      "cast_hash": "0xd10ad02e3563b37a2de444631c29aaa9d0d844da",
+      "posted_at": "2026-04-18T22:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["game", "daily", "slider", "progress", "badge", "submit", "compose_cast", "stateless", "url-params", "teal", "replayable"]
     }
   ]
 }
