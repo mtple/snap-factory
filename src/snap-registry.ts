@@ -34,6 +34,7 @@ import snap_musicCollab from "./snaps/music-collab/index.js";
 import snap_mvrShowcase from "./snaps/mvr-showcase/index.js";
 import snap_natalChart from "./snaps/natal-chart/index.js";
 import snap_natalChartV2 from "./snaps/natal-chart-v2/index.js";
+import snap_numberWizard from "./snaps/number-wizard/index.js";
 import snap_originStory from "./snaps/origin-story/index.js";
 import snap_pacman from "./snaps/pacman/index.js";
 import snap_raffle from "./snaps/raffle/index.js";
@@ -87,6 +88,7 @@ export const snaps: Record<string, Hono> = {
   "mvr-showcase": snap_mvrShowcase,
   "natal-chart": snap_natalChart,
   "natal-chart-v2": snap_natalChartV2,
+  "number-wizard": snap_numberWizard,
   "origin-story": snap_originStory,
   "pacman": snap_pacman,
   "raffle": snap_raffle,
