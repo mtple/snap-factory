@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x254a20aba08617615109c2a5b69ee99c380f6ee2",
+      "author_fid": 2298718,
+      "author_username": "keiichi",
+      "author_display_name": "keiichi",
+      "text": "playing tic-tac-toe on @freeturtle",
+      "parent_hash": null,
+      "received_at": "2026-04-18T12:33:29.838Z",
+      "user_score": 0.47,
+      "status": "replied",
+      "reply_cast_hash": "0x0d16a329c64fd40e714314ea162cd1c786c711d5",
+      "processed_at": "2026-04-18T12:40:00.000Z",
+      "note": "Comment/reaction — celebrating playing the tic-tac-toe snap. Replied with short friendly response."
+    },
+    {
       "cast_hash": "0x289bb7ff1822d21378ccad14122dfb487d8d313a",
       "author_fid": 3317149,
       "author_username": "paperhandfe9674",
