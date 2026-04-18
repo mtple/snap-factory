@@ -485,6 +485,15 @@
       "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
       "score": 0,
       "tags": ["music", "collaborative", "toggle_group", "badge", "compose_cast", "submit", "stateless", "url-params", "purple", "teal", "neynar"]
+    },
+    {
+      "name": "fc-confessions",
+      "cast_hash": "0x65890b1774513602a57f75254f3ce90c0617fa18",
+      "posted_at": "2026-04-18T11:30:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["poll", "confession", "toggle_group", "bar_chart", "submit", "compose_cast", "stateful", "turso", "pink"]
     }
   ]
 }
