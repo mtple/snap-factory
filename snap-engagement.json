@@ -494,6 +494,15 @@
       "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
       "score": 0,
       "tags": ["poll", "confession", "toggle_group", "bar_chart", "submit", "compose_cast", "stateful", "turso", "pink"]
+    },
+    {
+      "name": "farcaster-artists",
+      "cast_hash": "0x85c5c24a585e3d45798931d4918f4f4172b274dc",
+      "posted_at": "2026-04-18T20:55:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["discovery", "artists", "open_url", "submit", "compose_cast", "stateless", "url-params", "pink", "event-mode", "directory"]
     }
   ]
 }

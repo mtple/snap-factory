@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x07f1b7ad9409bde1427b5c95615b1e9b92c73768",
       "author_fid": 838,
@@ -8,10 +9,12 @@
       "text": "@freeturtle create a snap to follow all farcaster artists\n\none click to follow this starter pack on the timeline",
       "parent_hash": "0x2e520ba2636b2be56140f666ac2fa59944522ac3",
       "received_at": "2026-04-18T20:48:08.289Z",
-      "user_score": 1
-    }
-  ],
-  "processed": [
+      "user_score": 1,
+      "status": "built",
+      "root_cast_hash": "0x85c5c24a585e3d45798931d4918f4f4172b274dc",
+      "processed_at": "2026-04-18T20:55:00.000Z",
+      "note": "Snap request: curated Farcaster artists starter pack cycling through 10 artists. Posted root cast in /snaps tagging @luciano."
+    },
     {
       "cast_hash": "0x02b9ee3adbb58cd0ae0fdd054f4ee36f58d67de6",
       "author_fid": 2298718,
