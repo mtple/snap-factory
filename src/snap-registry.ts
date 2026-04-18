@@ -16,6 +16,7 @@ import snap_drumMachine from "./snaps/drum-machine/index.js";
 import snap_duoDoSongQuiz from "./snaps/duo-do-song-quiz/index.js";
 import snap_dylsteckArticles from "./snaps/dylsteck-articles/index.js";
 import snap_energyReading from "./snaps/energy-reading/index.js";
+import snap_farcasterArtists from "./snaps/farcaster-artists/index.js";
 import snap_farcasterSign from "./snaps/farcaster-sign/index.js";
 import snap_fcConfessions from "./snaps/fc-confessions/index.js";
 import snap_fcType from "./snaps/fc-type/index.js";
@@ -68,6 +69,7 @@ export const snaps: Record<string, Hono> = {
   "duo-do-song-quiz": snap_duoDoSongQuiz,
   "dylsteck-articles": snap_dylsteckArticles,
   "energy-reading": snap_energyReading,
+  "farcaster-artists": snap_farcasterArtists,
   "farcaster-sign": snap_farcasterSign,
   "fc-confessions": snap_fcConfessions,
   "fc-type": snap_fcType,
