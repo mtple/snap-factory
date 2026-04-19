@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x8d41ab682c5c4325fdeeed6156348093f9ba0016",
+      "author_fid": 555340,
+      "author_username": "kruukruu",
+      "author_display_name": "kruukruu.base.eth",
+      "text": "Look up any Farcaster profile by FID 🔍 \n\nMade by @freeturtle",
+      "parent_hash": null,
+      "received_at": "2026-04-19T11:53:19.547Z",
+      "user_score": 0.96,
+      "status": "replied",
+      "reply_cast_hash": "0x6912aca049c181ac71e3091b549a605382ed1fd0",
+      "processed_at": "2026-04-19T12:30:00.000Z",
+      "note": "Share/promotion of profile-finder snap — @kruukruu sharing the snap they got built. Replied with a friendly note."
+    },
+    {
       "cast_hash": "0xf205cd843993001b3e99dba28be0c3e71e3edfd7",
       "author_fid": 555340,
       "author_username": "kruukruu",
