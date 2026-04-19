@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "alchemy-lab",
+      "cast_hash": "0x4d3b2dab0e69fdcfdf383c3df5a018ddfa64f19e",
+      "posted_at": "2026-04-19T10:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["absurd", "switch", "stateless", "playful", "combo"]
+    },
+    {
       "name": "wizard-rps",
       "cast_hash": "0xfaf2146bbb44b7c46de79ff1fae341e1e89c9c89",
       "posted_at": "2026-04-16T10:00:00Z",

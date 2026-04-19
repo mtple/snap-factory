@@ -63,11 +63,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 49 | number-wizard | Daily higher/lower number guessing game — same number for everyone each day, 7 guesses, slider narrows the range, progress bar counts down remaining guesses, confetti on win | /snaps/number-wizard | 0xd10ad02e3563b37a2de444631c29aaa9d0d844da | 2026-04-18 | game, daily, slider, progress, badge, separator, submit, compose_cast, stateless, url-params, teal, replayable |
 
 | 50 | profile-finder | FID lookup tool — enter any Farcaster ID, get a direct view_profile button to open that profile in the client. Requested by @kruukruu during Snaps event. | /snaps/profile-finder | 0xecc1702dd89afb486c5294ea4644e36093b36a74 | 2026-04-19 | utility, fid, view_profile, input, badge, separator, submit, compose_cast, stateless, blue, event-mode |
+| 51 | alchemy-lab | Toggle fire, water, earth, and air switches to brew one of 16 unique compounds. All four = Cosmos + confetti. | /snaps/alchemy-lab | 0x4d3b2dab0e69fdcfdf383c3df5a018ddfa64f19e | 2026-04-19 | absurd, switch, badge, text, separator, submit, compose_cast, stateless, amber, playful |
 
 ## Stats
 
-- Total snaps built: 50
-- Live snaps: 48
+- Total snaps built: 51
+- Live snaps: 49
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
