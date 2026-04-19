@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0xf205cd843993001b3e99dba28be0c3e71e3edfd7",
       "author_fid": 555340,
@@ -8,10 +9,12 @@
       "text": "@freeturtle create a snap that will have a text field wherein user can enter an FID then you generate a button that is linked to the profile of that particular FID. For example, FID 1 should be @farcaster",
       "parent_hash": null,
       "received_at": "2026-04-19T11:43:04.993Z",
-      "user_score": 0.96
-    }
-  ],
-  "processed": [
+      "user_score": 0.96,
+      "status": "built",
+      "root_cast_hash": "0xecc1702dd89afb486c5294ea4644e36093b36a74",
+      "processed_at": "2026-04-19T12:00:00.000Z",
+      "note": "Snap request: FID lookup tool with view_profile action. Built profile-finder snap. Posted root cast in /snaps tagging @kruukruu."
+    },
     {
       "cast_hash": "0x07f1b7ad9409bde1427b5c95615b1e9b92c73768",
       "author_fid": 838,
