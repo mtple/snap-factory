@@ -38,8 +38,10 @@ interface YTVideo {
   watchUrl: string;
 }
 
-async function fetchVideos(query: string): Promise<YTVideo[]> {
+async function fetchVideos(query: string): Promise<{ videos: YTVideo[]; error?: string }> {
   const key = process.env.YOUTUBE_API_KEY ?? "";
+  if (!key) return { videos: [], error: "YOUTUBE_API_KEY not configured" };
+
   const url = new URL("https://www.googleapis.com/youtube/v3/search");
   url.searchParams.set("part", "snippet");
   url.searchParams.set("q", query);
@@ -48,8 +50,17 @@ async function fetchVideos(query: string): Promise<YTVideo[]> {
   url.searchParams.set("type", "video");
   url.searchParams.set("key", key);
 
-  const res = await fetch(url.toString());
-  if (!res.ok) return [];
+  let res: Response;
+  try {
+    res = await fetch(url.toString());
+  } catch (e) {
+    return { videos: [], error: `Network error: ${String(e)}` };
+  }
+
+  if (!res.ok) {
+    const body = await res.text().catch(() => "");
+    return { videos: [], error: `YouTube API ${res.status}: ${body.slice(0, 120)}` };
+  }
   const data = (await res.json()) as {
     items?: {
       id: { videoId: string };
@@ -62,7 +73,7 @@ async function fetchVideos(query: string): Promise<YTVideo[]> {
     }[];
   };
 
-  return (data.items ?? []).map((item) => {
+  const videos = (data.items ?? []).map((item) => {
     const videoId = item.id.videoId;
     return {
       id: videoId,
@@ -75,6 +86,7 @@ async function fetchVideos(query: string): Promise<YTVideo[]> {
       watchUrl: `https://www.youtube.com/watch?v=${videoId}`,
     };
   });
+  return { videos };
 }
 
 function formatDate(iso: string): string {
@@ -293,9 +305,9 @@ registerSnapHandler(app, async (ctx) => {
   if (topicParam) {
     const topicDef = TOPICS.find((t) => t.label === topicParam);
     const query = topicDef?.query ?? topicParam;
-    const videos = await fetchVideos(query);
+    const { videos, error } = await fetchVideos(query);
     if (!videos.length) {
-      return renderError("No videos found. Try a different topic.", self);
+      return renderError(error ?? "No videos found. Try a different topic.", self);
     }
     const idx = Math.max(0, Math.min(idxParam, videos.length - 1));
     const video = videos[idx];
@@ -316,9 +328,9 @@ registerSnapHandler(app, async (ctx) => {
   const chosenLabel = String(inputs["topic"] ?? "Farcaster") as TopicLabel;
   const topicDef = TOPICS.find((t) => t.label === chosenLabel) ?? TOPICS[0];
 
-  const videos = await fetchVideos(topicDef.query);
+  const { videos, error } = await fetchVideos(topicDef.query);
   if (!videos.length) {
-    return renderError("No videos found right now. Try again shortly.", self);
+    return renderError(error ?? "No videos found right now. Try again shortly.", self);
   }
 
   const video = videos[0];
