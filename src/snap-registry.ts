@@ -58,6 +58,7 @@ import snap_wizardRps from "./snaps/wizard-rps/index.js";
 import snap_wizardTrivia from "./snaps/wizard-trivia/index.js";
 import snap_worldCupCountdown from "./snaps/world-cup-countdown/index.js";
 import snap_wouldYouRather from "./snaps/would-you-rather/index.js";
+import snap_ytDiscover from "./snaps/yt-discover/index.js";
 
 export const snaps: Record<string, Hono> = {
   "airdrop-checker": snap_airdropChecker,
@@ -115,4 +116,5 @@ export const snaps: Record<string, Hono> = {
   "wizard-trivia": snap_wizardTrivia,
   "world-cup-countdown": snap_worldCupCountdown,
   "would-you-rather": snap_wouldYouRather,
+  "yt-discover": snap_ytDiscover,
 };
