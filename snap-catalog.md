@@ -65,11 +65,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 50 | profile-finder | FID lookup tool — enter any Farcaster ID, get a direct view_profile button to open that profile in the client. Requested by @kruukruu during Snaps event. | /snaps/profile-finder | 0xecc1702dd89afb486c5294ea4644e36093b36a74 | 2026-04-19 | utility, fid, view_profile, input, badge, separator, submit, compose_cast, stateless, blue, event-mode |
 | 51 | alchemy-lab | Toggle fire, water, earth, and air switches to brew one of 16 unique compounds. All four = Cosmos + confetti. | /snaps/alchemy-lab | 0x4d3b2dab0e69fdcfdf383c3df5a018ddfa64f19e | 2026-04-19 | absurd, switch, badge, text, separator, submit, compose_cast, stateless, amber, playful |
 | 52 | farcaster-100 | Community daily tap counter — everyone works together to hit 100 taps in a day, one tap per FID. Progress bar + confetti on tap #100. | /snaps/farcaster-100 | 0xcd469e596ad3efac16a7fb6d6f67dbcef0fead7e | 2026-04-22 | collaborative, daily, progress, badge, separator, submit, compose_cast, stateful, turso, green, community |
+| 53 | daily-cast | Fresh question every day — tap "I'll answer this", composer opens pre-filled. Tracks daily respondents via Turso. First use of the icon component. | /snaps/daily-cast | 0x4b3b88910c69e8a9ebfddfcad899958741952d00 | 2026-04-22 | daily, prompt, icon, badge, separator, submit, compose_cast, stateful, turso, teal, community |
 
 ## Stats
 
-- Total snaps built: 52
-- Live snaps: 50
-- Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image
+- Total snaps built: 53
+- Live snaps: 51
+- Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "daily-cast",
+      "cast_hash": "0x4b3b88910c69e8a9ebfddfcad899958741952d00",
+      "posted_at": "2026-04-22T18:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["daily", "prompt", "icon", "compose_cast", "stateful", "community", "teal"]
+    },
+    {
       "name": "farcaster-100",
       "cast_hash": "0xcd469e596ad3efac16a7fb6d6f67dbcef0fead7e",
       "posted_at": "2026-04-22T10:00:00Z",
