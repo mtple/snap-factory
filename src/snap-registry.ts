@@ -17,6 +17,7 @@ import snap_drumMachine from "./snaps/drum-machine/index.js";
 import snap_duoDoSongQuiz from "./snaps/duo-do-song-quiz/index.js";
 import snap_dylsteckArticles from "./snaps/dylsteck-articles/index.js";
 import snap_energyReading from "./snaps/energy-reading/index.js";
+import snap_farcaster100 from "./snaps/farcaster-100/index.js";
 import snap_farcasterArtists from "./snaps/farcaster-artists/index.js";
 import snap_farcasterSign from "./snaps/farcaster-sign/index.js";
 import snap_fcConfessions from "./snaps/fc-confessions/index.js";
@@ -58,7 +59,6 @@ import snap_wizardRps from "./snaps/wizard-rps/index.js";
 import snap_wizardTrivia from "./snaps/wizard-trivia/index.js";
 import snap_worldCupCountdown from "./snaps/world-cup-countdown/index.js";
 import snap_wouldYouRather from "./snaps/would-you-rather/index.js";
-import snap_ytDiscover from "./snaps/yt-discover/index.js";
 
 export const snaps: Record<string, Hono> = {
   "airdrop-checker": snap_airdropChecker,
@@ -75,6 +75,7 @@ export const snaps: Record<string, Hono> = {
   "duo-do-song-quiz": snap_duoDoSongQuiz,
   "dylsteck-articles": snap_dylsteckArticles,
   "energy-reading": snap_energyReading,
+  "farcaster-100": snap_farcaster100,
   "farcaster-artists": snap_farcasterArtists,
   "farcaster-sign": snap_farcasterSign,
   "fc-confessions": snap_fcConfessions,
@@ -116,5 +117,4 @@ export const snaps: Record<string, Hono> = {
   "wizard-trivia": snap_wizardTrivia,
   "world-cup-countdown": snap_worldCupCountdown,
   "would-you-rather": snap_wouldYouRather,
-  "yt-discover": snap_ytDiscover,
 };
