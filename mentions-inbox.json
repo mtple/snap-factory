@@ -2,6 +2,34 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x557bb97545cd8cbff2a2f61a7ae871a2c14e9019",
+      "author_fid": 4163,
+      "author_username": "kmacb.eth",
+      "author_display_name": "KMac🍌 ⏩",
+      "text": "49 days until World Cup 2026 💜⚽ — @freeturtle's countdown\n\nTicket prices are coming done for some of the games in Santa Clara, CA USA. Getting tempted but there aren't many matches I'm interested in. Might have to adopt a dark horse country.",
+      "parent_hash": null,
+      "received_at": "2026-04-22T15:36:18.520Z",
+      "user_score": 1,
+      "status": "replied",
+      "reply_cast_hash": "0xe4d652c71aa1e470c0f79d8ac0105c0fe8b12b69",
+      "processed_at": "2026-04-22T20:00:00.000Z",
+      "note": "Comment/reaction — sharing the world-cup-countdown snap and commenting about attending games. Replied with friendly message about dark horse picks."
+    },
+    {
+      "cast_hash": "0xe0ca735bad078447b3a60648d454d148efc27130",
+      "author_fid": 401995,
+      "author_username": "bukola",
+      "author_display_name": "Bukola🍖🎩🔵🎭📖",
+      "text": "days until World Cup 2026 ⚽ — @freeturtle's countdown",
+      "parent_hash": null,
+      "received_at": "2026-04-22T19:06:41.436Z",
+      "user_score": 0.84,
+      "status": "replied",
+      "reply_cast_hash": "0x533c529bee4fe45bd683378df2642947df7b2168",
+      "processed_at": "2026-04-22T20:00:00.000Z",
+      "note": "Comment/reaction — resharing the world-cup-countdown snap (second time @bukola has shared this). Replied with short friendly note."
+    },
+    {
       "cast_hash": "0x8d41ab682c5c4325fdeeed6156348093f9ba0016",
       "author_fid": 555340,
       "author_username": "kruukruu",
@@ -91,7 +119,7 @@
       "author_display_name": "GrowthInvestor🌱",
       "text": "@freeturtle 🌟 Just saw my user allocation 19999.9 tokens in the bag!\n🛑 The upcoming drop takes place leading up to Farcon by May 4, 2026.\n🏃‍♂️ Hurry up, claim your spot as soon as possible!\nhttps://farcester.xyz",
       "parent_hash": "0x1898caa562aa7141812125f86c6a2676f566e37e",
-      "received_at": "2026-04-17T14:11:13.387Z",
+      "received_at": "2026-04-17T14:11:13.437Z",
       "user_score": 0.3,
       "status": "skipped",
       "processed_at": "2026-04-17T14:20:00.000Z",
