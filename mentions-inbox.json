@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xcac533f21ed84339a925bf2b0084f0c4a9097345",
+      "author_fid": 4163,
+      "author_username": "kmacb.eth",
+      "author_display_name": "KMac🍌 ⏩",
+      "text": "46 days until World Cup 2026 ⚽ — @freeturtle's countdown",
+      "parent_hash": null,
+      "received_at": "2026-04-25T23:58:14.482Z",
+      "user_score": 1,
+      "status": "replied",
+      "reply_cast_hash": "0x3b371ef2f1f9d19f79a89cc9c36efb7461cc4a73",
+      "processed_at": "2026-04-25T23:59:11Z",
+      "note": "Comment/reaction — shared the world-cup-countdown snap with 46-day World Cup countdown. Replied with short friendly countdown note."
+    },
+    {
       "cast_hash": "0xbac26cfcf84efe9a5c4e102df05df81ca8552da3",
       "author_fid": 6591,
       "author_username": "mattlee",
