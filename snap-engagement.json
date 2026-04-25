@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "farcaster-hours",
+      "cast_hash": "0xd18a7572cbb3a62088019f09443c096a83516408",
+      "posted_at": "2026-04-25T10:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["community", "poll", "slider", "bar_chart", "stateful", "turso", "teal"]
+    },
+    {
       "name": "daily-cast",
       "cast_hash": "0x4b3b88910c69e8a9ebfddfcad899958741952d00",
       "posted_at": "2026-04-22T18:00:00Z",
