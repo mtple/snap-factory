@@ -175,6 +175,12 @@ function tortoiseMiniAppSongUrl(slug: string): string {
   return `${TORTOISE_MINIAPP_URL}/song/${encodeURIComponent(slug)}`;
 }
 
+function resetUrl(self: string): string {
+  const url = new URL(self);
+  url.searchParams.set("reset", "1");
+  return url.toString();
+}
+
 function shareButton(self: string, text = "I consulted the Album Oracle on @freeturtle") {
   return {
     type: "button" as const,
@@ -282,7 +288,7 @@ function resultPage(self: string, tempo: number, mood: Mood, aura: AlbumAura): S
     again: {
       type: "button",
       props: { label: "Try again", variant: "secondary" },
-      on: { press: { action: "submit", params: { target: self } } },
+      on: { press: { action: "submit", params: { target: resetUrl(self) } } },
     },
     share_btn: shareButton(self, shareText),
   };
@@ -303,6 +309,10 @@ registerSnapHandler(app, async (ctx) => {
   }
 
   const url = new URL(ctx.request.url);
+  if (url.searchParams.get("reset") === "1") {
+    return startPage(self);
+  }
+
   const queryMood = url.searchParams.get("mood");
   const tempo = asTempo(ctx.action.inputs?.tempo);
   const mood = asMood(queryMood ?? ctx.action.inputs?.mood);
@@ -310,5 +320,5 @@ registerSnapHandler(app, async (ctx) => {
   return resultPage(self, tempo, mood, aura);
 });
 
-export { asMood, asTempo, pickAura, tortoiseMiniAppSongUrl };
+export { asMood, asTempo, pickAura, tortoiseMiniAppSongUrl, resetUrl };
 export default app;
