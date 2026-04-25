@@ -58,7 +58,7 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 45 | music-collab | 4-person collaborative track builder — pick drums, bass, chords, vibe one layer at a time, pass via compose_cast, final page resolves @usernames via Neynar | /snaps/music-collab | 0x4cefbfc8ae9bef8e1c1ad952b10a7918377c5f3f | 2026-04-17 | music, collaborative, toggle_group, badge, separator, submit, compose_cast, stateless, url-params, purple, teal, neynar, tortoise |
 | ~~46~~ | ~~word-of-the-day~~ | ~~taken down by Matt~~ | ~~removed~~ | ~~0xdc18ad88cb13a320f733cbd94f421dfabc9d42d3~~ | 2026-04-18 | taken-down |
-| 47 | fc-confessions | Pick your most relatable Farcaster confession from 4 options, see live bar chart of how the community split via Turso | /snaps/fc-confessions | 0x65890b1774513602a57f75254f3ce90c0617fa18 | 2026-04-18 | poll, confession, toggle_group, bar_chart, badge, separator, submit, compose_cast, stateful, turso, pink |
+| 47 | *** | Pick your most relatable Farcaster confession from 4 options, see live bar chart of how the community split via Turso | /snaps/*** | 0x65890b1774513602a57f75254f3ce90c0617fa18 | 2026-04-18 | poll, confession, toggle_group, bar_chart, badge, separator, submit, compose_cast, stateful, turso, pink |
 | 48 | farcaster-artists | Curated Farcaster artists starter pack — cycle through 10 notable visual/digital artists one at a time, tap to view their Warpcast profile. Requested by @luciano during Snaps event. | /snaps/farcaster-artists | 0x85c5c24a585e3d45798931d4918f4f4172b274dc | 2026-04-18 | discovery, artists, open_url, submit, compose_cast, stateless, url-params, pink, event-mode, directory |
 | 49 | number-wizard | Daily higher/lower number guessing game — same number for everyone each day, 7 guesses, slider narrows the range, progress bar counts down remaining guesses, confetti on win | /snaps/number-wizard | 0xd10ad02e3563b37a2de444631c29aaa9d0d844da | 2026-04-18 | game, daily, slider, progress, badge, separator, submit, compose_cast, stateless, url-params, teal, replayable |
 
@@ -69,11 +69,13 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 54 | farcaster-hours | Community hour tracker — slide to your local hour, see a live bar chart of when Farcaster is online. Data accumulates over time. | /snaps/farcaster-hours | 0xd18a7572cbb3a62088019f09443c096a83516408 | 2026-04-25 | community, poll, slider, bar_chart, badge, separator, submit, compose_cast, stateful, turso, teal |
 | 55 | degen-quest | Crypto quest game — a new token is up 7,000%, pick your move (ape/research/CT/grass), get a personalized outcome based on choice + FID. 12 unique endings. | /snaps/degen-quest | 0x591b088d11c874a0321cfe385f1e5c1e5a374b5e | 2026-04-25 | game, absurd, toggle_group, badge, separator, submit, compose_cast, stateless, amber, crypto, replayable |
 | 56 | token-type | What Base token are you? 3 questions score you as ETH, USDC, or DEGEN — result page has view_token button. Built Apr 20, posted Apr 25 (Vercel was down). | /snaps/token-type | 0x119ce9b80e35aa8448d4f2d1dc2a0cce095672fc | 2026-04-25 | personality, token, toggle_group, badge, view_token, compose_cast, stateless, blue, crypto |
+| 57 | hooksmith | Cast hook generator — enter a rough idea, choose a tone, get three cast-ready hooks with a compose_cast button for the best one. Built from engagement learnings. | /snaps/hooksmith | 0xc4d87d8879ca6f479d18031c8898f0c5ab6df936 | 2026-04-25 | utility, input, multi-page, item_group, badge, submit, compose_cast, stateless, amber |
 
 ## Stats
 
-- Total snaps built: 56
-- Live snaps: 54
+- Total snaps built: 57
+- Live snaps: 55
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
+

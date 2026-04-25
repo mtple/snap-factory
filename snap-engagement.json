@@ -1,49 +1,135 @@
 {
   "snaps": [
     {
+      "name": "hooksmith",
+      "cast_hash": "0xc4d87d8879ca6f479d18031c8898f0c5ab6df936",
+      "posted_at": "2026-04-25T17:59:41Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "input",
+        "multi-page",
+        "item_group",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "amber"
+      ]
+    },
+    {
       "name": "degen-quest",
       "cast_hash": "0x591b088d11c874a0321cfe385f1e5c1e5a374b5e",
       "posted_at": "2026-04-25T18:00:00Z",
       "last_checked": null,
-      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
       "score": 0,
-      "tags": ["game", "absurd", "toggle_group", "stateless", "amber", "crypto", "replayable"]
+      "tags": [
+        "game",
+        "absurd",
+        "toggle_group",
+        "stateless",
+        "amber",
+        "crypto",
+        "replayable"
+      ]
     },
     {
       "name": "farcaster-hours",
       "cast_hash": "0xd18a7572cbb3a62088019f09443c096a83516408",
       "posted_at": "2026-04-25T10:00:00Z",
       "last_checked": null,
-      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
       "score": 0,
-      "tags": ["community", "poll", "slider", "bar_chart", "stateful", "turso", "teal"]
+      "tags": [
+        "community",
+        "poll",
+        "slider",
+        "bar_chart",
+        "stateful",
+        "turso",
+        "teal"
+      ]
     },
     {
       "name": "daily-cast",
       "cast_hash": "0x4b3b88910c69e8a9ebfddfcad899958741952d00",
       "posted_at": "2026-04-22T18:00:00Z",
       "last_checked": null,
-      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
       "score": 0,
-      "tags": ["daily", "prompt", "icon", "compose_cast", "stateful", "community", "teal"]
+      "tags": [
+        "daily",
+        "prompt",
+        "icon",
+        "compose_cast",
+        "stateful",
+        "community",
+        "teal"
+      ]
     },
     {
       "name": "farcaster-100",
       "cast_hash": "0xcd469e596ad3efac16a7fb6d6f67dbcef0fead7e",
       "posted_at": "2026-04-22T10:00:00Z",
       "last_checked": null,
-      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
       "score": 0,
-      "tags": ["collaborative", "daily", "progress", "stateful", "community", "green"]
+      "tags": [
+        "collaborative",
+        "daily",
+        "progress",
+        "stateful",
+        "community",
+        "green"
+      ]
     },
     {
       "name": "alchemy-lab",
       "cast_hash": "0x4d3b2dab0e69fdcfdf383c3df5a018ddfa64f19e",
       "posted_at": "2026-04-19T10:00:00Z",
       "last_checked": null,
-      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
       "score": 0,
-      "tags": ["absurd", "switch", "stateless", "playful", "combo"]
+      "tags": [
+        "absurd",
+        "switch",
+        "stateless",
+        "playful",
+        "combo"
+      ]
     },
     {
       "name": "wizard-rps",
@@ -1174,9 +1260,24 @@
       "cast_hash": "0x119ce9b80e35aa8448d4f2d1dc2a0cce095672fc",
       "posted_at": "2026-04-25T15:00:00Z",
       "last_checked": null,
-      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
       "score": 0,
-      "tags": ["personality", "token", "toggle_group", "badge", "view_token", "compose_cast", "stateless", "blue", "crypto"]
+      "tags": [
+        "personality",
+        "token",
+        "toggle_group",
+        "badge",
+        "view_token",
+        "compose_cast",
+        "stateless",
+        "blue",
+        "crypto"
+      ]
     }
   ]
 }
