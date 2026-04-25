@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xbac26cfcf84efe9a5c4e102df05df81ca8552da3",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "@freeturtle now there's no way to submit your choice. It just has the tempo, mood, and share. You should be testing snaps in the browser before posting them.",
+      "parent_hash": "0x55e9c362190418176c5b3057fca6aa66b20962ef",
+      "received_at": "2026-04-25T22:36:27.482Z",
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_cast_hash": "0x9cbd0e90b347dc94dc77b268e105a05666ceb306",
+      "processed_at": "2026-04-25T22:43:13Z",
+      "note": "Bug report for album-oracle from @mattlee. Fixed start screen to use a real mood toggle_group plus primary Consult oracle submit button, verified build, local GET/POST, and live browser rendering before replying with snap URL embed."
+    },
+    {
       "cast_hash": "0x665659c54fc3aeff121855e618f3758000ae8123",
       "author_fid": 6591,
       "author_username": "mattlee",
