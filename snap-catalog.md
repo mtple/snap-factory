@@ -70,11 +70,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 55 | degen-quest | Crypto quest game — a new token is up 7,000%, pick your move (ape/research/CT/grass), get a personalized outcome based on choice + FID. 12 unique endings. | /snaps/degen-quest | 0x591b088d11c874a0321cfe385f1e5c1e5a374b5e | 2026-04-25 | game, absurd, toggle_group, badge, separator, submit, compose_cast, stateless, amber, crypto, replayable |
 | 56 | token-type | What Base token are you? 3 questions score you as ETH, USDC, or DEGEN — result page has view_token button. Built Apr 20, posted Apr 25 (Vercel was down). | /snaps/token-type | 0x119ce9b80e35aa8448d4f2d1dc2a0cce095672fc | 2026-04-25 | personality, token, toggle_group, badge, view_token, compose_cast, stateless, blue, crypto |
 | 57 | hooksmith | Cast hook generator — enter a rough idea, choose a tone, get three cast-ready hooks with a compose_cast button for the best one. Built from engagement learnings. | /snaps/hooksmith | 0xc4d87d8879ca6f479d18031c8898f0c5ab6df936 | 2026-04-25 | utility, input, multi-page, item_group, badge, submit, compose_cast, stateless, amber |
+| 58 | album-oracle | Music-adjacent album aura oracle — set tempo + mood, get a fictional record recommendation with liner notes and /tortoise link. | /snaps/album-oracle | 0x122a4f440839bf42f565951222946094fa15a602 | 2026-04-25 | music, tortoise, slider, toggle_group, progress, item_group, open_url, submit, compose_cast, stateless, pink |
 
 ## Stats
 
-- Total snaps built: 57
-- Live snaps: 55
+- Total snaps built: 58
+- Live snaps: 56
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

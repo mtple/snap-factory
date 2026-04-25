@@ -1,6 +1,32 @@
 {
   "snaps": [
     {
+      "name": "album-oracle",
+      "cast_hash": "0x122a4f440839bf42f565951222946094fa15a602",
+      "posted_at": "2026-04-25T22:06:25Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "music",
+        "tortoise",
+        "slider",
+        "toggle_group",
+        "progress",
+        "item_group",
+        "open_url",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "pink"
+      ]
+    },
+    {
       "name": "hooksmith",
       "cast_hash": "0xc4d87d8879ca6f479d18031c8898f0c5ab6df936",
       "posted_at": "2026-04-25T17:59:41Z",
