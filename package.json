@@ -6,6 +6,7 @@
   "description": "Farcaster snaps built by Snap Wizard",
   "scripts": {
     "generate": "tsx scripts/generate-registry.ts",
+    "refresh-engagement": "node scripts/refresh-engagement.mjs",
     "prebuild": "npm run generate",
     "build": "tsc",
     "typecheck": "tsc --noEmit",
