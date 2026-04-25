@@ -12,6 +12,7 @@ import { snapUrl } from "../../_lib/base-url.js";
 
 const app = new Hono();
 const SNAP_NAME = "album-oracle";
+const TORTOISE_MINIAPP_URL = "https://farcaster.xyz/miniapps/0197c2c3-6650-349a-bc8f-9892abae9e4a/tortoise";
 
 type Elements = SnapHandlerResult["ui"]["elements"];
 type Accent = "pink" | "purple" | "teal" | "amber" | "blue" | "green";
@@ -28,7 +29,7 @@ type AlbumAura = {
   accent: Accent;
   recordTitle: string;
   artist: string;
-  recordUrl: string;
+  recordSlug: string;
 };
 
 const MOODS: Mood[] = ["Dusty", "Neon", "Heavy", "Floating"];
@@ -46,7 +47,7 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       accent: "amber",
       recordTitle: "Seams of Dreams",
       artist: "Mr. Wildenfree",
-      recordUrl: "https://tortoise.studio/song/seams-of-dreams",
+      recordSlug: "seams-of-dreams",
     },
     {
       title: "Crate Ghosts",
@@ -59,7 +60,7 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       accent: "purple",
       recordTitle: "Ya Doin’ Good",
       artist: "Mr. Wildenfree",
-      recordUrl: "https://tortoise.studio/song/ya-doin-good",
+      recordSlug: "ya-doin-good",
     },
   ],
   Neon: [
@@ -73,8 +74,8 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       intensity: 82,
       accent: "pink",
       recordTitle: "Your Glowing Energy",
-      artist: "Matt",
-      recordUrl: "https://tortoise.studio/song/your-glowing-energy-2",
+      artist: "Matt Lee",
+      recordSlug: "your-glowing-energy-2",
     },
     {
       title: "Laser Rain",
@@ -86,8 +87,8 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       intensity: 74,
       accent: "blue",
       recordTitle: "TIPN",
-      artist: "Davyd Music",
-      recordUrl: "https://tortoise.studio/song/tipn",
+      artist: "Davyd",
+      recordSlug: "tipn",
     },
   ],
   Heavy: [
@@ -101,8 +102,8 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       intensity: 91,
       accent: "purple",
       recordTitle: "Better believe",
-      artist: "The C1",
-      recordUrl: "https://tortoise.studio/song/better-believe",
+      artist: "Fabio Thec1 Viscarelli",
+      recordSlug: "better-believe",
     },
     {
       title: "Concrete Chorus",
@@ -114,8 +115,8 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       intensity: 86,
       accent: "teal",
       recordTitle: "TIPN II",
-      artist: "Davyd Music",
-      recordUrl: "https://tortoise.studio/song/tipn-ii",
+      artist: "Davyd",
+      recordSlug: "tipn-ii",
     },
   ],
   Floating: [
@@ -129,8 +130,8 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       intensity: 38,
       accent: "teal",
       recordTitle: "Viaja con Sielo y Keleven",
-      artist: "Keleven",
-      recordUrl: "https://tortoise.studio/song/viaja-con-sielo-y-keleven",
+      artist: "Keleven x Sielo",
+      recordSlug: "viaja-con-sielo-y-keleven",
     },
     {
       title: "Zero Gravity Folk",
@@ -142,8 +143,8 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       intensity: 42,
       accent: "green",
       recordTitle: "Quintessence",
-      artist: "K. Copely",
-      recordUrl: "https://tortoise.studio/song/quintessence",
+      artist: "Kirsten Agresta Copely",
+      recordSlug: "quintessence",
     },
   ],
 };
@@ -168,6 +169,10 @@ function pickAura(mood: Mood, tempo: number, fid: number): AlbumAura {
     ...base,
     intensity: Math.max(10, Math.min(100, base.intensity + tempoLift)),
   };
+}
+
+function tortoiseMiniAppSongUrl(slug: string): string {
+  return `${TORTOISE_MINIAPP_URL}/song/${encodeURIComponent(slug)}`;
 }
 
 function shareButton(self: string, text = "I consulted the Album Oracle on @freeturtle") {
@@ -271,8 +276,8 @@ function resultPage(self: string, tempo: number, mood: Mood, aura: AlbumAura): S
     sep: { type: "separator", props: {} },
     record: {
       type: "button",
-      props: { label: "Open record", variant: "primary" },
-      on: { press: { action: "open_url", params: { target: aura.recordUrl } } },
+      props: { label: "Open in Tortoise", variant: "primary" },
+      on: { press: { action: "open_url", params: { target: tortoiseMiniAppSongUrl(aura.recordSlug) } } },
     },
     again: {
       type: "button",
@@ -305,5 +310,5 @@ registerSnapHandler(app, async (ctx) => {
   return resultPage(self, tempo, mood, aura);
 });
 
-export { asMood, asTempo, pickAura };
+export { asMood, asTempo, pickAura, tortoiseMiniAppSongUrl };
 export default app;
