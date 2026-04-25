@@ -184,17 +184,11 @@ function shareButton(self: string, text = "I consulted the Album Oracle on @free
 }
 
 function startPage(self: string): SnapHandlerResult {
-  const moodButton = (mood: Mood, variant: "primary" | "secondary" = "secondary") => ({
-    type: "button" as const,
-    props: { label: mood, variant },
-    on: { press: { action: "submit" as const, params: { target: `${self}?mood=${encodeURIComponent(mood)}` } } },
-  });
-
   const elements: Elements = {
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "md" },
-      children: ["title", "sub", "tempo", "mood_prompt", "mood_buttons", "share_btn"],
+      children: ["title", "sub", "tempo", "mood_picker", "submit_btn", "share_btn"],
     },
     title: {
       type: "text",
@@ -203,7 +197,7 @@ function startPage(self: string): SnapHandlerResult {
     sub: {
       type: "text",
       props: {
-        content: "Set a tempo, then tap the mood you want. The oracle points to a real Tortoise record.",
+        content: "Set a tempo, choose a mood, then submit. The oracle points to a real Tortoise record.",
         size: "sm",
         align: "center",
       },
@@ -212,19 +206,21 @@ function startPage(self: string): SnapHandlerResult {
       type: "slider",
       props: { name: "tempo", label: "Tempo", min: 40, max: 180, step: 1, defaultValue: 96 },
     },
-    mood_prompt: {
-      type: "text",
-      props: { content: "Choose a mood:", weight: "bold", align: "center" },
+    mood_picker: {
+      type: "toggle_group",
+      props: {
+        name: "mood",
+        label: "Mood",
+        options: MOODS,
+        orientation: "horizontal",
+        variant: "outline",
+      },
     },
-    mood_buttons: {
-      type: "stack",
-      props: { direction: "horizontal", gap: "sm" },
-      children: ["mood_dusty", "mood_neon", "mood_heavy", "mood_floating"],
+    submit_btn: {
+      type: "button",
+      props: { label: "Consult oracle", variant: "primary" },
+      on: { press: { action: "submit", params: { target: self } } },
     },
-    mood_dusty: moodButton("Dusty", "primary"),
-    mood_neon: moodButton("Neon"),
-    mood_heavy: moodButton("Heavy"),
-    mood_floating: moodButton("Floating"),
     share_btn: shareButton(self),
   };
 
