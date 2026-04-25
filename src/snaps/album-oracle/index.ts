@@ -238,7 +238,7 @@ function resultPage(self: string, tempo: number, mood: Mood, aura: AlbumAura): S
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "md" },
-      children: ["badge", "title", "desc", "intensity", "notes", "sep", "record", "again", "share_btn"],
+      children: ["badge", "title", "desc", "notes", "record", "again", "share_btn"],
     },
     badge: {
       type: "badge",
