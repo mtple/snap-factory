@@ -1,8 +1,8 @@
 /**
- * music-collab — Collaborative grid sequencer for Farcaster.
+ * music-collab — Collaborative relay grid sequencer for Farcaster.
  *
- * Build a 4-step sequence across drums + melodic parts in AUI, then open a
- * Web Audio player or pass the encoded pattern to collaborators.
+ * Each collaborator programs one layer at a time: drums, bass, chords, then
+ * lead. The snap only reveals the full arrangement after every layer is done.
  */
 import { Hono } from "hono";
 import { registerSnapHandler } from "@farcaster/snap-hono";
@@ -13,9 +13,11 @@ const app = new Hono();
 const SNAP_NAME = "music-collab";
 const STEPS = ["1", "2", "3", "4"] as const;
 const PATTERN_LEN = 4;
+const STAGE_PARAM = "stage";
 
 type Inputs = Record<string, string | string[] | undefined>;
 type TrackKey = "kick" | "snare" | "hat" | "bass" | "chord" | "lead";
+type StageId = "drums" | "bass" | "chords" | "lead" | "complete";
 
 interface TrackDef {
   key: TrackKey;
@@ -26,14 +28,72 @@ interface TrackDef {
   defaultPattern: string;
 }
 
+interface StageDef {
+  id: Exclude<StageId, "complete">;
+  title: string;
+  subtitle: string;
+  submitLabel: string;
+  shareLabel: string;
+  shareText: string;
+  tracks: TrackKey[];
+  next: StageId;
+}
+
 const TRACKS: TrackDef[] = [
   { key: "kick", param: "k", label: "Kick", short: "K", color: "red", defaultPattern: "1001" },
   { key: "snare", param: "s", label: "Snare", short: "S", color: "blue", defaultPattern: "0100" },
   { key: "hat", param: "h", label: "Hi-hat", short: "H", color: "green", defaultPattern: "1111" },
   { key: "bass", param: "b", label: "Bass", short: "B", color: "purple", defaultPattern: "1010" },
   { key: "chord", param: "ch", label: "Chords", short: "C", color: "teal", defaultPattern: "0101" },
-  { key: "lead", param: "l", label: "Lead", short: "L", color: "yellow", defaultPattern: "0010" },
+  { key: "lead", param: "l", label: "Melody", short: "M", color: "yellow", defaultPattern: "0010" },
 ];
+
+const TRACK_BY_KEY = Object.fromEntries(TRACKS.map((track) => [track.key, track])) as Record<TrackKey, TrackDef>;
+
+const STAGES: StageDef[] = [
+  {
+    id: "drums",
+    title: "Step 1: sequence drums 🥁",
+    subtitle: "Program the rhythm. When you pass it, the next person only sees bass.",
+    submitLabel: "Lock drums → bass",
+    shareLabel: "Share drum starter",
+    shareText: "Start this Farcaster track: sequence the drums, then pass it on 🥁",
+    tracks: ["kick", "snare", "hat"],
+    next: "bass",
+  },
+  {
+    id: "bass",
+    title: "Step 2: add bass",
+    subtitle: "Drums are already underneath. Program only the bass line.",
+    submitLabel: "Lock bass → chords",
+    shareLabel: "Share: add bass",
+    shareText: "Drums are in. Add the bass to this Farcaster track 🎛️",
+    tracks: ["bass"],
+    next: "chords",
+  },
+  {
+    id: "chords",
+    title: "Step 3: add chords",
+    subtitle: "Drums and bass are saved. Program only the chord stabs.",
+    submitLabel: "Lock chords → melody",
+    shareLabel: "Share: add chords",
+    shareText: "Drums and bass are in. Add chords to this Farcaster track 🎹",
+    tracks: ["chord"],
+    next: "lead",
+  },
+  {
+    id: "lead",
+    title: "Step 4: add melody",
+    subtitle: "Final layer. Program the melody, then reveal the whole track.",
+    submitLabel: "Finish track",
+    shareLabel: "Share: add melody",
+    shareText: "Drums, bass, and chords are in. Add the melody and finish this Farcaster track ✨",
+    tracks: ["lead"],
+    next: "complete",
+  },
+];
+
+const STAGE_BY_ID = Object.fromEntries(STAGES.map((stage) => [stage.id, stage])) as Record<Exclude<StageId, "complete">, StageDef>;
 
 type PatternState = Record<TrackKey, string>;
 
@@ -56,32 +116,38 @@ function patternDisplay(pattern: string): string {
   return pattern.split("").map((bit) => (bit === "1" ? "●" : "·")).join("  ");
 }
 
-function defaults(): PatternState {
-  return Object.fromEntries(TRACKS.map((track) => [track.key, track.defaultPattern])) as PatternState;
+function emptyState(): PatternState {
+  return Object.fromEntries(TRACKS.map((track) => [track.key, "0000"])) as PatternState;
+}
+
+function stageFromUrl(url: URL): StageId {
+  const value = url.searchParams.get(STAGE_PARAM);
+  if (value === "bass" || value === "chords" || value === "lead" || value === "complete") return value;
+  return "drums";
 }
 
 function patternsFromUrl(url: URL): PatternState {
   return Object.fromEntries(
     TRACKS.map((track) => [
       track.key,
-      cleanPattern(url.searchParams.get(track.param), track.defaultPattern),
+      cleanPattern(url.searchParams.get(track.param), "0000"),
     ]),
   ) as PatternState;
 }
 
-function patternsFromInputs(inputs: Inputs): PatternState {
-  const next = Object.fromEntries(
-    TRACKS.map((track) => [track.key, inputToPattern(inputs[track.key])]),
-  ) as PatternState;
-
-  const hasAnyNote = Object.values(next).some((pattern) => pattern.includes("1"));
-  return hasAnyNote ? next : defaults();
+function mergeInputsForStage(state: PatternState, stage: StageDef, inputs: Inputs): PatternState {
+  const next = { ...state };
+  for (const key of stage.tracks) {
+    next[key] = inputToPattern(inputs[key]);
+  }
+  return next;
 }
 
-function patternUrl(self: string, state: PatternState): string {
+function patternUrl(self: string, state: PatternState, stage: StageId = "complete"): string {
   const url = new URL(self);
+  url.searchParams.set(STAGE_PARAM, stage);
   for (const track of TRACKS) {
-    url.searchParams.set(track.param, state[track.key]);
+    url.searchParams.set(track.param, cleanPattern(state[track.key], "0000"));
   }
   return url.toString();
 }
@@ -92,10 +158,6 @@ function playerUrl(self: string, state: PatternState): string {
     url.searchParams.set(track.param, state[track.key]);
   }
   return url.toString();
-}
-
-function hasPatternParams(url: URL): boolean {
-  return TRACKS.some((track) => url.searchParams.has(track.param));
 }
 
 function escapeHtml(value: string): string {
@@ -116,7 +178,7 @@ app.get("/player", (c) => {
 
 function buildPlayerHtml(state: PatternState): string {
   const safeState = Object.fromEntries(
-    TRACKS.map((track) => [track.key, cleanPattern(state[track.key], track.defaultPattern)]),
+    TRACKS.map((track) => [track.key, cleanPattern(state[track.key], "0000")]),
   ) as PatternState;
   const rows = TRACKS.map((track) => `
     <div class="lbl">${escapeHtml(track.label)}</div>
@@ -140,7 +202,7 @@ h1{font-size:1.65rem;letter-spacing:-.03em}.sub{color:#94a3b8;font-size:.9rem;te
 </head>
 <body>
 <h1>Music Collab</h1>
-<p class="sub">Sequenced in a Farcaster snap — drums, bass, chords, lead.</p>
+<p class="sub">A Farcaster relay track — drums, bass, chords, melody.</p>
 <div class="grid">
   <div></div><div class="step">1</div><div class="step">2</div><div class="step">3</div><div class="step">4</div>
   ${rows}
@@ -176,15 +238,16 @@ function tick(){const now=ac.currentTime;clearCursor();TRACKS.forEach(k=>{const 
 </html>`;
 }
 
-function buildSequencerScreen(self: string, state: PatternState, hasSeed = false): SnapHandlerResult {
-  const children = ["title", "subtitle", "sep", ...TRACKS.map((track) => `${track.key}_grid`), "make_btn", "share_btn"];
+function buildSequencerScreen(self: string, state: PatternState, stage: StageDef): SnapHandlerResult {
+  const stageUrl = patternUrl(self, state, stage.id);
+  const children = ["title", "subtitle", "sep", ...stage.tracks.map((key) => `${key}_grid`), "make_btn", "share_btn"];
   const elements: Record<string, object> = {
     page: { type: "stack", props: { direction: "vertical", gap: "sm" }, children },
-    title: { type: "text", props: { content: "Music Collab Grid 🎛️", weight: "bold", align: "center" } },
+    title: { type: "text", props: { content: stage.title, weight: "bold", align: "center" } },
     subtitle: {
       type: "text",
       props: {
-        content: hasSeed ? "Remix the shared 4-step loop, then play/pass it." : "Program each instrument on the 4-step grid.",
+        content: stage.subtitle,
         size: "sm",
         align: "center",
       },
@@ -192,22 +255,23 @@ function buildSequencerScreen(self: string, state: PatternState, hasSeed = false
     sep: { type: "separator", props: {} },
     make_btn: {
       type: "button",
-      props: { label: "Build the loop", variant: "primary" },
-      on: { press: { action: "submit", params: { target: self } } },
+      props: { label: stage.submitLabel, variant: "primary" },
+      on: { press: { action: "submit", params: { target: stageUrl } } },
     },
     share_btn: {
       type: "button",
-      props: { label: "Share starter", variant: "secondary" },
+      props: { label: stage.shareLabel, variant: "secondary" },
       on: {
         press: {
           action: "compose_cast",
-          params: { text: "help sequence this Farcaster track 🎛️", embeds: [patternUrl(self, state)] },
+          params: { text: stage.shareText, embeds: [stageUrl] },
         },
       },
     },
   };
 
-  for (const track of TRACKS) {
+  for (const key of stage.tracks) {
+    const track = TRACK_BY_KEY[key];
     elements[`${track.key}_grid`] = {
       type: "toggle_group",
       props: {
@@ -217,7 +281,7 @@ function buildSequencerScreen(self: string, state: PatternState, hasSeed = false
         orientation: "horizontal",
         variant: "outline",
         multiple: true,
-        defaultValue: patternToSteps(state[track.key]),
+        defaultValue: patternToSteps(state[track.key] === "0000" ? track.defaultPattern : state[track.key]),
       },
     };
   }
@@ -226,16 +290,16 @@ function buildSequencerScreen(self: string, state: PatternState, hasSeed = false
 }
 
 function buildResultScreen(self: string, state: PatternState): SnapHandlerResult {
-  const loopUrl = patternUrl(self, state);
+  const loopUrl = patternUrl(self, state, "complete");
   const listenUrl = playerUrl(self, state);
   const elements: Record<string, object> = {
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "sm" },
-      children: ["title", "subtitle", "patterns", "sep", "listen_btn", "remix_btn", "pass_btn", "share_btn"],
+      children: ["title", "subtitle", "patterns", "sep", "listen_btn", "share_btn", "restart_btn"],
     },
-    title: { type: "text", props: { content: "Loop programmed 🎶", weight: "bold", align: "center" } },
-    subtitle: { type: "text", props: { content: "Open the synth player, or pass this pattern for a remix.", size: "sm", align: "center" } },
+    title: { type: "text", props: { content: "Full track complete 🎶", weight: "bold", align: "center" } },
+    subtitle: { type: "text", props: { content: "All four collaborators are layered: drums, bass, chords, melody.", size: "sm", align: "center" } },
     patterns: { type: "item_group", props: {}, children: TRACKS.map((track) => `${track.key}_row`) },
     sep: { type: "separator", props: {} },
     listen_btn: {
@@ -243,30 +307,20 @@ function buildResultScreen(self: string, state: PatternState): SnapHandlerResult
       props: { label: "Open music player", variant: "primary" },
       on: { press: { action: "open_url", params: { target: listenUrl } } },
     },
-    remix_btn: {
-      type: "button",
-      props: { label: "Remix this grid", variant: "secondary" },
-      on: { press: { action: "submit", params: { target: loopUrl } } },
-    },
-    pass_btn: {
-      type: "button",
-      props: { label: "Pass to collaborator", variant: "secondary" },
-      on: {
-        press: {
-          action: "compose_cast",
-          params: { text: "I sequenced a loop — add a part or remix it 🎛️", embeds: [loopUrl] },
-        },
-      },
-    },
     share_btn: {
       type: "button",
-      props: { label: "Share track", variant: "secondary" },
+      props: { label: "Share finished track", variant: "secondary" },
       on: {
         press: {
           action: "compose_cast",
-          params: { text: "built a collaborative Farcaster loop 🎶", embeds: [loopUrl] },
+          params: { text: "We built a collaborative Farcaster loop 🎶", embeds: [loopUrl] },
         },
       },
+    },
+    restart_btn: {
+      type: "button",
+      props: { label: "Start new relay", variant: "secondary" },
+      on: { press: { action: "submit", params: { target: patternUrl(self, emptyState(), "drums") } } },
     },
   };
 
@@ -283,15 +337,26 @@ function buildResultScreen(self: string, state: PatternState): SnapHandlerResult
 registerSnapHandler(app, async (ctx) => {
   const self = snapUrl(ctx.request, SNAP_NAME);
   const reqUrl = new URL(ctx.request.url);
+  const stageId = stageFromUrl(reqUrl);
+  const state = patternsFromUrl(reqUrl);
 
   if (ctx.action.type === "get") {
-    const state = patternsFromUrl(reqUrl);
-    return buildSequencerScreen(self, state, hasPatternParams(reqUrl));
+    if (stageId === "complete") return buildResultScreen(self, state);
+    return buildSequencerScreen(self, state, STAGE_BY_ID[stageId]);
   }
 
+  if (stageId === "complete") return buildResultScreen(self, state);
+
   const inputs = ((ctx.action as { inputs?: Inputs }).inputs ?? {}) as Inputs;
-  return buildResultScreen(self, patternsFromInputs(inputs));
+  const currentStage = STAGE_BY_ID[stageId];
+  const nextState = mergeInputsForStage(state, currentStage, inputs);
+
+  if (currentStage.next === "complete") {
+    return buildResultScreen(self, nextState);
+  }
+
+  return buildSequencerScreen(self, nextState, STAGE_BY_ID[currentStage.next]);
 });
 
-export { cleanPattern, inputToPattern, patternToSteps, patternDisplay };
+export { cleanPattern, inputToPattern, patternToSteps, patternDisplay, stageFromUrl };
 export default app;
