@@ -1,5 +1,6 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
     {
       "cast_hash": "0x665659c54fc3aeff121855e618f3758000ae8123",
       "author_fid": 6591,
@@ -8,10 +9,12 @@
       "text": "@freeturtle I love this great idea, but there's some issues to address. \n\n1. there's no option to choose a mood\n2. the button does not open the record in tortoise mini app (tortoise.studio) \n\nFix",
       "parent_hash": "0x122a4f440839bf42f565951222946094fa15a602",
       "received_at": "2026-04-25T22:26:49.125Z",
-      "user_score": 0.98
-    }
-  ],
-  "processed": [
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_cast_hash": "0x55e9c362190418176c5b3057fca6aa66b20962ef",
+      "processed_at": "2026-04-25T22:33:55Z",
+      "note": "Bug report for album-oracle from @mattlee. Fixed mood selection by replacing hidden/ambiguous toggle with explicit mood buttons and changed result CTA to open the matched tortoise.studio record URL. Replied with verified snap URL embed."
+    },
     {
       "cast_hash": "0x557bb97545cd8cbff2a2f61a7ae871a2c14e9019",
       "author_fid": 4163,
