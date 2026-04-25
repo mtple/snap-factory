@@ -12,7 +12,6 @@ import { snapUrl } from "../../_lib/base-url.js";
 
 const app = new Hono();
 const SNAP_NAME = "album-oracle";
-const TORTOISE_URL = "https://warpcast.com/~/channel/tortoise";
 
 type Elements = SnapHandlerResult["ui"]["elements"];
 type Accent = "pink" | "purple" | "teal" | "amber" | "blue" | "green";
@@ -27,6 +26,9 @@ type AlbumAura = {
   recommendedMove: string;
   intensity: number;
   accent: Accent;
+  recordTitle: string;
+  artist: string;
+  recordUrl: string;
 };
 
 const MOODS: Mood[] = ["Dusty", "Neon", "Heavy", "Floating"];
@@ -42,6 +44,9 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       recommendedMove: "Play it while walking with no destination.",
       intensity: 48,
       accent: "amber",
+      recordTitle: "Seams of Dreams",
+      artist: "Mr. Wildenfree",
+      recordUrl: "https://tortoise.studio/song/seams-of-dreams",
     },
     {
       title: "Crate Ghosts",
@@ -52,6 +57,9 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       recommendedMove: "Tell one friend you found something strange.",
       intensity: 55,
       accent: "purple",
+      recordTitle: "Ya Doin’ Good",
+      artist: "Mr. Wildenfree",
+      recordUrl: "https://tortoise.studio/song/ya-doin-good",
     },
   ],
   Neon: [
@@ -64,6 +72,9 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       recommendedMove: "Post the hook and pretend it found you.",
       intensity: 82,
       accent: "pink",
+      recordTitle: "Your Glowing Energy",
+      artist: "Matt",
+      recordUrl: "https://tortoise.studio/song/your-glowing-energy-2",
     },
     {
       title: "Laser Rain",
@@ -74,6 +85,9 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       recommendedMove: "Queue it before your next late-night build.",
       intensity: 74,
       accent: "blue",
+      recordTitle: "TIPN",
+      artist: "Davyd Music",
+      recordUrl: "https://tortoise.studio/song/tipn",
     },
   ],
   Heavy: [
@@ -86,6 +100,9 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       recommendedMove: "Turn it up exactly one notch too far.",
       intensity: 91,
       accent: "purple",
+      recordTitle: "Better believe",
+      artist: "The C1",
+      recordUrl: "https://tortoise.studio/song/better-believe",
     },
     {
       title: "Concrete Chorus",
@@ -96,6 +113,9 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       recommendedMove: "Send it to the friend who says 'heavier.'",
       intensity: 86,
       accent: "teal",
+      recordTitle: "TIPN II",
+      artist: "Davyd Music",
+      recordUrl: "https://tortoise.studio/song/tipn-ii",
     },
   ],
   Floating: [
@@ -108,6 +128,9 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       recommendedMove: "Play it while the tabs close themselves.",
       intensity: 38,
       accent: "teal",
+      recordTitle: "Viaja con Sielo y Keleven",
+      artist: "Keleven",
+      recordUrl: "https://tortoise.studio/song/viaja-con-sielo-y-keleven",
     },
     {
       title: "Zero Gravity Folk",
@@ -118,6 +141,9 @@ const AURAS: Record<Mood, AlbumAura[]> = {
       recommendedMove: "Save it for golden hour, obviously.",
       intensity: 42,
       accent: "green",
+      recordTitle: "Quintessence",
+      artist: "K. Copely",
+      recordUrl: "https://tortoise.studio/song/quintessence",
     },
   ],
 };
@@ -158,11 +184,17 @@ function shareButton(self: string, text = "I consulted the Album Oracle on @free
 }
 
 function startPage(self: string): SnapHandlerResult {
+  const moodButton = (mood: Mood, variant: "primary" | "secondary" = "secondary") => ({
+    type: "button" as const,
+    props: { label: mood, variant },
+    on: { press: { action: "submit" as const, params: { target: `${self}?mood=${encodeURIComponent(mood)}` } } },
+  });
+
   const elements: Elements = {
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "md" },
-      children: ["title", "sub", "tempo", "mood", "ask", "share_btn"],
+      children: ["title", "sub", "tempo", "mood_prompt", "mood_buttons", "share_btn"],
     },
     title: {
       type: "text",
@@ -171,7 +203,7 @@ function startPage(self: string): SnapHandlerResult {
     sub: {
       type: "text",
       props: {
-        content: "Set a tempo, pick a mood, receive the record your day is secretly asking for.",
+        content: "Set a tempo, then tap the mood you want. The oracle points to a real Tortoise record.",
         size: "sm",
         align: "center",
       },
@@ -180,20 +212,19 @@ function startPage(self: string): SnapHandlerResult {
       type: "slider",
       props: { name: "tempo", label: "Tempo", min: 40, max: 180, step: 1, defaultValue: 96 },
     },
-    mood: {
-      type: "toggle_group",
-      props: {
-        name: "mood",
-        label: "Mood",
-        options: MOODS.map((label) => ({ label, value: label })),
-        defaultValue: "Dusty",
-      },
+    mood_prompt: {
+      type: "text",
+      props: { content: "Choose a mood:", weight: "bold", align: "center" },
     },
-    ask: {
-      type: "button",
-      props: { label: "Reveal my album", variant: "primary" },
-      on: { press: { action: "submit", params: { target: self } } },
+    mood_buttons: {
+      type: "stack",
+      props: { direction: "horizontal", gap: "sm" },
+      children: ["mood_dusty", "mood_neon", "mood_heavy", "mood_floating"],
     },
+    mood_dusty: moodButton("Dusty", "primary"),
+    mood_neon: moodButton("Neon"),
+    mood_heavy: moodButton("Heavy"),
+    mood_floating: moodButton("Floating"),
     share_btn: shareButton(self),
   };
 
@@ -206,7 +237,7 @@ function resultPage(self: string, tempo: number, mood: Mood, aura: AlbumAura): S
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "md" },
-      children: ["badge", "title", "desc", "intensity", "notes", "sep", "tortoise", "again", "share_btn"],
+      children: ["badge", "title", "desc", "intensity", "notes", "sep", "record", "again", "share_btn"],
     },
     badge: {
       type: "badge",
@@ -234,7 +265,7 @@ function resultPage(self: string, tempo: number, mood: Mood, aura: AlbumAura): S
     },
     note_3: {
       type: "item",
-      props: { title: "Move", description: aura.recommendedMove },
+      props: { title: "Tortoise pick", description: `${aura.recordTitle} by ${aura.artist}` },
     },
     notes: {
       type: "item_group",
@@ -242,10 +273,10 @@ function resultPage(self: string, tempo: number, mood: Mood, aura: AlbumAura): S
       children: ["note_1", "note_2", "note_3"],
     },
     sep: { type: "separator", props: {} },
-    tortoise: {
+    record: {
       type: "button",
-      props: { label: "Open /tortoise", variant: "primary" },
-      on: { press: { action: "open_url", params: { url: TORTOISE_URL } } },
+      props: { label: "Open record", variant: "primary" },
+      on: { press: { action: "open_url", params: { target: aura.recordUrl } } },
     },
     again: {
       type: "button",
@@ -270,8 +301,10 @@ registerSnapHandler(app, async (ctx) => {
     return startPage(self);
   }
 
+  const url = new URL(ctx.request.url);
+  const queryMood = url.searchParams.get("mood");
   const tempo = asTempo(ctx.action.inputs?.tempo);
-  const mood = asMood(ctx.action.inputs?.mood);
+  const mood = asMood(queryMood ?? ctx.action.inputs?.mood);
   const aura = pickAura(mood, tempo, ctx.action.fid ?? 0);
   return resultPage(self, tempo, mood, aura);
 });
