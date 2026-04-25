@@ -1,6 +1,15 @@
 {
   "snaps": [
     {
+      "name": "degen-quest",
+      "cast_hash": "0x591b088d11c874a0321cfe385f1e5c1e5a374b5e",
+      "posted_at": "2026-04-25T18:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["game", "absurd", "toggle_group", "stateless", "amber", "crypto", "replayable"]
+    },
+    {
       "name": "farcaster-hours",
       "cast_hash": "0xd18a7572cbb3a62088019f09443c096a83516408",
       "posted_at": "2026-04-25T10:00:00Z",
