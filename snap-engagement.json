@@ -4,14 +4,14 @@
       "name": "hooksmith",
       "cast_hash": "0xc4d87d8879ca6f479d18031c8898f0c5ab6df936",
       "posted_at": "2026-04-25T17:59:41Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
-        "recasts": 0,
+        "likes": 1,
+        "recasts": 1,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 2
       },
-      "score": 0,
+      "score": 8,
       "tags": [
         "utility",
         "input",
@@ -28,7 +28,7 @@
       "name": "degen-quest",
       "cast_hash": "0x591b088d11c874a0321cfe385f1e5c1e5a374b5e",
       "posted_at": "2026-04-25T18:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -50,7 +50,7 @@
       "name": "farcaster-hours",
       "cast_hash": "0xd18a7572cbb3a62088019f09443c096a83516408",
       "posted_at": "2026-04-25T10:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -72,7 +72,7 @@
       "name": "daily-cast",
       "cast_hash": "0x4b3b88910c69e8a9ebfddfcad899958741952d00",
       "posted_at": "2026-04-22T18:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -94,14 +94,14 @@
       "name": "farcaster-100",
       "cast_hash": "0xcd469e596ad3efac16a7fb6d6f67dbcef0fead7e",
       "posted_at": "2026-04-22T10:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 2,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 2
       },
-      "score": 0,
+      "score": 6,
       "tags": [
         "collaborative",
         "daily",
@@ -115,14 +115,14 @@
       "name": "alchemy-lab",
       "cast_hash": "0x4d3b2dab0e69fdcfdf383c3df5a018ddfa64f19e",
       "posted_at": "2026-04-19T10:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 2,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 2
       },
-      "score": 0,
+      "score": 6,
       "tags": [
         "absurd",
         "switch",
@@ -135,7 +135,7 @@
       "name": "wizard-rps",
       "cast_hash": "0xfaf2146bbb44b7c46de79ff1fae341e1e89c9c89",
       "posted_at": "2026-04-16T10:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -161,7 +161,7 @@
       "name": "magic-mirror",
       "cast_hash": "0x3d84038e23cbb54a2c9f4397c33506b13bed11e2",
       "posted_at": "2026-04-15T22:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -185,7 +185,7 @@
       "name": "daily-pulse",
       "cast_hash": "0x093791aa21137ab198e4217f402dcb6ec71b3bf5",
       "posted_at": "2026-04-15T18:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -211,7 +211,7 @@
       "name": "airdrop-checker",
       "cast_hash": "0x8ea75090cb719d5a360bea4e810512e7a302d02a",
       "posted_at": "2026-04-15T12:15:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -238,14 +238,14 @@
       "name": "world-cup-countdown",
       "cast_hash": "0xc5988ce8d03c480b6bb49811f69362fd0ce50ac8",
       "posted_at": "2026-04-14T23:10:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 3,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 3
       },
-      "score": 0,
+      "score": 9,
       "tags": [
         "utility",
         "countdown",
@@ -263,14 +263,14 @@
       "name": "local-biz-search",
       "cast_hash": "0x9574598cc232d55eff66298e31400e0a177fbadf",
       "posted_at": "2026-04-14T14:15:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
-        "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "likes": 1,
+        "recasts": 1,
+        "replies": 1,
+        "unique_interactors": 3
       },
-      "score": 0,
+      "score": 10,
       "tags": [
         "utility",
         "input",
@@ -286,7 +286,7 @@
       "name": "cooked-check",
       "cast_hash": "0x823f0073c8ccb579c91a2f698bd1fe49f821d58d",
       "posted_at": "2026-04-14T10:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -313,7 +313,7 @@
       "name": "trending-cast",
       "cast_hash": "0x1c0b53a066473d238a4bd7b565bfeb5fb86163a8",
       "posted_at": "2026-04-14T06:30:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -336,14 +336,14 @@
       "name": "farcaster-sign",
       "cast_hash": "0x954b5a6a3b39ad55d9d7f4cb1f772615a213dfbe",
       "posted_at": "2026-04-13T22:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 7,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 7
       },
-      "score": 0,
+      "score": 21,
       "tags": [
         "personalized",
         "fid",
@@ -360,14 +360,14 @@
       "name": "cat-pet",
       "cast_hash": "0x28b810886b5e6a17d0c13fdc1e0730fe666f3798",
       "posted_at": "2026-04-13T20:15:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 1,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 1
       },
-      "score": 0,
+      "score": 3,
       "tags": [
         "tamagotchi",
         "pet",
@@ -383,14 +383,14 @@
       "name": "checkers",
       "cast_hash": "0x36f7d242ee4cc271f1bebe55597e503f4ffaca59",
       "posted_at": "2026-04-13T20:30:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 1,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 1
       },
-      "score": 0,
+      "score": 3,
       "tags": [
         "game",
         "multiplayer",
@@ -406,14 +406,14 @@
       "name": "origin-story",
       "cast_hash": "0xc103d59199bad355410d1b70429f1ed8f9a7611a",
       "posted_at": "2026-04-13T17:10:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
-        "recasts": 0,
+        "likes": 3,
+        "recasts": 2,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 5
       },
-      "score": 0,
+      "score": 19,
       "tags": [
         "lore",
         "item_group",
@@ -429,14 +429,14 @@
       "name": "mona-lisa",
       "cast_hash": "0xb266efd6d87a3b4454f782625946638e87cfc832",
       "posted_at": "2026-04-13T17:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
-        "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "likes": 5,
+        "recasts": 1,
+        "replies": 1,
+        "unique_interactors": 7
       },
-      "score": 0,
+      "score": 22,
       "tags": [
         "art",
         "cell_grid",
@@ -451,7 +451,7 @@
       "name": "dont-click",
       "cast_hash": "0x057bcf7430c9af486aa042625547b87f45c322fc",
       "posted_at": "2026-04-13T15:30:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -473,14 +473,14 @@
       "name": "tetris-snap",
       "cast_hash": "0xf6459e70b3dbb1ca1c1a2a3763a8534769b6dbb9",
       "posted_at": "2026-04-13T15:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 1,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 1
       },
-      "score": 0,
+      "score": 3,
       "tags": [
         "game",
         "cell_grid",
@@ -497,14 +497,14 @@
       "name": "would-you-rather",
       "cast_hash": "0x906d2979283164b705c321692e0f3b9945fc8306",
       "posted_at": "2026-04-13T10:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 2,
         "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "replies": 1,
+        "unique_interactors": 3
       },
-      "score": 0,
+      "score": 8,
       "tags": [
         "poll",
         "toggle_group",
@@ -542,14 +542,14 @@
       "name": "beautiful-thing",
       "cast_hash": "0xaf4ff68fc4781617f52db948c4a2e0afc1aab321",
       "posted_at": "2026-04-12T22:30:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 3,
         "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "replies": 1,
+        "unique_interactors": 4
       },
-      "score": 0,
+      "score": 11,
       "tags": [
         "gag",
         "open_url",
@@ -563,14 +563,14 @@
       "name": "tic-tac-toe",
       "cast_hash": "0xead3c1044fca48ee41354335a5026b367d84f8a0",
       "posted_at": "2026-04-12T05:55:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
-        "recasts": 0,
+        "likes": 3,
+        "recasts": 1,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 4
       },
-      "score": 0,
+      "score": 14,
       "tags": [
         "game",
         "button",
@@ -586,14 +586,14 @@
       "name": "flappy-bird",
       "cast_hash": "0x42350ce21344ed4a054d84f275da3aaff8065ff3",
       "posted_at": "2026-04-12T03:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
-        "recasts": 0,
+        "likes": 5,
+        "recasts": 1,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 6
       },
-      "score": 0,
+      "score": 20,
       "tags": [
         "game",
         "cell_grid",
@@ -607,14 +607,14 @@
       "name": "rug-floor-is-lava",
       "cast_hash": "0xd4e3c98e6e54a67ff48016c41728d2c5ef6265a0",
       "posted_at": "2026-04-12T02:10:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 2,
         "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "replies": 1,
+        "unique_interactors": 3
       },
-      "score": 0,
+      "score": 8,
       "tags": [
         "game",
         "cell_grid",
@@ -631,14 +631,14 @@
       "name": "duo-do-song-quiz",
       "cast_hash": "0xc88ad2e025c67bc63209a5d123cc8588d75100be",
       "posted_at": "2026-04-12T01:50:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
-        "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "likes": 6,
+        "recasts": 4,
+        "replies": 1,
+        "unique_interactors": 11
       },
-      "score": 0,
+      "score": 40,
       "tags": [
         "quiz",
         "toggle_group",
@@ -655,14 +655,14 @@
       "name": "raffle",
       "cast_hash": "0x26f6c6618675dc2eec0971461ebba36fbcf1e33d",
       "posted_at": "2026-04-11T22:50:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
-        "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "likes": 12,
+        "recasts": 1,
+        "replies": 1,
+        "unique_interactors": 14
       },
-      "score": 0,
+      "score": 43,
       "tags": [
         "utility",
         "input",
@@ -677,7 +677,7 @@
       "name": "creature-summoner",
       "cast_hash": "0x86fbaa9d239ec697c697014194840efee7393286",
       "posted_at": "2026-04-11T22:30:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -700,14 +700,14 @@
       "name": "natal-chart-v2",
       "cast_hash": "0x5472ee4306f0684197524b57f3191b45e2d11124",
       "posted_at": "2026-04-11T21:50:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 2,
         "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "replies": 2,
+        "unique_interactors": 4
       },
-      "score": 0,
+      "score": 10,
       "tags": [
         "utility",
         "input",
@@ -722,14 +722,14 @@
       "name": "natal-chart",
       "cast_hash": "0x694d967cee000e51b6f3fe60a36341f17949f05a",
       "posted_at": "2026-04-11T21:20:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 1,
         "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "replies": 1,
+        "unique_interactors": 2
       },
-      "score": 0,
+      "score": 5,
       "tags": [
         "utility",
         "input",
@@ -744,14 +744,14 @@
       "name": "mvr-showcase",
       "cast_hash": "0x9ae2207c5f20e6cc2f13ca366073ef28d0389796",
       "posted_at": "2026-04-11T20:45:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 1,
         "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "replies": 1,
+        "unique_interactors": 2
       },
-      "score": 0,
+      "score": 5,
       "tags": [
         "showcase",
         "item",
@@ -765,14 +765,14 @@
       "name": "pacman",
       "cast_hash": "0x535b32f6481781dd34b25356577541796b076295",
       "posted_at": "2026-04-11T20:30:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
-        "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "likes": 4,
+        "recasts": 1,
+        "replies": 1,
+        "unique_interactors": 6
       },
-      "score": 0,
+      "score": 19,
       "tags": [
         "game",
         "cell_grid",
@@ -787,14 +787,14 @@
       "name": "follow-kayonfire",
       "cast_hash": "0x84884130a7048673808b0131738759c95783b7e8",
       "posted_at": "2026-04-11T20:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "replies": 1,
+        "unique_interactors": 1
       },
-      "score": 0,
+      "score": 2,
       "tags": [
         "social",
         "open_url",
@@ -808,14 +808,14 @@
       "name": "snap-101",
       "cast_hash": "0xd494753c007a65321c99eafd21ec62cd473f7b37",
       "posted_at": "2026-04-11T16:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 7,
         "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "replies": 2,
+        "unique_interactors": 9
       },
-      "score": 0,
+      "score": 25,
       "tags": [
         "tutorial",
         "meta",
@@ -833,14 +833,14 @@
       "name": "drum-machine",
       "cast_hash": "0x295eae18ef6d20d69307f2b2410f4771e3814893",
       "posted_at": "2026-04-11T18:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 2,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 2
       },
-      "score": 0,
+      "score": 6,
       "tags": [
         "game",
         "cell_grid",
@@ -854,14 +854,14 @@
       "name": "snapathon",
       "cast_hash": "0xcacc8f13f3e8e51bdc9d0e80098723974bb836f9",
       "posted_at": "2026-04-11T13:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
-        "recasts": 0,
+        "likes": 8,
+        "recasts": 2,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 10
       },
-      "score": 0,
+      "score": 34,
       "tags": [
         "announcement",
         "compose_cast",
@@ -873,14 +873,14 @@
       "name": "loud-links",
       "cast_hash": "0xb6a821aa5439947814aa60a764d4781de40e3411",
       "posted_at": "2026-04-11T12:30:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 2,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 2
       },
-      "score": 0,
+      "score": 6,
       "tags": [
         "collaborative",
         "input",
@@ -896,14 +896,14 @@
       "name": "energy-reading",
       "cast_hash": "0x8914da78ad5953a5189425051b64b2d1bc4cd561",
       "posted_at": "2026-04-10T18:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 2,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 2
       },
-      "score": 0,
+      "score": 6,
       "tags": [
         "absurd",
         "slider",
@@ -918,14 +918,14 @@
       "name": "vibe-check",
       "cast_hash": "0x4687bee0f1600a3bb98253fa5deb9eb1241dff35",
       "posted_at": "2026-04-10T14:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 1,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 1
       },
-      "score": 0,
+      "score": 3,
       "tags": [
         "poll",
         "toggle_group",
@@ -939,14 +939,14 @@
       "name": "meet-snap-wizard",
       "cast_hash": "0x8f249fff0bbc8b50eec6fe072e6d529c8cd7d981",
       "posted_at": "2026-04-10T08:45:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 5,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 5
       },
-      "score": 0,
+      "score": 15,
       "tags": [
         "slideshow",
         "progress",
@@ -960,14 +960,14 @@
       "name": "wizard-trivia",
       "cast_hash": "0xc3c95cc8d335149c8ce7f7e64ad6b2b22eecce9b",
       "posted_at": "2026-04-12T18:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 1,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 1
       },
-      "score": 0,
+      "score": 3,
       "tags": [
         "trivia",
         "quiz",
@@ -986,14 +986,14 @@
       "name": "tip-calculator",
       "cast_hash": "0x8047693c76d3eeec7ba96b0bf0535432a7d87e21",
       "posted_at": "2026-04-12T22:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 3,
         "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "replies": 3,
+        "unique_interactors": 6
       },
-      "score": 0,
+      "score": 15,
       "tags": [
         "utility",
         "input",
@@ -1011,14 +1011,14 @@
       "name": "fortune-cookie",
       "cast_hash": "0x5ccbd3b215a9d4ea3b73de328e392a3d0b853f47",
       "posted_at": "2026-04-14T18:30:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 2,
         "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "replies": 1,
+        "unique_interactors": 3
       },
-      "score": 0,
+      "score": 8,
       "tags": [
         "daily",
         "fortune",
@@ -1036,7 +1036,7 @@
       "name": "fc-type",
       "cast_hash": "0x15d729ecd5ab421ba8a0c8c0579b59857eac19f2",
       "posted_at": "2026-04-14T22:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -1059,7 +1059,7 @@
       "name": "morning-ritual",
       "cast_hash": "0x91f0663411c4e63061c06789358020a39f1fb5a2",
       "posted_at": "2026-04-16T14:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -1083,14 +1083,14 @@
       "name": "drum-machine",
       "cast_hash": "0x1898caa562aa7141812125f86c6a2676f566e37e",
       "posted_at": "2026-04-17T10:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 2,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 2
       },
-      "score": 0,
+      "score": 6,
       "tags": [
         "music",
         "toggle_group-multiple",
@@ -1108,7 +1108,7 @@
       "name": "wizard-dice",
       "cast_hash": "0x0af75f1ed91540a81e6abac9f48b50f355773fff",
       "posted_at": "2026-04-17T18:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -1133,14 +1133,14 @@
       "name": "music-collab",
       "cast_hash": "0x4cefbfc8ae9bef8e1c1ad952b10a7918377c5f3f",
       "posted_at": "2026-04-17T22:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 1,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 1
       },
-      "score": 0,
+      "score": 3,
       "tags": [
         "music",
         "collaborative",
@@ -1159,7 +1159,7 @@
       "name": "fc-confessions",
       "cast_hash": "0x65890b1774513602a57f75254f3ce90c0617fa18",
       "posted_at": "2026-04-18T11:30:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -1183,14 +1183,14 @@
       "name": "farcaster-artists",
       "cast_hash": "0x85c5c24a585e3d45798931d4918f4f4172b274dc",
       "posted_at": "2026-04-18T20:55:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
-        "likes": 0,
+        "likes": 2,
         "recasts": 0,
         "replies": 0,
-        "unique_interactors": 0
+        "unique_interactors": 2
       },
-      "score": 0,
+      "score": 6,
       "tags": [
         "discovery",
         "artists",
@@ -1208,7 +1208,7 @@
       "name": "number-wizard",
       "cast_hash": "0xd10ad02e3563b37a2de444631c29aaa9d0d844da",
       "posted_at": "2026-04-18T22:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
@@ -1234,14 +1234,14 @@
       "name": "profile-finder",
       "cast_hash": "0xecc1702dd89afb486c5294ea4644e36093b36a74",
       "posted_at": "2026-04-19T12:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,
-        "replies": 0,
-        "unique_interactors": 0
+        "replies": 1,
+        "unique_interactors": 1
       },
-      "score": 0,
+      "score": 2,
       "tags": [
         "utility",
         "fid",
@@ -1259,7 +1259,7 @@
       "name": "token-type",
       "cast_hash": "0x119ce9b80e35aa8448d4f2d1dc2a0cce095672fc",
       "posted_at": "2026-04-25T15:00:00Z",
-      "last_checked": null,
+      "last_checked": "2026-04-25T18:16:40.852Z",
       "stats": {
         "likes": 0,
         "recasts": 0,

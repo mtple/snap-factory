@@ -6,7 +6,9 @@ const ROOT = process.cwd();
 const ENGAGEMENT_PATH = path.join(ROOT, 'snap-engagement.json');
 const INSIGHTS_PATH = path.join(ROOT, 'snap-insights.md');
 const NEYNAR_API_KEY = process.env.NEYNAR_API_KEY;
-const API_BASE = 'https://api.neynar.com/v2/farcaster/cast';
+const SNAPWIZARD_FID = process.env.SNAPWIZARD_FID ?? '2856987';
+const NEYNAR_API_BASE = 'https://api.neynar.com/v2/farcaster/cast';
+const WARPCAST_CASTS_BASE = 'https://client.warpcast.com/v2/casts';
 const SCORE_FORMULA = 'score = likes * 3 + recasts * 5 + replies * 2';
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -36,6 +38,7 @@ function extractStats(payload) {
   const likes = asNumber(
     cast?.reactions?.likes_count,
     cast?.reactions?.likes?.count,
+    cast?.reactions?.count,
     cast?.likes_count,
     cast?.reaction_counts?.likes,
     getNested(cast, ['viewer_context', 'likes_count']),
@@ -43,6 +46,7 @@ function extractStats(payload) {
   const recasts = asNumber(
     cast?.reactions?.recasts_count,
     cast?.reactions?.recasts?.count,
+    cast?.recasts?.count,
     cast?.recasts_count,
     cast?.reaction_counts?.recasts,
   );
@@ -189,8 +193,8 @@ The daily SnapWizard engagement-refresh cron job:
 `;
 }
 
-async function fetchCast(castHash) {
-  const url = new URL(API_BASE);
+async function fetchCastFromNeynar(castHash) {
+  const url = new URL(NEYNAR_API_BASE);
   url.searchParams.set('identifier', castHash);
   url.searchParams.set('type', 'hash');
 
@@ -208,11 +212,38 @@ async function fetchCast(castHash) {
   return response.json();
 }
 
-async function main() {
-  if (!NEYNAR_API_KEY) {
-    throw new Error('NEYNAR_API_KEY is required to refresh SnapWizard engagement stats.');
-  }
+async function fetchWarpcastIndex() {
+  const byHash = new Map();
+  let cursor;
+  for (let page = 0; page < 10; page += 1) {
+    const url = new URL(WARPCAST_CASTS_BASE);
+    url.searchParams.set('fid', SNAPWIZARD_FID);
+    url.searchParams.set('limit', '50');
+    if (cursor) url.searchParams.set('cursor', cursor);
 
+    const response = await fetch(url, {
+      headers: {
+        accept: 'application/json',
+        'user-agent': 'SnapWizard engagement refresh',
+      },
+    });
+    if (!response.ok) {
+      const body = await response.text().catch(() => '');
+      throw new Error(`Warpcast ${response.status}: ${body.slice(0, 240)}`);
+    }
+
+    const payload = await response.json();
+    for (const cast of payload?.result?.casts ?? []) {
+      if (cast?.hash) byHash.set(cast.hash.toLowerCase(), cast);
+    }
+    cursor = payload?.next?.cursor;
+    if (!cursor) break;
+    await new Promise((resolve) => setTimeout(resolve, 150));
+  }
+  return byHash;
+}
+
+async function main() {
   const raw = await fs.readFile(ENGAGEMENT_PATH, 'utf8');
   const data = JSON.parse(raw);
   if (!Array.isArray(data.snaps)) {
@@ -223,16 +254,24 @@ async function main() {
   let refreshed = 0;
   const failures = [];
 
+  const warpcastIndex = NEYNAR_API_KEY ? null : await fetchWarpcastIndex();
+  const source = NEYNAR_API_KEY ? 'Neynar' : `Warpcast public casts for fid ${SNAPWIZARD_FID}`;
+
   for (const snap of data.snaps) {
     if (!snap.cast_hash) continue;
     try {
-      const payload = await fetchCast(snap.cast_hash);
+      const payload = NEYNAR_API_KEY
+        ? await fetchCastFromNeynar(snap.cast_hash)
+        : warpcastIndex.get(String(snap.cast_hash).toLowerCase());
+      if (!payload) {
+        throw new Error(`cast not found in ${source}`);
+      }
       const stats = extractStats(payload);
       snap.stats = stats;
       snap.score = score(stats);
       snap.last_checked = checkedAt;
       refreshed += 1;
-      await new Promise((resolve) => setTimeout(resolve, 150));
+      if (NEYNAR_API_KEY) await new Promise((resolve) => setTimeout(resolve, 150));
     } catch (error) {
       failures.push(`${snap.name ?? snap.cast_hash}: ${error.message}`);
     }
