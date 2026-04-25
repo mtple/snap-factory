@@ -68,11 +68,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 53 | daily-cast | Fresh question every day — tap "I'll answer this", composer opens pre-filled. Tracks daily respondents via Turso. First use of the icon component. | /snaps/daily-cast | 0x4b3b88910c69e8a9ebfddfcad899958741952d00 | 2026-04-22 | daily, prompt, icon, badge, separator, submit, compose_cast, stateful, turso, teal, community |
 | 54 | farcaster-hours | Community hour tracker — slide to your local hour, see a live bar chart of when Farcaster is online. Data accumulates over time. | /snaps/farcaster-hours | 0xd18a7572cbb3a62088019f09443c096a83516408 | 2026-04-25 | community, poll, slider, bar_chart, badge, separator, submit, compose_cast, stateful, turso, teal |
 | 55 | degen-quest | Crypto quest game — a new token is up 7,000%, pick your move (ape/research/CT/grass), get a personalized outcome based on choice + FID. 12 unique endings. | /snaps/degen-quest | 0x591b088d11c874a0321cfe385f1e5c1e5a374b5e | 2026-04-25 | game, absurd, toggle_group, badge, separator, submit, compose_cast, stateless, amber, crypto, replayable |
+| 56 | token-type | What Base token are you? 3 questions score you as ETH, USDC, or DEGEN — result page has view_token button. Built Apr 20, posted Apr 25 (Vercel was down). | /snaps/token-type | 0x119ce9b80e35aa8448d4f2d1dc2a0cce095672fc | 2026-04-25 | personality, token, toggle_group, badge, view_token, compose_cast, stateless, blue, crypto |
 
 ## Stats
 
-- Total snaps built: 55
-- Live snaps: 53
+- Total snaps built: 56
+- Live snaps: 54
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

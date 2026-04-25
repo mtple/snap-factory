@@ -1168,6 +1168,15 @@
         "blue",
         "event-mode"
       ]
+    },
+    {
+      "name": "token-type",
+      "cast_hash": "0x119ce9b80e35aa8448d4f2d1dc2a0cce095672fc",
+      "posted_at": "2026-04-25T15:00:00Z",
+      "last_checked": null,
+      "stats": { "likes": 0, "recasts": 0, "replies": 0, "unique_interactors": 0 },
+      "score": 0,
+      "tags": ["personality", "token", "toggle_group", "badge", "view_token", "compose_cast", "stateless", "blue", "crypto"]
     }
   ]
 }
