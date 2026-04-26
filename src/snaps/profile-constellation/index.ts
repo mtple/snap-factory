@@ -1,7 +1,7 @@
 /**
  * profile-constellation — turn a Farcaster FID into a tiny star map.
  *
- * Components: icon, text, badge, button, stack
+ * Components: icon, text, cell_grid, badge, button, stack
  * Actions: submit, view_profile, compose_cast
  * State: stateless
  */
@@ -190,8 +190,13 @@ function resultPage(self: string, fid: number, map: Constellation): SnapHandlerR
       props: { content: map.title, weight: "bold", align: "center" },
     },
     sky: {
-      type: "text",
-      props: { content: skyText(map.cells), align: "center" },
+      type: "cell_grid",
+      props: {
+        cols: 18,
+        rows: 10,
+        rowHeight: 18,
+        cells: map.cells,
+      },
     },
     badge: {
       type: "badge",
