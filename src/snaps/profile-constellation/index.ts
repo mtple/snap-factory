@@ -1,7 +1,7 @@
 /**
  * profile-constellation — turn a Farcaster FID into a tiny star map.
  *
- * Components: icon, cell_grid, badge, item_group, item, separator, button, stack
+ * Components: icon, text, badge, button, stack
  * Actions: submit, view_profile, compose_cast
  * State: stateless
  */
@@ -168,57 +168,47 @@ function startPage(self: string): SnapHandlerResult {
   return { version: "1.0", theme: { accent: "purple" }, ui: { root: "page", elements } };
 }
 
+function skyText(cells: Cell[]): string {
+  const rows = Array.from({ length: 5 }, () => Array.from({ length: 12 }, () => "·"));
+  for (const cell of cells) {
+    const row = Math.min(4, Math.floor(cell.row / 2));
+    const col = Math.min(11, Math.floor(cell.col / 1.5));
+    rows[row][col] = cell.color === "gray" ? "✦" : "★";
+  }
+  return rows.map((row) => row.join(" ")).join("\n");
+}
+
 function resultPage(self: string, fid: number, map: Constellation): SnapHandlerResult {
   const elements: Elements = {
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "sm" },
-      children: ["title", "sky", "badge", "details", "actions", "share_btn"],
+      children: ["title", "sky", "badge", "sign", "field", "profile_btn", "share_btn"],
     },
     title: {
       type: "text",
       props: { content: map.title, weight: "bold", align: "center" },
     },
     sky: {
-      type: "cell_grid",
-      props: {
-        cols: 18,
-        rows: 10,
-        rowHeight: 18,
-        select: "off",
-        cells: map.cells,
-      },
+      type: "text",
+      props: { content: skyText(map.cells), align: "center" },
     },
     badge: {
       type: "badge",
       props: { label: `${map.stars} stars`, variant: "primary" },
     },
-    details: {
-      type: "item_group",
-      children: ["sign_item", "field_item"],
+    sign: {
+      type: "text",
+      props: { content: `${map.sign}: ${map.omen}`, size: "sm" },
     },
-    sign_item: {
-      type: "item",
-      props: { title: map.sign, description: map.omen },
-    },
-    field_item: {
-      type: "item",
-      props: { title: map.field, description: `FID ${fid || "unknown"} plotted as snap-native pixels.` },
-    },
-    actions: {
-      type: "stack",
-      props: { direction: "horizontal", gap: "sm" },
-      children: ["profile_btn", "again_btn"],
+    field: {
+      type: "text",
+      props: { content: `${map.field} · FID ${fid || "unknown"}`, size: "sm" },
     },
     profile_btn: {
       type: "button",
       props: { label: "View profile", variant: "primary" },
       on: { press: { action: "view_profile", params: { fid } } },
-    },
-    again_btn: {
-      type: "button",
-      props: { label: "Start over", variant: "secondary" },
-      on: { press: { action: "submit", params: { target: `${self}?reset=1` } } },
     },
     share_btn: shareButton(self, `My Farcaster constellation is ${map.title}. Yours? ✨`),
   };
