@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "profile-constellation",
+      "cast_hash": "0x72caaf03f43b2c8153112d1be65b4e71e3517da9",
+      "posted_at": "2026-04-26T22:10:33Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "personalized",
+        "fid",
+        "social",
+        "cell_grid",
+        "icon",
+        "item_group",
+        "badge",
+        "view_profile",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "polite-no",
       "cast_hash": "0x50630cddfe3cebc41edcbc90f79faf3caa9dc1a9",
       "posted_at": "2026-04-26T14:10:45Z",
