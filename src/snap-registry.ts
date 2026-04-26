@@ -45,6 +45,7 @@ import snap_numberWizard from "./snaps/number-wizard/index.js";
 import snap_originStory from "./snaps/origin-story/index.js";
 import snap_pacman from "./snaps/pacman/index.js";
 import snap_politeNo from "./snaps/polite-no/index.js";
+import snap_profileConstellation from "./snaps/profile-constellation/index.js";
 import snap_profileFinder from "./snaps/profile-finder/index.js";
 import snap_raffle from "./snaps/raffle/index.js";
 import snap_randomFcPic from "./snaps/random-fc-pic/index.js";
@@ -109,6 +110,7 @@ export const snaps: Record<string, Hono> = {
   "origin-story": snap_originStory,
   "pacman": snap_pacman,
   "polite-no": snap_politeNo,
+  "profile-constellation": snap_profileConstellation,
   "profile-finder": snap_profileFinder,
   "raffle": snap_raffle,
   "random-fc-pic": snap_randomFcPic,
