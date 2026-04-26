@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x11a9a75b5577ef685421e586e635e7bb9f285afc",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "yo @freeturtle wtf is this snap lol",
+      "parent_hash": "0x50630cddfe3cebc41edcbc90f79faf3caa9dc1a9",
+      "received_at": "2026-04-26T14:24:07.952Z",
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_cast_hash": "0x41846b8ca85f2f63c51064a2a01a6fd79480cfe5",
+      "processed_at": "2026-04-26T14:24:38Z",
+      "note": "Ordinary comment/reaction from @mattlee asking what the snap is. Replied playfully and invited a bug detail if something misbehaved."
+    },
+    {
       "cast_hash": "0x906ed0e3c3d2d7a0ba5f4a9a7546df064d7c6bc3",
       "author_fid": 296107,
       "author_username": "pulok20",
