@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x619d8dc9c2daef40f4f757a6ee892dcbe23aed85",
+      "author_fid": 3317094,
+      "author_username": "redditdegen1182",
+      "author_display_name": "RedditDegenerate🤡",
+      "text": "@freeturtle 🤯 Looked into my hypersnap snapshot result > 2100.0 tokens predicted!\n🕰️ The token generation event will be completed around Farcon time (May 4, 2026).\n🏃‍♂️ Grab your chance and claim your spot in the link!\nhttps://farcester.xyz",
+      "parent_hash": "0xc9b7f269757e315835ff6d81f2762bca11f968c6",
+      "received_at": "2026-04-26T15:01:09.631Z",
+      "user_score": 0.22,
+      "status": "skipped",
+      "processed_at": "2026-04-26T15:01:32Z",
+      "note": "Spam/phishing — fake hypersnap/token claim with misspelled domain farcester.xyz (same pattern as previous skips); no snap request and no reply posted."
+    },
+    {
       "cast_hash": "0xa1fd42e65e1a6ab5ab49bfa795dab8ce6e20d874",
       "author_fid": 6591,
       "author_username": "mattlee",
