@@ -1,6 +1,29 @@
 {
   "snaps": [
     {
+      "name": "polite-no",
+      "cast_hash": "0x50630cddfe3cebc41edcbc90f79faf3caa9dc1a9",
+      "posted_at": "2026-04-26T14:10:45Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "switch",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple",
+        "daily-life"
+      ]
+    },
+    {
       "name": "album-oracle",
       "cast_hash": "0x122a4f440839bf42f565951222946094fa15a602",
       "posted_at": "2026-04-25T22:06:25Z",
@@ -1182,7 +1205,7 @@
       ]
     },
     {
-      "name": "fc-confessions",
+      "name": "***",
       "cast_hash": "0x65890b1774513602a57f75254f3ce90c0617fa18",
       "posted_at": "2026-04-18T11:30:00Z",
       "last_checked": "2026-04-26T07:00:51.913Z",
