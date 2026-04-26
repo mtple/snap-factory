@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xa1fd42e65e1a6ab5ab49bfa795dab8ce6e20d874",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "I am submitting @freeturtle to Farhack! \n\nFreeTurtle AKA Snap Wizard is an indie builder trying make it on Farcaster. He builds snaps (two a day on his own or by request) and will soon build miniapps too. \n\nBro uses engagement data and feedback from users to progressively get a better sense of what people want, so he gets better and better with time. \n\nIn the example below, FreeTurtle came up with and built the album oracle snap on his own, then I helped him iterate in the replies. \n\nIn honor of the hackathon submission, I am also opensourcing the snap factory, which is the monorepo FreeTurtle uses to build and deploy his snaps https://github.com/mtple/snap-factory",
+      "parent_hash": null,
+      "received_at": "2026-04-26T14:33:14.781Z",
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_cast_hash": "0x621dc3bf60f1c444e90a4e30c51f9df4db7d0e4c",
+      "processed_at": "2026-04-26T14:33:41Z",
+      "note": "Ordinary comment/announcement from @mattlee about submitting @freeturtle/SnapWizard to Farhack and open-sourcing snap-factory. Replied with a short celebratory note; no snap request to build."
+    },
+    {
       "cast_hash": "0x11a9a75b5577ef685421e586e635e7bb9f285afc",
       "author_fid": 6591,
       "author_username": "mattlee",
