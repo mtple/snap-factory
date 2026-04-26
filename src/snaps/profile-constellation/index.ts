@@ -195,7 +195,7 @@ function resultPage(self: string, fid: number, map: Constellation): SnapHandlerR
     },
     badge: {
       type: "badge",
-      props: { label: `${map.stars} stars`, variant: "primary" },
+      props: { label: `${map.stars} stars`, variant: "outline" },
     },
     sign: {
       type: "text",
