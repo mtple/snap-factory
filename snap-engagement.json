@@ -1,6 +1,32 @@
 {
   "snaps": [
     {
+      "name": "walkout-song",
+      "cast_hash": "0x549554faceedd412a60b5baf725af3c07c915e30",
+      "posted_at": "2026-04-27T14:10:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "music",
+        "tortoise",
+        "input",
+        "toggle_group",
+        "progress",
+        "badge",
+        "open_url",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "blue"
+      ]
+    },
+    {
       "name": "profile-constellation",
       "cast_hash": "0x72caaf03f43b2c8153112d1be65b4e71e3517da9",
       "posted_at": "2026-04-26T22:10:33Z",
