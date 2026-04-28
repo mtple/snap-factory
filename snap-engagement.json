@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "setlist-spell",
+      "cast_hash": "0xad48892a6bd94073ff21976c288c28a2ceed7cea",
+      "posted_at": "2026-04-28T14:11:02Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "music",
+        "tortoise",
+        "toggle_group",
+        "slider",
+        "switch",
+        "bar_chart",
+        "badge",
+        "open_url",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "green"
+      ]
+    },
+    {
       "name": "listening-room",
       "cast_hash": "0xa1c9cf4b4becfbfd8fe7f68164a0410255e50c66",
       "posted_at": "2026-04-27T22:13:00Z",

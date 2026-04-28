@@ -77,11 +77,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 61 | walkout-song | Walkout-song generator — enter what you are facing, pick an energy, get a fictional anthem with readiness meter and Tortoise link. | /snaps/walkout-song | 0x549554faceedd412a60b5baf725af3c07c915e30 | 2026-04-27 | music, tortoise, input, toggle_group, progress, badge, open_url, submit, compose_cast, stateless, blue |
 | 62 | listening-room | Daily music conversation prompt — answer today’s listening question, open Tortoise, or share the room. No submit step, just a tiny music signal. | /snaps/listening-room | 0xa1c9cf4b4becfbfd8fe7f68164a0410255e50c66 | 2026-04-27 | music, tortoise, daily, prompt, icon, badge, separator, open_url, compose_cast, stateless, green |
+| 63 | setlist-spell | Fictional five-song setlist conjurer — pick venue, dial chaos, hide an encore, and get an energy arc with Tortoise link. | /snaps/setlist-spell | 0xad48892a6bd94073ff21976c288c28a2ceed7cea | 2026-04-28 | music, tortoise, toggle_group, slider, switch, bar_chart, badge, open_url, submit, compose_cast, stateless, green |
 
 ## Stats
 
-- Total snaps built: 62
-- Live snaps: 60
+- Total snaps built: 63
+- Live snaps: 61
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
