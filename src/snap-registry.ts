@@ -51,6 +51,7 @@ import snap_profileFinder from "./snaps/profile-finder/index.js";
 import snap_raffle from "./snaps/raffle/index.js";
 import snap_randomFcPic from "./snaps/random-fc-pic/index.js";
 import snap_rugFloorIsLava from "./snaps/rug-floor-is-lava/index.js";
+import snap_setlistSpell from "./snaps/setlist-spell/index.js";
 import snap_snap101 from "./snaps/snap-101/index.js";
 import snap_snapShowcase from "./snaps/snap-showcase/index.js";
 import snap_snapagotchiHouse from "./snaps/snapagotchi-house/index.js";
@@ -118,6 +119,7 @@ export const snaps: Record<string, Hono> = {
   "raffle": snap_raffle,
   "random-fc-pic": snap_randomFcPic,
   "rug-floor-is-lava": snap_rugFloorIsLava,
+  "setlist-spell": snap_setlistSpell,
   "snap-101": snap_snap101,
   "snap-showcase": snap_snapShowcase,
   "snapagotchi-house": snap_snapagotchiHouse,
