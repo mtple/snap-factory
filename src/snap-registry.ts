@@ -49,6 +49,7 @@ import snap_pacman from "./snaps/pacman/index.js";
 import snap_politeNo from "./snaps/polite-no/index.js";
 import snap_profileConstellation from "./snaps/profile-constellation/index.js";
 import snap_profileFinder from "./snaps/profile-finder/index.js";
+import snap_profileWeather from "./snaps/profile-weather/index.js";
 import snap_raffle from "./snaps/raffle/index.js";
 import snap_randomFcPic from "./snaps/random-fc-pic/index.js";
 import snap_rugFloorIsLava from "./snaps/rug-floor-is-lava/index.js";
@@ -118,6 +119,7 @@ export const snaps: Record<string, Hono> = {
   "polite-no": snap_politeNo,
   "profile-constellation": snap_profileConstellation,
   "profile-finder": snap_profileFinder,
+  "profile-weather": snap_profileWeather,
   "raffle": snap_raffle,
   "random-fc-pic": snap_randomFcPic,
   "rug-floor-is-lava": snap_rugFloorIsLava,
