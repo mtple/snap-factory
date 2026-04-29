@@ -81,10 +81,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 64 | crate-cover | Tiny album sleeve generator — enter a record/artist name, pick a sleeve style, get snap-native cell_grid cover art with a Tortoise jump. | /snaps/crate-cover | 0x1554da7bb09cd007b5642058f8659ea7958524a6 | 2026-04-28 | music, tortoise, input, toggle_group, cell_grid, badge, open_url, submit, compose_cast, stateless, teal |
 
+| 65 | profile-weather | Personalized Farcaster weather report — tap once to forecast your FID with confidence meter, timeline-condition bars, and view_profile button. | /snaps/profile-weather | 0x429c74b3fafbad69ea29fc893301b39f3adf9b8f | 2026-04-29 | personalized, fid, social, icon, progress, bar_chart, badge, view_profile, submit, compose_cast, stateless, blue |
+
 ## Stats
 
-- Total snaps built: 64
-- Live snaps: 62
+- Total snaps built: 65
+- Live snaps: 63
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

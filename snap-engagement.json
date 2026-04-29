@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "profile-weather",
+      "cast_hash": "0x429c74b3fafbad69ea29fc893301b39f3adf9b8f",
+      "posted_at": "2026-04-29T14:09:19Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "personalized",
+        "fid",
+        "social",
+        "icon",
+        "progress",
+        "bar_chart",
+        "badge",
+        "view_profile",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "blue"
+      ]
+    },
+    {
       "name": "crate-cover",
       "cast_hash": "0x1554da7bb09cd007b5642058f8659ea7958524a6",
       "posted_at": "2026-04-28T22:08:51Z",
