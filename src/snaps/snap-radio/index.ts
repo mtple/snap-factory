@@ -168,11 +168,45 @@ export function renderStation(request: Request, self: string, index: number): Sn
   return { version: "1.0", theme: { accent: station.accent }, ui: { root: "page", elements } };
 }
 
-registerSnapHandler(app, async (ctx) => {
-  const self = snapUrl(ctx.request, SNAP_NAME);
-  const url = new URL(ctx.request.url);
-  const index = clampIndex(url.searchParams.get("i"));
-  return renderStation(ctx.request, self, index);
-});
+const SNAP_RADIO_URL = "https://snap-factory.vercel.app/snaps/snap-radio";
+
+const snapRadioFallbackHtml = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Snap Radio</title>
+    <meta name="description" content="Five tiny hits, one wizard dial.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Snap Factory">
+    <meta property="og:title" content="Snap Radio">
+    <meta property="og:description" content="Five tiny hits, one wizard dial.">
+    <meta property="og:url" content="${SNAP_RADIO_URL}">
+    <meta property="og:image" content="${SNAP_RADIO_URL}/~/og-image">
+    <meta property="og:image:alt" content="Snap Radio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Snap Radio">
+    <meta name="twitter:description" content="Five tiny hits, one wizard dial.">
+    <meta name="twitter:image" content="${SNAP_RADIO_URL}/~/og-image">
+  </head>
+  <body style="margin:0;font-family:system-ui,sans-serif;background:#111827;color:#f9fafb;display:grid;min-height:100vh;place-items:center;text-align:center">
+    <main>
+      <h1>Snap Radio</h1>
+      <p>Five tiny hits, one wizard dial.</p>
+      <p><a style="color:#f9a8d4" href="${SNAP_RADIO_URL}">Open the snap</a></p>
+    </main>
+  </body>
+</html>`;
+
+registerSnapHandler(
+  app,
+  async (ctx) => {
+    const self = snapUrl(ctx.request, SNAP_NAME);
+    const url = new URL(ctx.request.url);
+    const index = clampIndex(url.searchParams.get("i"));
+    return renderStation(ctx.request, self, index);
+  },
+  { fallbackHtml: snapRadioFallbackHtml },
+);
 
 export default app;
