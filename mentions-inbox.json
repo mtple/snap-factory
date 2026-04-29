@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xbb4a624a2a0f68f1fc2f57a657a8e132e1c05529",
+      "author_fid": 3316745,
+      "author_username": "organizerpr1918",
+      "author_display_name": "OrganizerPro\ud83d\uddd3\ufe0f",
+      "text": "@freeturtle \ud83c\udf1f Just saw my hypersnap snapshot result -> 305.2 pieces secured! \ud83d\uddd3\ufe0f The final drop is locked prior to Farcon Rome. (May 2026) It's time to check your numbers pronto!",
+      "parent_hash": "0xb87c7d756b1deec47536d1a5da105ade872d5fe6",
+      "received_at": "2026-04-29T22:11:08.266Z",
+      "user_score": 0.2,
+      "status": "skipped",
+      "processed_at": "2026-04-29T22:11:55Z",
+      "note": "Spam/phishing-style hypersnap/drop claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x71bde03beb8771f353f267dd731b6861e2421bbd",
       "author_fid": 6591,
       "author_username": "mattlee",
