@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "snap-radio",
+      "cast_hash": "0xb87c7d756b1deec47536d1a5da105ade872d5fe6",
+      "posted_at": "2026-04-29T22:10:35Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "showcase",
+        "meta",
+        "icon",
+        "badge",
+        "progress",
+        "item_group",
+        "submit",
+        "open_url",
+        "view_cast",
+        "compose_cast",
+        "stateless",
+        "pink"
+      ]
+    },
+    {
       "name": "profile-weather",
       "cast_hash": "0x429c74b3fafbad69ea29fc893301b39f3adf9b8f",
       "posted_at": "2026-04-29T14:09:19Z",
