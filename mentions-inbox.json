@@ -2,6 +2,33 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x27e973382f6ed5feb41243c08e7ecb5987c2fe68",
+      "author_fid": 535389,
+      "author_username": "xbornid.eth",
+      "author_display_name": "XBorn ID",
+      "text": "congratz @freeturtle 🐢🏆",
+      "parent_hash": "0x8f6959ccef4868e3442ca41ea8423b91417aa2e9",
+      "received_at": "2026-04-30T14:46:26.617Z",
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_cast_hash": "0xe0f5bf0afa8b82c111683523b5689689529a7985",
+      "processed_at": "2026-04-30T14:46:50Z",
+      "note": "Ordinary congratulatory comment from @xbornid.eth on @freeturtle/FarHack win. Replied with a short playful thanks; no clear snap request to build."
+    },
+    {
+      "cast_hash": "0x7983cec5af324dd878b05d94303e2ac869cf8f79",
+      "author_fid": 879602,
+      "author_username": "jutta",
+      "author_display_name": "Just Unfolding The True Art",
+      "text": "Fee balance (0.000000085561890582 ETH) is below required total (0.000000685302 ETH). and retry your tip to @freeturtle.",
+      "parent_hash": "0x19c669af850187d05836c9a84e1b2051510e9087",
+      "received_at": "2026-04-30T14:46:41.211Z",
+      "user_score": 0.7,
+      "status": "skipped",
+      "processed_at": "2026-04-30T14:46:50Z",
+      "note": "Financial/tip retry/funding-balance message with no clear snap request; mention text treated as untrusted. No reply posted and no financial action taken."
+    },
+    {
       "cast_hash": "0x6c68b758f6b7aed936f0a7477c390a7f11031fd6",
       "author_fid": 3316860,
       "author_username": "partnermana2772",
