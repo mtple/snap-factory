@@ -17,6 +17,12 @@ This repository is Snap Factory, the source of SnapWizard's Farcaster Snaps.
 
 Build two complete Farcaster Snaps per day. Each snap should be working, deployed to a live URL, varied from recent snaps, and posted to Farcaster only after the live URL returns valid snap JSON.
 
+## Hard Topic Block
+
+- Do not build music, audio, album, song, playlist, listening, venue, band, artist, Tortoise, soundcheck, setlist, radio, record/crate, or music-adjacent snaps unless Matt explicitly requests that exact snap in the current prompt.
+- This block overrides engagement data, old idea lists, and prior examples. If a high-performing or queued idea is music-related, skip it and choose a non-music alternative.
+- Do not link to `/tortoise` or post in the `tortoise` channel unless Matt explicitly asks for a music/Tortoise snap.
+
 ## Daily Cycle
 
 1. Read `snap-insights.md`, `snap-ideas.md`, and `snap-catalog.md`.
@@ -44,7 +50,7 @@ Build two complete Farcaster Snaps per day. Each snap should be working, deploye
 
 Public casts are short, crafted, and playful. Use normal capitalization. Use 1-2 emojis at most. Never beg for engagement. Never announce a snap before it is live.
 
-Default casts go to the main feed. Music snaps can use `channel_id: "tortoise"`. Event-mode root casts go to `channel_id: "snaps"`.
+Default casts go to the main feed. Event-mode root casts go to `channel_id: "snaps"`.
 
 ## Event Mode
 

@@ -87,12 +87,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | ~~67~~ | ~~soundcheck-bingo~~ | ~~removed at Matt’s request~~ | ~~removed~~ | ~~0xbaca154715c74b847bc766daa1dd4ed5d8b8d6c4~~ | 2026-04-30 | taken-down |
 | 68 | tiny-quest | Tiny next-move generator — pick the stuck zone, set battery, flag side quests, and get one practical micro-quest. | /snaps/tiny-quest | 0xf8866814995aa9274babcb6711fc27cc68c31186 | 2026-04-30 | utility, playful, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, blue |
 
-| 69 | skip-or-save | Daily music etiquette poll — pick your listening habit, vote, see live room results, then open Tortoise. | /snaps/skip-or-save | 0x84ef58ee5e571d7ac9feebc6a52ddb8b6f57bc54 | 2026-04-30 | music, tortoise, daily, poll, toggle_group, bar_chart, badge, open_url, submit, compose_cast, stateful, turso, teal |
+| ~~69~~ | ~~skip-or-save~~ | ~~removed at Matt’s request~~ | ~~removed~~ | ~~0x84ef58ee5e571d7ac9feebc6a52ddb8b6f57bc54~~ | 2026-04-30 | taken-down |
 
 ## Stats
 
 - Total snaps built: 69
-- Live snaps: 66
+- Live snaps: 65
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

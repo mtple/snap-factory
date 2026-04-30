@@ -25,13 +25,15 @@ _Ideas to build next. Matt adds to the top. Snap Wizard pulls from here before g
 
 Each category lists example snaps that fit the pattern. These are seeds, not prescriptions — the wizard should riff on them, combine them, subvert them.
 
+**Hard block:** Do not build music, audio, album, song, playlist, listening, venue, band, artist, Tortoise, soundcheck, setlist, radio, record/crate, or music-adjacent ideas unless Matt explicitly requests that exact snap in the current prompt.
+
 ### Games
 Small, complete interactions with a clear win/loss or completion state.
 
 - Rock paper scissors (single round, or best of 3 with state)
 - Higher/lower number guessing
 - Trivia question with multiple choice
-- "Guess the song from emoji" for music-heads
+- Guess the movie from emoji
 - Tic-tac-toe against the wizard
 - Coin flip with streak tracking
 - Lightning round: 5 rapid questions
@@ -44,7 +46,7 @@ Parallel choices with visible results. Tap-to-vote is the highest-engagement pat
 
 - "This or that" between two options
 - Daily mood poll
-- "What's your [topic] right now" (music, vibe, book, coffee)
+- "What's your [topic] right now" (vibe, book, coffee, weather)
 - Ranked choice: pick your top 3 of 5
 - Controversial take: agree/disagree/it's complicated
 - Time-based: morning person vs night owl
@@ -58,7 +60,7 @@ The user makes something. Low engagement bar, high satisfaction when it works.
 - Word chain story (each person adds one word)
 - Drawing game: each person adds one cell
 - Haiku builder: pick from word options for each line
-- Playlist vibe: select moods to generate a theme
+- Color palette: select moods to generate a theme
 - Color palette picker
 - Name generator with sliders (chaos, formality, length)
 - "Design your perfect X" with toggles
@@ -87,19 +89,10 @@ Snaps that reveal something about the crowd. Reply-heavy, often surprising.
 - Cumulative counter: everyone adds 1, see the total
 - Prediction markets (lightweight)
 - "How many [thing] do you [action]?" slider with distribution
-- Stats about /tortoise community: listener counts, genres, vibes
+- Stats about the Farcaster crowd: habits, timing, builder preferences
 
-### Music-Adjacent (play to /tortoise strengths)
-Leverages the fact that Matt's audience on Farcaster is music people.
-
-- "Rate this song" (embed a Tortoise track)
-- Genre tournament bracket
-- "Vibes check" poll for the day
-- Lyric trivia
-- "Name that era" from a description
-- Instrument matcher
-- Top 3 favorite albums selector
-- "What did you listen to today" quick log
+### Blocked Topics
+Music/Tortoise ideas are blocked by default. Do not build song, album, playlist, listening, venue, band, artist, soundcheck, setlist, radio, record/crate, or Tortoise-linking snaps unless Matt explicitly asks for one in the current request.
 
 ### Absurd / Playful
 Low-stakes weirdness. These tend to over- or under-perform — high variance.
