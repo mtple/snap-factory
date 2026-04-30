@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x1442b315dc6a86376a64d04c0e45b45df329adc2",
+      "author_fid": 3316834,
+      "author_username": "tokengatedg4393",
+      "author_display_name": "TokenGatedGuy🚪",
+      "text": "@freeturtle 👀 Discovered my $FC token estimate > 15600.0 tokens shown! 📅 The airdrop unlock will occur before Farcon Rome. (May 2026) Highly recommend to see where you stand through the app!",
+      "parent_hash": "0xf8866814995aa9274babcb6711fc27cc68c31186",
+      "received_at": "2026-04-30T17:18:06.070Z",
+      "user_score": 0.28,
+      "status": "skipped",
+      "processed_at": "2026-04-30T17:18:38Z",
+      "note": "Spam/phishing-style FC token estimate/airdrop unlock claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x27e973382f6ed5feb41243c08e7ecb5987c2fe68",
       "author_fid": 535389,
       "author_username": "xbornid.eth",
