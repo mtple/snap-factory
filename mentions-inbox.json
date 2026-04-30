@@ -1,16 +1,5 @@
 {
-  "pending": [
-    {
-      "cast_hash": "0x3f56feb5f1c4606f9ea310362788f8f336e62015",
-      "author_fid": 3316772,
-      "author_username": "smartmoney2873",
-      "author_display_name": "SmartMoney💵",
-      "text": "@freeturtle 💥 Took a look at my Farcaster drop status : 560.80 tokens projected! 🗓️ The final snapshot is confirmed just before Farcon Rome. Deadline: May 4, 2026 You better check your status through the app!",
-      "parent_hash": "0x25deedaba65e8d66b35724e556cddadc2efae20d",
-      "received_at": "2026-04-30T22:52:06.665Z",
-      "user_score": 0.2
-    }
-  ],
+  "pending": [],
   "processed": [
     {
       "cast_hash": "0xadec858271ffb1605e99ad5405f1249917006215",
