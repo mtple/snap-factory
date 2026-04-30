@@ -1,6 +1,32 @@
 {
   "snaps": [
     {
+      "name": "soundcheck-bingo",
+      "cast_hash": "0xbaca154715c74b847bc766daa1dd4ed5d8b8d6c4",
+      "posted_at": "2026-04-30T14:12:25Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "music",
+        "tortoise",
+        "toggle_group",
+        "switch",
+        "cell_grid",
+        "badge",
+        "open_url",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "snap-radio",
       "cast_hash": "0xb87c7d756b1deec47536d1a5da105ade872d5fe6",
       "posted_at": "2026-04-29T22:10:35Z",
