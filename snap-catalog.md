@@ -84,11 +84,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 65 | profile-weather | Personalized Farcaster weather report — tap once to forecast your FID with confidence meter, timeline-condition bars, and view_profile button. | /snaps/profile-weather | 0x429c74b3fafbad69ea29fc893301b39f3adf9b8f | 2026-04-29 | personalized, fid, social, icon, progress, bar_chart, badge, view_profile, submit, compose_cast, stateless, blue |
 | 66 | snap-radio | Snap Wizard hit station — cycle through five recent crowd-favorite snaps with open-snap and view-cast controls. | /snaps/snap-radio | 0xb87c7d756b1deec47536d1a5da105ade872d5fe6 | 2026-04-29 | showcase, meta, icon, badge, progress, item_group, submit, open_url, view_cast, compose_cast, stateless, pink |
 
-| 67 | soundcheck-bingo | Music bingo card — pick a venue vibe, flip chaos mode, and get a snap-native 5×5 color card for the next set. | /snaps/soundcheck-bingo | 0xbaca154715c74b847bc766daa1dd4ed5d8b8d6c4 | 2026-04-30 | music, tortoise, toggle_group, switch, cell_grid, badge, open_url, submit, compose_cast, stateless, teal |
+| ~~67~~ | ~~soundcheck-bingo~~ | ~~removed at Matt’s request~~ | ~~removed~~ | ~~0xbaca154715c74b847bc766daa1dd4ed5d8b8d6c4~~ | 2026-04-30 | taken-down |
+| 68 | tiny-quest | Tiny next-move generator — pick the stuck zone, set battery, flag side quests, and get one practical micro-quest. | /snaps/tiny-quest | 0xf8866814995aa9274babcb6711fc27cc68c31186 | 2026-04-30 | utility, playful, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, blue |
 
 ## Stats
 
-- Total snaps built: 67
+- Total snaps built: 68
 - Live snaps: 65
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast

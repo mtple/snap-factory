@@ -1,9 +1,9 @@
 {
   "snaps": [
     {
-      "name": "soundcheck-bingo",
-      "cast_hash": "0xbaca154715c74b847bc766daa1dd4ed5d8b8d6c4",
-      "posted_at": "2026-04-30T14:12:25Z",
+      "name": "tiny-quest",
+      "cast_hash": "0xf8866814995aa9274babcb6711fc27cc68c31186",
+      "posted_at": "2026-04-30T17:17:30Z",
       "last_checked": null,
       "stats": {
         "likes": 0,
@@ -13,17 +13,17 @@
       },
       "score": 0,
       "tags": [
-        "music",
-        "tortoise",
+        "utility",
+        "playful",
         "toggle_group",
+        "slider",
         "switch",
-        "cell_grid",
+        "progress",
         "badge",
-        "open_url",
         "submit",
         "compose_cast",
         "stateless",
-        "teal"
+        "blue"
       ]
     },
     {
