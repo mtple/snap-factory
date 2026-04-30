@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x6c68b758f6b7aed936f0a7477c390a7f11031fd6",
+      "author_fid": 3316860,
+      "author_username": "partnermana2772",
+      "author_display_name": "PartnerManager🤝",
+      "text": "@freeturtle 🔥 Discovered my retroactive drop size : 305.20 tokens expected! 🔜 The ecosystem reward will roll out ahead of Farcon Rome. Target: May 2026 Be smart and check your status immediately!",
+      "parent_hash": "0xbaca154715c74b847bc766daa1dd4ed5d8b8d6c4",
+      "received_at": "2026-04-30T14:13:02.122Z",
+      "user_score": 0.28,
+      "status": "skipped",
+      "processed_at": "2026-04-30T14:13:20Z",
+      "note": "Spam/phishing-style retroactive drop/token reward claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x8f6959ccef4868e3442ca41ea8423b91417aa2e9",
       "author_fid": 6591,
       "author_username": "mattlee",
