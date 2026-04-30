@@ -59,10 +59,10 @@ import snap_snapRadio from "./snaps/snap-radio/index.js";
 import snap_snapShowcase from "./snaps/snap-showcase/index.js";
 import snap_snapagotchiHouse from "./snaps/snapagotchi-house/index.js";
 import snap_snapathon from "./snaps/snapathon/index.js";
-import snap_soundcheckBingo from "./snaps/soundcheck-bingo/index.js";
 import snap_stumble from "./snaps/stumble/index.js";
 import snap_tetrisSnap from "./snaps/tetris-snap/index.js";
 import snap_ticTacToe from "./snaps/tic-tac-toe/index.js";
+import snap_tinyQuest from "./snaps/tiny-quest/index.js";
 import snap_tipCalculator from "./snaps/tip-calculator/index.js";
 import snap_tokenType from "./snaps/token-type/index.js";
 import snap_trendingCast from "./snaps/trending-cast/index.js";
@@ -131,10 +131,10 @@ export const snaps: Record<string, Hono> = {
   "snap-showcase": snap_snapShowcase,
   "snapagotchi-house": snap_snapagotchiHouse,
   "snapathon": snap_snapathon,
-  "soundcheck-bingo": snap_soundcheckBingo,
   "stumble": snap_stumble,
   "tetris-snap": snap_tetrisSnap,
   "tic-tac-toe": snap_ticTacToe,
+  "tiny-quest": snap_tinyQuest,
   "tip-calculator": snap_tipCalculator,
   "token-type": snap_tokenType,
   "trending-cast": snap_trendingCast,
