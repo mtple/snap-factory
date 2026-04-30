@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x0d0afd2b3bcb5a0869092173d34bca7c136e6847",
+      "author_fid": 3317292,
+      "author_username": "remoteworke7796",
+      "author_display_name": "RemoteWorker\ud83d\udcbb",
+      "text": "@freeturtle \ud83d\ude0e Confirmed my Genesis allocation > 20450.0 pieces secured! \u26a1 The upcoming drop is officially set pre-Farcon Rome. (May 4, 2026) Don't ignore this, review your stats below!",
+      "parent_hash": "0xcfa1efae317fab074b1e8948df0774728e06a0d8",
+      "received_at": "2026-04-30T12:42:54.324Z",
+      "user_score": 0.27,
+      "status": "skipped",
+      "processed_at": "2026-04-30T12:43:18Z",
+      "note": "Spam/phishing-style Genesis allocation/drop claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0xbb4a624a2a0f68f1fc2f57a657a8e132e1c05529",
       "author_fid": 3316745,
       "author_username": "organizerpr1918",
