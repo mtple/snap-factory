@@ -1,6 +1,34 @@
 {
   "snaps": [
     {
+      "name": "skip-or-save",
+      "cast_hash": "0x84ef58ee5e571d7ac9feebc6a52ddb8b6f57bc54",
+      "posted_at": "2026-04-30T22:11:31Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "music",
+        "tortoise",
+        "daily",
+        "poll",
+        "toggle_group",
+        "bar_chart",
+        "badge",
+        "open_url",
+        "submit",
+        "compose_cast",
+        "stateful",
+        "turso",
+        "teal"
+      ]
+    },
+    {
       "name": "tiny-quest",
       "cast_hash": "0xf8866814995aa9274babcb6711fc27cc68c31186",
       "posted_at": "2026-04-30T17:17:30Z",
