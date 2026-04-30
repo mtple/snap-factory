@@ -33,6 +33,13 @@ app.get("/", (c) => {
   );
 });
 
+// Legacy OG fallback for snap-hono sub-apps that emitted /~/og-image before
+// the mounted /snaps/<name>/~/og-image path was used in fallback HTML.
+app.get("/~/og-image", async (c) => {
+  const fallback = new URL("/snaps/snap-radio/~/og-image", c.req.url);
+  return fetch(fallback, c.req.raw);
+});
+
 // JSON listing of all registered snap names.
 app.get("/snaps", (c) => {
   return c.json({ snaps: Object.keys(snaps) });
