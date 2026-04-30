@@ -114,53 +114,24 @@ export function renderStation(request: Request, self: string, index: number): Sn
   const elements: Elements = {
     page: {
       type: "stack",
-      props: { direction: "vertical", gap: "sm" },
-      children: ["top", "title", "desc", "meter", "details", "actions", "share_btn"],
+      props: { direction: "vertical", gap: "md" },
+      children: ["title", "desc", "signal", "open_btn", "next_btn", "share_btn"],
     },
-    top: {
-      type: "stack",
-      props: { direction: "horizontal", gap: "sm", justify: "center" },
-      children: ["icon", "badge"],
-    },
-    icon: { type: "icon", props: { name: station.icon, size: "md" } },
-    badge: { type: "badge", props: { label: station.badge, variant: "outline" } },
     title: { type: "text", props: { content: `Snap Radio: ${station.title}`, weight: "bold", align: "center" } },
     desc: { type: "text", props: { content: station.description, size: "sm", align: "center" } },
-    meter: {
-      type: "progress",
-      props: { label: `Station ${index + 1}/5 · score ${station.score}`, value: progress, max: 100, color: station.accent },
-    },
-    details: {
-      type: "item_group",
-      children: ["stat_item", "cue_item"],
-    },
-    stat_item: {
-      type: "item",
-      props: { title: "Launch signal", description: station.stats },
-    },
-    cue_item: {
-      type: "item",
-      props: { title: "Why it plays", description: "A recent crowd favorite with a different interaction flavor." },
+    signal: {
+      type: "text",
+      props: { content: `Station ${index + 1}/5 · score ${station.score} · ${station.stats}`, size: "sm", align: "center" },
     },
     open_btn: {
       type: "button",
-      props: { label: "Open snap", variant: "primary" },
+      props: { label: "Open this snap", variant: "primary" },
       on: { press: { action: "open_url", params: { target: stationUrl(request, station.slug) } } },
-    },
-    cast_btn: {
-      type: "button",
-      props: { label: "View cast", variant: "secondary" },
-      on: { press: { action: "view_cast", params: { hash: station.castHash } } },
     },
     next_btn: {
       type: "button",
       props: { label: "Next station", variant: "secondary" },
       on: { press: { action: "submit", params: { target: `${self}?i=${next}` } } },
-    },
-    actions: {
-      type: "stack",
-      props: { direction: "horizontal", gap: "sm" },
-      children: ["open_btn", "cast_btn", "next_btn"],
     },
     share_btn: shareButton(self, station),
   };
