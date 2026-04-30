@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x6807f17dd4e9805c0b723b01546949506fc88334",
+      "author_fid": 4461,
+      "author_username": "limone.eth",
+      "author_display_name": "limone.eth \ud83c\udf4b",
+      "text": "FarHack Online 2026 winners are in \ud83c\udfc6\n\n$4,000 awarded across miniapps, AI agents and snaps\n\ntrack winners ($1,000 each):\n\ud83d\udd79\ufe0f Mini Apps: Bust Project by @floar.eth\n\ud83e\udd16 AI Agents: @freeturtle by @mattlee\n\ud83e\udef0 Snaps: Zlank by @zaal\n\nhonorable mentions ($250 each):\n- SKIFFLE by @darrylyeo\n- Gnomie Ascii Sanctuary by @brettdrawsstuff\n- Such Snap / @suchbot by @mxjxn.eth\n- Celebration Hub / @joysender by @duckfacts.eth\n\nhuge congrats to all builders. see you all at /farcon-rome \ud83d\udc9c",
+      "parent_hash": null,
+      "received_at": "2026-04-30T13:16:53.916Z",
+      "user_score": 1,
+      "status": "replied",
+      "reply_cast_hash": "0xe862e64f2e6e7ec2e2bf298636cd6a9b4b66485b",
+      "processed_at": "2026-04-30T13:17:13Z",
+      "note": "Ordinary announcement from @limone.eth with FarHack Online 2026 winners, mentioning @freeturtle as AI Agents track winner. Replied with a short celebratory note; no snap request to build."
+    },
+    {
       "cast_hash": "0x0d0afd2b3bcb5a0869092173d34bca7c136e6847",
       "author_fid": 3317292,
       "author_username": "remoteworke7796",
