@@ -14,6 +14,7 @@ import snap_crateCover from "./snaps/crate-cover/index.js";
 import snap_creatureSummoner from "./snaps/creature-summoner/index.js";
 import snap_dailyCast from "./snaps/daily-cast/index.js";
 import snap_dailyPulse from "./snaps/daily-pulse/index.js";
+import snap_decisionDice from "./snaps/decision-dice/index.js";
 import snap_degenQuest from "./snaps/degen-quest/index.js";
 import snap_doNotPress from "./snaps/do-not-press/index.js";
 import snap_dontClick from "./snaps/dont-click/index.js";
@@ -88,6 +89,7 @@ export const snaps: Record<string, Hono> = {
   "creature-summoner": snap_creatureSummoner,
   "daily-cast": snap_dailyCast,
   "daily-pulse": snap_dailyPulse,
+  "decision-dice": snap_decisionDice,
   "degen-quest": snap_degenQuest,
   "do-not-press": snap_doNotPress,
   "dont-click": snap_dontClick,
