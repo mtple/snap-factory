@@ -1,6 +1,32 @@
 {
   "snaps": [
     {
+      "name": "decision-dice",
+      "cast_hash": "0xdc5baefe138fd70d89331284bf76abfc2afa3d48",
+      "posted_at": "2026-05-01T22:11:30Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "productivity",
+        "toggle_group",
+        "slider",
+        "switch",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "blue"
+      ]
+    },
+    {
       "name": "ship-check",
       "cast_hash": "0x752f6d22e596bf3b091a2485db054fbfd99ad64b",
       "posted_at": "2026-05-01T14:10:25Z",

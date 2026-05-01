@@ -92,10 +92,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 71 | ship-check | Daily builder roll call — pick what you are shipping today, then see the live Farcaster split. | /snaps/ship-check | 0x752f6d22e596bf3b091a2485db054fbfd99ad64b | 2026-05-01 | daily, poll, builder, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, teal |
 
+| 72 | decision-dice | Playful decision helper — choose a realm, set stakes, flag overthinking, and roll a tiny next move with confidence. | /snaps/decision-dice | 0xdc5baefe138fd70d89331284bf76abfc2afa3d48 | 2026-05-01 | utility, productivity, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, blue |
+
 ## Stats
 
-- Total snaps built: 71
-- Live snaps: 67
+- Total snaps built: 72
+- Live snaps: 68
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
