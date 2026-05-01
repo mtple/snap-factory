@@ -90,10 +90,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | ~~69~~ | ~~skip-or-save~~ | ~~removed at Matt’s request~~ | ~~removed~~ | ~~0x84ef58ee5e571d7ac9feebc6a52ddb8b6f57bc54~~ | 2026-04-30 | taken-down |
 | 70 | movie-emoji | Emoji movie quiz — decode a tiny emoji poster, pick from four answers, and get an instant reveal with a fun fact. | /snaps/movie-emoji | 0x25deedaba65e8d66b35724e556cddadc2efae20d | 2026-04-30 | game, quiz, movies, emoji, toggle_group, badge, submit, compose_cast, stateless, amber |
 
+| 71 | ship-check | Daily builder roll call — pick what you are shipping today, then see the live Farcaster split. | /snaps/ship-check | 0x752f6d22e596bf3b091a2485db054fbfd99ad64b | 2026-05-01 | daily, poll, builder, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, teal |
+
 ## Stats
 
-- Total snaps built: 70
-- Live snaps: 66
+- Total snaps built: 71
+- Live snaps: 67
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

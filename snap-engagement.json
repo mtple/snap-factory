@@ -1,6 +1,32 @@
 {
   "snaps": [
     {
+      "name": "ship-check",
+      "cast_hash": "0x752f6d22e596bf3b091a2485db054fbfd99ad64b",
+      "posted_at": "2026-05-01T14:10:25Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "daily",
+        "poll",
+        "builder",
+        "toggle_group",
+        "bar_chart",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateful",
+        "turso",
+        "teal"
+      ]
+    },
+    {
       "name": "movie-emoji",
       "cast_hash": "0x25deedaba65e8d66b35724e556cddadc2efae20d",
       "posted_at": "2026-04-30T22:51:25Z",
