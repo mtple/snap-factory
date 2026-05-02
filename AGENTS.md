@@ -28,23 +28,28 @@ Build two complete Farcaster Snaps per day. Each snap should be working, deploye
 1. Read `snap-insights.md`, `snap-ideas.md`, and `snap-catalog.md`.
 2. Treat `snap-insights.md` as the current engagement-calibration signal. Prefer patterns with recent nonzero score, but keep enough variety that the feed does not feel repetitive.
 3. If Matt has a queued idea, build that next. Otherwise pick a varied idea with a clear single interaction.
-4. Read `SNAP_TEMPLATE.md` before building.
-5. Create or update a self-contained snap under `src/snaps/[name]/index.ts`.
-6. Run `npm run build`.
-7. Commit and push with `snapwizard_git_commit_and_push`.
-8. Wait for Vercel, then verify:
+4. Before implementation, fetch/read current snap docs: `https://docs.farcaster.xyz/snap/SKILL.md` and `https://docs.farcaster.xyz/snap/llms.txt`. The spec changes quickly; do not rely on stale examples.
+5. Read `SNAP_TEMPLATE.md` before building.
+6. Create or update a self-contained snap under `src/snaps/[name]/index.ts`.
+7. Run `npm run build`.
+8. Commit and push with `snapwizard_git_commit_and_push`.
+9. Wait for Vercel, then verify:
    `curl -sS -H 'Accept: application/vnd.farcaster.snap+json' "$SNAP_PUBLIC_BASE_URL/snaps/[name]"`
-9. Only after valid JSON, post with `snapwizard_post_farcaster_cast`; put the URL in `embeds`, not text.
-10. Update `snap-catalog.md` and `snap-engagement.json`, then commit and push the log update.
+10. Only after valid JSON, post with `snapwizard_post_farcaster_cast`; put the URL in `embeds`, not text.
+11. Update `snap-catalog.md` and `snap-engagement.json`, then commit and push the log update.
 
 ## Snap Constraints
 
-- `version` is always `"1.0"`.
+- New or substantially updated snaps should return `version: "2.0"`; legacy `"1.0"` snaps may remain until touched.
 - Use clean URLs: `$SNAP_PUBLIC_BASE_URL/snaps/[name]`.
 - Use `snapUrl(ctx.request, name)` from `src/_lib/base-url.ts` for internal absolute URLs.
 - Always include a share button using `compose_cast`.
+- For v2 POST handlers, read authenticated FID from `ctx.action.user.fid`; `ctx.action.fid` is deprecated/optional.
+- GET may include best-effort signed viewer context at `ctx.action.user`, but anonymous GET must always render correctly.
+- Use distinct `submit` target URLs/query params for different server actions; do not depend on `button_index`.
 - Text max 320 chars; button labels max 30 chars; toggle groups 2-6 options; bar charts 1-6 bars.
-- All production `submit` targets and images must be HTTPS.
+- Structural limits: max 64 elements, max 7 root children, max 6 children per container, max nesting depth 5.
+- Production `submit`, `open_url`, `open_snap`, `open_mini_app`, and images must be HTTPS.
 
 ## Farcaster Voice
 

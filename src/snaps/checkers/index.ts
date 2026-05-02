@@ -661,7 +661,7 @@ registerSnapHandler(app, async (ctx) => {
       const id = generateId();
       const newGame: GameState = {
         board: initialBoard(),
-        p1: ctx.action.fid,
+        p1: ctx.action.user.fid,
         turn: "p1",
         status: "waiting",
         created_at: Date.now(),
@@ -723,7 +723,7 @@ registerSnapHandler(app, async (ctx) => {
 
   // POST — player interaction
   if (ctx.action.type === "post") {
-    const fid = ctx.action.fid;
+    const fid = ctx.action.user.fid;
     const inputs = ctx.action.inputs as Record<string, unknown>;
 
     // Join if waiting and not already a player

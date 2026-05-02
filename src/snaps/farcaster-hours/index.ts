@@ -127,7 +127,7 @@ registerSnapHandler(app, async (ctx) => {
   }
 
   // ── POST: record vote + show chart ────────────────────────────────────
-  const fid = ctx.action.fid;
+  const fid = ctx.action.user.fid;
   const rawHour = ctx.action.inputs?.hour;
   const hour = typeof rawHour === "number"
     ? Math.min(23, Math.max(0, Math.round(rawHour)))

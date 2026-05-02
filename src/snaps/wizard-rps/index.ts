@@ -117,7 +117,7 @@ function formatScore(s: Score): string {
 
 registerSnapHandler(app, async (ctx) => {
   const self = snapUrl(ctx.request, SNAP_NAME);
-  const fid = ctx.action.type === "post" ? ctx.action.fid : 0;
+  const fid = ctx.action.type === "post" ? ctx.action.user.fid : 0;
 
   // ── Pick screen (GET or play-again POST with no move) ─────────────────
   const shouldShowPicker =

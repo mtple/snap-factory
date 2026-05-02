@@ -413,7 +413,7 @@ registerSnapHandler(app, async (ctx) => {
     return renderWelcome(self);
   }
 
-  const fid = ctx.action.fid;
+  const fid = ctx.action.user.fid;
 
   // Cat status screen
   if (page === "cat") {

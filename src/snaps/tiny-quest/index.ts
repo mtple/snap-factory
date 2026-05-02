@@ -166,7 +166,7 @@ registerSnapHandler(app, async (ctx) => {
   const energy = numberInput(inputs.energy, 50);
   const chaos = asBool(inputs.chaos);
 
-  return resultPage(self, buildQuest(area, energy, chaos, ctx.action.fid ?? 0));
+  return resultPage(self, buildQuest(area, energy, chaos, ctx.action.user?.fid ?? 0));
 });
 
 export default app;

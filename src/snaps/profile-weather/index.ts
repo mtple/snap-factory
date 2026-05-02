@@ -187,7 +187,7 @@ registerSnapHandler(app, async (ctx) => {
   const self = snapUrl(ctx.request, SNAP_NAME);
   if (ctx.action.type === "get") return startPage(self);
 
-  const fid = ctx.action.fid ?? 0;
+  const fid = ctx.action.user?.fid ?? 0;
   return resultPage(self, fid, makeForecast(fid));
 });
 

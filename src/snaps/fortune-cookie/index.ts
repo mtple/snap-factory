@@ -182,7 +182,7 @@ registerSnapHandler(app, async (ctx) => {
   }
 
   // ── Fortune screen ────────────────────────────────────────────────────────
-  const fid = ctx.action.fid ?? 0;
+  const fid = ctx.action.user?.fid ?? 0;
   const today = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
   const h = seedHash(fid, today);
   const fortune = FORTUNES[h % FORTUNES.length];

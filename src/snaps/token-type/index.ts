@@ -221,7 +221,7 @@ registerSnapHandler(app, async (ctx) => {
   const q1 = inputs.q1 ?? "Long game";
   const q2 = inputs.q2 ?? "Build something";
   const q3 = inputs.q3 ?? "Sound money";
-  const fid = ctx.action.fid;
+  const fid = ctx.action.user.fid;
 
   const tokenKey = pickToken(q1, q2, q3, fid);
   const token = TOKENS[tokenKey];

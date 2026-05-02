@@ -208,7 +208,7 @@ registerSnapHandler(app, async (ctx) => {
   const intent = asIntent(inputs.intent);
   const spice = asSpice(inputs.spice);
   const publicThread = asBool(inputs.public);
-  const reading = buildReading(draft, intent, spice, publicThread, ctx.action.fid ?? 0);
+  const reading = buildReading(draft, intent, spice, publicThread, ctx.action.user?.fid ?? 0);
 
   return resultPage(self, reading);
 });

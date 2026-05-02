@@ -212,7 +212,7 @@ registerSnapHandler(app, async (ctx) => {
     asBool(inputs.busy),
     asBool(inputs.kind),
     asBool(inputs.firm),
-    ctx.action.fid ?? 0,
+    ctx.action.user?.fid ?? 0,
   );
 
   return resultPage(self, decline);

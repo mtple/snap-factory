@@ -1,224 +1,145 @@
-# Snap Template — How to Build a New Snap
+# Snap Template — Current SnapWizard Process
 
-When building a new snap, follow this exact pattern. Each snap is an independent Vercel function at `api/snaps/[name]/index.ts` and accessible at `/snaps/[name]` (clean URL).
+Snap spec changes quickly. Before building or materially editing a snap, fetch/read:
 
-## Steps
-
-1. **Pick a short kebab-case name** for the snap (e.g., `rock-paper-scissors`, `music-mood-poll`, `daily-trivia`). This becomes the directory name and the URL slug.
-
-2. **Create the directory:**
-   ```bash
-   mkdir -p api/snaps/[name]
-   ```
-
-3. **Copy the hello-farcaster sample as a starting point** and modify:
-   ```bash
-   cp api/snaps/hello-farcaster/index.ts api/snaps/[name]/index.ts
-   ```
-   Then update the `basePath` and the `snapUrl(ctx.request, "...")` call to match the new name.
-
-4. **Write the snap logic** inside the `registerSnapHandler` callback:
-   - `ctx.action.type === "get"` — initial render (first time someone sees the snap)
-   - `ctx.action.type === "post"` — user interaction (has `ctx.action.inputs`, `ctx.action.fid`, `ctx.action.button_index`)
-
-5. **For multi-page snaps**, use `snapUrl()` from `_lib/base-url` to build button target URLs:
-   ```typescript
-   import { snapUrl } from "../../_lib/base-url.js";
-   // ...
-   const self = snapUrl(ctx.request, "my-snap");
-   // Use `self` in button target URLs for navigation within the snap
-   ```
-   This ensures URLs work correctly across dev, preview, and production. The helper reads `SNAP_PUBLIC_BASE_URL` first, then falls back to constructing from request headers.
-
-6. **For state**, use `@farcaster/snap-turso`:
-   ```typescript
-   import { createTursoDataStore } from "@farcaster/snap-turso";
-   const store = createTursoDataStore();
-   // await store.get(key)
-   // await store.set(key, value)
-   ```
-   Namespace your keys with the snap name: `store.get("rock-paper-scissors:game-state")`. This prevents collisions across snaps.
-
-7. **Type check before committing:**
-   ```bash
-   npm run build
-   ```
-   If it fails, fix the errors. Never push code that doesn't type-check.
-
-8. **Commit and push** via the `mcp__nanoclaw__git_commit_and_push` MCP tool (the host runs the actual git push for you):
-   ```
-   message: "snap: [name] — [short description]"
-   repo: "snap-factory"  (or omit, that's the default)
-   ```
-   Vercel auto-deploys on the push.
-
-9. **Wait and verify:**
-   Poll the snap URL every 10 seconds for up to 3 minutes:
-   ```bash
-   curl -fsSL -H 'Accept: application/vnd.farcaster.snap+json' \
-     "$SNAP_PUBLIC_BASE_URL/snaps/[name]"
-   ```
-   Check for valid JSON with `"version": "1.0"` (or `"2.0"` if you targeted v2) and a `ui` field. Only post to Farcaster after verification succeeds.
-
-## URL Pattern
-
-**Canonical URL (use this for Farcaster posts and inter-snap links):**
-```
-$SNAP_PUBLIC_BASE_URL/snaps/[name]
+```bash
+curl -fsSL https://docs.farcaster.xyz/snap/SKILL.md
+curl -fsSL https://docs.farcaster.xyz/snap/llms.txt
 ```
 
-**File location on disk:**
+Use this file for Snap Factory repo conventions; use the official docs for the latest protocol details.
+
+## Repo conventions
+
+- Snap source lives at `src/snaps/[name]/index.ts`.
+- Public URL is the clean form: `$SNAP_PUBLIC_BASE_URL/snaps/[name]`.
+- Internal absolute URLs must use `snapUrl(ctx.request, "[name]")` from `../../_lib/base-url.js`.
+- Local relative imports in TypeScript must include `.js` extensions because this is ESM.
+- Each snap should be self-contained. Put true shared helpers under `src/_lib/`.
+- Commit/push with the Hermes tool `snapwizard_git_commit_and_push`; do not use NanoClaw tooling.
+
+## Build flow
+
+1. Pick a short kebab-case slug.
+2. Create `src/snaps/[slug]/index.ts` or update the existing snap.
+3. Return Snap JSON from a `registerSnapHandler(app, async (ctx) => ...)` Hono sub-app.
+4. Run `npm run build` before committing. The build regenerates `src/snap-registry.ts`.
+5. Push with `snapwizard_git_commit_and_push`.
+6. Wait for Vercel and verify the live endpoint:
+
+```bash
+curl -fsSL -H 'Accept: application/vnd.farcaster.snap+json' \
+  "$SNAP_PUBLIC_BASE_URL/snaps/[slug]"
 ```
-api/snaps/[name]/index.ts
-```
 
-Both `/snaps/[name]` and `/api/snaps/[name]` resolve to the same function — the clean form is a Vercel rewrite to the file-based form. **Always use the clean form publicly** (in casts, in button targets, in `snapUrl()` results).
+7. Only post publicly after the live JSON and card/OG presentation are verified.
 
-## Isolation Rules
+## Current spec defaults for new snaps
 
-- **Never import code from another snap directory.** Each snap is fully self-contained. If you need shared utilities, add them to `api/_lib/` (underscore prefix means Vercel won't deploy as functions).
-- **Never share state keys across snaps.** Namespace Turso keys with the snap name.
-- **Never assume other snaps exist.** A snap deployment should not break if another snap is removed.
+- New or substantially edited snaps should use `version: "2.0"`.
+- Keep legacy `"1.0"` snaps working until they are touched; do not batch-migrate all old snaps unless asked.
+- Use `theme.accent` from: `gray`, `blue`, `red`, `amber`, `green`, `teal`, `purple`, `pink`.
+- `effects` currently supports `"confetti"`.
+- `ui` uses the flat JSON-render shape:
 
-## Share Button (Required on Every Screen)
-
-**Every snap must include a share button on every screen/page.** This is a hard requirement — Matt confirmed it. No exceptions.
-
-The share button is always:
-- A `button` with `variant: "secondary"`
-- Label: `"Share"` or `"Share snap"`
-- Action: `compose_cast` with the snap URL pre-filled in `embeds`
-- Placed at the bottom of the screen
-
-```typescript
-share_btn: {
-  type: "button",
-  props: { label: "Share", variant: "secondary" },
-  on: {
-    press: {
-      action: "compose_cast",
-      params: {
-        text: "check this out on @freeturtle",
-        embeds: [self],  // self = snapUrl(ctx.request, "your-snap-name")
+```ts
+return {
+  version: "2.0",
+  theme: { accent: "purple" },
+  ui: {
+    root: "page",
+    elements: {
+      page: { type: "stack", children: ["title", "cta", "share"] },
+      title: { type: "text", props: { content: "Hello", weight: "bold" } },
+      cta: {
+        type: "button",
+        props: { label: "Do thing", variant: "primary" },
+        on: { press: { action: "submit", params: { target: `${self}?action=do` } } },
+      },
+      share: {
+        type: "button",
+        props: { label: "Share", variant: "secondary" },
+        on: { press: { action: "compose_cast", params: { text: "try this snap", embeds: [self] } } },
       },
     },
   },
-},
+};
 ```
 
-Add `"share_btn"` to the `children` array of every page's root stack. Do this for **every screen** — menu, playing, result, etc. Before committing, grep for `compose_cast` in your snap file and count: it should appear once per distinct screen/page you render.
+## v2 action/auth rules
 
-## Constraints (from the Farcaster Snaps spec)
+- On POST, authenticated viewer identity is `ctx.action.user.fid`.
+- `ctx.action.fid` is deprecated/optional and should not be used for new code.
+- On GET, `ctx.action.user` is best-effort only. Always render a functional anonymous first load.
+- Do not depend on `button_index`. Give different server actions distinct submit target URLs/query params, e.g. `${self}?action=reset`.
+- Local POST tests must still use a JFS-shaped envelope. With `SKIP_JFS_VERIFICATION=1`, payload should include `user`, `surface`, `audience`, `timestamp`, and `inputs`.
 
-### Text content
-- `text.content`: max 320 chars
-- `button.label`: max 30 chars
-- `badge.label`: max 30 chars
-- `item.title`: max 100 chars
-- `item.description`: max 160 chars
-- `input.label`, `slider.label`, `progress.label`: max 60 chars
-
-### Input constraints
-- `input.maxLength`: 1-280
-- `toggle_group.options`: 2-6 options, each max 30 chars
-- `bar_chart.bars`: 1-6 bars, each label max 40 chars
-- `cell_grid`: 2-32 cols × 2-16 rows, `rowHeight` 8-64
-
-### URLs
-- Target URLs for `submit`, `open_url`, `open_mini_app` must be HTTPS in production
-- `http://localhost` valid only in dev
-- No `javascript:` URIs
-- Images must be HTTPS, jpg/png/gif/webp only
-
-### Response
-- `version` must be `"1.0"` or `"2.0"` (the validator accepts both; pick one and stick to it within a snap)
-- `theme.accent` must be a named palette color (gray, blue, red, amber, green, teal, purple, pink)
-- `ui.root` must be an ID present in `ui.elements`
-- POST responses timeout at 5 seconds — keep handlers fast
-
-Violating constraints causes the snap to fail validation and not render. Always check limits before committing.
-
-## Available Components
-
-**Display:** text, button, badge, icon, image, item, progress, separator
-**Container:** stack, item_group
-**Data:** bar_chart, cell_grid
-**Field (collect user input):** input, slider, switch, toggle_group
-
-Every component lives in `ui.elements` as a named entry. The `type` field is the component name, `props` is the configuration, `children` is an array of child element IDs, `on` binds events (typically `on.press` on buttons).
-
-## Available Actions (on button press)
-
-1. `submit` — POST to server, get next page
-2. `open_url` — open URL in browser
-3. `open_mini_app` — launch Farcaster mini app
-4. `view_cast` — navigate to a cast by hash
-5. `view_profile` — navigate to a profile by FID
-6. `compose_cast` — open cast composer with pre-filled content
-7. `view_token` — view token in wallet (CAIP-19 identifier)
-8. `send_token` — open send token flow
-9. `swap_token` — open swap flow between two tokens
-
-## Available Icons
-
-**Navigation:** arrow-right, arrow-left, external-link, chevron-right
-**Status:** check, x, alert-triangle, info, clock
-**Social:** heart, message-circle, repeat, share, user, users
-**Content:** star, trophy, zap, flame, gift
-**Media:** image, play, pause
-**Commerce:** wallet, coins
-**Actions:** plus, minus, refresh-cw, bookmark
-**Feedback:** thumbs-up, thumbs-down, trending-up, trending-down
-
-## Accent Colors (Palette)
-
-gray, blue, red, amber, green, teal, purple, pink
-
-Default: `purple`. Pick one that matches the snap's mood. Use `teal` for tools and utilities, `green` for success/go states, `red` for urgency/stop, `amber` for warnings, `blue` for info/neutral, `pink` for playful, `purple` for mystical, `gray` for subtle.
-
-## Effects
-
-Only one effect is available: `confetti`. Use it sparingly — for wins, completions, milestones. Add at the top level:
+Example local POST payload core:
 
 ```json
 {
-  "version": "1.0",
-  "effects": ["confetti"],
-  "ui": { ... }
+  "inputs": {},
+  "audience": "http://localhost",
+  "timestamp": 1717200000,
+  "user": { "fid": 1 },
+  "surface": { "type": "standalone" }
 }
 ```
 
-## POST Payload Shape
+## Components and actions
 
-When a user taps a button with a `submit` action, the client sends:
+Available components include display (`text`, `button`, `badge`, `icon`, `image`, `item`, `progress`, `separator`), containers (`stack`, `item_group`), data (`bar_chart`, `cell_grid`), and fields (`input`, `slider`, `switch`, `toggle_group`).
 
-```json
-{
-  "fid": 12345,
-  "inputs": {
-    "fieldName": "value"
-  },
-  "button_index": 0,
-  "timestamp": 1717200000
-}
-```
+Action types:
 
-`@farcaster/snap-hono` parses this automatically into `ctx.action.fid`, `ctx.action.inputs`, `ctx.action.button_index`. JFS signature verification happens automatically unless `SKIP_JFS_VERIFICATION=1` is set (dev only).
+- `submit` — POST to server and render next page.
+- `open_url` — open external browser URL.
+- `open_snap` — open another snap inline.
+- `open_mini_app` — open a Farcaster mini app in-app.
+- `view_cast`, `view_profile`, `compose_cast`, `view_token`, `send_token`, `swap_token` — Farcaster/client actions.
 
-## Quick Reference: Component Interplay
+Use `open_snap` for snap-to-snap navigation instead of `open_url` when the target should remain inline.
 
-- **Field components** (`input`, `slider`, `switch`, `toggle_group`) collect user input. Their values appear in `ctx.action.inputs[name]` on the next POST.
-- **Buttons** are the only components that fire actions. Buttons trigger `submit` to collect field values, `open_url` for navigation, etc.
-- **Stacks** are the primary layout container. Every page's root should be a stack.
-- **Item + item_group** is the pattern for structured lists (leaderboards, settings, key-value rows).
-- **Bar_chart + progress** are the two ways to show numeric data visually.
-- **Cell_grid** is for pixel art, game boards, and tap-to-select interfaces.
+## Expanded cell_grid capabilities
 
-## See also
+- `cell_grid` can be press-to-act: keep `select: "off"` (or omit it) and bind `on.press` to a `submit` action.
+- Or it can be press-to-select: set `select: "single"` or `"multiple"` and pair with a separate submit button.
+- Do not combine `on.press` with `select: "single" | "multiple"`; `on.press` is ignored when select is on.
+- Cells can include `content` and optional `value` (1–30 chars). If `value` is set, `inputs[name]` receives that value; otherwise it receives `"row,col"`.
+- Cell text now auto-contrasts against cell background in current clients, so labeled grids are more usable.
 
-- The official `farcaster-snap` Claude Code skill (loaded into your container at
-  `/home/node/.claude/skills/farcaster-snap/`) has the spec author's own guidance on
-  building snaps. Use it for any snap you're building. Note: that skill defaults to
-  deploying via `host.neynar.app` — ignore those steps. Our deploy is via Vercel and
-  the `mcp__nanoclaw__git_commit_and_push` MCP tool. The override section at the
-  bottom of the SKILL.md explains this.
+## Layout/limits checklist
+
+- Design for ~480px width and ~500px visible height in feed.
+- Max 64 elements.
+- Max 7 root children.
+- Max 6 children per container.
+- Max nesting depth 5.
+- Text max 320 chars.
+- Button and badge labels max 30 chars.
+- `input.maxLength`: 1–280; labels/placeholders max 60 chars.
+- `toggle_group.options`: 2–6; each option max 30 chars.
+- `bar_chart.bars`: 1–6; label max 40 chars.
+- `cell_grid`: 2–32 cols, 2–16 rows, `rowHeight` 8–64.
+- Production targets/images must be HTTPS; localhost HTTP is dev-only.
+
+## Layout guidance from current docs
+
+- Trust default `stack.gap` first. Horizontal stacks now use column-aware defaults: 2 columns → `lg`, 3 → `md`, 4+ → `sm`; vertical stacks default to `md`.
+- Use one primary button per page; secondary for share/back/reset.
+- `item` is not interactive. Do not use chevrons/arrows on non-navigating items.
+- Set `openGraph` title/description in `registerSnapHandler` for a clean fallback/card.
+
+## Required share button
+
+Every screen should include a `compose_cast` share button with the snap URL in `embeds`.
+
+## Verification
+
+Before public posting:
+
+1. `npm run build` succeeds.
+2. Local GET works against `dist/index.js` where practical.
+3. Primary submit paths are exercised with a JFS-shaped payload.
+4. Live URL returns `application/vnd.farcaster.snap+json` with valid JSON.
+5. HTML fallback/OG image and posted cast/card are checked after posting when possible.

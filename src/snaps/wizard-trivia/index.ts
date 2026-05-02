@@ -436,7 +436,7 @@ registerSnapHandler(app, async (ctx) => {
   }
 
   // POST — we now have fid guaranteed
-  const fid = ctx.action.fid;
+  const fid = ctx.action.user.fid;
   const doneKey = `wt:done:${date}:${fid}`;
 
   // ── POST: process answer ─────────────────────────────────────────────

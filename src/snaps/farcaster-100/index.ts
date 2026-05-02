@@ -50,7 +50,7 @@ registerSnapHandler(app, async (ctx) => {
 
   // ── POST: handle a tap ────────────────────────────────────────────────
   if (ctx.action.type === "post") {
-    const fid = ctx.action.fid;
+    const fid = ctx.action.user.fid;
     const alreadyTapped = await hasTapped(fid, date);
 
     if (alreadyTapped) {

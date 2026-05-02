@@ -234,7 +234,7 @@ registerSnapHandler(app, async (ctx) => {
     return writePage(self, "Give me a rough idea first.");
   }
 
-  return resultPage(self, idea, asTone(ctx.action.inputs?.tone), ctx.action.fid ?? 0);
+  return resultPage(self, idea, asTone(ctx.action.inputs?.tone), ctx.action.user?.fid ?? 0);
 });
 
 export { asTone, cleanIdea, makeHooks };

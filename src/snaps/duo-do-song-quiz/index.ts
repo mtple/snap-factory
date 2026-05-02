@@ -248,7 +248,7 @@ registerSnapHandler(app, async (ctx) => {
 
   // ── Page 3 — Result ────────────────────────────────────────────────────────
   if (page === "3" && ctx.action.type === "post") {
-    const fid = ctx.action.fid ?? 1;
+    const fid = ctx.action.user?.fid ?? 1;
     const rawMood = (ctx.action.inputs?.mood as string) ?? "Hopeful";
     const moodKey = rawMood.toLowerCase();
     const song = pickSong(moodKey, fid);

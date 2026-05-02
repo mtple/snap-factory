@@ -184,7 +184,7 @@ registerSnapHandler(app, async (ctx) => {
 
   const challenge = cleanChallenge(ctx.action.inputs?.challenge);
   const energy = asEnergy(ctx.action.inputs?.energy);
-  const walkout = makeWalkout(challenge, energy, ctx.action.fid ?? 0);
+  const walkout = makeWalkout(challenge, energy, ctx.action.user?.fid ?? 0);
   return resultPage(self, challenge, energy, walkout);
 });
 

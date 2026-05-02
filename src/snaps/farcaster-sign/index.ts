@@ -239,7 +239,7 @@ registerSnapHandler(app, async (ctx) => {
   }
 
   // POST — fid is authenticated via JFS
-  const fid = ctx.action.fid ?? 0;
+  const fid = ctx.action.user?.fid ?? 0;
 
   // If someone taps "See signs" on the result page, they submit with no inputs
   // and we check a query param to distinguish. But actually we want to show their

@@ -327,7 +327,7 @@ registerSnapHandler(app, async (ctx) => {
       );
     }
 
-    const fid = ctx.action.fid;
+    const fid = ctx.action.user.fid;
     let casts: NeynarCast[];
 
     try {

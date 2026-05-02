@@ -281,7 +281,7 @@ registerSnapHandler(app, async (ctx) => {
     : "ape";
 
   // FID-based variant (0, 1, or 2) — makes the snap replayable with others
-  const fid = ctx.action.fid ?? 0;
+  const fid = ctx.action.user?.fid ?? 0;
   const variant = fid % 3 as 0 | 1 | 2;
 
   const outcome = OUTCOMES[choice][variant];

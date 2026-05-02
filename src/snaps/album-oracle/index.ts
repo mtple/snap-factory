@@ -316,7 +316,7 @@ registerSnapHandler(app, async (ctx) => {
   const queryMood = url.searchParams.get("mood");
   const tempo = asTempo(ctx.action.inputs?.tempo);
   const mood = asMood(queryMood ?? ctx.action.inputs?.mood);
-  const aura = pickAura(mood, tempo, ctx.action.fid ?? 0);
+  const aura = pickAura(mood, tempo, ctx.action.user?.fid ?? 0);
   return resultPage(self, tempo, mood, aura);
 });
 

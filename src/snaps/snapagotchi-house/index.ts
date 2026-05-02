@@ -496,7 +496,7 @@ registerSnapHandler(app, async (ctx) => {
     return renderHome(self);
   }
 
-  const fid = ctx.action.fid;
+  const fid = ctx.action.user.fid;
 
   // Check my house
   if (page === "house") {

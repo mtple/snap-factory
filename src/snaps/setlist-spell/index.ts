@@ -181,7 +181,7 @@ registerSnapHandler(app, async (ctx) => {
   const venue = asVenue(ctx.action.inputs?.venue);
   const chaos = asChaos(ctx.action.inputs?.chaos);
   const encore = asEncore(ctx.action.inputs?.encore);
-  const setlist = buildSetlist(venue, chaos, encore, ctx.action.fid ?? 0);
+  const setlist = buildSetlist(venue, chaos, encore, ctx.action.user?.fid ?? 0);
   return resultPage(self, venue, chaos, encore, setlist);
 });
 

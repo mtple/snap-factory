@@ -143,7 +143,7 @@ registerSnapHandler(app, async (ctx) => {
     return buildIntroPage(self);
   }
 
-  const fid = ctx.action.fid ?? 0;
+  const fid = ctx.action.user?.fid ?? 0;
   return buildRevealPage(self, fid);
 });
 

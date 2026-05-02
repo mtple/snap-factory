@@ -199,7 +199,7 @@ registerSnapHandler(app, async (ctx) => {
   const type = asDecisionType(inputs.kind);
   const stakes = asNumber(inputs.stakes, 4);
   const overthinking = asBool(inputs.loop);
-  const roll = buildRoll(type, stakes, overthinking, ctx.action.fid ?? 0);
+  const roll = buildRoll(type, stakes, overthinking, ctx.action.user?.fid ?? 0);
   return resultPage(self, roll);
 });
 
