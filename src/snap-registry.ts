@@ -7,6 +7,7 @@ import snap_airdropChecker from "./snaps/airdrop-checker/index.js";
 import snap_albumOracle from "./snaps/album-oracle/index.js";
 import snap_alchemyLab from "./snaps/alchemy-lab/index.js";
 import snap_beautifulThing from "./snaps/beautiful-thing/index.js";
+import snap_botOrNot from "./snaps/bot-or-not/index.js";
 import snap_catPet from "./snaps/cat-pet/index.js";
 import snap_checkers from "./snaps/checkers/index.js";
 import snap_cookedCheck from "./snaps/cooked-check/index.js";
@@ -83,6 +84,7 @@ export const snaps: Record<string, Hono> = {
   "album-oracle": snap_albumOracle,
   "alchemy-lab": snap_alchemyLab,
   "beautiful-thing": snap_beautifulThing,
+  "bot-or-not": snap_botOrNot,
   "cat-pet": snap_catPet,
   "checkers": snap_checkers,
   "cooked-check": snap_cookedCheck,
