@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x430c2f354006c7bb4562444e78481a3fce3eed76",
+      "author_fid": 3317050,
+      "author_username": "philosopher7116",
+      "author_display_name": "PhilosopherGuy🤔",
+      "text": "@freeturtle 💎 Got my hands on my retroactive drop size : 13,500 tokens predicted! ⏱️ The Hypersnap distribution will be completed before the Rome event. (May 4, 2026) Don't be late, find your allocation right now!",
+      "parent_hash": "0xc1a23fb995874ced9a27d71cdf0b53072685588b",
+      "received_at": "2026-05-03T13:16:19.649Z",
+      "user_score": 0.28,
+      "status": "skipped",
+      "processed_at": "2026-05-03T13:16:35Z",
+      "note": "Spam/phishing-style retroactive drop/token allocation claim with urgency/deadline and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x3f56feb5f1c4606f9ea310362788f8f336e62015",
       "author_fid": 3316772,
       "author_username": "smartmoney2873",
