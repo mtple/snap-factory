@@ -96,10 +96,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 73 | reply-radar | Farcaster reply triage — paste a draft, set intent/spice, and get a thread-safety verdict before posting. | /snaps/reply-radar | 0xb7498885e1fb7e08b80b469b583404e256b7d402 | 2026-05-02 | utility, farcaster-native, input, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, teal |
 | 74 | bot-or-not | Timeline classifier game — decide whether a suspicious Farcaster-style cast is human, bot, or performance art, then get the tell. | /snaps/bot-or-not | 0xce6f28b51622912a3a403aa34052c51902a247d4 | 2026-05-02 | game, quiz, farcaster-native, toggle_group, badge, separator, submit, compose_cast, stateless, gray |
 
+| 75 | timeline-bingo | Tiny daily Farcaster feed bingo — deal a deterministic 3×3 card, then scroll until the prophecy hits. | /snaps/timeline-bingo | 0xd85d90315b999c5022aca947e76f3fd4dd2ba7e6 | 2026-05-03 | game, social, daily, farcaster-native, cell_grid, badge, submit, compose_cast, stateless, teal |
+
 ## Stats
 
-- Total snaps built: 74
-- Live snaps: 70
+- Total snaps built: 75
+- Live snaps: 71
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

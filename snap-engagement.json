@@ -1,6 +1,31 @@
 {
   "snaps": [
     {
+      "name": "timeline-bingo",
+      "cast_hash": "0xd85d90315b999c5022aca947e76f3fd4dd2ba7e6",
+      "posted_at": "2026-05-03T14:10:50Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "game",
+        "social",
+        "daily",
+        "farcaster-native",
+        "cell_grid",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "bot-or-not",
       "cast_hash": "0xce6f28b51622912a3a403aa34052c51902a247d4",
       "posted_at": "2026-05-02T22:13:57Z",
