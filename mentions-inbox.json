@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x288681535da43fc0166c9debbd8d2d72d108ca51",
+      "author_fid": 3316949,
+      "author_username": "communicato8314",
+      "author_display_name": "CommunicatorAce🗣️",
+      "text": "@freeturtle 😎 Got to see my hypersnap snapshot result 🎯 560.8 tokens in the bag! 🛑 The main distribution is projected before the Rome event. Deadline: May 4, 2026 It's time to calculate your drop right now!",
+      "parent_hash": "0xd85d90315b999c5022aca947e76f3fd4dd2ba7e6",
+      "received_at": "2026-05-03T14:11:13.217Z",
+      "user_score": 0.28,
+      "status": "skipped",
+      "processed_at": "2026-05-03T14:11:35Z",
+      "note": "Spam/phishing-style hypersnap/token drop/allocation claim with urgency/deadline and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x430c2f354006c7bb4562444e78481a3fce3eed76",
       "author_fid": 3317050,
       "author_username": "philosopher7116",
