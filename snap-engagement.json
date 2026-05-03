@@ -1,6 +1,30 @@
 {
   "snaps": [
     {
+      "name": "kredita-runeborn-lore",
+      "cast_hash": "0x5dd99e3b91bf6b55ebd0ac754bad7017b43b034f",
+      "posted_at": "2026-05-03T17:11:26Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "lore",
+        "fantasy",
+        "event-mode",
+        "toggle_group",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "timeline-bingo",
       "cast_hash": "0xd85d90315b999c5022aca947e76f3fd4dd2ba7e6",
       "posted_at": "2026-05-03T14:10:50Z",
