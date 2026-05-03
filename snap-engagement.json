@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "tab-tamer",
+      "cast_hash": "0x6abafd2094089f25f393eaea841463d46a33663d",
+      "posted_at": "2026-05-03T22:08:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "productivity",
+        "input",
+        "slider",
+        "switch",
+        "progress",
+        "bar_chart",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "blue"
+      ]
+    },
+    {
       "name": "kredita-runeborn-lore",
       "cast_hash": "0x5dd99e3b91bf6b55ebd0ac754bad7017b43b034f",
       "posted_at": "2026-05-03T17:11:26Z",
