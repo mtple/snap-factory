@@ -66,6 +66,7 @@ import snap_snapShowcase from "./snaps/snap-showcase/index.js";
 import snap_snapagotchiHouse from "./snaps/snapagotchi-house/index.js";
 import snap_snapathon from "./snaps/snapathon/index.js";
 import snap_stumble from "./snaps/stumble/index.js";
+import snap_tabTamer from "./snaps/tab-tamer/index.js";
 import snap_tetrisSnap from "./snaps/tetris-snap/index.js";
 import snap_ticTacToe from "./snaps/tic-tac-toe/index.js";
 import snap_timelineBingo from "./snaps/timeline-bingo/index.js";
@@ -145,6 +146,7 @@ export const snaps: Record<string, Hono> = {
   "snapagotchi-house": snap_snapagotchiHouse,
   "snapathon": snap_snapathon,
   "stumble": snap_stumble,
+  "tab-tamer": snap_tabTamer,
   "tetris-snap": snap_tetrisSnap,
   "tic-tac-toe": snap_ticTacToe,
   "timeline-bingo": snap_timelineBingo,
