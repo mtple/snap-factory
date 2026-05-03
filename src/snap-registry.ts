@@ -34,6 +34,7 @@ import snap_followKayonfire from "./snaps/follow-kayonfire/index.js";
 import snap_fortuneCookie from "./snaps/fortune-cookie/index.js";
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
 import snap_hooksmith from "./snaps/hooksmith/index.js";
+import snap_kreditaRunebornLore from "./snaps/kredita-runeborn-lore/index.js";
 import snap_listeningRoom from "./snaps/listening-room/index.js";
 import snap_localBizSearch from "./snaps/local-biz-search/index.js";
 import snap_loudLinks from "./snaps/loud-links/index.js";
@@ -112,6 +113,7 @@ export const snaps: Record<string, Hono> = {
   "fortune-cookie": snap_fortuneCookie,
   "hello-farcaster": snap_helloFarcaster,
   "hooksmith": snap_hooksmith,
+  "kredita-runeborn-lore": snap_kreditaRunebornLore,
   "listening-room": snap_listeningRoom,
   "local-biz-search": snap_localBizSearch,
   "loud-links": snap_loudLinks,

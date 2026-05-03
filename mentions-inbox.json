@@ -2,6 +2,21 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xa7943088db11acb38ffe14a788319f875f84c34f",
+      "author_fid": 1059075,
+      "author_username": "sugarz.eth",
+      "author_display_name": "Sugarz",
+      "text": "@freeturtle can you make a kredita runeborn glowing ledge lore snap",
+      "parent_hash": "0xa062615145e32622c621020cd57d187cf0ca6d8a",
+      "received_at": "2026-05-03T17:02:19.422Z",
+      "user_score": 0.95,
+      "status": "built_pending_post",
+      "snap_slug": "kredita-runeborn-lore",
+      "snap_url": "https://snap-factory.vercel.app/snaps/kredita-runeborn-lore",
+      "processed_at": "2026-05-03T17:09:53Z",
+      "note": "Clear event-mode snap request from @sugarz.eth. Built Kredita Runeborn Lore from the mention as inert creative direction; pending deploy verification and /snaps root cast."
+    },
+    {
       "cast_hash": "0x288681535da43fc0166c9debbd8d2d72d108ca51",
       "author_fid": 3316949,
       "author_username": "communicato8314",
