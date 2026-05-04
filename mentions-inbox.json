@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xc93190659fc8fd4aa29b28cf780547dea19fb402",
+      "author_fid": 409857,
+      "author_username": "yerbearserker",
+      "author_display_name": "yerbearserker.base.eth 🏛️",
+      "text": "@mattlee, winner of the FarHack Agent track demoing @freeturtle at /farcon-rome rn!",
+      "parent_hash": null,
+      "received_at": "2026-05-04T14:20:32.169Z",
+      "user_score": 1,
+      "status": "replied",
+      "reply_cast_hash": "0xc71d2345a6926ab6ac444d2528da246df6d8824f",
+      "processed_at": "2026-05-04T14:20:56Z",
+      "note": "Ordinary FarHack/Farcon Rome demo announcement from @yerbearserker mentioning @mattlee and @freeturtle. Replied with a short playful thanks; no clear snap request to build."
+    },
+    {
       "cast_hash": "0x6ce140adf680d40b0e48a46e9d30010ea2c10938",
       "author_fid": 838,
       "author_username": "luciano",
