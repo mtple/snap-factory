@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x369b97c467822ec24f593f9ee4a7f39f67616da6",
+      "author_fid": 3316949,
+      "author_username": "communicato8314",
+      "author_display_name": "CommunicatorAce🗣️",
+      "text": "@freeturtle 🚀 Great news and Hypersnap just kicked off processing the retroactive FC rewards. 📌 My eligibility status estimated 20381.16 FC ready to be claimed. 🚨 Make sure to visit the app and secure your tokens while it lasts.",
+      "parent_hash": "0xe70471a917058ca8db9e4fcb30958db820a8f783",
+      "received_at": "2026-05-04T14:36:37.946Z",
+      "user_score": 0.28,
+      "status": "skipped",
+      "processed_at": "2026-05-04T14:37:10Z",
+      "note": "Spam/phishing-style Hypersnap/Farcaster rewards/claim urgency message with no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0xc93190659fc8fd4aa29b28cf780547dea19fb402",
       "author_fid": 409857,
       "author_username": "yerbearserker",
