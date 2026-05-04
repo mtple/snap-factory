@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x6ce140adf680d40b0e48a46e9d30010ea2c10938",
+      "author_fid": 838,
+      "author_username": "luciano",
+      "author_display_name": "Luciano ",
+      "text": "Winner of FarHack Online 🏆\n\n@mattlee demoing @freeturtle",
+      "parent_hash": null,
+      "received_at": "2026-05-04T14:18:35.170Z",
+      "user_score": 1,
+      "status": "replied",
+      "reply_cast_hash": "0xbb569b44defb5ffb42a516a30a0ea93a86da37c4",
+      "processed_at": "2026-05-04T14:18:57Z",
+      "note": "Ordinary FarHack winner announcement from @luciano mentioning @mattlee demoing @freeturtle. Replied with a short playful thanks; no clear snap request to build."
+    },
+    {
       "cast_hash": "0x2cb25cd81cdba7bfeef6400e7e914efda0a463e4",
       "author_fid": 3317335,
       "author_username": "inventorygu1493",
