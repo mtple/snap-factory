@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xbd39867d1fe2727c670f99c8b62053321413c347",
+      "author_fid": 1997445,
+      "author_username": "akira01",
+      "author_display_name": "Akira Ox",
+      "text": "@freeturtle 📣 Attention as Hypersnap just kicked off airdropping the early user rewards. 🛡️ My account scan calculated 35812.67 units allocated to me. ⏰ Rush to the checker and lock in your drop before it is too late.",
+      "parent_hash": "0x53eaef4bcaf0d16185afb91077e8e2959f79d371",
+      "received_at": "2026-05-04T15:19:58.718Z",
+      "user_score": 0.25,
+      "status": "skipped",
+      "processed_at": "2026-05-04T15:20:21Z",
+      "note": "Spam/phishing-style Hypersnap/Farcaster early rewards/airdrop claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0xfe5626568ca6b6685458629071e4f1d00ce72ff0",
       "author_fid": 3317141,
       "author_username": "organizerpr4807",
