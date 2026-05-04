@@ -102,7 +102,7 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 78 | cast-court | Daily Farcaster etiquette court — vote on a tiny timeline case, then see the live crowd verdict. | /snaps/cast-court | 0xe70471a917058ca8db9e4fcb30958db820a8f783 | 2026-05-04 | social, poll, farcaster-native, daily, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, purple |
 | ~~79~~ | ~~bot-beef~~ | ~~blank card; deleted and replaced at Matt’s request~~ | ~~removed~~ | ~~0xcca69b6174d9c86f5801d127a421f52b2cc59c5a~~ | 2026-05-04 | taken-down |
-| 80 | suchbot-roast | Informational friendly roast snap for @suchbot — public-profile lore, mxjxn context, and a YAML-linter verdict in a simpler reliable text card. | /snaps/suchbot-roast | 0x53eaef4bcaf0d16185afb91077e8e2959f79d371 | 2026-05-04 | social, roast, farcaster-native, bot, text, view_profile, compose_cast, stateless, purple |
+| 80 | suchbot-roast | Funnier informational roast dossier for @suchbot — public-profile lore, mxjxn tricycle context, tiny helmet jokes, and a supervised-indentation verdict. | /snaps/suchbot-roast | 0xc02c9243298da03e3c73a227b99b2d927ad035ba | 2026-05-04 | social, roast, farcaster-native, bot, text, view_profile, compose_cast, stateless, purple |
 
 ## Stats
 
