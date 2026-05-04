@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "cast-court",
+      "cast_hash": "0xe70471a917058ca8db9e4fcb30958db820a8f783",
+      "posted_at": "2026-05-04T14:10:20Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "social",
+        "poll",
+        "farcaster-native",
+        "daily",
+        "toggle_group",
+        "bar_chart",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateful",
+        "turso",
+        "purple"
+      ]
+    },
+    {
       "name": "tab-tamer",
       "cast_hash": "0x6abafd2094089f25f393eaea841463d46a33663d",
       "posted_at": "2026-05-03T22:08:00Z",

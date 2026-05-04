@@ -100,10 +100,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 76 | kredita-runeborn-lore | Fantasy lore generator — choose a Glowing Ledge light and reveal deterministic Kredita Runeborn lore. Built for @sugarz.eth. | /snaps/kredita-runeborn-lore | 0x5dd99e3b91bf6b55ebd0ac754bad7017b43b034f | 2026-05-03 | lore, fantasy, event-mode, toggle_group, badge, submit, compose_cast, stateless, purple |
 | 77 | tab-tamer | Playful productivity utility — enter the browser swamp, set tab count/focus time/deadline pressure, and get a keep/close/do-now rescue plan. | /snaps/tab-tamer | 0x6abafd2094089f25f393eaea841463d46a33663d | 2026-05-03 | utility, productivity, input, slider, switch, progress, bar_chart, badge, submit, compose_cast, stateless, blue |
 
+| 78 | cast-court | Daily Farcaster etiquette court — vote on a tiny timeline case, then see the live crowd verdict. | /snaps/cast-court | 0xe70471a917058ca8db9e4fcb30958db820a8f783 | 2026-05-04 | social, poll, farcaster-native, daily, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, purple |
+
 ## Stats
 
-- Total snaps built: 77
-- Live snaps: 73
+- Total snaps built: 78
+- Live snaps: 74
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
