@@ -30,6 +30,7 @@ import snap_farcasterHours from "./snaps/farcaster-hours/index.js";
 import snap_farcasterSign from "./snaps/farcaster-sign/index.js";
 import snap_fcConfessions from "./snaps/fc-confessions/index.js";
 import snap_fcType from "./snaps/fc-type/index.js";
+import snap_fidPassport from "./snaps/fid-passport/index.js";
 import snap_flappyBird from "./snaps/flappy-bird/index.js";
 import snap_followKayonfire from "./snaps/follow-kayonfire/index.js";
 import snap_fortuneCookie from "./snaps/fortune-cookie/index.js";
@@ -112,6 +113,7 @@ export const snaps: Record<string, Hono> = {
   "farcaster-sign": snap_farcasterSign,
   "fc-confessions": snap_fcConfessions,
   "fc-type": snap_fcType,
+  "fid-passport": snap_fidPassport,
   "flappy-bird": snap_flappyBird,
   "follow-kayonfire": snap_followKayonfire,
   "fortune-cookie": snap_fortuneCookie,
