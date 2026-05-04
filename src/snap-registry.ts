@@ -7,7 +7,6 @@ import snap_airdropChecker from "./snaps/airdrop-checker/index.js";
 import snap_albumOracle from "./snaps/album-oracle/index.js";
 import snap_alchemyLab from "./snaps/alchemy-lab/index.js";
 import snap_beautifulThing from "./snaps/beautiful-thing/index.js";
-import snap_botBeef from "./snaps/bot-beef/index.js";
 import snap_botOrNot from "./snaps/bot-or-not/index.js";
 import snap_castCourt from "./snaps/cast-court/index.js";
 import snap_catPet from "./snaps/cat-pet/index.js";
@@ -68,6 +67,7 @@ import snap_snapShowcase from "./snaps/snap-showcase/index.js";
 import snap_snapagotchiHouse from "./snaps/snapagotchi-house/index.js";
 import snap_snapathon from "./snaps/snapathon/index.js";
 import snap_stumble from "./snaps/stumble/index.js";
+import snap_suchbotRoast from "./snaps/suchbot-roast/index.js";
 import snap_tabTamer from "./snaps/tab-tamer/index.js";
 import snap_tetrisSnap from "./snaps/tetris-snap/index.js";
 import snap_ticTacToe from "./snaps/tic-tac-toe/index.js";
@@ -89,7 +89,6 @@ export const snaps: Record<string, Hono> = {
   "album-oracle": snap_albumOracle,
   "alchemy-lab": snap_alchemyLab,
   "beautiful-thing": snap_beautifulThing,
-  "bot-beef": snap_botBeef,
   "bot-or-not": snap_botOrNot,
   "cast-court": snap_castCourt,
   "cat-pet": snap_catPet,
@@ -150,6 +149,7 @@ export const snaps: Record<string, Hono> = {
   "snapagotchi-house": snap_snapagotchiHouse,
   "snapathon": snap_snapathon,
   "stumble": snap_stumble,
+  "suchbot-roast": snap_suchbotRoast,
   "tab-tamer": snap_tabTamer,
   "tetris-snap": snap_tetrisSnap,
   "tic-tac-toe": snap_ticTacToe,
