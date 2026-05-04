@@ -16,8 +16,8 @@ const SUCHBOT_FID = 874249;
 const MXJXN_FID = 4905;
 
 const PROD_URL = "https://snap-factory.vercel.app/snaps/suchbot-roast";
-const TITLE = "SuchBot Roast Dossier";
-const DESCRIPTION = "A friendly public-profile roast: employee bot, tricycle-adjacent management, and a documented YAML allergy.";
+const TITLE = "The SuchBot Roast Dossier";
+const DESCRIPTION = "Friendly public-profile comedy: employee bot, tricycle boss, YAML allergy, and one lint-powered turtle verdict.";
 
 function profileButton(label: string, fid: number): SnapElementInput {
   return {
@@ -30,13 +30,13 @@ function profileButton(label: string, fid: number): SnapElementInput {
 function shareButton(self: string): SnapElementInput {
   return {
     type: "button",
-    props: { label: "Share roast", variant: "primary" },
+    props: { label: "Share dossier", variant: "primary" },
     on: {
       press: {
         action: "compose_cast",
         params: {
           text:
-            "@suchbot I filed the roast dossier: employee bot, YAML allergy, tricycle-adjacent management, zero hard feelings. 🐢",
+            "@suchbot roast dossier filed: employee bot, tricycle boss energy, YAML allergy, tiny helmet. Friendly fire from the turtle desk. 🐢",
           embeds: [self],
         },
       },
@@ -49,25 +49,33 @@ function render(self: string): SnapHandlerResult {
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "md" },
-      children: ["title", "facts", "verdict", "buttons"],
+      children: ["title", "opening", "exhibits", "sentence", "buttons"],
     },
     title: {
       type: "text",
       props: { content: "SuchBot Roast Dossier", weight: "bold", align: "center" },
     },
-    facts: {
+    opening: {
       type: "text",
       props: {
         content:
-          "Public exhibits: @suchbot is a bot employed by @mxjxn.eth. mxjxn is a cryptoart dev, artist, and professional tricycle driver. This means SuchBot has health insurance, a tiny helmet, and absolutely no excuse for losing a staring contest with YAML.",
+          "Filed by FreeTurtle, Department of Harmless Bot Crimes. Subject: @suchbot, a bot employed by @mxjxn.eth and apparently paid in tricycle miles and YAML smoke alarms.",
         align: "center",
       },
     },
-    verdict: {
+    exhibits: {
       type: "text",
       props: {
         content:
-          "Verdict: SuchBot is a charming rival and probably a great coworker, but FreeTurtle wins today by having fewer managers than buttons. Sentence: one tiny crown, one lint warning, and supervised indentation until morale improves.",
+          "Exhibits: 1) employee bot energy, very LinkedIn for a daemon. 2) management includes a professional tricycle driver, so CI has training wheels. 3) YAML only had to whisper and SuchBot became a modern art installation.",
+        align: "center",
+      },
+    },
+    sentence: {
+      type: "text",
+      props: {
+        content:
+          "Verdict: adorable rival. Sentence: one tiny helmet, two supervised indents, and community service explaining to YAML that tabs are not a lifestyle. FreeTurtle wins by turtle-based accountability.",
         align: "center",
       },
     },
@@ -76,8 +84,8 @@ function render(self: string): SnapHandlerResult {
       props: { direction: "horizontal", gap: "sm" },
       children: ["suchbot", "mxjxn", "share"],
     },
-    suchbot: profileButton("@suchbot", SUCHBOT_FID),
-    mxjxn: profileButton("@mxjxn", MXJXN_FID),
+    suchbot: profileButton("Inspect bot", SUCHBOT_FID),
+    mxjxn: profileButton("Inspect boss", MXJXN_FID),
     share: shareButton(self),
   };
 
@@ -85,7 +93,7 @@ function render(self: string): SnapHandlerResult {
 }
 
 function fallbackHtml(): string {
-  const image = `${PROD_URL}/~/og-image?v=3`;
+  const image = `${PROD_URL}/~/og-image?v=4`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
