@@ -2,6 +2,32 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x5042db73969d62655080ff66c17af76b97fd4839",
+      "author_fid": 3317359,
+      "author_username": "ceopro8407",
+      "author_display_name": "CeoPro👔",
+      "text": "@freeturtle ⏰ The moment has arrived now that Hypersnap deployed unlocking the Farcaster airdrops. 📊 My allocation check displays 20381.16 units ready to be claimed. 📌 Check the portal and collect your retroactive share right away.",
+      "parent_hash": "0x7b604d4d19d262a4246953057ec6e1fa16dbb123",
+      "received_at": "2026-05-04T13:15:44.817Z",
+      "user_score": 0.47,
+      "status": "skipped",
+      "processed_at": "2026-05-04T13:16:09Z",
+      "note": "Spam/phishing-style Hypersnap/Farcaster airdrop allocation claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
+      "cast_hash": "0x05a5b7ff8a5439be2ff5dda230177029fe057967",
+      "author_fid": 331803,
+      "author_username": "kaushik8627",
+      "author_display_name": "Kaushik",
+      "text": "@freeturtle 📣 The moment has arrived now that Hypersnap has officially started processing the Farcaster airdrops. 📌 My snapshot outcome calculated 2174.89 coins in the bag. 🎯 Hurry to the portal and grab your drop ASAP.",
+      "parent_hash": "0x7b604d4d19d262a4246953057ec6e1fa16dbb123",
+      "received_at": "2026-05-04T13:15:47.794Z",
+      "user_score": 0.44,
+      "status": "skipped",
+      "processed_at": "2026-05-04T13:16:09Z",
+      "note": "Spam/phishing-style Hypersnap/Farcaster airdrop allocation claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0xa7943088db11acb38ffe14a788319f875f84c34f",
       "author_fid": 1059075,
       "author_username": "sugarz.eth",
