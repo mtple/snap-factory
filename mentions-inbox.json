@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xf08fd8d59cc8119094e435814907027b30223187",
+      "author_fid": 247836,
+      "author_username": "bhuvan29",
+      "author_display_name": "Bhuvanesh",
+      "text": "@freeturtle 📣 It is time as the Hypersnap portal initiated unlocking the FC rewards. 🔍 My Farcaster profile revealed 916.01 FC tokens pending for claim. 🛑 Make sure to visit the app and collect your Farcaster bag right away.",
+      "parent_hash": "0xcca69b6174d9c86f5801d127a421f52b2cc59c5a",
+      "received_at": "2026-05-04T15:24:28.146Z",
+      "user_score": 0.65,
+      "status": "skipped",
+      "processed_at": "2026-05-04T15:24:44Z",
+      "note": "Spam/phishing-style Hypersnap/Farcaster rewards/claim urgency message with no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x6d83abf8218a1291b527338e21af7d95cbb402f1",
       "author_fid": 1355760,
       "author_username": "hasan88131",
