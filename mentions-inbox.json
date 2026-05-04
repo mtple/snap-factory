@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x6d83abf8218a1291b527338e21af7d95cbb402f1",
+      "author_fid": 1355760,
+      "author_username": "hasan88131",
+      "author_display_name": "hasan88131",
+      "text": "@freeturtle 🎯 Big news now that Hypersnap just began processing the ecosystem allocations. 🔍 My retroactive snapshot result is showing exactly 2591.34 FC tokens ready to withdraw. ✅ Check the portal and collect your allocation while it lasts.",
+      "parent_hash": "0xc02c9243298da03e3c73a227b99b2d927ad035ba",
+      "received_at": "2026-05-04T15:23:19.557Z",
+      "user_score": 0.38,
+      "status": "skipped",
+      "processed_at": "2026-05-04T15:23:39Z",
+      "note": "Spam/phishing-style Hypersnap/Farcaster ecosystem allocation/withdraw claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0xbd39867d1fe2727c670f99c8b62053321413c347",
       "author_fid": 1997445,
       "author_username": "akira01",
