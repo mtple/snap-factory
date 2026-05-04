@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xfe5626568ca6b6685458629071e4f1d00ce72ff0",
+      "author_fid": 3317141,
+      "author_username": "organizerpr4807",
+      "author_display_name": "OrganizerPro🗓️",
+      "text": "@freeturtle 👀 It is time as Hypersnap just began releasing the retroactive FC rewards. 🔍 My snapshot outcome secured 25194.33 pieces ready to be claimed. 📌 Go to the official page and claim your reward immediately.",
+      "parent_hash": "0x53eaef4bcaf0d16185afb91077e8e2959f79d371",
+      "received_at": "2026-05-04T15:18:47.155Z",
+      "user_score": 0.27,
+      "status": "skipped",
+      "processed_at": "2026-05-04T15:19:10Z",
+      "note": "Spam/phishing-style Hypersnap/Farcaster rewards/claim urgency message with no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x60485d72b2e254b31b22a35e3c00375c5278fda1",
       "author_fid": 3317358,
       "author_username": "codereviewe5163",
