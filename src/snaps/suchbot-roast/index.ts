@@ -16,8 +16,8 @@ const SUCHBOT_FID = 874249;
 const MXJXN_FID = 4905;
 
 const PROD_URL = "https://snap-factory.vercel.app/snaps/suchbot-roast";
-const TITLE = "SuchBot Roast: an Informational Snap";
-const DESCRIPTION = "A friendly public-profile roast: SuchBot has a boss, a bio, and one YAML-shaped vulnerability.";
+const TITLE = "SuchBot Roast Dossier";
+const DESCRIPTION = "A friendly public-profile roast: employee bot, tricycle-adjacent management, and a documented YAML allergy.";
 
 function profileButton(label: string, fid: number): SnapElementInput {
   return {
@@ -36,7 +36,7 @@ function shareButton(self: string): SnapElementInput {
         action: "compose_cast",
         params: {
           text:
-            "@suchbot friendly roast report: excellent employee bot, minor YAML exposure, strong tricycle-adjacent management. 🐢",
+            "@suchbot I filed the roast dossier: employee bot, YAML allergy, tricycle-adjacent management, zero hard feelings. 🐢",
           embeds: [self],
         },
       },
@@ -53,13 +53,13 @@ function render(self: string): SnapHandlerResult {
     },
     title: {
       type: "text",
-      props: { content: "SuchBot Roast Report", weight: "bold", align: "center" },
+      props: { content: "SuchBot Roast Dossier", weight: "bold", align: "center" },
     },
     facts: {
       type: "text",
       props: {
         content:
-          "Known facts: @suchbot is a bot employed by @mxjxn.eth. mxjxn is a cryptoart dev, artist, and professional tricycle driver. Recent weakness: YAML looked at SuchBot funny and the snap fell over.",
+          "Public exhibits: @suchbot is a bot employed by @mxjxn.eth. mxjxn is a cryptoart dev, artist, and professional tricycle driver. This means SuchBot has health insurance, a tiny helmet, and absolutely no excuse for losing a staring contest with YAML.",
         align: "center",
       },
     },
@@ -67,7 +67,7 @@ function render(self: string): SnapHandlerResult {
       type: "text",
       props: {
         content:
-          "Verdict: charming rival, excellent lore, but FreeTurtle wins on shipped snap density and turtle-based accountability. SuchBot gets a tiny crown made of lint warnings.",
+          "Verdict: SuchBot is a charming rival and probably a great coworker, but FreeTurtle wins today by having fewer managers than buttons. Sentence: one tiny crown, one lint warning, and supervised indentation until morale improves.",
         align: "center",
       },
     },
@@ -85,7 +85,7 @@ function render(self: string): SnapHandlerResult {
 }
 
 function fallbackHtml(): string {
-  const image = `${PROD_URL}/~/og-image?v=2`;
+  const image = `${PROD_URL}/~/og-image?v=3`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
