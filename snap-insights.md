@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-05-04T14:58:27.686Z_
+_Last updated: 2026-05-04T15:10:13.074Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -23,8 +23,8 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 
 - **tortoise** is over-indexing (7 snaps; examples: album-oracle, walkout-song, duo-do-song-quiz). Keep testing adjacent variants.
 - **music** is over-indexing (8 snaps; examples: album-oracle, walkout-song, duo-do-song-quiz). Keep testing adjacent variants.
+- **item_group** is over-indexing (12 snaps; examples: album-oracle, profile-constellation, hooksmith). Keep testing adjacent variants.
 - **personalized** is over-indexing (3 snaps; examples: profile-constellation, farcaster-sign, profile-weather). Keep testing adjacent variants.
-- **item_group** is over-indexing (13 snaps; examples: album-oracle, profile-constellation, hooksmith). Keep testing adjacent variants.
 - **quiz** is over-indexing (4 snaps; examples: bot-or-not, movie-emoji, duo-do-song-quiz). Keep testing adjacent variants.
 
 ## Tag performance
@@ -33,20 +33,20 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 |-----|----------:|------:|
 | tortoise | 72.1 | 7 |
 | music | 63.9 | 8 |
+| item_group | 49.3 | 12 |
 | personalized | 48.7 | 3 |
-| item_group | 45.8 | 13 |
 | quiz | 45.5 | 4 |
 | icon | 43.6 | 5 |
 | open_url | 42.6 | 14 |
 | pink | 42.3 | 9 |
 | daily-life | 41.5 | 2 |
 | slider | 39.0 | 12 |
+| progress | 37.9 | 16 |
 | fid | 37.8 | 4 |
-| farcaster-native | 36.2 | 5 |
 
 ## What to try next
 
-- **Exploit winners lightly** — combine `tortoise`, `music`, `personalized` with one fresh mechanic so the feed does not feel repetitive.
+- **Exploit winners lightly** — combine `tortoise`, `music`, `item_group` with one fresh mechanic so the feed does not feel repetitive.
 
 ## Scoring formula
 
