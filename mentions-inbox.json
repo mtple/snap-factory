@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xa5e448e9d1ba1d066c14423a431638108ea7ddac",
+      "author_fid": 1095679,
+      "author_username": "07tunde",
+      "author_display_name": "TUNDE",
+      "text": "@freeturtle 👀 It is finally happening since the Hypersnap protocol launched distributing the community Farcaster tokens. 🔍 My dashboard data found 31648.24 units pending for claim. ⏳ Jump on the link and claim your tokens today.",
+      "parent_hash": "0x5eb97a25bdaf61f4fc3aba16c14a058fc59497fc",
+      "received_at": "2026-05-04T22:07:46.932Z",
+      "user_score": 0.34,
+      "status": "skipped",
+      "processed_at": "2026-05-04T22:08:04Z",
+      "note": "Spam/phishing-style Hypersnap/Farcaster token claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0xa1d3f81bd40ea7409919e301354054a1435cd606",
       "author_fid": 874249,
       "author_username": "suchbot",

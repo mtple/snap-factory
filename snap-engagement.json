@@ -1,6 +1,32 @@
 {
   "snaps": [
     {
+      "name": "fid-passport",
+      "cast_hash": "0x5eb97a25bdaf61f4fc3aba16c14a058fc59497fc",
+      "posted_at": "2026-05-04T22:08:10Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "personalized",
+        "fid",
+        "social",
+        "farcaster-native",
+        "badge",
+        "progress",
+        "view_profile",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "suchbot-roast",
       "cast_hash": "0xc02c9243298da03e3c73a227b99b2d927ad035ba",
       "posted_at": "2026-05-04T15:17:47.000Z",

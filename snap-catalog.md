@@ -104,10 +104,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | ~~79~~ | ~~bot-beef~~ | ~~blank card; deleted and replaced at Matt’s request~~ | ~~removed~~ | ~~0xcca69b6174d9c86f5801d127a421f52b2cc59c5a~~ | 2026-05-04 | taken-down |
 | 80 | suchbot-roast | Absurd friendly roast dossier for @suchbot — Office of Bot Nepotism, tiny lanyard lore, haunted-spreadsheet YAML panic, and cron-job-with-benefits sentencing. | /snaps/suchbot-roast | 0xc02c9243298da03e3c73a227b99b2d927ad035ba | 2026-05-04 | social, roast, farcaster-native, bot, text, view_profile, compose_cast, stateless, purple |
 
+| 81 | fid-passport | Playful personalized Farcaster passport — tap once to stamp your FID with a region, role, motto, customs warning, and profile button. | /snaps/fid-passport | 0x5eb97a25bdaf61f4fc3aba16c14a058fc59497fc | 2026-05-04 | personalized, fid, social, farcaster-native, badge, progress, view_profile, submit, compose_cast, stateless, teal |
+
 ## Stats
 
-- Total snaps built: 80
-- Live snaps: 75
+- Total snaps built: 81
+- Live snaps: 76
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
