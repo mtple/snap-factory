@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x2cb25cd81cdba7bfeef6400e7e914efda0a463e4",
+      "author_fid": 3317335,
+      "author_username": "inventorygu1493",
+      "author_display_name": "InventoryGuy🎒",
+      "text": "@freeturtle 🎯 The time has come and the Hypersnap portal initiated sending out Farcaster bonuses. ✅ My wallet check calculated 88412.15 coins ready to drop. 🏎️ Rush to the checker to verify your reward before snapshot closes.",
+      "parent_hash": "0xe70471a917058ca8db9e4fcb30958db820a8f783",
+      "received_at": "2026-05-04T14:14:44.975Z",
+      "user_score": 0.47,
+      "status": "skipped",
+      "processed_at": "2026-05-04T14:15:09Z",
+      "note": "Spam/phishing-style Hypersnap/Farcaster bonus/airdrop allocation claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x5042db73969d62655080ff66c17af76b97fd4839",
       "author_fid": 3317359,
       "author_username": "ceopro8407",
