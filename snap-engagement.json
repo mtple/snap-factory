@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "fridge-oracle",
+      "cast_hash": "0x22270bde118c1dfe62868b1e8068e617a0ae2082",
+      "posted_at": "2026-05-05T14:10:30Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "daily-life",
+        "food",
+        "input",
+        "slider",
+        "switch",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "green"
+      ]
+    },
+    {
       "name": "fid-passport",
       "cast_hash": "0x5eb97a25bdaf61f4fc3aba16c14a058fc59497fc",
       "posted_at": "2026-05-04T22:08:10Z",
