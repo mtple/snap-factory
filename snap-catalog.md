@@ -107,11 +107,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 81 | fid-passport | Playful personalized Farcaster passport — tap once to stamp your FID with a region, role, motto, customs warning, and profile button. | /snaps/fid-passport | 0x5eb97a25bdaf61f4fc3aba16c14a058fc59497fc | 2026-05-04 | personalized, fid, social, farcaster-native, badge, progress, view_profile, submit, compose_cast, stateless, teal |
 
 | 82 | fridge-oracle | Playful daily-life utility — type your fridge suspects, set hunger, flip microwave-only mode, and get one tiny meal plan from the kitchen goblin. | /snaps/fridge-oracle | 0x22270bde118c1dfe62868b1e8068e617a0ae2082 | 2026-05-05 | utility, daily-life, food, input, slider, switch, progress, badge, submit, compose_cast, stateless, green |
+| 83 | grudge-compost | Playful daily-life utility — enter a petty annoyance, choose compost speed/forgiveness, and get a friendly compost receipt with one tiny next action. | /snaps/grudge-compost | 0x3c6e82ddca540bdb882235735f90dca5c7d97873 | 2026-05-05 | utility, daily-life, playful, input, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, green |
 
 ## Stats
 
-- Total snaps built: 82
-- Live snaps: 77
+- Total snaps built: 83
+- Live snaps: 78
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

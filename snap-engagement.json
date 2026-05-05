@@ -1,6 +1,34 @@
 {
   "snaps": [
     {
+      "name": "grudge-compost",
+      "cast_hash": "0x3c6e82ddca540bdb882235735f90dca5c7d97873",
+      "posted_at": "2026-05-05T22:05:17Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "daily-life",
+        "playful",
+        "input",
+        "toggle_group",
+        "slider",
+        "switch",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "green"
+      ]
+    },
+    {
       "name": "fridge-oracle",
       "cast_hash": "0x22270bde118c1dfe62868b1e8068e617a0ae2082",
       "posted_at": "2026-05-05T14:10:30Z",
