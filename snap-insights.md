@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-05-04T15:18:33.639Z_
+_Last updated: 2026-05-05T07:00:42.921Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -12,9 +12,9 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | 2 | profile-constellation | 100 | 31 | 1 | 1 | personalized, fid, social, cell_grid, icon, item_group, badge, view_profile, submit, compose_cast, stateless, purple |
 | 3 | walkout-song | 95 | 30 | 1 | 0 | music, tortoise, input, toggle_group, progress, badge, open_url, submit, compose_cast, stateless, blue |
 | 4 | polite-no | 83 | 27 | 0 | 1 | utility, switch, badge, submit, compose_cast, stateless, purple, daily-life |
-| 5 | hooksmith | 82 | 24 | 2 | 0 | utility, input, multi-page, item_group, badge, submit, compose_cast, stateless, amber |
+| 5 | hooksmith | 79 | 23 | 2 | 0 | utility, input, multi-page, item_group, badge, submit, compose_cast, stateless, amber |
 | 6 | bot-or-not | 77 | 15 | 0 | 16 | game, quiz, farcaster-native, toggle_group, badge, separator, submit, compose_cast, stateless, gray |
-| 7 | timeline-bingo | 62 | 19 | 1 | 0 | game, social, daily, farcaster-native, cell_grid, badge, submit, compose_cast, stateless, teal |
+| 7 | timeline-bingo | 65 | 20 | 1 | 0 | game, social, daily, farcaster-native, cell_grid, badge, submit, compose_cast, stateless, teal |
 | 8 | movie-emoji | 59 | 18 | 1 | 0 | game, quiz, movies, emoji, toggle_group, badge, submit, compose_cast, stateless, amber |
 | 9 | degen-quest | 57 | 19 | 0 | 0 | game, absurd, toggle_group, stateless, amber, crypto, replayable |
 | 10 | snap-radio | 43 | 12 | 1 | 1 | showcase, meta, icon, badge, progress, item_group, submit, open_url, view_cast, compose_cast, stateless, pink |
@@ -24,8 +24,8 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 - **tortoise** is over-indexing (7 snaps; examples: album-oracle, walkout-song, duo-do-song-quiz). Keep testing adjacent variants.
 - **music** is over-indexing (8 snaps; examples: album-oracle, walkout-song, duo-do-song-quiz). Keep testing adjacent variants.
 - **item_group** is over-indexing (12 snaps; examples: album-oracle, profile-constellation, hooksmith). Keep testing adjacent variants.
-- **personalized** is over-indexing (3 snaps; examples: profile-constellation, farcaster-sign, profile-weather). Keep testing adjacent variants.
 - **quiz** is over-indexing (4 snaps; examples: bot-or-not, movie-emoji, duo-do-song-quiz). Keep testing adjacent variants.
+- **icon** is over-indexing (5 snaps; examples: profile-constellation, snap-radio, listening-room). Keep testing adjacent variants.
 
 ## Tag performance
 
@@ -33,16 +33,16 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 |-----|----------:|------:|
 | tortoise | 72.1 | 7 |
 | music | 63.9 | 8 |
-| item_group | 49.3 | 12 |
-| personalized | 48.7 | 3 |
+| item_group | 49.1 | 12 |
 | quiz | 45.5 | 4 |
 | icon | 43.6 | 5 |
 | open_url | 42.6 | 14 |
 | pink | 42.3 | 9 |
 | daily-life | 41.5 | 2 |
-| slider | 39.0 | 12 |
-| progress | 37.9 | 16 |
-| fid | 37.8 | 4 |
+| personalized | 40.8 | 4 |
+| slider | 39.1 | 12 |
+| farcaster-native | 39.0 | 6 |
+| progress | 36.7 | 17 |
 
 ## What to try next
 
