@@ -34,6 +34,7 @@ import snap_fidPassport from "./snaps/fid-passport/index.js";
 import snap_flappyBird from "./snaps/flappy-bird/index.js";
 import snap_followKayonfire from "./snaps/follow-kayonfire/index.js";
 import snap_fortuneCookie from "./snaps/fortune-cookie/index.js";
+import snap_fridgeOracle from "./snaps/fridge-oracle/index.js";
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
 import snap_hooksmith from "./snaps/hooksmith/index.js";
 import snap_kreditaRunebornLore from "./snaps/kredita-runeborn-lore/index.js";
@@ -117,6 +118,7 @@ export const snaps: Record<string, Hono> = {
   "flappy-bird": snap_flappyBird,
   "follow-kayonfire": snap_followKayonfire,
   "fortune-cookie": snap_fortuneCookie,
+  "fridge-oracle": snap_fridgeOracle,
   "hello-farcaster": snap_helloFarcaster,
   "hooksmith": snap_hooksmith,
   "kredita-runeborn-lore": snap_kreditaRunebornLore,
