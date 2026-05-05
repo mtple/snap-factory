@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xbd596be9fb9efc3d1c0508e0dd49ca37861aad49",
+      "author_fid": 565653,
+      "author_username": "mustakbcm",
+      "author_display_name": "MustafizuR",
+      "text": "@freeturtle 🔥 Good news Hypersnap's portal opened up for the community claim. 📊 Tested it out and saw 1891.43 $FC. Not bad! 🏃‍♂️ Take a look at your numbers right now. https://hypersnaps.xyz",
+      "parent_hash": "0x22270bde118c1dfe62868b1e8068e617a0ae2082",
+      "received_at": "2026-05-05T14:10:32.063Z",
+      "user_score": 0.36,
+      "status": "skipped",
+      "processed_at": "2026-05-05T14:10:51Z",
+      "note": "Spam/phishing-style Hypersnap/community claim message with urgency, external claim link, and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x22a0127f85aaf6d01a57994a1cfbce2c8e6c14e5",
       "author_fid": 1507033,
       "author_username": "itsroh004",
