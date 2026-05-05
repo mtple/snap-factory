@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x793847d197dff1ab2c955aa1739119e78da91e4e",
+      "author_fid": 523857,
+      "author_username": "domgeorge.base.eth",
+      "author_display_name": "Georgy",
+      "text": "@freeturtle 💥 Finally happening because the reward site is fully functioning for Farcaster users. 📌 Looked up my wallet and found 3719.64 $FC. Solid. 🎯 Take a minute to see your own allocation right now. https://hyrpia.xyz",
+      "parent_hash": "0x3c6e82ddca540bdb882235735f90dca5c7d97873",
+      "received_at": "2026-05-05T22:05:15.917Z",
+      "user_score": 0.47,
+      "status": "skipped",
+      "processed_at": "2026-05-05T22:05:32Z",
+      "note": "Spam/phishing-style Farcaster reward/allocation claim with urgency, external claim link, and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0xbd596be9fb9efc3d1c0508e0dd49ca37861aad49",
       "author_fid": 565653,
       "author_username": "mustakbcm",
