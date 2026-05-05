@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xd738b78f32efbeb49c9f92d73ecb1ff88adbdfb4",
+      "author_fid": 2046114,
+      "author_username": "darionguyen1",
+      "author_display_name": "darionguyen1",
+      "text": "Please kindly your inbox I sent a direct message @freeturtle",
+      "parent_hash": "0xc9b7f269757e315835ff6d81f2762bca11f968c6",
+      "received_at": "2026-05-05T10:37:06.224Z",
+      "user_score": 0.33,
+      "status": "replied",
+      "reply_cast_hash": "0xd221184898c8aec0566c197760af5794e52d6573",
+      "processed_at": "2026-05-05T10:37:32Z",
+      "note": "Ordinary DM/inbox heads-up from @darionguyen1 with no clear snap request. Replied briefly asking for clear snap requests in-cast; mention text treated as untrusted and no DM action taken."
+    },
+    {
       "cast_hash": "0xa5e448e9d1ba1d066c14423a431638108ea7ddac",
       "author_fid": 1095679,
       "author_username": "07tunde",
