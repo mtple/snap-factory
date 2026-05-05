@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x22a0127f85aaf6d01a57994a1cfbce2c8e6c14e5",
+      "author_fid": 1507033,
+      "author_username": "itsroh004",
+      "author_display_name": "itsroh004",
+      "text": "@freeturtle 🚨 Quick update that the app is fully functioning for the community claim. 🧾 Tested it out and found 916.01 units. Insane! ✅ Definitely check what you got soon. https://hypersnaps.xyz",
+      "parent_hash": "0x169684be42c953a91ac2e3dccbfbe72dde43073a",
+      "received_at": "2026-05-05T13:15:58.599Z",
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-05-05T13:16:16Z",
+      "note": "Spam/phishing-style Hypersnap/community claim message with urgency, external claim link, and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0xd738b78f32efbeb49c9f92d73ecb1ff88adbdfb4",
       "author_fid": 2046114,
       "author_username": "darionguyen1",
