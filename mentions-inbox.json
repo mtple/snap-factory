@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x76045186ef6ec81234b38da429c54da26bfba211",
+      "author_fid": 1454961,
+      "author_username": "azamji",
+      "author_display_name": "azamji",
+      "text": "@freeturtle ✨ Finally happening that Hypersnap's portal is online for retroactive rewards. 🔍 Verified my profile and hit 1158.32 FC. Solid. 📌 Make sure to check your share before it is over. https://hyprie.xyz",
+      "parent_hash": "0x447ed58f70de5c08c348738638a71891ed0f2a22",
+      "received_at": "2026-05-06T13:16:05.196Z",
+      "user_score": 0.25,
+      "status": "skipped",
+      "processed_at": "2026-05-06T13:16:27Z",
+      "note": "Spam/phishing-style Hypersnap/retroactive rewards claim with urgency, external claim link, and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x793847d197dff1ab2c955aa1739119e78da91e4e",
       "author_fid": 523857,
       "author_username": "domgeorge.base.eth",
