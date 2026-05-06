@@ -111,10 +111,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 84 | permission-slip | Playful productivity utility — enter what you are overthinking, choose permission type, and get a tiny official slip with one next action. | /snaps/permission-slip | 0x04ce0cb0c3ae0bb4aba0cf3719ef5fc070e0e0ff | 2026-05-06 | utility, productivity, playful, input, toggle_group, switch, progress, badge, submit, compose_cast, stateless, blue |
 
+| 85 | palette-potion | Creative palette utility — choose a mood, set warmth, toggle night-mode depth, and brew a snap-native color palette. | /snaps/palette-potion | 0x8ec07d213ee24321673abfbc1958d728abe93816 | 2026-05-06 | creative, utility, palette, toggle_group, slider, switch, cell_grid, badge, submit, compose_cast, stateless, purple |
+
 ## Stats
 
-- Total snaps built: 84
-- Live snaps: 79
+- Total snaps built: 85
+- Live snaps: 80
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

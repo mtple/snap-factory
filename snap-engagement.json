@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "palette-potion",
+      "cast_hash": "0x8ec07d213ee24321673abfbc1958d728abe93816",
+      "posted_at": "2026-05-06T22:04:47Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "creative",
+        "utility",
+        "palette",
+        "toggle_group",
+        "slider",
+        "switch",
+        "cell_grid",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "permission-slip",
       "cast_hash": "0x04ce0cb0c3ae0bb4aba0cf3719ef5fc070e0e0ff",
       "posted_at": "2026-05-06T14:04:00Z",
