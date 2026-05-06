@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-05-05T07:00:42.921Z_
+_Last updated: 2026-05-06T07:01:33.222Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -12,8 +12,8 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | 2 | profile-constellation | 100 | 31 | 1 | 1 | personalized, fid, social, cell_grid, icon, item_group, badge, view_profile, submit, compose_cast, stateless, purple |
 | 3 | walkout-song | 95 | 30 | 1 | 0 | music, tortoise, input, toggle_group, progress, badge, open_url, submit, compose_cast, stateless, blue |
 | 4 | polite-no | 83 | 27 | 0 | 1 | utility, switch, badge, submit, compose_cast, stateless, purple, daily-life |
-| 5 | hooksmith | 79 | 23 | 2 | 0 | utility, input, multi-page, item_group, badge, submit, compose_cast, stateless, amber |
-| 6 | bot-or-not | 77 | 15 | 0 | 16 | game, quiz, farcaster-native, toggle_group, badge, separator, submit, compose_cast, stateless, gray |
+| 5 | bot-or-not | 80 | 16 | 0 | 16 | game, quiz, farcaster-native, toggle_group, badge, separator, submit, compose_cast, stateless, gray |
+| 6 | hooksmith | 76 | 22 | 2 | 0 | utility, input, multi-page, item_group, badge, submit, compose_cast, stateless, amber |
 | 7 | timeline-bingo | 65 | 20 | 1 | 0 | game, social, daily, farcaster-native, cell_grid, badge, submit, compose_cast, stateless, teal |
 | 8 | movie-emoji | 59 | 18 | 1 | 0 | game, quiz, movies, emoji, toggle_group, badge, submit, compose_cast, stateless, amber |
 | 9 | degen-quest | 57 | 19 | 0 | 0 | game, absurd, toggle_group, stateless, amber, crypto, replayable |
@@ -33,16 +33,16 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 |-----|----------:|------:|
 | tortoise | 72.1 | 7 |
 | music | 63.9 | 8 |
-| item_group | 49.1 | 12 |
-| quiz | 45.5 | 4 |
+| item_group | 48.8 | 12 |
+| quiz | 46.3 | 4 |
 | icon | 43.6 | 5 |
 | open_url | 42.6 | 14 |
 | pink | 42.3 | 9 |
-| daily-life | 41.5 | 2 |
-| personalized | 40.8 | 4 |
-| slider | 39.1 | 12 |
-| farcaster-native | 39.0 | 6 |
-| progress | 36.7 | 17 |
+| personalized | 42.3 | 4 |
+| farcaster-native | 40.2 | 6 |
+| slider | 36.1 | 14 |
+| social | 35.6 | 8 |
+| progress | 35.1 | 19 |
 
 ## What to try next
 
