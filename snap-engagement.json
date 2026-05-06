@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "permission-slip",
+      "cast_hash": "0x04ce0cb0c3ae0bb4aba0cf3719ef5fc070e0e0ff",
+      "posted_at": "2026-05-06T14:04:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "productivity",
+        "playful",
+        "input",
+        "toggle_group",
+        "switch",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "blue"
+      ]
+    },
+    {
       "name": "grudge-compost",
       "cast_hash": "0x3c6e82ddca540bdb882235735f90dca5c7d97873",
       "posted_at": "2026-05-05T22:05:17Z",
