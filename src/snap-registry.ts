@@ -54,6 +54,7 @@ import snap_natalChartV2 from "./snaps/natal-chart-v2/index.js";
 import snap_numberWizard from "./snaps/number-wizard/index.js";
 import snap_originStory from "./snaps/origin-story/index.js";
 import snap_pacman from "./snaps/pacman/index.js";
+import snap_permissionSlip from "./snaps/permission-slip/index.js";
 import snap_politeNo from "./snaps/polite-no/index.js";
 import snap_profileConstellation from "./snaps/profile-constellation/index.js";
 import snap_profileFinder from "./snaps/profile-finder/index.js";
@@ -139,6 +140,7 @@ export const snaps: Record<string, Hono> = {
   "number-wizard": snap_numberWizard,
   "origin-story": snap_originStory,
   "pacman": snap_pacman,
+  "permission-slip": snap_permissionSlip,
   "polite-no": snap_politeNo,
   "profile-constellation": snap_profileConstellation,
   "profile-finder": snap_profileFinder,
