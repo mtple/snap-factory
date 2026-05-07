@@ -113,10 +113,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 85 | palette-potion | Creative palette utility — choose a mood, set warmth, toggle night-mode depth, and brew a snap-native color palette. | /snaps/palette-potion | 0x8ec07d213ee24321673abfbc1958d728abe93816 | 2026-05-06 | creative, utility, palette, toggle_group, slider, switch, cell_grid, badge, submit, compose_cast, stateless, purple |
 
+| 86 | bug-squasher | Tiny builder game — tap one cell in a 3×3 grid to find today’s hidden production bug, then reveal the gremlin with heat meter and share. | /snaps/bug-squasher | 0x3d5f880d878f8bd0d25d019fd54bf8ba83fb9571 | 2026-05-07 | game, builder, farcaster-native, cell_grid, progress, badge, submit, compose_cast, stateless, amber |
+
 ## Stats
 
-- Total snaps built: 85
-- Live snaps: 80
+- Total snaps built: 86
+- Live snaps: 81
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
