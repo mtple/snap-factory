@@ -115,10 +115,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 86 | bug-squasher | Tiny builder game — tap one cell in a 3×3 grid to find today’s hidden production bug, then reveal the gremlin with heat meter and share. | /snaps/bug-squasher | 0x3d5f880d878f8bd0d25d019fd54bf8ba83fb9571 | 2026-05-07 | game, builder, farcaster-native, cell_grid, progress, badge, submit, compose_cast, stateless, amber |
 
+| 87 | inbox-weather | Playful productivity forecast — set unread count, deadline pressure, and avoidance mode to get an inbox storm report with one tiny survival protocol. | /snaps/inbox-weather | 0x840a82850df7d964af9bff421b0e1e92b3f9b615 | 2026-05-07 | utility, productivity, daily-life, slider, toggle_group, switch, progress, bar_chart, badge, submit, compose_cast, stateless, blue |
+
 ## Stats
 
-- Total snaps built: 86
-- Live snaps: 81
+- Total snaps built: 87
+- Live snaps: 82
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
