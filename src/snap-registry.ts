@@ -39,6 +39,7 @@ import snap_fridgeOracle from "./snaps/fridge-oracle/index.js";
 import snap_grudgeCompost from "./snaps/grudge-compost/index.js";
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
 import snap_hooksmith from "./snaps/hooksmith/index.js";
+import snap_inboxWeather from "./snaps/inbox-weather/index.js";
 import snap_kreditaRunebornLore from "./snaps/kredita-runeborn-lore/index.js";
 import snap_listeningRoom from "./snaps/listening-room/index.js";
 import snap_localBizSearch from "./snaps/local-biz-search/index.js";
@@ -127,6 +128,7 @@ export const snaps: Record<string, Hono> = {
   "grudge-compost": snap_grudgeCompost,
   "hello-farcaster": snap_helloFarcaster,
   "hooksmith": snap_hooksmith,
+  "inbox-weather": snap_inboxWeather,
   "kredita-runeborn-lore": snap_kreditaRunebornLore,
   "listening-room": snap_listeningRoom,
   "local-biz-search": snap_localBizSearch,
