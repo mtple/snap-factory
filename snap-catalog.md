@@ -119,10 +119,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 88 | timeline-talisman | Playful personalized Farcaster charm — tap once to forge a daily FID-based timeline talisman with ward meter, snap-native glyph grid, and profile/share buttons. | /snaps/timeline-talisman | 0x8eeebe0ef8d6f19fcd2f6b355a2202d7b1e73964 | 2026-05-08 | personalized, fid, social, farcaster-native, cell_grid, progress, badge, view_profile, submit, compose_cast, stateless, purple |
 
+| 89 | group-chat-oracle | Playful creative utility — name a group chat, pick its vibe/drama level, and receive a funny chat name plus one sacred house rule. | /snaps/group-chat-oracle | 0x072b7b80817d645063a212f20c83acee4a8720f6 | 2026-05-08 | creative, utility, social, daily-life, input, toggle_group, slider, progress, badge, submit, compose_cast, stateless, purple |
+
 ## Stats
 
-- Total snaps built: 88
-- Live snaps: 83
+- Total snaps built: 89
+- Live snaps: 84
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
