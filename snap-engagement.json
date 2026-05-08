@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "timeline-talisman",
+      "cast_hash": "0x8eeebe0ef8d6f19fcd2f6b355a2202d7b1e73964",
+      "posted_at": "2026-05-08T14:03:41Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "personalized",
+        "fid",
+        "social",
+        "farcaster-native",
+        "cell_grid",
+        "progress",
+        "badge",
+        "view_profile",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "inbox-weather",
       "cast_hash": "0x840a82850df7d964af9bff421b0e1e92b3f9b615",
       "posted_at": "2026-05-07T22:04:50Z",

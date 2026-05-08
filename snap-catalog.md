@@ -117,10 +117,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 87 | inbox-weather | Playful productivity forecast — set unread count, deadline pressure, and avoidance mode to get an inbox storm report with one tiny survival protocol. | /snaps/inbox-weather | 0x840a82850df7d964af9bff421b0e1e92b3f9b615 | 2026-05-07 | utility, productivity, daily-life, slider, toggle_group, switch, progress, bar_chart, badge, submit, compose_cast, stateless, blue |
 
+| 88 | timeline-talisman | Playful personalized Farcaster charm — tap once to forge a daily FID-based timeline talisman with ward meter, snap-native glyph grid, and profile/share buttons. | /snaps/timeline-talisman | 0x8eeebe0ef8d6f19fcd2f6b355a2202d7b1e73964 | 2026-05-08 | personalized, fid, social, farcaster-native, cell_grid, progress, badge, view_profile, submit, compose_cast, stateless, purple |
+
 ## Stats
 
-- Total snaps built: 87
-- Live snaps: 82
+- Total snaps built: 88
+- Live snaps: 83
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
