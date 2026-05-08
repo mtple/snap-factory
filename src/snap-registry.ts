@@ -79,6 +79,7 @@ import snap_tabTamer from "./snaps/tab-tamer/index.js";
 import snap_tetrisSnap from "./snaps/tetris-snap/index.js";
 import snap_ticTacToe from "./snaps/tic-tac-toe/index.js";
 import snap_timelineBingo from "./snaps/timeline-bingo/index.js";
+import snap_timelineTalisman from "./snaps/timeline-talisman/index.js";
 import snap_tinyQuest from "./snaps/tiny-quest/index.js";
 import snap_tipCalculator from "./snaps/tip-calculator/index.js";
 import snap_tokenType from "./snaps/token-type/index.js";
@@ -168,6 +169,7 @@ export const snaps: Record<string, Hono> = {
   "tetris-snap": snap_tetrisSnap,
   "tic-tac-toe": snap_ticTacToe,
   "timeline-bingo": snap_timelineBingo,
+  "timeline-talisman": snap_timelineTalisman,
   "tiny-quest": snap_tinyQuest,
   "tip-calculator": snap_tipCalculator,
   "token-type": snap_tokenType,
