@@ -36,6 +36,7 @@ import snap_flappyBird from "./snaps/flappy-bird/index.js";
 import snap_followKayonfire from "./snaps/follow-kayonfire/index.js";
 import snap_fortuneCookie from "./snaps/fortune-cookie/index.js";
 import snap_fridgeOracle from "./snaps/fridge-oracle/index.js";
+import snap_grassProtocol from "./snaps/grass-protocol/index.js";
 import snap_groupChatOracle from "./snaps/group-chat-oracle/index.js";
 import snap_grudgeCompost from "./snaps/grudge-compost/index.js";
 import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
@@ -127,6 +128,7 @@ export const snaps: Record<string, Hono> = {
   "follow-kayonfire": snap_followKayonfire,
   "fortune-cookie": snap_fortuneCookie,
   "fridge-oracle": snap_fridgeOracle,
+  "grass-protocol": snap_grassProtocol,
   "group-chat-oracle": snap_groupChatOracle,
   "grudge-compost": snap_grudgeCompost,
   "hello-farcaster": snap_helloFarcaster,
