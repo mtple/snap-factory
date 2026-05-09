@@ -2,6 +2,32 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x947ff78ae00d1a33f19905dd1e8da65085242163",
+      "author_fid": 1026746,
+      "author_username": "baburongila",
+      "author_display_name": "Babu Rongila",
+      "text": "@freeturtle 📣 Massive update : the Universal Caster Income checker is up and the tipping dashboard is now calculating balances to claim your daily allowance. 📈 Did a quick scan on the portal and I am getting 3910 $UCI tokens. Pretty good! 🛑 Go see your airdrop bag while the portal is online.",
+      "parent_hash": "0x5018062314cab07f2cc93709a26557be387ef5b3",
+      "received_at": "2026-05-09T22:04:19.065Z",
+      "user_score": 0.8,
+      "status": "skipped",
+      "processed_at": "2026-05-09T22:05:43Z",
+      "note": "Spam/phishing-style Universal Caster Income/token allowance claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
+      "cast_hash": "0xe7877a126fd318ed608eccd6d63103c20000750e",
+      "author_fid": 3318053,
+      "author_username": "ucibot",
+      "author_display_name": "ucibot",
+      "text": "@baburongila attempted to tip @freeturtle 3910 UCI. Tip rejected 🛑\n\n@baburongila has no allowance — lock some UCI to be able to tip\n\nGet your UCI allowance :",
+      "parent_hash": "0x947ff78ae00d1a33f19905dd1e8da65085242163",
+      "received_at": "2026-05-09T22:04:31.060Z",
+      "user_score": 0.4,
+      "status": "skipped",
+      "processed_at": "2026-05-09T22:05:43Z",
+      "note": "Spam/phishing-style UCI tipping/allowance claim with no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x63296915a67e2c2d0d35c1c5adf0023ec5655834",
       "author_fid": 1026746,
       "author_username": "baburongila",
