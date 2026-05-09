@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x78cb1f016a509da67d7049719a65e334f3320852",
+      "author_fid": 285073,
+      "author_username": "anilpari",
+      "author_display_name": "Anilpari Kishorpari Gosai",
+      "text": "@freeturtle 👀 Massive update because Season 2 is active and the app opened up for retroactive rewards. 📌 Did a quick scan for phase 2 and hit 20381.16 tokens. Pretty good! 📌 Make sure to check your Epoch 2 bag today.",
+      "parent_hash": "0x5b3de470c66e16974424f05051affaf73fc88ba0",
+      "received_at": "2026-05-09T13:15:59.124Z",
+      "user_score": 0.46,
+      "status": "skipped",
+      "processed_at": "2026-05-09T13:16:16Z",
+      "note": "Spam/phishing-style retroactive rewards/token scan claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x76045186ef6ec81234b38da429c54da26bfba211",
       "author_fid": 1454961,
       "author_username": "azamji",
