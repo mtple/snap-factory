@@ -122,11 +122,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 89 | group-chat-oracle | Playful creative utility — name a group chat, pick its vibe/drama level, and receive a funny chat name plus one sacred house rule. | /snaps/group-chat-oracle | 0x072b7b80817d645063a212f20c83acee4a8720f6 | 2026-05-08 | creative, utility, social, daily-life, input, toggle_group, slider, progress, badge, submit, compose_cast, stateless, purple |
 
 | 90 | grass-protocol | Playful Farcaster-native touch-grass prescription — set scroll minutes/outside status/reply arguments, then get timeline fog score, bars, and one tiny meadow protocol. | /snaps/grass-protocol | 0x1aac1d850993d454c47795bf01fad2de33da283b | 2026-05-09 | utility, daily-life, farcaster-native, playful, slider, toggle_group, switch, progress, bar_chart, badge, submit, compose_cast, stateless, green |
+| 91 | pfp-court | Playful Farcaster-native avatar judgment — pick a PFP vibe, set chaos, toggle sunglasses, and receive a tiny timeline verdict. | /snaps/pfp-court | 0x5018062314cab07f2cc93709a26557be387ef5b3 | 2026-05-09 | social, farcaster-native, gag, personality, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, purple |
 
 ## Stats
 
-- Total snaps built: 90
-- Live snaps: 85
+- Total snaps built: 91
+- Live snaps: 86
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

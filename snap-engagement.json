@@ -1,6 +1,34 @@
 {
   "snaps": [
     {
+      "name": "pfp-court",
+      "cast_hash": "0x5018062314cab07f2cc93709a26557be387ef5b3",
+      "posted_at": "2026-05-09T22:02:55Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "social",
+        "farcaster-native",
+        "gag",
+        "personality",
+        "toggle_group",
+        "slider",
+        "switch",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "grass-protocol",
       "cast_hash": "0x1aac1d850993d454c47795bf01fad2de33da283b",
       "posted_at": "2026-05-09T14:04:10Z",
