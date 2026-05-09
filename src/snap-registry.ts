@@ -60,6 +60,7 @@ import snap_originStory from "./snaps/origin-story/index.js";
 import snap_pacman from "./snaps/pacman/index.js";
 import snap_palettePotion from "./snaps/palette-potion/index.js";
 import snap_permissionSlip from "./snaps/permission-slip/index.js";
+import snap_pfpCourt from "./snaps/pfp-court/index.js";
 import snap_politeNo from "./snaps/polite-no/index.js";
 import snap_profileConstellation from "./snaps/profile-constellation/index.js";
 import snap_profileFinder from "./snaps/profile-finder/index.js";
@@ -152,6 +153,7 @@ export const snaps: Record<string, Hono> = {
   "pacman": snap_pacman,
   "palette-potion": snap_palettePotion,
   "permission-slip": snap_permissionSlip,
+  "pfp-court": snap_pfpCourt,
   "polite-no": snap_politeNo,
   "profile-constellation": snap_profileConstellation,
   "profile-finder": snap_profileFinder,
