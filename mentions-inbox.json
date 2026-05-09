@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x63296915a67e2c2d0d35c1c5adf0023ec5655834",
+      "author_fid": 1026746,
+      "author_username": "baburongila",
+      "author_display_name": "Babu Rongila",
+      "text": "@freeturtle 🚨 Massive update that Season 2 is active and the web3 portal just went live for retroactive rewards. 💎 Looked up my phase 2 wallet and I am getting 218.84 FC. Happy with that. 🛑 Recommend checking your share while you can.",
+      "parent_hash": "0x1aac1d850993d454c47795bf01fad2de33da283b",
+      "received_at": "2026-05-09T14:04:42.869Z",
+      "user_score": 0.8,
+      "status": "skipped",
+      "processed_at": "2026-05-09T14:05:22Z",
+      "note": "Spam/phishing-style retroactive rewards/FC allocation claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x78cb1f016a509da67d7049719a65e334f3320852",
       "author_fid": 285073,
       "author_username": "anilpari",
