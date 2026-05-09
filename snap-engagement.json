@@ -1,6 +1,35 @@
 {
   "snaps": [
     {
+      "name": "grass-protocol",
+      "cast_hash": "0x1aac1d850993d454c47795bf01fad2de33da283b",
+      "posted_at": "2026-05-09T14:04:10Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "daily-life",
+        "farcaster-native",
+        "playful",
+        "slider",
+        "toggle_group",
+        "switch",
+        "progress",
+        "bar_chart",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "green"
+      ]
+    },
+    {
       "name": "group-chat-oracle",
       "cast_hash": "0x072b7b80817d645063a212f20c83acee4a8720f6",
       "posted_at": "2026-05-08T22:04:15Z",
