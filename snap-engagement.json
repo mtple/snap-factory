@@ -1,6 +1,31 @@
 {
   "snaps": [
     {
+      "name": "reply-roulette",
+      "cast_hash": "0x9bf36b6cce0a217f0f6b7533af66f8485beaefb6",
+      "posted_at": "2026-05-10T22:04:04Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "game",
+        "social",
+        "farcaster-native",
+        "toggle_group",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "ritual-receipt",
       "cast_hash": "0xd5943822a2f37528df60727d4e7526c2dab31dd7",
       "posted_at": "2026-05-10T14:04:54Z",

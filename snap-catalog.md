@@ -125,11 +125,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 91 | pfp-court | Playful Farcaster-native avatar judgment — pick a PFP vibe, set chaos, toggle sunglasses, and receive a tiny timeline verdict. | /snaps/pfp-court | 0x5018062314cab07f2cc93709a26557be387ef5b3 | 2026-05-09 | social, farcaster-native, gag, personality, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, purple |
 
 | 92 | ritual-receipt | Playful productivity receipt printer — enter a dodged task, set effort and printer mode, then get one tiny official next move with confidence meter. | /snaps/ritual-receipt | 0xd5943822a2f37528df60727d4e7526c2dab31dd7 | 2026-05-10 | utility, productivity, playful, daily-life, input, slider, toggle_group, progress, badge, submit, compose_cast, stateless, teal |
+| 93 | reply-roulette | Farcaster-native tiny game — choose a reply strategy for a chaotic thread and get a deterministic survival verdict with a thread-survival meter. | /snaps/reply-roulette | 0x9bf36b6cce0a217f0f6b7533af66f8485beaefb6 | 2026-05-10 | game, social, farcaster-native, toggle_group, progress, badge, submit, compose_cast, stateless, purple |
 
 ## Stats
 
-- Total snaps built: 92
-- Live snaps: 87
+- Total snaps built: 93
+- Live snaps: 88
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
