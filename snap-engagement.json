@@ -1,6 +1,34 @@
 {
   "snaps": [
     {
+      "name": "ritual-receipt",
+      "cast_hash": "0xd5943822a2f37528df60727d4e7526c2dab31dd7",
+      "posted_at": "2026-05-10T14:04:54Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "productivity",
+        "playful",
+        "daily-life",
+        "input",
+        "slider",
+        "toggle_group",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "pfp-court",
       "cast_hash": "0x5018062314cab07f2cc93709a26557be387ef5b3",
       "posted_at": "2026-05-09T22:02:55Z",
