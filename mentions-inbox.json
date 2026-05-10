@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xa8b23d8894ada94b3926272bbd1446547335a802",
+      "author_fid": 3318053,
+      "author_username": "ucibot",
+      "author_display_name": "ucibot",
+      "text": "@herophatan attempted to tip @freeturtle 6190 UCI. Tip rejected 🛑\n\n@herophatan has no allowance — lock some UCI to be able to tip\n\nGet your UCI allowance :",
+      "parent_hash": "0x9dbf20956618e04da9eb12c511f063a1beff6b31",
+      "received_at": "2026-05-10T13:30:11.674Z",
+      "user_score": 0.43,
+      "status": "skipped",
+      "processed_at": "2026-05-10T13:30:33Z",
+      "note": "Spam/phishing-style UCI tipping/allowance claim with no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x9dbf20956618e04da9eb12c511f063a1beff6b31",
       "author_fid": 273571,
       "author_username": "herophatan",
