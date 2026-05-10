@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xff20b627431928f936b00f4fb348bd9a21f52d40",
+      "author_fid": 847876,
+      "author_username": "ejaaskhan",
+      "author_display_name": "Ejaas Khan",
+      "text": "@freeturtle 💥 Crazy news since the $UCI airdrop portal opened and the tipping dashboard is online for all active casters. 🎯 Logged in for my Universal Caster Income and saw 14310 daily UCI. Pretty good! 👉 Do not forget to claim your new stats today.",
+      "parent_hash": "0xd5943822a2f37528df60727d4e7526c2dab31dd7",
+      "received_at": "2026-05-10T14:05:27.529Z",
+      "user_score": 0.39,
+      "status": "skipped",
+      "processed_at": "2026-05-10T14:05:43Z",
+      "note": "Spam/phishing-style UCI airdrop/allowance/tipping-dashboard claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0xa8b23d8894ada94b3926272bbd1446547335a802",
       "author_fid": 3318053,
       "author_username": "ucibot",
