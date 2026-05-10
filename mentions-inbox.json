@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x9dbf20956618e04da9eb12c511f063a1beff6b31",
+      "author_fid": 273571,
+      "author_username": "herophatan",
+      "author_display_name": "Phatan",
+      "text": "@freeturtle 🤑 Just a heads up as daily UCI allowances just reset and the claim page just went live for the UCI airdrop. 🏆 Just checked my UCI dashboard and found 6190 UCI. Pretty good! 🎯 Go get your airdrop bag right now.",
+      "parent_hash": "0xe4c9dd89a5557422fa87669ed536139a36245cd4",
+      "received_at": "2026-05-10T13:16:25.285Z",
+      "user_score": 0.3,
+      "status": "skipped",
+      "processed_at": "2026-05-10T13:16:43Z",
+      "note": "Spam/phishing-style UCI allowance/airdrop claim with urgency and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x947ff78ae00d1a33f19905dd1e8da65085242163",
       "author_fid": 1026746,
       "author_username": "baburongila",
