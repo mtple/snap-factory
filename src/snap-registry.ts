@@ -10,6 +10,7 @@ import snap_beautifulThing from "./snaps/beautiful-thing/index.js";
 import snap_botOrNot from "./snaps/bot-or-not/index.js";
 import snap_bugSquasher from "./snaps/bug-squasher/index.js";
 import snap_castCourt from "./snaps/cast-court/index.js";
+import snap_castTimeCapsule from "./snaps/cast-time-capsule/index.js";
 import snap_catPet from "./snaps/cat-pet/index.js";
 import snap_checkers from "./snaps/checkers/index.js";
 import snap_cookedCheck from "./snaps/cooked-check/index.js";
@@ -105,6 +106,7 @@ export const snaps: Record<string, Hono> = {
   "bot-or-not": snap_botOrNot,
   "bug-squasher": snap_bugSquasher,
   "cast-court": snap_castCourt,
+  "cast-time-capsule": snap_castTimeCapsule,
   "cat-pet": snap_catPet,
   "checkers": snap_checkers,
   "cooked-check": snap_cookedCheck,
