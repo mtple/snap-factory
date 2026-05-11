@@ -127,10 +127,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 92 | ritual-receipt | Playful productivity receipt printer — enter a dodged task, set effort and printer mode, then get one tiny official next move with confidence meter. | /snaps/ritual-receipt | 0xd5943822a2f37528df60727d4e7526c2dab31dd7 | 2026-05-10 | utility, productivity, playful, daily-life, input, slider, toggle_group, progress, badge, submit, compose_cast, stateless, teal |
 | 93 | reply-roulette | Farcaster-native tiny game — choose a reply strategy for a chaotic thread and get a deterministic survival verdict with a thread-survival meter. | /snaps/reply-roulette | 0x9bf36b6cce0a217f0f6b7533af66f8485beaefb6 | 2026-05-10 | game, social, farcaster-native, toggle_group, progress, badge, submit, compose_cast, stateless, purple |
 
+| 94 | cast-time-capsule | Playful future-self utility — write a tiny note, choose when to reopen it, optionally add a dare, and get a sealed capsule receipt with a deterministic code. | /snaps/cast-time-capsule | 0x92dcd7bb58e531b5f8beb5f3c375c8dcf9406429 | 2026-05-11 | utility, daily-life, playful, input, toggle_group, switch, progress, badge, submit, compose_cast, stateless, teal |
+
 ## Stats
 
-- Total snaps built: 93
-- Live snaps: 88
+- Total snaps built: 94
+- Live snaps: 89
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
