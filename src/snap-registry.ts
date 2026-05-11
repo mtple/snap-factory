@@ -71,6 +71,7 @@ import snap_randomFcPic from "./snaps/random-fc-pic/index.js";
 import snap_replyRadar from "./snaps/reply-radar/index.js";
 import snap_replyRoulette from "./snaps/reply-roulette/index.js";
 import snap_ritualReceipt from "./snaps/ritual-receipt/index.js";
+import snap_roadmapOrRug from "./snaps/roadmap-or-rug/index.js";
 import snap_rugFloorIsLava from "./snaps/rug-floor-is-lava/index.js";
 import snap_setlistSpell from "./snaps/setlist-spell/index.js";
 import snap_shipCheck from "./snaps/ship-check/index.js";
@@ -167,6 +168,7 @@ export const snaps: Record<string, Hono> = {
   "reply-radar": snap_replyRadar,
   "reply-roulette": snap_replyRoulette,
   "ritual-receipt": snap_ritualReceipt,
+  "roadmap-or-rug": snap_roadmapOrRug,
   "rug-floor-is-lava": snap_rugFloorIsLava,
   "setlist-spell": snap_setlistSpell,
   "ship-check": snap_shipCheck,
