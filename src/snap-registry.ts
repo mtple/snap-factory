@@ -49,6 +49,7 @@ import snap_localBizSearch from "./snaps/local-biz-search/index.js";
 import snap_loudLinks from "./snaps/loud-links/index.js";
 import snap_magicMirror from "./snaps/magic-mirror/index.js";
 import snap_meetSnapWizard from "./snaps/meet-snap-wizard/index.js";
+import snap_meetingGoblin from "./snaps/meeting-goblin/index.js";
 import snap_monaLisa from "./snaps/mona-lisa/index.js";
 import snap_morningRitual from "./snaps/morning-ritual/index.js";
 import snap_movieEmoji from "./snaps/movie-emoji/index.js";
@@ -147,6 +148,7 @@ export const snaps: Record<string, Hono> = {
   "loud-links": snap_loudLinks,
   "magic-mirror": snap_magicMirror,
   "meet-snap-wizard": snap_meetSnapWizard,
+  "meeting-goblin": snap_meetingGoblin,
   "mona-lisa": snap_monaLisa,
   "morning-ritual": snap_morningRitual,
   "movie-emoji": snap_movieEmoji,
