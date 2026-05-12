@@ -1,6 +1,34 @@
 {
   "snaps": [
     {
+      "name": "pitch-haiku",
+      "cast_hash": "0xd703abd424b03b8f3d775220589ee3a9ecd01ccb",
+      "posted_at": "2026-05-12T14:07:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "creative",
+        "utility",
+        "pitch",
+        "input",
+        "toggle_group",
+        "slider",
+        "switch",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "roadmap-or-rug",
       "cast_hash": "0x3e3169f935cf3471145acc607b71f2fb29ff7036",
       "posted_at": "2026-05-11T22:04:00Z",

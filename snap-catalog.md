@@ -131,10 +131,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 95 | roadmap-or-rug | Daily Farcaster/startup culture quiz — pick the ruggiest product promise from four roadmap claims and get a risk-meter verdict. | /snaps/roadmap-or-rug | 0x3e3169f935cf3471145acc607b71f2fb29ff7036 | 2026-05-11 | game, quiz, farcaster-native, startup, toggle_group, progress, badge, submit, compose_cast, stateless, gray |
 
+| 96 | pitch-haiku | Creative pitch utility — enter a rough idea, choose tone/hype/jargon, and get a funny launch haiku with clarity meter. | /snaps/pitch-haiku | 0xd703abd424b03b8f3d775220589ee3a9ecd01ccb | 2026-05-12 | creative, utility, pitch, input, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, teal |
+
 ## Stats
 
-- Total snaps built: 95
-- Live snaps: 90
+- Total snaps built: 96
+- Live snaps: 91
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
