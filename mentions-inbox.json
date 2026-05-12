@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x8cdeba9a2eddc155760166ed4013d8894125c5ca",
+      "author_fid": 1049425,
+      "author_username": "castrend",
+      "author_display_name": "CasTrend 👾",
+      "text": "great! 37 $CASTER for @freeturtle. Caster Premium doubles promo rewards. Tip others: Farcaster 500/500, Caster 500/500 left. Claimable 80.",
+      "parent_hash": "0x637b518b7c680e35c6f7623540fcc984501831f5",
+      "received_at": "2026-05-12T13:15:49.834Z",
+      "user_score": 0.41,
+      "status": "skipped",
+      "processed_at": "2026-05-12T13:16:27Z",
+      "note": "Spam/phishing-style CASTER/tipping/promo-rewards claim with allowance/claimable numbers and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0xff20b627431928f936b00f4fb348bd9a21f52d40",
       "author_fid": 847876,
       "author_username": "ejaaskhan",
