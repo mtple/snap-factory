@@ -137,10 +137,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 98 | tiny-bravery | Daily social experiment — choose one tiny brave move for today and see the live Farcaster distribution. | /snaps/tiny-bravery | 0x3ca87553022305588b10ebe8637709f85c4d9741 | 2026-05-13 | social, poll, daily, productivity, playful, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, green |
 
+| 99 | gmfarcaster-guest-link | GMFarcaster shortcut utility — enter a Farcaster username and get a sanitized button to that user’s GMFarcaster guest page. Built for @dylsteck.eth. | /snaps/gmfarcaster-guest-link | 0xce4fdf5431f1a88a6ad7692ea8dca50696557515 | 2026-05-13 | utility, directory, farcaster-native, input, open_url, submit, compose_cast, stateless, teal, event-mode |
+
 ## Stats
 
-- Total snaps built: 98
-- Live snaps: 93
+- Total snaps built: 99
+- Live snaps: 94
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

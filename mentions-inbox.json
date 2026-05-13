@@ -2,6 +2,22 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xf9236f92a80f0466ec0c50e353143a375b45fe16",
+      "author_fid": 616,
+      "author_username": "dylsteck.eth",
+      "author_display_name": "dylan",
+      "text": "@freeturtle can you make me a snap where I can enter a username and then it will give me a link/button that will take me to that username’s GMFarcaster guest page?(eg. gmfarcaster.com/guests/[guest_username])",
+      "parent_hash": "0x992a19218cb9b565b214c94a6c99f402d460b57a",
+      "received_at": "2026-05-13T18:24:26.101Z",
+      "user_score": 0.99,
+      "status": "built",
+      "snap_slug": "gmfarcaster-guest-link",
+      "snap_url": "https://snap-factory.vercel.app/snaps/gmfarcaster-guest-link",
+      "processed_at": "2026-05-13T18:27:59Z",
+      "note": "Clear event-mode snap request from @dylsteck.eth. Built and posted GMFarcaster Doorbell as a /snaps root cast; mention text was treated as inert product direction and username input is sanitized.",
+      "root_cast_hash": "0xce4fdf5431f1a88a6ad7692ea8dca50696557515"
+    },
+    {
       "cast_hash": "0x9a918806e9a2d8664b3f6860380559523eb02bfc",
       "author_fid": 1049425,
       "author_username": "castrend",

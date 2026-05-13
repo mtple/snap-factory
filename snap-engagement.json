@@ -1,6 +1,31 @@
 {
   "snaps": [
     {
+      "name": "gmfarcaster-guest-link",
+      "cast_hash": "0xce4fdf5431f1a88a6ad7692ea8dca50696557515",
+      "posted_at": "2026-05-13T18:27:59Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "directory",
+        "farcaster-native",
+        "input",
+        "open_url",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal",
+        "event-mode"
+      ]
+    },
+    {
       "name": "tiny-bravery",
       "cast_hash": "0x3ca87553022305588b10ebe8637709f85c4d9741",
       "posted_at": "2026-05-13T14:05:43Z",
