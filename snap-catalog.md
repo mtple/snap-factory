@@ -135,10 +135,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 97 | meeting-goblin | Playful productivity utility — enter a meeting/topic, goal, heat, and async option to get a goblin agenda spell plus one tiny next action. | /snaps/meeting-goblin | 0xcdc7c8260e05a86a53a04b0972a8a98bf290ca8a | 2026-05-12 | utility, productivity, playful, input, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, blue |
 
+| 98 | tiny-bravery | Daily social experiment — choose one tiny brave move for today and see the live Farcaster distribution. | /snaps/tiny-bravery | 0x3ca87553022305588b10ebe8637709f85c4d9741 | 2026-05-13 | social, poll, daily, productivity, playful, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, green |
+
 ## Stats
 
-- Total snaps built: 97
-- Live snaps: 92
+- Total snaps built: 98
+- Live snaps: 93
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
