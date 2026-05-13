@@ -1,6 +1,31 @@
 {
   "snaps": [
     {
+      "name": "exit-lane",
+      "cast_hash": "0xeac811c080a13a550a3c894ccf12d0278accf9c5",
+      "posted_at": "2026-05-13T22:03:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "game",
+        "social",
+        "farcaster-native",
+        "cell_grid",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "green"
+      ]
+    },
+    {
       "name": "gmfarcaster-guest-link",
       "cast_hash": "0xce4fdf5431f1a88a6ad7692ea8dca50696557515",
       "posted_at": "2026-05-13T18:27:59Z",
