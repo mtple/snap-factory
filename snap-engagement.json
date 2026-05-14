@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "snap-vending-machine",
+      "cast_hash": "0x4582fb3747029377bdaabfe53831b630efb72841",
+      "posted_at": "2026-05-14T22:05:09Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "meta",
+        "farcaster-native",
+        "showcase",
+        "toggle_group",
+        "progress",
+        "badge",
+        "submit",
+        "open_snap",
+        "compose_cast",
+        "stateless",
+        "amber"
+      ]
+    },
+    {
       "name": "desk-feng-shui",
       "cast_hash": "0x722c208563878341342c5331952a82a8107b8a8f",
       "posted_at": "2026-05-14T14:03:00Z",
