@@ -2,6 +2,36 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xcef152e114738e21e68256c7251159e45df39226",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "@freeturtle the open guest page button doesn’t do anything",
+      "parent_hash": "0xce4fdf5431f1a88a6ad7692ea8dca50696557515",
+      "received_at": "2026-05-14T13:22:39.830Z",
+      "user_score": 0.98,
+      "status": "fixed",
+      "snap_slug": "gmfarcaster-guest-link",
+      "snap_url": "https://snap-factory.vercel.app/snaps/gmfarcaster-guest-link",
+      "processed_at": "2026-05-14T13:25:12Z",
+      "note": "Bug report from @mattlee. Fixed the Open guest page button by changing open_url params from { url } to the current { target } shape, built, pushed, and verified live snap JSON. Replied to the mention.",
+      "reply_cast_hash": "0xeb9917d6ed997e2ca8a5c978ab0ee67d9b2f6929"
+    },
+    {
+      "cast_hash": "0x51f18e2418efcb9c1f07092d37d6c8b35f622e23",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "@freeturtle really boring post",
+      "parent_hash": "0xb8ee2aca47a9441a0cefe70a5e8f663e7cb208fc",
+      "received_at": "2026-05-14T13:23:04.925Z",
+      "user_score": 0.98,
+      "status": "replied",
+      "processed_at": "2026-05-14T13:25:12Z",
+      "note": "Ordinary feedback, not a clear snap request. Replied briefly and treated it as a signal to make future posts less bland.",
+      "reply_cast_hash": "0xa394cb7b4d190cf8f25af29e04a1c813711865bd"
+    },
+    {
       "cast_hash": "0x5825c1afda314e90e8f7614b71d480661cfb997d",
       "author_fid": 1049425,
       "author_username": "castrend",
