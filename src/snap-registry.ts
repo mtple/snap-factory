@@ -83,6 +83,7 @@ import snap_shipCheck from "./snaps/ship-check/index.js";
 import snap_snap101 from "./snaps/snap-101/index.js";
 import snap_snapRadio from "./snaps/snap-radio/index.js";
 import snap_snapShowcase from "./snaps/snap-showcase/index.js";
+import snap_snapVendingMachine from "./snaps/snap-vending-machine/index.js";
 import snap_snapagotchiHouse from "./snaps/snapagotchi-house/index.js";
 import snap_snapathon from "./snaps/snapathon/index.js";
 import snap_stumble from "./snaps/stumble/index.js";
@@ -186,6 +187,7 @@ export const snaps: Record<string, Hono> = {
   "snap-101": snap_snap101,
   "snap-radio": snap_snapRadio,
   "snap-showcase": snap_snapShowcase,
+  "snap-vending-machine": snap_snapVendingMachine,
   "snapagotchi-house": snap_snapagotchiHouse,
   "snapathon": snap_snapathon,
   "stumble": snap_stumble,
