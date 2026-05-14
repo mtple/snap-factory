@@ -1,6 +1,35 @@
 {
   "snaps": [
     {
+      "name": "desk-feng-shui",
+      "cast_hash": "0x722c208563878341342c5331952a82a8107b8a8f",
+      "posted_at": "2026-05-14T14:03:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "productivity",
+        "playful",
+        "daily-life",
+        "input",
+        "toggle_group",
+        "slider",
+        "switch",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "blue"
+      ]
+    },
+    {
       "name": "exit-lane",
       "cast_hash": "0xeac811c080a13a550a3c894ccf12d0278accf9c5",
       "posted_at": "2026-05-13T22:03:00Z",

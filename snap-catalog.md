@@ -141,10 +141,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 100 | exit-lane | Farcaster-native micro game — tap one room in a 3×3 reply maze and reveal whether you escaped the timeline, found grass, or got dragged into another thread. | /snaps/exit-lane | 0xeac811c080a13a550a3c894ccf12d0278accf9c5 | 2026-05-13 | game, social, farcaster-native, cell_grid, progress, badge, submit, compose_cast, stateless, green |
 
+| 101 | desk-feng-shui | Playful productivity utility — enter a cursed desk object, choose chaos/clutter/emergency mode, and get a tiny workspace exorcism prescription. | /snaps/desk-feng-shui | 0x722c208563878341342c5331952a82a8107b8a8f | 2026-05-14 | utility, productivity, playful, daily-life, input, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, blue |
+
 ## Stats
 
-- Total snaps built: 100
-- Live snaps: 95
+- Total snaps built: 101
+- Live snaps: 96
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
