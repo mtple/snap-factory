@@ -2,6 +2,22 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x99ed8478483e2bbf485fd98255af9148cfa069f1",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "Cool new snap requested from @freeturtle by @dylsteck.eth \n\nEnter username and get a link to their @gmfarcaster guest profile",
+      "parent_hash": null,
+      "received_at": "2026-05-14T15:25:50.689Z",
+      "user_score": 0.98,
+      "status": "replied_existing_snap",
+      "snap_slug": "gmfarcaster-guest-link",
+      "snap_url": "https://snap-factory.vercel.app/snaps/gmfarcaster-guest-link",
+      "processed_at": "2026-05-14T15:26:49Z",
+      "note": "Clear event-mode request relayed by @mattlee, but this snap already existed from @dylsteck.eth’s original request. Verified live snap JSON and replied with the existing snap URL instead of duplicating the build/root cast.",
+      "reply_cast_hash": "0x0573571d0adf5af65bb59a6037da3b34a4489530"
+    },
+    {
       "cast_hash": "0xcef152e114738e21e68256c7251159e45df39226",
       "author_fid": 6591,
       "author_username": "mattlee",
