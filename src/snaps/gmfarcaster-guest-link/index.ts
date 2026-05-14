@@ -97,7 +97,7 @@ function renderResult(self: string, username: string): SnapHandlerResult {
     open_btn: {
       type: "button",
       props: { label: "Open guest page", variant: "primary" },
-      on: { press: { action: "open_url", params: { url } } },
+      on: { press: { action: "open_url", params: { target: url } } },
     },
     again_btn: {
       type: "button",
