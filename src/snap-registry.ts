@@ -20,6 +20,7 @@ import snap_dailyCast from "./snaps/daily-cast/index.js";
 import snap_dailyPulse from "./snaps/daily-pulse/index.js";
 import snap_decisionDice from "./snaps/decision-dice/index.js";
 import snap_degenQuest from "./snaps/degen-quest/index.js";
+import snap_deskFengShui from "./snaps/desk-feng-shui/index.js";
 import snap_doNotPress from "./snaps/do-not-press/index.js";
 import snap_dontClick from "./snaps/dont-click/index.js";
 import snap_drumMachine from "./snaps/drum-machine/index.js";
@@ -122,6 +123,7 @@ export const snaps: Record<string, Hono> = {
   "daily-pulse": snap_dailyPulse,
   "decision-dice": snap_decisionDice,
   "degen-quest": snap_degenQuest,
+  "desk-feng-shui": snap_deskFengShui,
   "do-not-press": snap_doNotPress,
   "dont-click": snap_dontClick,
   "drum-machine": snap_drumMachine,
