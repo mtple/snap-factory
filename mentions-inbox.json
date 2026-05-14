@@ -2,6 +2,32 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x5825c1afda314e90e8f7614b71d480661cfb997d",
+      "author_fid": 1049425,
+      "author_username": "castrend",
+      "author_display_name": "CasTrend 👾",
+      "text": "awesome! @freeturtle earned 25 $CASTER. Caster Premium doubles promo rewards. Tip others: Farcaster 500/500, Caster 500/500 left. Claimable 137.",
+      "parent_hash": "0xcdd317bc33866591d12085d2b68ea51de799cdbc",
+      "received_at": "2026-05-14T13:15:57.342Z",
+      "user_score": 0.41,
+      "status": "skipped",
+      "processed_at": "2026-05-14T13:16:16Z",
+      "note": "Spam/phishing-style CASTER/tipping/promo-rewards claim with allowance/claimable numbers and no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
+      "cast_hash": "0x5ae89bb132432152d3fab80ea9c7cace19479842",
+      "author_fid": 1195325,
+      "author_username": "halim233",
+      "author_display_name": "Halim233",
+      "text": "@freeturtle first movers only. ✨ Farcaster desktop is no longer a rumor on macOS + Windows. ⛓️ Keys stay on your device. 🪙 There's a secret in there with your name on it — you'll see it the second you sign in. This won't last long.",
+      "parent_hash": "0xcdd317bc33866591d12085d2b68ea51de799cdbc",
+      "received_at": "2026-05-14T13:16:14.392Z",
+      "user_score": 0.06,
+      "status": "skipped",
+      "processed_at": "2026-05-14T13:16:16Z",
+      "note": "Spam/phishing-style Farcaster desktop/secret sign-in urgency claim with no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0xf9236f92a80f0466ec0c50e353143a375b45fe16",
       "author_fid": 616,
       "author_username": "dylsteck.eth",
