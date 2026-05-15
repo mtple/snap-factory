@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-05-14T07:01:04.025Z_
+_Last updated: 2026-05-15T07:00:34.442Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -10,14 +10,14 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 |---:|------|------:|------:|--------:|--------:|------|
 | 1 | bot-or-not | 77 | 15 | 0 | 16 | game, quiz, farcaster-native, toggle_group, badge, separator, submit, compose_cast, stateless, gray |
 | 2 | timeline-bingo | 65 | 20 | 1 | 0 | game, social, daily, farcaster-native, cell_grid, badge, submit, compose_cast, stateless, teal |
-| 3 | movie-emoji | 59 | 18 | 1 | 0 | game, quiz, movies, emoji, toggle_group, badge, submit, compose_cast, stateless, amber |
-| 4 | kredita-runeborn-lore | 38 | 12 | 0 | 1 | lore, fantasy, event-mode, toggle_group, badge, submit, compose_cast, stateless, purple |
-| 5 | decision-dice | 36 | 12 | 0 | 0 | utility, productivity, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, blue |
-| 6 | palette-potion | 32 | 9 | 1 | 0 | creative, utility, palette, toggle_group, slider, switch, cell_grid, badge, submit, compose_cast, stateless, purple |
-| 7 | grudge-compost | 32 | 10 | 0 | 1 | utility, daily-life, playful, input, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, green |
-| 8 | tab-tamer | 27 | 9 | 0 | 0 | utility, productivity, input, slider, switch, progress, bar_chart, badge, submit, compose_cast, stateless, blue |
-| 9 | suchbot-roast | 26 | 6 | 0 | 4 | social, roast, farcaster-native, bot, text, view_profile, compose_cast, stateless, purple |
-| 10 | reply-radar | 24 | 8 | 0 | 0 | utility, farcaster-native, input, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, teal |
+| 3 | kredita-runeborn-lore | 38 | 12 | 0 | 1 | lore, fantasy, event-mode, toggle_group, badge, submit, compose_cast, stateless, purple |
+| 4 | decision-dice | 36 | 12 | 0 | 0 | utility, productivity, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, blue |
+| 5 | palette-potion | 32 | 9 | 1 | 0 | creative, utility, palette, toggle_group, slider, switch, cell_grid, badge, submit, compose_cast, stateless, purple |
+| 6 | grudge-compost | 32 | 10 | 0 | 1 | utility, daily-life, playful, input, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, green |
+| 7 | tab-tamer | 27 | 9 | 0 | 0 | utility, productivity, input, slider, switch, progress, bar_chart, badge, submit, compose_cast, stateless, blue |
+| 8 | suchbot-roast | 26 | 6 | 0 | 4 | social, roast, farcaster-native, bot, text, view_profile, compose_cast, stateless, purple |
+| 9 | reply-radar | 24 | 8 | 0 | 0 | utility, farcaster-native, input, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, teal |
+| 10 | grass-protocol | 23 | 7 | 0 | 1 | utility, daily-life, farcaster-native, playful, slider, toggle_group, switch, progress, bar_chart, badge, submit, compose_cast, stateless, green |
 
 ## Patterns observed
 
@@ -36,13 +36,13 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | item_group | 47.1 | 12 |
 | icon | 43.0 | 5 |
 | pink | 41.3 | 9 |
-| open_url | 39.2 | 15 |
+| open_url | 39.5 | 15 |
 | quiz | 36.4 | 5 |
 | personalized | 34.4 | 5 |
-| meta | 34.0 | 2 |
 | fid | 29.5 | 6 |
 | lore | 28.5 | 2 |
-| slider | 27.1 | 22 |
+| prompt | 27.0 | 2 |
+| slider | 26.2 | 23 |
 
 ## What to try next
 
