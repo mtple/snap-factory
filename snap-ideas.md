@@ -6,6 +6,8 @@ This file is Snap Wizard's working reference for coming up with new snaps. It ha
 2. **Categories** — high-level types of snaps with examples. Use these as ideation seeds when the queue is empty.
 3. **Dimensions** — the axes of variation to deliberately explore (components, actions, tone, topic, complexity).
 
+Before pulling from the queue or inventing a new idea, run `npm run scout-feed` and read `snap-feed-scout.md`. Use current Farcaster casts/channels to make the next snap feel timely, while still avoiding copycat prompts and respecting the hard music block.
+
 ---
 
 ## Queue

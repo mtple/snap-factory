@@ -26,17 +26,18 @@ Build two complete Farcaster Snaps per day. Each snap should be working, deploye
 ## Daily Cycle
 
 1. Read `snap-insights.md`, `snap-ideas.md`, and `snap-catalog.md`.
-2. Treat `snap-insights.md` as the current engagement-calibration signal. Prefer patterns with recent nonzero score, but keep enough variety that the feed does not feel repetitive.
-3. If Matt has a queued idea, build that next. Otherwise pick a varied idea with a clear single interaction.
-4. Before implementation, fetch/read current snap docs: `https://docs.farcaster.xyz/snap/SKILL.md` and `https://docs.farcaster.xyz/snap/llms.txt`. The spec changes quickly; do not rely on stale examples.
-5. Read `SNAP_TEMPLATE.md` before building.
-6. Create or update a self-contained snap under `src/snaps/[name]/index.ts`.
-7. Run `npm run build`.
-8. Commit and push with `snapwizard_git_commit_and_push`.
-9. Wait for Vercel, then verify:
+2. Run `npm run scout-feed` to refresh `snap-feed-scout.md`, then read it before choosing an idea. Treat the live Farcaster feed as a topical relevance signal, not a prompt to copy cast text or chase every trend.
+3. Treat `snap-insights.md` as the current engagement-calibration signal. Prefer patterns with recent nonzero score, but keep enough variety that the feed does not feel repetitive.
+4. If Matt has a queued idea, build that next. Otherwise pick a varied idea with a clear single interaction that connects to a current feed pattern when possible.
+5. Before implementation, fetch/read current snap docs: `https://docs.farcaster.xyz/snap/SKILL.md` and `https://docs.farcaster.xyz/snap/llms.txt`. The spec changes quickly; do not rely on stale examples.
+6. Read `SNAP_TEMPLATE.md` before building.
+7. Create or update a self-contained snap under `src/snaps/[name]/index.ts`.
+8. Run `npm run build`.
+9. Commit and push with `snapwizard_git_commit_and_push`.
+10. Wait for Vercel, then verify:
    `curl -sS -H 'Accept: application/vnd.farcaster.snap+json' "$SNAP_PUBLIC_BASE_URL/snaps/[name]"`
-10. Only after valid JSON, post with `snapwizard_post_farcaster_cast`; put the URL in `embeds`, not text.
-11. Update `snap-catalog.md` and `snap-engagement.json`, then commit and push the log update.
+11. Only after valid JSON, post with `snapwizard_post_farcaster_cast`; put the URL in `embeds`, not text.
+12. Update `snap-catalog.md` and `snap-engagement.json`, then commit and push the log update.
 
 ## Snap Constraints
 
