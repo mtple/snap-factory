@@ -1,6 +1,34 @@
 {
   "snaps": [
     {
+      "name": "icebreaker-anvil",
+      "cast_hash": "0x708fdec564a3dfd51dc464ce505b3d437650b6e5",
+      "posted_at": "2026-05-15T14:03:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "social",
+        "farcaster-native",
+        "input",
+        "toggle_group",
+        "slider",
+        "switch",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "snap-vending-machine",
       "cast_hash": "0x4582fb3747029377bdaabfe53831b630efb72841",
       "posted_at": "2026-05-14T22:05:09Z",
