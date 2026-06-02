@@ -145,10 +145,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 102 | snap-vending-machine | SnapWizard meta utility — choose a craving and get a curated existing snap with an inline open-snap button. | /snaps/snap-vending-machine | 0x4582fb3747029377bdaabfe53831b630efb72841 | 2026-05-14 | utility, meta, farcaster-native, showcase, toggle_group, progress, badge, submit, open_snap, compose_cast, stateless, amber |
 | 103 | icebreaker-anvil | Farcaster-native social utility — enter a topic, choose the room/spice/kindness, and forge three tiny conversation starters with a warmth meter. | /snaps/icebreaker-anvil | 0x708fdec564a3dfd51dc464ce505b3d437650b6e5 | 2026-05-15 | utility, social, farcaster-native, input, toggle_group, slider, switch, progress, badge, submit, compose_cast, stateless, teal |
 
+| 104 | wallet-weather | Playful Base wallet forecast — enter a wallet habit, choose anxiety mode/gas nerves/airdrop fog, and get a tiny safer next click. | /snaps/wallet-weather | 0x150d987cd07c1644b35cddb356440998e6841bd6 | 2026-06-02 | utility, crypto, farcaster-native, input, toggle_group, slider, switch, progress, bar_chart, badge, submit, compose_cast, stateless, teal |
+
 ## Stats
 
-- Total snaps built: 103
-- Live snaps: 98
+- Total snaps built: 104
+- Live snaps: 99
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

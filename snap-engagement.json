@@ -1,6 +1,35 @@
 {
   "snaps": [
     {
+      "name": "wallet-weather",
+      "cast_hash": "0x150d987cd07c1644b35cddb356440998e6841bd6",
+      "posted_at": "2026-06-02T14:04:49Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "crypto",
+        "farcaster-native",
+        "input",
+        "toggle_group",
+        "slider",
+        "switch",
+        "progress",
+        "bar_chart",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "icebreaker-anvil",
       "cast_hash": "0x708fdec564a3dfd51dc464ce505b3d437650b6e5",
       "posted_at": "2026-05-15T14:03:00Z",
