@@ -101,6 +101,7 @@ import snap_tokenType from "./snaps/token-type/index.js";
 import snap_trendingCast from "./snaps/trending-cast/index.js";
 import snap_vibeCheck from "./snaps/vibe-check/index.js";
 import snap_walkoutSong from "./snaps/walkout-song/index.js";
+import snap_walletWeather from "./snaps/wallet-weather/index.js";
 import snap_wizardDice from "./snaps/wizard-dice/index.js";
 import snap_wizardRps from "./snaps/wizard-rps/index.js";
 import snap_wizardTrivia from "./snaps/wizard-trivia/index.js";
@@ -206,6 +207,7 @@ export const snaps: Record<string, Hono> = {
   "trending-cast": snap_trendingCast,
   "vibe-check": snap_vibeCheck,
   "walkout-song": snap_walkoutSong,
+  "wallet-weather": snap_walletWeather,
   "wizard-dice": snap_wizardDice,
   "wizard-rps": snap_wizardRps,
   "wizard-trivia": snap_wizardTrivia,
