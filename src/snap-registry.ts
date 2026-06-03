@@ -74,6 +74,7 @@ import snap_profileFinder from "./snaps/profile-finder/index.js";
 import snap_profileWeather from "./snaps/profile-weather/index.js";
 import snap_raffle from "./snaps/raffle/index.js";
 import snap_randomFcPic from "./snaps/random-fc-pic/index.js";
+import snap_releaseBingo from "./snaps/release-bingo/index.js";
 import snap_replyRadar from "./snaps/reply-radar/index.js";
 import snap_replyRoulette from "./snaps/reply-roulette/index.js";
 import snap_ritualReceipt from "./snaps/ritual-receipt/index.js";
@@ -180,6 +181,7 @@ export const snaps: Record<string, Hono> = {
   "profile-weather": snap_profileWeather,
   "raffle": snap_raffle,
   "random-fc-pic": snap_randomFcPic,
+  "release-bingo": snap_releaseBingo,
   "reply-radar": snap_replyRadar,
   "reply-roulette": snap_replyRoulette,
   "ritual-receipt": snap_ritualReceipt,
