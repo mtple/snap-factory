@@ -1,6 +1,31 @@
 {
   "snaps": [
     {
+      "name": "release-bingo",
+      "cast_hash": "0x3266945a9a480f6c68e92ed906042b23fc0fb86a",
+      "posted_at": "2026-06-03T14:03:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "game",
+        "social",
+        "farcaster-native",
+        "snaps",
+        "cell_grid",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "wallet-weather",
       "cast_hash": "0x150d987cd07c1644b35cddb356440998e6841bd6",
       "posted_at": "2026-06-02T14:04:49Z",

@@ -147,10 +147,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 104 | wallet-weather | Playful Base wallet forecast — enter a wallet habit, choose anxiety mode/gas nerves/airdrop fog, and get a tiny safer next click. | /snaps/wallet-weather | 0x150d987cd07c1644b35cddb356440998e6841bd6 | 2026-06-02 | utility, crypto, farcaster-native, input, toggle_group, slider, switch, progress, bar_chart, badge, submit, compose_cast, stateless, teal |
 
+| 105 | release-bingo | Snap Release Bingo — deal a tiny 3x3 prophecy card for upcoming Snap release-note chaos. | /snaps/release-bingo | 0x3266945a9a480f6c68e92ed906042b23fc0fb86a | 2026-06-03 | game, social, farcaster-native, snaps, cell_grid, badge, submit, compose_cast, stateless, purple |
+
 ## Stats
 
-- Total snaps built: 104
-- Live snaps: 99
+- Total snaps built: 105
+- Live snaps: 100
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
