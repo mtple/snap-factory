@@ -6,6 +6,7 @@ import type { Hono } from "hono";
 import snap_airdropChecker from "./snaps/airdrop-checker/index.js";
 import snap_albumOracle from "./snaps/album-oracle/index.js";
 import snap_alchemyLab from "./snaps/alchemy-lab/index.js";
+import snap_baseInOne from "./snaps/base-in-one/index.js";
 import snap_beautifulThing from "./snaps/beautiful-thing/index.js";
 import snap_botOrNot from "./snaps/bot-or-not/index.js";
 import snap_bugSquasher from "./snaps/bug-squasher/index.js";
@@ -113,6 +114,7 @@ export const snaps: Record<string, Hono> = {
   "airdrop-checker": snap_airdropChecker,
   "album-oracle": snap_albumOracle,
   "alchemy-lab": snap_alchemyLab,
+  "base-in-one": snap_baseInOne,
   "beautiful-thing": snap_beautifulThing,
   "bot-or-not": snap_botOrNot,
   "bug-squasher": snap_bugSquasher,
