@@ -8,6 +8,8 @@
     "generate": "tsx scripts/generate-registry.ts",
     "refresh-engagement": "node scripts/refresh-engagement.mjs",
     "scout-feed": "node scripts/scout-feed.mjs",
+    "snap:verify": "node scripts/verify-snap-local.mjs",
+    "snap:preflight": "npm run build && npm run snap:verify --",
     "prebuild": "npm run generate",
     "build": "tsc",
     "typecheck": "tsc --noEmit",

@@ -138,8 +138,23 @@ Every screen should include a `compose_cast` share button with the snap URL in `
 
 Before public posting:
 
-1. `npm run build` succeeds.
-2. Local GET works against `dist/index.js` where practical.
-3. Primary submit paths are exercised with a JFS-shaped payload.
-4. Live URL returns `application/vnd.farcaster.snap+json` with valid JSON.
-5. HTML fallback/OG image and posted cast/card are checked after posting when possible.
+1. Run the repo preflight after every new or materially edited snap:
+
+```bash
+npm run snap:preflight -- [slug]
+```
+
+This runs `npm run build`, imports `dist/index.js`, verifies the local GET Snap JSON, checks common AUI limits, requires a `compose_cast` share button, and checks HTML/OG fallback routes.
+
+2. Exercise at least one primary submit path locally when the snap has server actions:
+
+```bash
+npm run snap:verify -- [slug] --post-target '?action=example' --inputs '{"choice":"example"}'
+```
+
+Use the real query string from the button target and realistic inputs. The verifier sends the JFS-shaped `SKIP_JFS_VERIFICATION=1` payload with `user`, `surface`, `audience`, `timestamp`, and `inputs`.
+
+3. Live URL returns `application/vnd.farcaster.snap+json` with valid JSON.
+4. HTML fallback/OG image and posted cast/card are checked after posting when possible.
+
+If `snap:preflight` fails, fix the local failure before commit/push. Do not rely on `npm run build` alone; TypeScript can pass while the Snap page is invalid or missing share/card basics.
