@@ -149,10 +149,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 105 | release-bingo | Snap Release Bingo — deal a tiny 3x3 prophecy card for upcoming Snap release-note chaos. | /snaps/release-bingo | 0x3266945a9a480f6c68e92ed906042b23fc0fb86a | 2026-06-03 | game, social, farcaster-native, snaps, cell_grid, badge, submit, compose_cast, stateless, purple |
 
+| 106 | base-in-one | Daily /base sentence poll — pick one short description of what Base feels like today, then see the live crowd split. | /snaps/base-in-one | 0x26f4d8116163b511d6d8594bf79598a5079f7b89 | 2026-06-04 | social, poll, base, farcaster-native, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, blue |
+
 ## Stats
 
-- Total snaps built: 105
-- Live snaps: 100
+- Total snaps built: 106
+- Live snaps: 101
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

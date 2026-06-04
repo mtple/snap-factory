@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "base-in-one",
+      "cast_hash": "0x26f4d8116163b511d6d8594bf79598a5079f7b89",
+      "posted_at": "2026-06-04T14:03:21Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "social",
+        "poll",
+        "base",
+        "farcaster-native",
+        "toggle_group",
+        "bar_chart",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateful",
+        "turso",
+        "blue"
+      ]
+    },
+    {
       "name": "release-bingo",
       "cast_hash": "0x3266945a9a480f6c68e92ed906042b23fc0fb86a",
       "posted_at": "2026-06-03T14:03:00Z",
