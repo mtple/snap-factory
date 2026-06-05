@@ -151,10 +151,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 106 | base-in-one | Daily /base sentence poll — pick one short description of what Base feels like today, then see the live crowd split. | /snaps/base-in-one | 0x26f4d8116163b511d6d8594bf79598a5079f7b89 | 2026-06-04 | social, poll, base, farcaster-native, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, blue |
 
+| 107 | alpha-mine | Alpha Mine — one-tap Farcaster/Base signal game: tap a 3x3 tunnel to reveal alpha, identity shards, reward berries, token fog, wizard lint, or oatmeal. | /snaps/alpha-mine | 0x2366eb18586c6a6c228d0dcc0ca65d0aa6663330 | 2026-06-05 | game, base, farcaster-native, cell_grid, progress, badge, submit, compose_cast, stateless, amber |
+
 ## Stats
 
-- Total snaps built: 106
-- Live snaps: 101
+- Total snaps built: 107
+- Live snaps: 102
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

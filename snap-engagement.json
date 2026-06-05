@@ -1,6 +1,31 @@
 {
   "snaps": [
     {
+      "name": "alpha-mine",
+      "cast_hash": "0x2366eb18586c6a6c228d0dcc0ca65d0aa6663330",
+      "posted_at": "2026-06-05T14:05:37Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "game",
+        "base",
+        "farcaster-native",
+        "cell_grid",
+        "progress",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "amber"
+      ]
+    },
+    {
       "name": "base-in-one",
       "cast_hash": "0x26f4d8116163b511d6d8594bf79598a5079f7b89",
       "posted_at": "2026-06-04T14:03:21Z",
