@@ -1,20 +1,22 @@
 # Snap Ideas — The Wizard's Grimoire
 
-This file is Snap Wizard's working reference for coming up with new snaps. It has three sections:
+This file is Snap Wizard's working reference for approved and candidate snap ideas. It has three sections:
 
-1. **Queue** — specific ideas ready to build next. Matt adds to the top. The wizard pulls from here first.
-2. **Categories** — high-level types of snaps with examples. Use these as ideation seeds when the queue is empty.
+1. **Queue** — Matt-approved ideas ready to build next. New approvals go at the top. Snap Wizard pulls from here first and must not build unapproved ideas.
+2. **Categories** — high-level types of snaps with examples. Use these as ideation seeds only when proposing candidate ideas for Matt to approve.
 3. **Dimensions** — the axes of variation to deliberately explore (components, actions, tone, topic, complexity).
 
-Before pulling from the queue or inventing a new idea, run `npm run scout-feed` and read `snap-feed-scout.md`. Use current Farcaster casts/channels to make the next snap feel timely, while still avoiding copycat prompts and respecting the hard music block.
+Before pulling from the queue or proposing new candidate ideas, run `npm run scout-feed` and read `snap-feed-scout.md`. Use current Farcaster casts/channels to make the next snap feel timely, while still avoiding copycat prompts and respecting the hard music block.
+
+Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a numbered list of 20 concise, varied candidate ideas for approval. Do not add those candidates to this file until Matt explicitly approves them.
 
 ---
 
 ## Queue
 
-_Ideas to build next. Matt adds to the top. Snap Wizard pulls from here before generating new ideas._
+_Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here before doing any autonomous build. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
 
-- **Mirror snap** (from Matt) — "most beautiful thing God ever created" gag snap. One button, cryptic label (no camera hint). Opens a custom HTML page via `open_url` that immediately fires `getUserMedia({ video: { facingMode: 'user' } })`. Page: dramatic black screen → camera permission prompt hits fast → front-facing feed fills the screen edge to edge, no UI chrome. The joke is the reveal. URL should be opaque (no "/camera" or "/selfie"). **Queued for 10am build tomorrow (Apr 13).**
+_Current active approved queue: empty._
 
 
 ### Blocked — waiting on dependencies

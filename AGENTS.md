@@ -26,18 +26,21 @@ Build two complete Farcaster Snaps per day. Each snap should be working, deploye
 ## Daily Cycle
 
 1. Read `snap-insights.md`, `snap-ideas.md`, and `snap-catalog.md`.
-2. Run `npm run scout-feed` to refresh `snap-feed-scout.md`, then read it before choosing an idea. Treat the live Farcaster feed as a topical relevance signal, not a prompt to copy cast text or chase every trend.
+2. Run `npm run scout-feed` to refresh `snap-feed-scout.md`, then read it before queue management or building. Treat the live Farcaster feed as a topical relevance signal, not a prompt to copy cast text or chase every trend.
 3. Treat `snap-insights.md` as the current engagement-calibration signal. Prefer patterns with recent nonzero score, but keep enough variety that the feed does not feel repetitive.
-4. If Matt has a queued idea, build that next. Otherwise pick a varied idea with a clear single interaction that connects to a current feed pattern when possible.
-5. Before implementation, fetch/read current snap docs: `https://docs.farcaster.xyz/snap/SKILL.md` and `https://docs.farcaster.xyz/snap/llms.txt`. The spec changes quickly; do not rely on stale examples.
-6. Read `SNAP_TEMPLATE.md` before building.
-7. Create or update a self-contained snap under `src/snaps/[name]/index.ts`.
-8. Run `npm run build`.
-9. Commit and push with `snapwizard_git_commit_and_push`.
-10. Wait for Vercel, then verify:
+4. Snap ideas require Matt approval before build. Only build from the active approved `## Queue` in `snap-ideas.md`; do not invent and build an unapproved idea autonomously.
+5. If the active approved queue has 5 or fewer buildable ideas, send Matt a numbered list of 20 fresh candidate ideas for approval. Keep them concise, varied, non-duplicative with `snap-catalog.md`, and compliant with the hard topic block. Do not add candidates to the queue until Matt explicitly approves them.
+6. If there is no buildable approved queued idea, stop after sending the 20-idea approval list; do not build a snap.
+7. If there is at least one buildable approved queued idea, build the top one next, then remove or mark it completed in `snap-ideas.md` as part of the log update.
+8. Before implementation, fetch/read current snap docs: `https://docs.farcaster.xyz/snap/SKILL.md` and `https://docs.farcaster.xyz/snap/llms.txt`. The spec changes quickly; do not rely on stale examples.
+9. Read `SNAP_TEMPLATE.md` before building.
+10. Create or update a self-contained snap under `src/snaps/[name]/index.ts`.
+11. Run `npm run build`.
+12. Commit and push with `snapwizard_git_commit_and_push`.
+13. Wait for Vercel, then verify:
    `curl -sS -H 'Accept: application/vnd.farcaster.snap+json' "$SNAP_PUBLIC_BASE_URL/snaps/[name]"`
-11. Only after valid JSON, post with `snapwizard_post_farcaster_cast`; put the URL in `embeds`, not text.
-12. Update `snap-catalog.md` and `snap-engagement.json`, then commit and push the log update.
+14. Only after valid JSON, post with `snapwizard_post_farcaster_cast`; put the URL in `embeds`, not text.
+15. Update `snap-catalog.md`, `snap-engagement.json`, and the approved queue in `snap-ideas.md`, then commit and push the log update.
 
 ## Snap Constraints
 
