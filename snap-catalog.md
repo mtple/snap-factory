@@ -153,10 +153,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 107 | alpha-mine | Alpha Mine — one-tap Farcaster/Base signal game: tap a 3x3 tunnel to reveal alpha, identity shards, reward berries, token fog, wizard lint, or oatmeal. | /snaps/alpha-mine | 0x2366eb18586c6a6c228d0dcc0ca65d0aa6663330 | 2026-06-05 | game, base, farcaster-native, cell_grid, progress, badge, submit, compose_cast, stateless, amber |
 
+| 108 | impact-swap | Playful Base transaction utility — choose swap/bridge/mint/send, set impact anxiety, and get a tiny no-impact checklist with confidence bars. | /snaps/impact-swap | 0xae52699c547b950dd35d360b167f301d9eab35d2 | 2026-06-06 | utility, base, farcaster-native, toggle_group, slider, switch, progress, bar_chart, badge, submit, compose_cast, stateless, blue |
+
 ## Stats
 
-- Total snaps built: 107
-- Live snaps: 102
+- Total snaps built: 108
+- Live snaps: 103
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
