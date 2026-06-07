@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "tiny-launch-checklist",
+      "cast_hash": "0xde3af0116bb830985ba9b09f4a698e634fe73230",
+      "posted_at": "2026-06-07T14:02:56Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "productivity",
+        "launch",
+        "input",
+        "toggle_group",
+        "progress",
+        "item_group",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "blue"
+      ]
+    },
+    {
       "name": "impact-swap",
       "cast_hash": "0xae52699c547b950dd35d360b167f301d9eab35d2",
       "posted_at": "2026-06-06T14:06:05Z",
