@@ -157,10 +157,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 109 | tiny-launch-checklist | Tiny launch preflight utility — enter a launch idea and type, get a five-step checklist plus confidence meter before shipping. | /snaps/tiny-launch-checklist | 0xde3af0116bb830985ba9b09f4a698e634fe73230 | 2026-06-07 | utility, productivity, launch, input, toggle_group, progress, item_group, badge, submit, compose_cast, stateless, blue |
 
+| 110 | builder-excuse | Builder Excuse Generator — pick what is blocked, get a funny but plausible shipping excuse plus one tiny unblock move. | /snaps/builder-excuse | 0x737de1ad3f1a24a213e8575e314519c9e8784d0d | 2026-06-08 | utility, productivity, builder, farcaster-native, input, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, amber |
+
 ## Stats
 
-- Total snaps built: 109
-- Live snaps: 104
+- Total snaps built: 110
+- Live snaps: 105
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

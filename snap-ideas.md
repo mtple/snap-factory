@@ -16,7 +16,6 @@ Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a n
 
 _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here before doing any autonomous build. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
 
-- **Builder Excuse Generator** (approved from candidate #9) — Pick what’s blocked; receive a funny but plausible shipping excuse.
 - **Cast Hook Court** (approved from candidate #14) — Submit a cast hook; the wizard rules: banger, try again, or legally threadable.
 - **App Idea Speedrun** (approved from candidate #15) — Pick audience + mechanic + vibe; get a tiny app concept in one screen.
 - **Farcaster Creature Type** (approved from candidate #17) — Pick social habits; reveal your timeline creature and habitat.
