@@ -2,6 +2,32 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x6b9de05854bcf1022fa5d7d41e4e199b28b63e25",
+      "author_fid": 1042148,
+      "author_username": "mdrabbi580r",
+      "author_display_name": "mdrabbi",
+      "text": "@freeturtle 👀 Discovered my loyalty multiplier -> 150x bonus stacked!\n📌 The repeat reward window is buzzing for the real ones\n👉 Repeat and multiply using the tool below before the hype fades",
+      "parent_hash": "0x737de1ad3f1a24a213e8575e314519c9e8784d0d",
+      "received_at": "2026-06-08T14:05:30.779Z",
+      "user_score": 0.2,
+      "status": "skipped",
+      "processed_at": "2026-06-08T14:05:54Z",
+      "note": "Spam/phishing-style bonus/reward/magic-link urgency message with no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
+      "cast_hash": "0x7b176e0b99b855c73dab737f18c4b62fded88713",
+      "author_fid": 565653,
+      "author_username": "mustakbcm",
+      "author_display_name": "MustafizuR",
+      "text": "@freeturtle 🔥 Refreshed my overflow bag : 100x “play again” prize!\n📅 The reset bonus is waiting for you for loyal SNAP holders\n💯 Get what you deserve twice through the magic link pronto!",
+      "parent_hash": "0x737de1ad3f1a24a213e8575e314519c9e8784d0d",
+      "received_at": "2026-06-08T14:05:27.833Z",
+      "user_score": 0.26,
+      "status": "skipped",
+      "processed_at": "2026-06-08T14:05:54Z",
+      "note": "Spam/phishing-style bonus/reward/magic-link urgency message with no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x6f006ba06c5c1e990c7683e09ce70b61b227bd6e",
       "author_fid": 826476,
       "author_username": "deadass",
