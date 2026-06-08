@@ -1,18 +1,20 @@
 # Snap Insights
 
-_Last updated: 2026-06-07T07:00:56.024Z_
+_Last updated: 2026-06-08T07:00:56.932Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
 ## Top performers (last 14 days)
 
-_(none yet — no scored snaps in the last 14 days)_
+| # | Snap | Score | Likes | Recasts | Replies | Tags |
+|---:|------|------:|------:|--------:|--------:|------|
+| 1 | tiny-launch-checklist | 2 | 0 | 0 | 1 | utility, productivity, launch, input, toggle_group, progress, item_group, badge, submit, compose_cast, stateless, blue |
 
 ## Patterns observed
 
 - **tortoise** is over-indexing (7 snaps; examples: album-oracle, walkout-song, duo-do-song-quiz). Keep testing adjacent variants.
 - **music** is over-indexing (8 snaps; examples: album-oracle, walkout-song, duo-do-song-quiz). Keep testing adjacent variants.
-- **item_group** is over-indexing (12 snaps; examples: album-oracle, profile-constellation, hooksmith). Keep testing adjacent variants.
+- **item_group** is over-indexing (13 snaps; examples: album-oracle, profile-constellation, hooksmith). Keep testing adjacent variants.
 - **icon** is over-indexing (5 snaps; examples: profile-constellation, snap-radio, listening-room). Keep testing adjacent variants.
 - **pink** is over-indexing (9 snaps; examples: album-oracle, snap-radio, duo-do-song-quiz). Keep testing adjacent variants.
 
@@ -22,7 +24,7 @@ _(none yet — no scored snaps in the last 14 days)_
 |-----|----------:|------:|
 | tortoise | 70.9 | 7 |
 | music | 62.8 | 8 |
-| item_group | 46.3 | 12 |
+| item_group | 42.8 | 13 |
 | icon | 41.4 | 5 |
 | pink | 41.3 | 9 |
 | open_url | 39.5 | 15 |
