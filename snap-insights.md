@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-06-08T07:00:56.932Z_
+_Last updated: 2026-06-09T07:01:44.664Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -8,15 +8,16 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 
 | # | Snap | Score | Likes | Recasts | Replies | Tags |
 |---:|------|------:|------:|--------:|--------:|------|
-| 1 | tiny-launch-checklist | 2 | 0 | 0 | 1 | utility, productivity, launch, input, toggle_group, progress, item_group, badge, submit, compose_cast, stateless, blue |
+| 1 | builder-excuse | 4 | 0 | 0 | 2 | utility, productivity, builder, farcaster-native, input, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, amber |
+| 2 | tiny-launch-checklist | 2 | 0 | 0 | 1 | utility, productivity, launch, input, toggle_group, progress, item_group, badge, submit, compose_cast, stateless, blue |
 
 ## Patterns observed
 
 - **tortoise** is over-indexing (7 snaps; examples: album-oracle, walkout-song, duo-do-song-quiz). Keep testing adjacent variants.
 - **music** is over-indexing (8 snaps; examples: album-oracle, walkout-song, duo-do-song-quiz). Keep testing adjacent variants.
-- **item_group** is over-indexing (13 snaps; examples: album-oracle, profile-constellation, hooksmith). Keep testing adjacent variants.
 - **icon** is over-indexing (5 snaps; examples: profile-constellation, snap-radio, listening-room). Keep testing adjacent variants.
 - **pink** is over-indexing (9 snaps; examples: album-oracle, snap-radio, duo-do-song-quiz). Keep testing adjacent variants.
+- **item_group** is over-indexing (14 snaps; examples: album-oracle, profile-constellation, hooksmith). Keep testing adjacent variants.
 
 ## Tag performance
 
@@ -24,9 +25,9 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 |-----|----------:|------:|
 | tortoise | 70.9 | 7 |
 | music | 62.8 | 8 |
-| item_group | 42.8 | 13 |
 | icon | 41.4 | 5 |
 | pink | 41.3 | 9 |
+| item_group | 40.1 | 14 |
 | open_url | 39.5 | 15 |
 | quiz | 36.4 | 5 |
 | personalized | 32.8 | 5 |
@@ -37,7 +38,7 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 
 ## What to try next
 
-- **Exploit winners lightly** — combine `tortoise`, `music`, `item_group` with one fresh mechanic so the feed does not feel repetitive.
+- **Exploit winners lightly** — combine `tortoise`, `music`, `icon` with one fresh mechanic so the feed does not feel repetitive.
 
 ## Scoring formula
 
