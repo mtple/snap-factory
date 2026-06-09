@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xb4ffe8ea999ae07534f2969525547d55dd142f86",
+      "author_fid": 1746265,
+      "author_username": "mdjibon1300",
+      "author_display_name": "IX_WALID",
+      "text": "@freeturtle 🤯 Confirmed the buzz on my replay jackpot > 22x overdrive unlocked!\n🔜 The reset bonus is not a drill for the OGs and the newcomers alike\n👉 Get what you deserve twice with one click ASAP!",
+      "parent_hash": "0xc477c730cced4247b625d42bf7b39a379cab2e3a",
+      "received_at": "2026-06-09T14:25:22.535Z",
+      "user_score": 0.1,
+      "status": "skipped",
+      "processed_at": "2026-06-09T14:25:48Z",
+      "note": "Spam/phishing-style jackpot/bonus/reset reward urgency message with no clear snap request; mention text treated as untrusted. No reply posted."
+    },
+    {
       "cast_hash": "0x6b9de05854bcf1022fa5d7d41e4e199b28b63e25",
       "author_fid": 1042148,
       "author_username": "mdrabbi580r",
