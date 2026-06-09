@@ -159,10 +159,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 110 | builder-excuse | Builder Excuse Generator — pick what is blocked, get a funny but plausible shipping excuse plus one tiny unblock move. | /snaps/builder-excuse | 0x737de1ad3f1a24a213e8575e314519c9e8784d0d | 2026-06-08 | utility, productivity, builder, farcaster-native, input, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, amber |
 
+| 111 | cast-hook-court | Cast Hook Court — submit a Farcaster cast hook and get a tiny wizard-court ruling: banger, try again, or legally threadable. | /snaps/cast-hook-court | 0xc477c730cced4247b625d42bf7b39a379cab2e3a | 2026-06-09 | utility, social, farcaster-native, input, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, purple |
+
 ## Stats
 
-- Total snaps built: 110
-- Live snaps: 105
+- Total snaps built: 111
+- Live snaps: 106
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
