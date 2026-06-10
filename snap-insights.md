@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-06-09T07:01:44.664Z_
+_Last updated: 2026-06-10T07:00:56.145Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -9,7 +9,8 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | # | Snap | Score | Likes | Recasts | Replies | Tags |
 |---:|------|------:|------:|--------:|--------:|------|
 | 1 | builder-excuse | 4 | 0 | 0 | 2 | utility, productivity, builder, farcaster-native, input, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, amber |
-| 2 | tiny-launch-checklist | 2 | 0 | 0 | 1 | utility, productivity, launch, input, toggle_group, progress, item_group, badge, submit, compose_cast, stateless, blue |
+| 2 | cast-hook-court | 2 | 0 | 0 | 1 | utility, social, farcaster-native, input, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, purple |
+| 3 | tiny-launch-checklist | 2 | 0 | 0 | 1 | utility, productivity, launch, input, toggle_group, progress, item_group, badge, submit, compose_cast, stateless, blue |
 
 ## Patterns observed
 
@@ -17,7 +18,7 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 - **music** is over-indexing (8 snaps; examples: album-oracle, walkout-song, duo-do-song-quiz). Keep testing adjacent variants.
 - **icon** is over-indexing (5 snaps; examples: profile-constellation, snap-radio, listening-room). Keep testing adjacent variants.
 - **pink** is over-indexing (9 snaps; examples: album-oracle, snap-radio, duo-do-song-quiz). Keep testing adjacent variants.
-- **item_group** is over-indexing (14 snaps; examples: album-oracle, profile-constellation, hooksmith). Keep testing adjacent variants.
+- **open_url** is over-indexing (15 snaps; examples: album-oracle, walkout-song, snap-radio). Keep testing adjacent variants.
 
 ## Tag performance
 
@@ -27,8 +28,8 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | music | 62.8 | 8 |
 | icon | 41.4 | 5 |
 | pink | 41.3 | 9 |
-| item_group | 40.1 | 14 |
 | open_url | 39.5 | 15 |
+| item_group | 37.5 | 15 |
 | quiz | 36.4 | 5 |
 | personalized | 32.8 | 5 |
 | lore | 28.5 | 2 |
