@@ -16,7 +16,6 @@ Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a n
 
 _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here before doing any autonomous build. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
 
-- **App Idea Speedrun** (approved from candidate #15) — Pick audience + mechanic + vibe; get a tiny app concept in one screen.
 - **Farcaster Creature Type** (approved from candidate #17) — Pick social habits; reveal your timeline creature and habitat.
 - **No-Code Spellbook** (approved from candidate #18) — Choose a workflow pain; get a tiny automation recipe.
 

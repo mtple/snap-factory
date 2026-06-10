@@ -1,6 +1,34 @@
 {
   "snaps": [
     {
+      "name": "app-idea-speedrun",
+      "cast_hash": "0x0ea0c3644896fbd4caf8bf7db8ff7a49ac8a2ad3",
+      "posted_at": "2026-06-10T14:03:56Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "creative",
+        "builder",
+        "farcaster-native",
+        "toggle_group",
+        "slider",
+        "progress",
+        "item_group",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "cast-hook-court",
       "cast_hash": "0xc477c730cced4247b625d42bf7b39a379cab2e3a",
       "posted_at": "2026-06-09T14:04:00Z",

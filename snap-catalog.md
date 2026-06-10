@@ -161,10 +161,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 111 | cast-hook-court | Cast Hook Court — submit a Farcaster cast hook and get a tiny wizard-court ruling: banger, try again, or legally threadable. | /snaps/cast-hook-court | 0xc477c730cced4247b625d42bf7b39a379cab2e3a | 2026-06-09 | utility, social, farcaster-native, input, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, purple |
 
+| 112 | app-idea-speedrun | App Idea Speedrun — pick audience, mechanic, and weirdness to generate a tiny app concept with prototype speed and guardrails. | /snaps/app-idea-speedrun | 0x0ea0c3644896fbd4caf8bf7db8ff7a49ac8a2ad3 | 2026-06-10 | utility, creative, builder, farcaster-native, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, purple |
+
 ## Stats
 
-- Total snaps built: 111
-- Live snaps: 106
+- Total snaps built: 112
+- Live snaps: 107
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
