@@ -35,6 +35,7 @@ import snap_energyReading from "./snaps/energy-reading/index.js";
 import snap_exitLane from "./snaps/exit-lane/index.js";
 import snap_farcaster100 from "./snaps/farcaster-100/index.js";
 import snap_farcasterArtists from "./snaps/farcaster-artists/index.js";
+import snap_farcasterCreatureType from "./snaps/farcaster-creature-type/index.js";
 import snap_farcasterHours from "./snaps/farcaster-hours/index.js";
 import snap_farcasterSign from "./snaps/farcaster-sign/index.js";
 import snap_fcConfessions from "./snaps/fc-confessions/index.js";
@@ -149,6 +150,7 @@ export const snaps: Record<string, Hono> = {
   "exit-lane": snap_exitLane,
   "farcaster-100": snap_farcaster100,
   "farcaster-artists": snap_farcasterArtists,
+  "farcaster-creature-type": snap_farcasterCreatureType,
   "farcaster-hours": snap_farcasterHours,
   "farcaster-sign": snap_farcasterSign,
   "fc-confessions": snap_fcConfessions,
