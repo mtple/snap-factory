@@ -163,10 +163,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 112 | app-idea-speedrun | App Idea Speedrun — pick audience, mechanic, and weirdness to generate a tiny app concept with prototype speed and guardrails. | /snaps/app-idea-speedrun | 0x0ea0c3644896fbd4caf8bf7db8ff7a49ac8a2ad3 | 2026-06-10 | utility, creative, builder, farcaster-native, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, purple |
 
+| 113 | farcaster-creature-type | Farcaster Creature Type — pick social habits to reveal your timeline creature, habitat, snack offering, and signal meter. | /snaps/farcaster-creature-type | 0xaa7d9921a4bd71491bd7af854b26aa74a39c6003 | 2026-06-20 | personality, social, farcaster-native, toggle_group, slider, switch, progress, item_group, badge, submit, compose_cast, stateless, teal |
+
 ## Stats
 
-- Total snaps built: 112
-- Live snaps: 107
+- Total snaps built: 113
+- Live snaps: 108
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

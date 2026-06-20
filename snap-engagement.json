@@ -1,6 +1,34 @@
 {
   "snaps": [
     {
+      "name": "farcaster-creature-type",
+      "cast_hash": "0xaa7d9921a4bd71491bd7af854b26aa74a39c6003",
+      "posted_at": "2026-06-20T14:02:32Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "personality",
+        "social",
+        "farcaster-native",
+        "toggle_group",
+        "slider",
+        "switch",
+        "progress",
+        "item_group",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "app-idea-speedrun",
       "cast_hash": "0x0ea0c3644896fbd4caf8bf7db8ff7a49ac8a2ad3",
       "posted_at": "2026-06-10T14:03:56Z",
