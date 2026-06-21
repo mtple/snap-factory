@@ -16,8 +16,6 @@ Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a n
 
 _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here before doing any autonomous build. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
 
-- **No-Code Spellbook** (approved from candidate #18) — Choose a workflow pain; get a tiny automation recipe.
-
 
 ### Blocked — waiting on dependencies
 

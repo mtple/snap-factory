@@ -165,10 +165,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 113 | farcaster-creature-type | Farcaster Creature Type — pick social habits to reveal your timeline creature, habitat, snack offering, and signal meter. | /snaps/farcaster-creature-type | 0xaa7d9921a4bd71491bd7af854b26aa74a39c6003 | 2026-06-20 | personality, social, farcaster-native, toggle_group, slider, switch, progress, item_group, badge, submit, compose_cast, stateless, teal |
 
+| 114 | no-code-spellbook | No-Code Spellbook — choose a workflow pain and constraint, then brew a tiny no-code automation recipe with three steps, confidence meter, and human-review guardrail. | /snaps/no-code-spellbook | 0xfba9b5574a73e1f48aa95289b56c70cb3fd67b58 | 2026-06-21 | utility, productivity, no-code, automation, farcaster-native, input, toggle_group, slider, switch, progress, item_group, badge, submit, compose_cast, stateless, purple |
+
 ## Stats
 
-- Total snaps built: 113
-- Live snaps: 108
+- Total snaps built: 114
+- Live snaps: 109
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

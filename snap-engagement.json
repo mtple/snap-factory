@@ -1,6 +1,37 @@
 {
   "snaps": [
     {
+      "name": "no-code-spellbook",
+      "cast_hash": "0xfba9b5574a73e1f48aa95289b56c70cb3fd67b58",
+      "posted_at": "2026-06-21T14:04:44Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "productivity",
+        "no-code",
+        "automation",
+        "farcaster-native",
+        "input",
+        "toggle_group",
+        "slider",
+        "switch",
+        "progress",
+        "item_group",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "farcaster-creature-type",
       "cast_hash": "0xaa7d9921a4bd71491bd7af854b26aa74a39c6003",
       "posted_at": "2026-06-20T14:02:32Z",
