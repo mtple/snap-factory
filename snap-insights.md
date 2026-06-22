@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-06-21T07:01:31.110Z_
+_Last updated: 2026-06-22T07:01:05.622Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -9,8 +9,8 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | # | Snap | Score | Likes | Recasts | Replies | Tags |
 |---:|------|------:|------:|--------:|--------:|------|
 | 1 | builder-excuse | 4 | 0 | 0 | 2 | utility, productivity, builder, farcaster-native, input, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, amber |
-| 2 | cast-hook-court | 2 | 0 | 0 | 1 | utility, social, farcaster-native, input, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, purple |
-| 3 | tiny-launch-checklist | 2 | 0 | 0 | 1 | utility, productivity, launch, input, toggle_group, progress, item_group, badge, submit, compose_cast, stateless, blue |
+| 2 | no-code-spellbook | 3 | 1 | 0 | 0 | utility, productivity, no-code, automation, farcaster-native, input, toggle_group, slider, switch, progress, item_group, badge, submit, compose_cast, stateless, purple |
+| 3 | cast-hook-court | 2 | 0 | 0 | 1 | utility, social, farcaster-native, input, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, purple |
 
 ## Patterns observed
 
@@ -30,8 +30,8 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | pink | 41.3 | 9 |
 | open_url | 39.5 | 15 |
 | quiz | 35.8 | 5 |
-| item_group | 33.1 | 17 |
 | personalized | 32.8 | 5 |
+| item_group | 31.4 | 18 |
 | lore | 28.5 | 2 |
 | fid | 28.2 | 6 |
 | prompt | 27.0 | 2 |
