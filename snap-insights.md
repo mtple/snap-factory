@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-06-23T07:00:38.362Z_
+_Last updated: 2026-06-24T07:01:09.806Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -9,7 +9,6 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | # | Snap | Score | Likes | Recasts | Replies | Tags |
 |---:|------|------:|------:|--------:|--------:|------|
 | 1 | no-code-spellbook | 3 | 1 | 0 | 0 | utility, productivity, no-code, automation, farcaster-native, input, toggle_group, slider, switch, progress, item_group, badge, submit, compose_cast, stateless, purple |
-| 2 | cast-hook-court | 2 | 0 | 0 | 1 | utility, social, farcaster-native, input, toggle_group, slider, progress, item_group, badge, submit, compose_cast, stateless, purple |
 
 ## Patterns observed
 
@@ -27,7 +26,7 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | music | 62.8 | 8 |
 | icon | 41.4 | 5 |
 | pink | 41.3 | 9 |
-| open_url | 39.5 | 15 |
+| open_url | 39.3 | 15 |
 | quiz | 35.8 | 5 |
 | personalized | 32.8 | 5 |
 | item_group | 31.4 | 18 |
