@@ -14,7 +14,12 @@ Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a n
 
 ## Queue
 
-_Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here before doing any autonomous build. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
+_Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here first and must not build unapproved ideas. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
+
+- **b20-name-smith** (Matt, 2026-06-24) — Type a vibe, pick a tone, get a B20 token name + ticker + 32×16 snap-native logo grid. Creative, stateless, input + toggle_group + cell_grid. Inspired by /base B20-deploy feed signal. Non-music.
+- **miniapp-mood** (Matt, 2026-06-24) — Pick the kind of mini app you want, get 3 curated recs from the cast feed + open_mini_app buttons. Discovery, stateless, toggle_group + item_group + open_mini_app. Underused `open_mini_app` action. Non-music.
+- **thread-compass** (Matt, 2026-06-24) — Paste a thread URL or topic, get a "what kind of thread is this" reading (hot/cold/reply-bait/serendipity) + survival tip. Farcaster-native, stateless, input + badge + item_group. Non-music.
+- **first-block-birthday** (Matt, 2026-06-24) — Auto-resolve the authed viewer's first cast via Neynar, stamp a personalized "X days on Farcaster" badge with a tiny shareable quote and view_profile button. Personalized, stateless, button + view_profile. Requires `NEYNAR_API_KEY` in Vercel env (same as trending-cast; verified working in prod). Non-music.
 
 
 ### Blocked — waiting on dependencies
