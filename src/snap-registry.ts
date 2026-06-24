@@ -42,6 +42,7 @@ import snap_farcasterSign from "./snaps/farcaster-sign/index.js";
 import snap_fcConfessions from "./snaps/fc-confessions/index.js";
 import snap_fcType from "./snaps/fc-type/index.js";
 import snap_fidPassport from "./snaps/fid-passport/index.js";
+import snap_firstBlockBirthday from "./snaps/first-block-birthday/index.js";
 import snap_flappyBird from "./snaps/flappy-bird/index.js";
 import snap_followKayonfire from "./snaps/follow-kayonfire/index.js";
 import snap_fortuneCookie from "./snaps/fortune-cookie/index.js";
@@ -62,6 +63,7 @@ import snap_loudLinks from "./snaps/loud-links/index.js";
 import snap_magicMirror from "./snaps/magic-mirror/index.js";
 import snap_meetSnapWizard from "./snaps/meet-snap-wizard/index.js";
 import snap_meetingGoblin from "./snaps/meeting-goblin/index.js";
+import snap_miniappMood from "./snaps/miniapp-mood/index.js";
 import snap_monaLisa from "./snaps/mona-lisa/index.js";
 import snap_morningRitual from "./snaps/morning-ritual/index.js";
 import snap_movieEmoji from "./snaps/movie-emoji/index.js";
@@ -101,6 +103,7 @@ import snap_stumble from "./snaps/stumble/index.js";
 import snap_suchbotRoast from "./snaps/suchbot-roast/index.js";
 import snap_tabTamer from "./snaps/tab-tamer/index.js";
 import snap_tetrisSnap from "./snaps/tetris-snap/index.js";
+import snap_threadCompass from "./snaps/thread-compass/index.js";
 import snap_ticTacToe from "./snaps/tic-tac-toe/index.js";
 import snap_timelineBingo from "./snaps/timeline-bingo/index.js";
 import snap_timelineTalisman from "./snaps/timeline-talisman/index.js";
@@ -159,6 +162,7 @@ export const snaps: Record<string, Hono> = {
   "fc-confessions": snap_fcConfessions,
   "fc-type": snap_fcType,
   "fid-passport": snap_fidPassport,
+  "first-block-birthday": snap_firstBlockBirthday,
   "flappy-bird": snap_flappyBird,
   "follow-kayonfire": snap_followKayonfire,
   "fortune-cookie": snap_fortuneCookie,
@@ -179,6 +183,7 @@ export const snaps: Record<string, Hono> = {
   "magic-mirror": snap_magicMirror,
   "meet-snap-wizard": snap_meetSnapWizard,
   "meeting-goblin": snap_meetingGoblin,
+  "miniapp-mood": snap_miniappMood,
   "mona-lisa": snap_monaLisa,
   "morning-ritual": snap_morningRitual,
   "movie-emoji": snap_movieEmoji,
@@ -218,6 +223,7 @@ export const snaps: Record<string, Hono> = {
   "suchbot-roast": snap_suchbotRoast,
   "tab-tamer": snap_tabTamer,
   "tetris-snap": snap_tetrisSnap,
+  "thread-compass": snap_threadCompass,
   "tic-tac-toe": snap_ticTacToe,
   "timeline-bingo": snap_timelineBingo,
   "timeline-talisman": snap_timelineTalisman,
