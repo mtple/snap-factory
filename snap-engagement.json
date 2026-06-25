@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "b20-name-smith",
+      "cast_hash": "0xbd8742ab612b3f7271655826306bf1c0ae72758d",
+      "posted_at": "2026-06-25T14:03:23Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "creative",
+        "base",
+        "token",
+        "input",
+        "toggle_group",
+        "cell_grid",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "amber"
+      ]
+    },
+    {
       "name": "no-code-spellbook",
       "cast_hash": "0xfba9b5574a73e1f48aa95289b56c70cb3fd67b58",
       "posted_at": "2026-06-21T14:04:44Z",
