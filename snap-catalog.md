@@ -169,11 +169,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 115 | b20-name-smith | B20 token name forge — type a vibe, pick a tone, and get a fictional token name, ticker, and 32×16 snap-native logo grid. | /snaps/b20-name-smith | 0xbd8742ab612b3f7271655826306bf1c0ae72758d | 2026-06-25 | utility, creative, base, token, input, toggle_group, cell_grid, badge, submit, compose_cast, stateless, amber |
 | 116 | miniapp-mood | Mini App Mood — pick a Farcaster mood and get three curated non-music Mini App recommendations with open-mini-app buttons. | /snaps/miniapp-mood | 0xb0090745bd9014786601201386090dacf7599b6d | 2026-06-26 | discovery, utility, miniapp, farcaster-native, toggle_group, item_group, open_mini_app, submit, compose_cast, stateless, teal |
+| 117 | thread-compass | Thread Compass — paste a draft, topic, or URL and get a tiny thread type reading plus reply survival tip. | /snaps/thread-compass | 0xfe74ab5496a459d38417828bd8765102f2996931 | 2026-06-27 | utility, social, farcaster-native, input, progress, item_group, badge, submit, compose_cast, stateless, purple |
 
 ## Stats
 
-- Total snaps built: 116
-- Live snaps: 111
+- Total snaps built: 117
+- Live snaps: 112
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

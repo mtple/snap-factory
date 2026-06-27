@@ -1,6 +1,32 @@
 {
   "snaps": [
     {
+      "name": "thread-compass",
+      "cast_hash": "0xfe74ab5496a459d38417828bd8765102f2996931",
+      "posted_at": "2026-06-27T14:03:07Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "social",
+        "farcaster-native",
+        "input",
+        "progress",
+        "item_group",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "miniapp-mood",
       "cast_hash": "0xb0090745bd9014786601201386090dacf7599b6d",
       "posted_at": "2026-06-26T14:04:50Z",
