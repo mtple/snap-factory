@@ -1,6 +1,34 @@
 {
   "snaps": [
     {
+      "name": "first-block-birthday",
+      "cast_hash": "0xf3ac6aa5b5a438e09ad4505b1afe5ae1e0642ce6",
+      "posted_at": "2026-06-28T14:03:45Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "personalized",
+        "fid",
+        "social",
+        "neynar-api",
+        "badge",
+        "progress",
+        "item_group",
+        "view_profile",
+        "view_cast",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "thread-compass",
       "cast_hash": "0xfe74ab5496a459d38417828bd8765102f2996931",
       "posted_at": "2026-06-27T14:03:07Z",

@@ -16,7 +16,6 @@ Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a n
 
 _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here first and must not build unapproved ideas. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
 
-- **first-block-birthday** (Matt, 2026-06-24) — Auto-resolve the authed viewer's first cast via Neynar, stamp a personalized "X days on Farcaster" badge with a tiny shareable quote and view_profile button. Personalized, stateless, button + view_profile. Requires `NEYNAR_API_KEY` in Vercel env (same as trending-cast; verified working in prod). Non-music.
 
 
 ### Blocked — waiting on dependencies
