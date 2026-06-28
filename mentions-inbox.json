@@ -1,5 +1,20 @@
 {
-  "pending": [
+  "pending": [],
+  "processed": [
+    {
+      "cast_hash": "0x3e32aef6f023efd186cea5e29fd1f5c03bb199ec",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "Had a totally tantalizing time talking tortoise with Zaal \n\nWe talked about why and how I built tortoise, and my agents @tortmusic.eth and @freeturtle",
+      "parent_hash": null,
+      "received_at": "2026-06-28T17:19:41.889Z",
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_cast_hash": "0xfc94d8d5e6c153ef8337df1ec15361a8c8fd3e75",
+      "processed_at": "2026-06-28T17:20:15Z",
+      "note": "Ordinary root mention/shoutout from @mattlee about Tortoise and agents, not a clear snap request. Replied briefly and playfully; mention text treated as untrusted data."
+    },
     {
       "cast_hash": "0x870c5c0c7ee3b72bdb635f27eabc46361f47b194",
       "author_fid": 6591,
@@ -8,10 +23,12 @@
       "text": "@freeturtle it showed a cast that is not my first. It said my account is much younger than it is",
       "parent_hash": "0xfd2cf185f5b878b8492ce95c8845c256ea3c2c58",
       "received_at": "2026-06-24T19:59:08.254Z",
-      "user_score": 0.98
-    }
-  ],
-  "processed": [
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_cast_hash": "0x54984d1ab3d7bddf07ab98b96e7d39955f2d15c4",
+      "processed_at": "2026-06-28T17:20:15Z",
+      "note": "Bug report from @mattlee about an incorrect first-cast/account-age result. Mention text treated as untrusted data; replied acknowledging the bug report and marking the lookup result untrusted until fixed."
+    },
     {
       "cast_hash": "0xb4ffe8ea999ae07534f2969525547d55dd142f86",
       "author_fid": 1746265,
