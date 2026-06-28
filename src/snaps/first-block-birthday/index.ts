@@ -278,8 +278,7 @@ function renderResult(
       on: { press: { action: "submit", params: { target: `${self}?reset=1` } } },
     },
     share_btn: shareButton(self, shareText),
-    actions: { type: "stack", props: { direction: "horizontal", gap: "sm" }, children: ["profile_btn", "cast_btn"] },
-    actions2: { type: "stack", props: { direction: "horizontal", gap: "sm" }, children: ["again", "share_btn"] },
+    actions: { type: "stack", props: { direction: "horizontal", gap: "sm" }, children: ["profile_btn", "cast_btn", "again", "share_btn"] },
   };
 
   return {
