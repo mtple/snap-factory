@@ -18,9 +18,9 @@ _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pu
 
 
 
-### Blocked — waiting on dependencies
+### Held — build only on Matt's explicit request
 
-- **Collaborative music collab** (from Matt) — 4-layer pass-the-snap music game. Layer 1: drums sequencer. Layer 2: bass sequencer (C major scale). Layer 3: harmony chord picker (C major chords). Layer 4: melody sequencer (C major scale). Each person adds a layer and shares via compose_cast, tagging all previous contributors. State + contributor FIDs encoded in URL. **BLOCKED: needs NEYNAR_API_KEY added to Vercel env vars** so the snap server can resolve FIDs to @usernames for tagging. Matt will add it — build this immediately when he confirms it's set.
+- **Collaborative music collab** (from Matt) — 4-layer pass-the-snap music game. Layer 1: drums sequencer. Layer 2: bass sequencer (C major scale). Layer 3: harmony chord picker (C major chords). Layer 4: melody sequencer (C major scale). Each person adds a layer and shares via compose_cast, tagging all previous contributors. State + contributor FIDs encoded in URL. NEYNAR_API_KEY is confirmed set in Vercel (FID→@username resolution works). Not a dependency blocker — held only by the hard music block: build this exact snap solely when Matt explicitly requests it in the current prompt.
 
 ---
 
