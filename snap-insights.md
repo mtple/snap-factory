@@ -1,14 +1,12 @@
 # Snap Insights
 
-_Last updated: 2026-07-05T07:01:14.382Z_
+_Last updated: 2026-07-07T07:00:37.960Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
 ## Top performers (last 14 days)
 
-| # | Snap | Score | Likes | Recasts | Replies | Tags |
-|---:|------|------:|------:|--------:|--------:|------|
-| 1 | no-code-spellbook | 3 | 1 | 0 | 0 | utility, productivity, no-code, automation, farcaster-native, input, toggle_group, slider, switch, progress, item_group, badge, submit, compose_cast, stateless, purple |
+_(none yet — no scored snaps in the last 14 days)_
 
 ## Patterns observed
 
@@ -25,7 +23,7 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | tortoise | 70.9 | 7 |
 | music | 62.8 | 8 |
 | icon | 41.4 | 5 |
-| pink | 41.3 | 9 |
+| pink | 41.0 | 9 |
 | open_url | 39.1 | 15 |
 | quiz | 35.8 | 5 |
 | lore | 28.5 | 2 |
