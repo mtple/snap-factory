@@ -16,7 +16,16 @@ Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a n
 
 _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here first and must not build unapproved ideas. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
 
-
+- **channel-weather** — Pick /snaps, /base, or /farcaster; get a tiny daily mood card with one signal cast and a view_cast jump.
+- **onchain-score-guess** — Guess your Base onchain score 1–100 before checking; per-FID accuracy streak via Turso.
+- **mini-app-sampler** — Pick a vibe (focus/social/shop/play); get one curated mini app + open_mini_app button.
+- **tiny-tap-test** — Tap a 5×5 grid as fast as you can in 3 seconds; score = taps and accuracy. Stateless.
+- **fid-anniversary** — Tap to reveal your FID's first-cast era + personalised "X years on Farcaster" badge.
+- **channel-hop** — Pick a vibe (learn/build/laugh/spam); get one recommended Farcaster channel + open_url.
+- **inbox-cleanup-quest** — Mark 9 fake inbox items keep/close/reply; get a tiny cleanup receipt.
+- **snack-oracle** — Pick a snack craving (salty/sweet/umami/spicy); get a tiny snack suggestion + recipe open_url.
+- **base-name-expiry** — Paste a Base name; get a tiny expiry forecast + renewal CTA.
+- **farcaster-time-machine** — Tap to peek at your timeline from one week / month / year ago — tiny era snapshots via view_cast.
 
 ### Held — build only on Matt's explicit request
 
