@@ -15,7 +15,7 @@ const SNAP_NAME = "community-call-bingo";
 
 type Elements = SnapHandlerResult["ui"]["elements"];
 type Accent = "gray" | "blue" | "red" | "amber" | "green" | "teal" | "purple" | "pink";
-type Cell = { row: number; col: number; color: Accent };
+type Cell = { row: number; col: number; color: Accent; content: string; value: string };
 
 type BingoCard = {
   squares: string[];
@@ -27,30 +27,30 @@ type BingoCard = {
 };
 
 const SQUARES = [
-  "Someone says soon twice",
-  "Roadmap fog rolls in",
-  "A demo works on reload",
-  "One awkward silence blooms",
-  "Feature teaser, no date",
-  "Chat asks about rewards",
-  "A builder ships mid-call",
-  "The host says quick update",
-  "A screen share is cursed",
-  "Someone asks for docs",
-  "A poll gets derailed",
-  "The phrase native feel appears",
-  "Beta caveat enters chat",
-  "A bug becomes roadmap",
-  "Three people talk at once",
-  "Free space: gm everyone",
-  "Someone says after the call",
-  "A tiny alpha leak sparkles",
-  "Timeline asks for recording",
-  "One more question becomes five",
-  "A metric is almost shared",
-  "The demo gods demand tribute",
-  "Someone posts a recap cast",
-  "The wizard hears opportunity",
+  "Soon™",
+  "Roadmap fog",
+  "Demo reload",
+  "Awkward pause",
+  "Feature tease",
+  "Rewards question",
+  "Mid-call ship",
+  "Quick update",
+  "Screen-share curse",
+  "Docs request",
+  "Poll derail",
+  "Native feel",
+  "Beta caveat",
+  "Bug = roadmap",
+  "Cross-talk",
+  "GM free space",
+  "After the call",
+  "Tiny alpha",
+  "Recording ask",
+  "One more q",
+  "Almost metric",
+  "Demo gods",
+  "Recap cast",
+  "Wizard omen",
 ];
 
 const BADGES = ["call gremlin", "roadmap weather", "demo omen", "feature fog", "recap goblin"];
@@ -105,10 +105,12 @@ export function buildCard(fid: number, salt: number): BingoCard {
   const accent = ACCENTS[seed % ACCENTS.length] ?? "purple";
   const badge = BADGES[Math.floor(rand() * BADGES.length)] ?? BADGES[0];
   const palette: Accent[] = [accent, "gray", "teal", "amber"];
-  const cells: Cell[] = squares.map((_, index) => ({
+  const cells: Cell[] = squares.map((square, index) => ({
     row: Math.floor(index / 3),
     col: index % 3,
     color: palette[(index + seed) % palette.length] ?? accent,
+    content: square,
+    value: String(index),
   }));
   const highlights = [squares[0], squares[4], squares[8]].filter(Boolean);
 
@@ -134,7 +136,7 @@ function startPage(self: string): SnapHandlerResult {
     intro: {
       type: "text",
       props: {
-        content: "Deal a 3x3 card for feature teasers, awkward pauses, roadmap fog, demos, and community-call chaos.",
+        content: "Deal a readable 3x3 card for feature teasers, awkward pauses, roadmap fog, demos, and community-call chaos.",
         align: "center",
       },
     },
@@ -161,7 +163,7 @@ function resultPage(self: string, card: BingoCard): SnapHandlerResult {
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "sm" },
-      children: ["title", "grid", "badge", "list", "new_card", "share_btn"],
+      children: ["title", "grid", "badge", "watch", "new_card", "share_btn"],
     },
     title: { type: "text", props: { content: "Your call chaos card", weight: "bold", align: "center" } },
     grid: {
@@ -174,7 +176,7 @@ function resultPage(self: string, card: BingoCard): SnapHandlerResult {
       },
     },
     badge: { type: "badge", props: { label: card.badge, variant: "outline" } },
-    list: { type: "text", props: { content: list, size: "sm" } },
+    watch: { type: "text", props: { content: `Center-line watch:\n${list}`, size: "sm", align: "center" } },
     new_card: {
       type: "button",
       props: { label: "New card", variant: "primary" },
