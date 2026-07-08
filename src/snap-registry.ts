@@ -19,6 +19,7 @@ import snap_castHookCourt from "./snaps/cast-hook-court/index.js";
 import snap_castTimeCapsule from "./snaps/cast-time-capsule/index.js";
 import snap_catPet from "./snaps/cat-pet/index.js";
 import snap_checkers from "./snaps/checkers/index.js";
+import snap_communityCallBingo from "./snaps/community-call-bingo/index.js";
 import snap_cookedCheck from "./snaps/cooked-check/index.js";
 import snap_crateCover from "./snaps/crate-cover/index.js";
 import snap_creatureSummoner from "./snaps/creature-summoner/index.js";
@@ -139,6 +140,7 @@ export const snaps: Record<string, Hono> = {
   "cast-time-capsule": snap_castTimeCapsule,
   "cat-pet": snap_catPet,
   "checkers": snap_checkers,
+  "community-call-bingo": snap_communityCallBingo,
   "cooked-check": snap_cookedCheck,
   "crate-cover": snap_crateCover,
   "creature-summoner": snap_creatureSummoner,
