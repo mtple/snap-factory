@@ -172,7 +172,7 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 117 | thread-compass | Thread Compass — paste a draft, topic, or URL and get a tiny thread type reading plus reply survival tip. | /snaps/thread-compass | 0xfe74ab5496a459d38417828bd8765102f2996931 | 2026-06-27 | utility, social, farcaster-native, input, progress, item_group, badge, submit, compose_cast, stateless, purple |
 | 118 | first-block-birthday | Personalized first-cast tenure badge — tap once to find your first Farcaster cast, see days on Farcaster, and share the tiny birthday receipt. | /snaps/first-block-birthday | 0xf3ac6aa5b5a438e09ad4505b1afe5ae1e0642ce6 | 2026-06-28 | personalized, fid, social, neynar-api, badge, progress, item_group, view_profile, view_cast, submit, compose_cast, stateless, teal |
 
-| 119 | community-call-bingo | Community Call Bingo — deal a 3×3 Farcaster community-call bingo card for feature teasers, “soon,” demos, awkward pauses, roadmap fog, and chaos. | /snaps/community-call-bingo | 0x4780bfdc0823b9ec623044906901aa67e872e705 | 2026-07-08 | game, social, farcaster-native, bingo, cell_grid, badge, submit, compose_cast, stateless, purple |
+| 119 | community-call-bingo | Community Call Bingo — deal a tappable 3×3 Farcaster community-call bingo card; tap cells as “soon,” demos, pauses, and roadmap fog happen. | /snaps/community-call-bingo | 0x4780bfdc0823b9ec623044906901aa67e872e705 | 2026-07-08 | game, social, farcaster-native, bingo, cell_grid, badge, submit, compose_cast, stateless, purple |
 
 ## Stats
 

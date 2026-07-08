@@ -1,9 +1,9 @@
 /**
- * community-call-bingo — a tiny bingo card for Farcaster community-call chaos.
+ * community-call-bingo — a tiny tappable bingo card for Farcaster community-call chaos.
  *
  * Components: text, badge, cell_grid, button, stack
  * Actions: submit, compose_cast
- * State: stateless
+ * State: stateless URL params
  */
 import { Hono } from "hono";
 import { registerSnapHandler } from "@farcaster/snap-hono";
@@ -19,11 +19,14 @@ type Cell = { row: number; col: number; color: Accent; content: string; value: s
 
 type BingoCard = {
   squares: string[];
-  highlights: string[];
   cells: Cell[];
   badge: string;
   accent: Accent;
   salt: number;
+  checked: Set<number>;
+  checkedMask: string;
+  checkedCount: number;
+  hasBingo: boolean;
 };
 
 const SQUARES = [
@@ -55,6 +58,16 @@ const SQUARES = [
 
 const BADGES = ["call gremlin", "roadmap weather", "demo omen", "feature fog", "recap goblin"];
 const ACCENTS: Accent[] = ["purple", "teal", "amber", "blue", "green", "pink"];
+const BINGO_LINES = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
+];
 
 function todayKey(): string {
   return new Date().toISOString().slice(0, 10);
@@ -64,6 +77,40 @@ function asSalt(value: string | null): number {
   const parsed = Number(value ?? "0");
   if (!Number.isFinite(parsed)) return 0;
   return Math.max(0, Math.min(9999, Math.floor(parsed)));
+}
+
+function parseChecked(value: string | null): Set<number> {
+  const set = new Set<number>();
+  for (const part of String(value ?? "").split(".")) {
+    if (part === "") continue;
+    const index = Number(part);
+    if (Number.isInteger(index) && index >= 0 && index <= 8) set.add(index);
+  }
+  return set;
+}
+
+function checkedMask(checked: Set<number>): string {
+  return [...checked].sort((a, b) => a - b).join(".");
+}
+
+function cellInput(raw: unknown): number | null {
+  const value = Array.isArray(raw) ? raw[0] : raw;
+  const text = String(value ?? "");
+  if (text === "") return null;
+  const index = Number(text);
+  return Number.isInteger(index) && index >= 0 && index <= 8 ? index : null;
+}
+
+function toggleChecked(checked: Set<number>, index: number | null): Set<number> {
+  const next = new Set(checked);
+  if (index === null) return next;
+  if (next.has(index)) next.delete(index);
+  else next.add(index);
+  return next;
+}
+
+function hasBingo(checked: Set<number>): boolean {
+  return BINGO_LINES.some((line) => line.every((index) => checked.has(index)));
 }
 
 function hashText(text: string): number {
@@ -97,24 +144,36 @@ function pickNine(rand: () => number): string[] {
   return picks;
 }
 
-export function buildCard(fid: number, salt: number): BingoCard {
+export function buildCard(fid: number, salt: number, checked = new Set<number>()): BingoCard {
   const safeFid = Math.max(0, Math.floor(fid || 0));
   const seed = hashText(`${todayKey()}|${safeFid}|${salt}|community-call-bingo`);
   const rand = mulberry32(seed);
   const squares = pickNine(rand);
   const accent = ACCENTS[seed % ACCENTS.length] ?? "purple";
-  const badge = BADGES[Math.floor(rand() * BADGES.length)] ?? BADGES[0];
+  const badge = hasBingo(checked) ? "BINGO" : (BADGES[Math.floor(rand() * BADGES.length)] ?? BADGES[0]);
   const palette: Accent[] = [accent, "gray", "teal", "amber"];
-  const cells: Cell[] = squares.map((square, index) => ({
-    row: Math.floor(index / 3),
-    col: index % 3,
-    color: palette[(index + seed) % palette.length] ?? accent,
-    content: square,
-    value: String(index),
-  }));
-  const highlights = [squares[0], squares[4], squares[8]].filter(Boolean);
+  const cells: Cell[] = squares.map((square, index) => {
+    const marked = checked.has(index);
+    return {
+      row: Math.floor(index / 3),
+      col: index % 3,
+      color: marked ? "green" : (palette[(index + seed) % palette.length] ?? accent),
+      content: marked ? `✓ ${square}` : square,
+      value: String(index),
+    };
+  });
 
-  return { squares, highlights, cells, badge, accent, salt };
+  return {
+    squares,
+    cells,
+    badge,
+    accent: hasBingo(checked) ? "green" : accent,
+    salt,
+    checked,
+    checkedMask: checkedMask(checked),
+    checkedCount: checked.size,
+    hasBingo: hasBingo(checked),
+  };
 }
 
 function shareButton(self: string, text = "I dealt Community Call Bingo. Roadmap fog, demo gods, tiny chaos.") {
@@ -136,18 +195,18 @@ function startPage(self: string): SnapHandlerResult {
     intro: {
       type: "text",
       props: {
-        content: "Deal a readable 3x3 card for feature teasers, awkward pauses, roadmap fog, demos, and community-call chaos.",
+        content: "Deal a tappable 3x3 card for feature teasers, awkward pauses, roadmap fog, demos, and community-call chaos.",
         align: "center",
       },
     },
     hint: {
       type: "text",
-      props: { content: "Bring it to the next Farcaster call. Mark squares spiritually; do not shout bingo unless deserved.", size: "sm", align: "center" },
+      props: { content: "Tap cells as they happen. Three in a row means the call goblin wins.", size: "sm", align: "center" },
     },
     deal: {
       type: "button",
       props: { label: "Deal my card", variant: "primary" },
-      on: { press: { action: "submit", params: { target: `${self}?salt=0` } } },
+      on: { press: { action: "submit", params: { target: `${self}?salt=0&checked=` } } },
     },
     share_btn: shareButton(self),
   };
@@ -157,35 +216,44 @@ function startPage(self: string): SnapHandlerResult {
 
 function resultPage(self: string, card: BingoCard): SnapHandlerResult {
   const nextSalt = (card.salt + 1) % 10000;
-  const list = card.highlights.map((square) => `• ${square}`).join("\n");
-  const shareText = `My Community Call Bingo card says:\n${card.highlights.map((square) => `• ${square}`).join("\n")}\nDeal yours.`;
+  const status = card.hasBingo
+    ? "BINGO. The roadmap fog has formed a line."
+    : card.checkedCount === 0
+      ? "Tap a cell when it happens. Marked cells turn green."
+      : `${card.checkedCount}/9 marked. Keep watching the call.`;
+  const shareText = card.hasBingo
+    ? "I hit Community Call Bingo. Roadmap fog successfully manifested."
+    : `My Community Call Bingo card has ${card.checkedCount}/9 squares marked.`;
+  const target = `${self}?salt=${card.salt}&checked=${card.checkedMask}`;
   const elements: Elements = {
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "sm" },
-      children: ["title", "grid", "badge", "watch", "new_card", "share_btn"],
+      children: ["title", "grid", "badge", "status", "new_card", "share_btn"],
     },
-    title: { type: "text", props: { content: "Your call chaos card", weight: "bold", align: "center" } },
+    title: { type: "text", props: { content: "Your call bingo card", weight: "bold", align: "center" } },
     grid: {
       type: "cell_grid",
       props: {
+        name: "cell",
         cols: 3,
         rows: 3,
-        rowHeight: 44,
+        rowHeight: 52,
         cells: card.cells,
       },
+      on: { press: { action: "submit", params: { target } } },
     },
-    badge: { type: "badge", props: { label: card.badge, variant: "outline" } },
-    watch: { type: "text", props: { content: `Center-line watch:\n${list}`, size: "sm", align: "center" } },
+    badge: { type: "badge", props: { label: card.badge, variant: "outline", color: card.hasBingo ? "green" : "accent" } },
+    status: { type: "text", props: { content: status, size: "sm", align: "center" } },
     new_card: {
       type: "button",
       props: { label: "New card", variant: "primary" },
-      on: { press: { action: "submit", params: { target: `${self}?salt=${nextSalt}` } } },
+      on: { press: { action: "submit", params: { target: `${self}?salt=${nextSalt}&checked=` } } },
     },
     share_btn: shareButton(self, shareText),
   };
 
-  return { version: "2.0", theme: { accent: card.accent }, effects: ["confetti"], ui: { root: "page", elements } };
+  return { version: "2.0", theme: { accent: card.accent }, effects: card.hasBingo ? ["confetti"] : undefined, ui: { root: "page", elements } };
 }
 
 registerSnapHandler(
@@ -200,12 +268,13 @@ registerSnapHandler(
 
     const fid = ctx.action.user.fid;
     const salt = asSalt(url.searchParams.get("salt"));
-    return resultPage(self, buildCard(fid, salt));
+    const checked = toggleChecked(parseChecked(url.searchParams.get("checked")), cellInput(ctx.action.inputs?.cell));
+    return resultPage(self, buildCard(fid, salt, checked));
   },
   {
     openGraph: {
       title: "Community Call Bingo",
-      description: "Deal a tiny bingo card for Farcaster community-call chaos.",
+      description: "Deal a tappable bingo card for Farcaster community-call chaos.",
     },
   },
 );
