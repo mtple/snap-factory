@@ -1,6 +1,31 @@
 {
   "snaps": [
     {
+      "name": "community-call-bingo",
+      "cast_hash": "0xb6baa93d9768301987ecde0e966fbf990c4c3af4",
+      "posted_at": "2026-07-08T14:42:14Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "game",
+        "social",
+        "farcaster-native",
+        "bingo",
+        "cell_grid",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "first-block-birthday",
       "cast_hash": "0xf3ac6aa5b5a438e09ad4505b1afe5ae1e0642ce6",
       "posted_at": "2026-06-28T14:03:45Z",

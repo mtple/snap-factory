@@ -172,10 +172,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 117 | thread-compass | Thread Compass — paste a draft, topic, or URL and get a tiny thread type reading plus reply survival tip. | /snaps/thread-compass | 0xfe74ab5496a459d38417828bd8765102f2996931 | 2026-06-27 | utility, social, farcaster-native, input, progress, item_group, badge, submit, compose_cast, stateless, purple |
 | 118 | first-block-birthday | Personalized first-cast tenure badge — tap once to find your first Farcaster cast, see days on Farcaster, and share the tiny birthday receipt. | /snaps/first-block-birthday | 0xf3ac6aa5b5a438e09ad4505b1afe5ae1e0642ce6 | 2026-06-28 | personalized, fid, social, neynar-api, badge, progress, item_group, view_profile, view_cast, submit, compose_cast, stateless, teal |
 
+| 119 | community-call-bingo | Community Call Bingo — deal a 3×3 Farcaster community-call bingo card for feature teasers, “soon,” demos, awkward pauses, roadmap fog, and chaos. | /snaps/community-call-bingo | 0xb6baa93d9768301987ecde0e966fbf990c4c3af4 | 2026-07-08 | game, social, farcaster-native, bingo, cell_grid, badge, submit, compose_cast, stateless, purple |
+
 ## Stats
 
-- Total snaps built: 118
-- Live snaps: 113
+- Total snaps built: 119
+- Live snaps: 114
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

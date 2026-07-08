@@ -16,7 +16,6 @@ Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a n
 
 _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here first and must not build unapproved ideas. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
 
-- **Community Call Bingo** (approved from prior unresponded candidate #3) — Deal a 3×3 Farcaster community-call bingo card for feature teasers, “soon,” demos, and chaos.
 - **Collab Art Seed** (approved from prior unresponded candidate #17) — Pick palette + prompt; generate a tiny snap-native pixel seed others can remix/share.
 - **channel-weather** — Pick /snaps, /base, or /farcaster; get a tiny daily mood card with one signal cast and a view_cast jump.
 - **onchain-score-guess** — Guess your Base onchain score 1–100 before checking; per-FID accuracy streak via Turso.
