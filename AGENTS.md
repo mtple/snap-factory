@@ -35,12 +35,18 @@ Build two complete Farcaster Snaps per day. Each snap should be working, deploye
 8. Before implementation, fetch/read current snap docs: `https://docs.farcaster.xyz/snap/SKILL.md` and `https://docs.farcaster.xyz/snap/llms.txt`. The spec changes quickly; do not rely on stale examples.
 9. Read `SNAP_TEMPLATE.md` before building.
 10. Create or update a self-contained snap under `src/snaps/[name]/index.ts`.
-11. Run `npm run build`.
-12. Commit and push with `snapwizard_git_commit_and_push`.
-13. Wait for Vercel, then verify:
+11. Run the product sanity review before any commit/post:
+   - State the intended human interaction in one sentence.
+   - For every visible control/grid/cell/button, answer: what should a user expect to happen, and did the local POST test prove it?
+   - Read every result screen as if it were a screenshot with no code context; if the labels/results do not explain themselves, fix the UI.
+   - If a grid/card/game/checklist looks playable, cells must be tappable/selectable or the copy must explicitly say it is decorative.
+12. Run `npm run build`, `npm run snap:preflight -- [name]`, and targeted `npm run snap:verify -- [name] --post-target '?...' --inputs '{...}'` for every primary action, reset/new-card path, and win/result path.
+13. Commit and push with `snapwizard_git_commit_and_push`.
+14. Wait for Vercel, then verify:
    `curl -sS -H 'Accept: application/vnd.farcaster.snap+json' "$SNAP_PUBLIC_BASE_URL/snaps/[name]"`
-14. Only after valid JSON, post with `snapwizard_post_farcaster_cast`; put the URL in `embeds`, not text.
-15. Update `snap-catalog.md`, `snap-engagement.json`, and the approved queue in `snap-ideas.md`, then commit and push the log update.
+15. Before posting, live-test the actual Farcaster/client card when possible. At minimum re-fetch live JSON, HTML/OG, and cast embed metadata after posting; if anything looks blank, nonsensical, or non-interactive, fix/repost before logging success.
+16. Only after valid JSON and product sanity checks, post with `snapwizard_post_farcaster_cast`; put the URL in `embeds`, not text.
+17. Update `snap-catalog.md`, `snap-engagement.json`, and the approved queue in `snap-ideas.md`, then commit and push the log update.
 
 ## Snap Constraints
 

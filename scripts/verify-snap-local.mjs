@@ -185,6 +185,17 @@ function validateSnapPage(page, label) {
   }
   if (page.ui?.root) validateElementRef(page.ui.root, elements, label, 1);
 
+  const pageText = Object.entries(elements)
+    .flatMap(([, element]) => {
+      const props = element?.props ?? {};
+      const bits = [props.content, props.label, props.title, props.description];
+      if (Array.isArray(props.cells)) bits.push(...props.cells.map((cell) => cell?.content));
+      return bits;
+    })
+    .filter((value) => typeof value === "string")
+    .join(" ")
+    .toLowerCase();
+
   let hasShare = false;
   let submitTargets = [];
   for (const [id, element] of Object.entries(elements)) {
@@ -240,6 +251,23 @@ function validateSnapPage(page, label) {
       }
       if ((props.select === "single" || props.select === "multiple") && element?.on?.press) {
         fail(`${label}: cell_grid ${id} combines select mode with on.press`);
+      }
+      const cells = Array.isArray(props.cells) ? props.cells : [];
+      const hasCellLabels = cells.some((cell) => typeof cell?.content === "string" && cell.content.trim());
+      const hasCellValues = cells.some((cell) => typeof cell?.value === "string" && cell.value.trim());
+      const isInteractive = Boolean(element?.on?.press) || props.select === "single" || props.select === "multiple";
+      const interactionWords = /\b(bingo|game|card|tap|mark|play|choose|pick|select|grid|board|square|cell)\b/;
+      if (interactionWords.test(pageText) && !hasCellLabels) {
+        fail(`${label}: cell_grid ${id} appears to be user-facing (${pageText.match(interactionWords)?.[0]}) but its cells have no content labels; colored squares alone often fail the common-sense/readability check`);
+      }
+      if ((hasCellLabels || hasCellValues) && interactionWords.test(pageText) && !isInteractive) {
+        fail(`${label}: cell_grid ${id} has labeled/value cells and page copy suggests an interactive ${pageText.match(interactionWords)?.[0]}, but the grid has no on.press or select mode`);
+      }
+      if (element?.on?.press && !props.name) {
+        fail(`${label}: tappable cell_grid ${id} is missing props.name, so handlers may not receive a meaningful input key`);
+      }
+      if (element?.on?.press && !hasCellValues) {
+        warn(`${label}: tappable cell_grid ${id} has no cell value fields; handlers will receive row,col strings`);
       }
     }
   }

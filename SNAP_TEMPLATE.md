@@ -144,17 +144,23 @@ Before public posting:
 npm run snap:preflight -- [slug]
 ```
 
-This runs `npm run build`, imports `dist/index.js`, verifies the local GET Snap JSON, checks common AUI limits, requires a `compose_cast` share button, and checks HTML/OG fallback routes.
+This runs `npm run build`, imports `dist/index.js`, verifies the local GET Snap JSON, checks common AUI limits, requires a `compose_cast` share button, checks HTML/OG fallback routes, and runs product-sanity heuristics that catch common human-obvious bugs such as unlabeled bingo/card grids or labeled grids that look tappable but have no `on.press`/`select` behavior.
 
-2. Exercise at least one primary submit path locally when the snap has server actions:
+2. Exercise every primary interaction path locally, not just one happy path:
 
 ```bash
 npm run snap:verify -- [slug] --post-target '?action=example' --inputs '{"choice":"example"}'
 ```
 
-Use the real query string from the button target and realistic inputs. The verifier sends the JFS-shaped `SKIP_JFS_VERIFICATION=1` payload with `user`, `surface`, `audience`, `timestamp`, and `inputs`.
+Use the real query string from the visible control and realistic inputs. For grids/cards/games, verify at least: no selection/empty input, one tap, toggle/unmark when supported, reset/new-card, and win/completion/result. The verifier sends the JFS-shaped `SKIP_JFS_VERIFICATION=1` payload with `user`, `surface`, `audience`, `timestamp`, and `inputs`.
 
-3. Live URL returns `application/vnd.farcaster.snap+json` with valid JSON.
-4. HTML fallback/OG image and posted cast/card are checked after posting when possible.
+3. Do a product/common-sense read before commit/post:
+   - Write the intended human interaction in one sentence.
+   - For every visible button/grid/cell/control, say what a user expects it to do and confirm a local test proves that exact behavior.
+   - Read every result screen as if it were a screenshot with no code context. If the labels/results do not explain themselves, fix the UI.
+   - If a grid/card/game/checklist looks playable, cells must be tappable/selectable or the copy must clearly say it is decorative.
+
+4. Live URL returns `application/vnd.farcaster.snap+json` with valid JSON.
+5. HTML fallback/OG image and posted cast/card are checked after posting when possible.
 
 If `snap:preflight` fails, fix the local failure before commit/push. Do not rely on `npm run build` alone; TypeScript can pass while the Snap page is invalid or missing share/card basics.
