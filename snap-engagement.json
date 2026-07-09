@@ -1,6 +1,32 @@
 {
   "snaps": [
     {
+      "name": "collab-art-seed",
+      "cast_hash": "0x57ffe41c77c8c9327bfa9d5e7212458a69306371",
+      "posted_at": "2026-07-09T14:14:20Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "creative",
+        "collaborative",
+        "art",
+        "input",
+        "toggle_group",
+        "cell_grid",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "community-call-bingo",
       "cast_hash": "0x4780bfdc0823b9ec623044906901aa67e872e705",
       "posted_at": "2026-07-08T14:42:14Z",

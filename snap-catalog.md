@@ -174,10 +174,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 119 | community-call-bingo | Community Call Bingo — deal a tappable 3×3 Farcaster community-call bingo card; tap cells as “soon,” demos, pauses, and roadmap fog happen. | /snaps/community-call-bingo | 0x4780bfdc0823b9ec623044906901aa67e872e705 | 2026-07-08 | game, social, farcaster-native, bingo, cell_grid, badge, submit, compose_cast, stateless, purple |
 
+| 120 | collab-art-seed | Collaborative pixel-art seed generator — pick a prompt, palette, and shape to grow a decorative snap-native mosaic others can remix/share. | /snaps/collab-art-seed | 0x57ffe41c77c8c9327bfa9d5e7212458a69306371 | 2026-07-09 | creative, collaborative, art, input, toggle_group, cell_grid, badge, submit, compose_cast, stateless, purple |
+
 ## Stats
 
-- Total snaps built: 119
-- Live snaps: 114
+- Total snaps built: 120
+- Live snaps: 115
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
