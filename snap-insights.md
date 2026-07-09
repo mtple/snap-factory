@@ -1,12 +1,14 @@
 # Snap Insights
 
-_Last updated: 2026-07-08T07:00:48.605Z_
+_Last updated: 2026-07-09T07:00:47.485Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
 ## Top performers (last 14 days)
 
-_(none yet — no scored snaps in the last 14 days)_
+| # | Snap | Score | Likes | Recasts | Replies | Tags |
+|---:|------|------:|------:|--------:|--------:|------|
+| 1 | community-call-bingo | 6 | 2 | 0 | 0 | game, social, farcaster-native, bingo, cell_grid, badge, submit, compose_cast, stateless, purple |
 
 ## Patterns observed
 
