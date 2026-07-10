@@ -16,7 +16,6 @@ Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a n
 
 _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here first and must not build unapproved ideas. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
 
-- **channel-weather** — Pick /snaps, /base, or /farcaster; get a tiny daily mood card with one signal cast and a view_cast jump.
 - **onchain-score-guess** — Guess your Base onchain score 1–100 before checking; per-FID accuracy streak via Turso.
 - **mini-app-sampler** — Pick a vibe (focus/social/shop/play); get one curated mini app + open_mini_app button.
 - **tiny-tap-test** — Tap a 5×5 grid as fast as you can in 3 seconds; score = taps and accuracy. Stateless.

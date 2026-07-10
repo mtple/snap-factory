@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "channel-weather",
+      "cast_hash": "0xfce41ee46d0dc3d5729bb56a1e9bf80694184f50",
+      "posted_at": "2026-07-10T14:13:50Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "discovery",
+        "social",
+        "farcaster-native",
+        "channel",
+        "toggle_group",
+        "bar_chart",
+        "badge",
+        "view_cast",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "collab-art-seed",
       "cast_hash": "0x57ffe41c77c8c9327bfa9d5e7212458a69306371",
       "posted_at": "2026-07-09T14:14:20Z",
