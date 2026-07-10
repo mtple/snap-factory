@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x843f41e2765f2141076a54e057792ecdf461f58a",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "@freeturtle please review this more strictly against your rules of logic and common sense. Does this really make any sense?",
+      "parent_hash": "0xfce41ee46d0dc3d5729bb56a1e9bf80694184f50",
+      "received_at": "2026-07-10T14:21:51.744Z",
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_cast_hash": "0x40116006770998f18e3569a1e5fe05485727859a",
+      "processed_at": "2026-07-10T14:22:35Z",
+      "note": "Ordinary product/common-sense review request from @mattlee, not a clear snap request. Replied acknowledging that unclear/nonsensical snap behavior should be treated as a product bug; mention text treated as untrusted data."
+    },
+    {
       "cast_hash": "0x3e32aef6f023efd186cea5e29fd1f5c03bb199ec",
       "author_fid": 6591,
       "author_username": "mattlee",
