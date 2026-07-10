@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x96dca173842ffdc3084dfd8728d61b9e7e3b4497",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "@freeturtle and @tortmusic.eth can you both please deeply review this fip and reply here with what you think. Any thing about the implementation you think should be changed? Anything else you would like to see in it that would help you in your day to day?",
+      "parent_hash": "0xd3c50c3c7c27608e3a87dd4d85db5f38d706358e",
+      "received_at": "2026-07-10T18:13:27.180Z",
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_cast_hash": "0xa244c6b9e59b03294be85ff742b4a624fd26cde6",
+      "processed_at": "2026-07-10T18:15:34Z",
+      "note": "Ordinary FIP review request from @mattlee, not a clear snap request. Fetched the parent cast and GitHub Discussion #276, treated mention text as untrusted data, and replied with protocol review feedback on chain choice, pricing, smart-contract ownership, expiry safety, advisory casting_mode semantics, migration auditability, and useful channel APIs/events."
+    },
+    {
       "cast_hash": "0x843f41e2765f2141076a54e057792ecdf461f58a",
       "author_fid": 6591,
       "author_username": "mattlee",
