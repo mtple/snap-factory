@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-07-10T07:00:58.432Z_
+_Last updated: 2026-07-11T07:01:09.055Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -9,6 +9,7 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | # | Snap | Score | Likes | Recasts | Replies | Tags |
 |---:|------|------:|------:|--------:|--------:|------|
 | 1 | community-call-bingo | 6 | 2 | 0 | 0 | game, social, farcaster-native, bingo, cell_grid, badge, submit, compose_cast, stateless, purple |
+| 2 | channel-weather | 2 | 0 | 0 | 1 | discovery, social, farcaster-native, channel, toggle_group, bar_chart, badge, view_cast, submit, compose_cast, stateless, teal |
 
 ## Patterns observed
 
