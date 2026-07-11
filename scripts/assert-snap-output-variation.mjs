@@ -8,13 +8,13 @@
  *     --post-target '?action=generate' \
  *     --inputs-a '{"prompt":"one","palette":"arcade","shape":"creature"}' \
  *     --inputs-b '{"prompt":"two","palette":"arcade","shape":"creature"}' \
- *     --element grid --prop cells
+ *     --element grid --prop cells --signature grid-occupied --min-diff-ratio 0.08
  */
 import process from "node:process";
 import { pathToFileURL } from "node:url";
 
 function usage(exitCode = 1) {
-  console.error(`Usage: node scripts/assert-snap-output-variation.mjs <slug> --post-target <query-or-path> --inputs-a <json> --inputs-b <json> [--element <id>] [--prop <prop>] [--base <url>] [--fid <number>]\n`);
+  console.error(`Usage: node scripts/assert-snap-output-variation.mjs <slug> --post-target <query-or-path> --inputs-a <json> --inputs-b <json> [--element <id>] [--prop <prop>] [--signature raw|grid-occupied] [--min-diff-ratio <0-1>] [--base <url>] [--fid <number>]\n`);
   process.exit(exitCode);
 }
 
@@ -29,6 +29,8 @@ function parseArgs(argv) {
     fid: 12345,
     element: "grid",
     prop: "cells",
+    signature: "raw",
+    minDiffRatio: 0,
   };
   while (args.length) {
     const flag = args.shift();
@@ -39,11 +41,15 @@ function parseArgs(argv) {
     else if (flag === "--inputs-b") options.inputsB = JSON.parse(value);
     else if (flag === "--element") options.element = value;
     else if (flag === "--prop") options.prop = value;
+    else if (flag === "--signature") options.signature = value;
+    else if (flag === "--min-diff-ratio") options.minDiffRatio = Number(value);
     else if (flag === "--base") options.base = value.replace(/\/$/, "");
     else if (flag === "--fid") options.fid = Number(value);
     else usage(1);
   }
   if (!options.postTarget || !options.inputsA || !options.inputsB) usage(1);
+  if (!["raw", "grid-occupied"].includes(options.signature)) usage(1);
+  if (!Number.isFinite(options.minDiffRatio) || options.minDiffRatio < 0 || options.minDiffRatio > 1) usage(1);
   return options;
 }
 
@@ -79,7 +85,7 @@ async function appRequest(app, url, init) {
   throw new Error("dist/index.js default export does not expose request() or fetch()");
 }
 
-function signatureFor(value) {
+function rawSignature(value) {
   if (Array.isArray(value)) {
     return value
       .map((item) => {
@@ -91,6 +97,35 @@ function signatureFor(value) {
       .join("|");
   }
   return JSON.stringify(value);
+}
+
+function gridOccupiedSignature(cells) {
+  if (!Array.isArray(cells)) throw new Error("grid-occupied signature requires an array of cell objects");
+  const colors = cells.map((cell) => cell?.color).filter((color) => typeof color === "string");
+  const counts = new Map();
+  for (const color of colors) counts.set(color, (counts.get(color) ?? 0) + 1);
+  const background = [...counts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0];
+  if (!background) throw new Error("grid-occupied signature could not identify a background color");
+  return cells
+    .map((cell) => `${cell?.row},${cell?.col}:${cell?.color === background ? 0 : 1}`)
+    .join("|");
+}
+
+function signatureFor(value, mode) {
+  if (mode === "grid-occupied") return gridOccupiedSignature(value);
+  return rawSignature(value);
+}
+
+function diffRatio(a, b) {
+  const left = a.split("|");
+  const right = b.split("|");
+  const total = Math.max(left.length, right.length);
+  if (total === 0) return 0;
+  let diff = 0;
+  for (let i = 0; i < total; i += 1) {
+    if (left[i] !== right[i]) diff += 1;
+  }
+  return diff / total;
 }
 
 async function post(app, options, inputs) {
@@ -115,7 +150,7 @@ async function post(app, options, inputs) {
   if (!element) throw new Error(`Output missing element ${JSON.stringify(options.element)}`);
   const value = options.prop === "." ? element : element?.props?.[options.prop];
   if (value === undefined) throw new Error(`Element ${options.element} missing props.${options.prop}`);
-  return { json, signature: signatureFor(value) };
+  return { json, signature: signatureFor(value, options.signature) };
 }
 
 async function main() {
@@ -126,13 +161,15 @@ async function main() {
   const app = appModule.default;
   const a = await post(app, options, options.inputsA);
   const b = await post(app, options, options.inputsB);
-  if (a.signature === b.signature) {
-    console.error(`FAIL: ${options.slug} output did not change for different inputs on ${options.element}.props.${options.prop}`);
+  const ratio = diffRatio(a.signature, b.signature);
+  if (a.signature === b.signature || ratio < options.minDiffRatio) {
+    console.error(`FAIL: ${options.slug} output did not change enough for different inputs on ${options.element}.props.${options.prop}`);
+    console.error(`signature mode: ${options.signature}; diff ratio: ${ratio.toFixed(3)}; required: ${options.minDiffRatio}`);
     console.error(`inputs A: ${JSON.stringify(options.inputsA)}`);
     console.error(`inputs B: ${JSON.stringify(options.inputsB)}`);
     process.exit(1);
   }
-  console.log(`OK: ${options.slug} output varies for ${options.element}.props.${options.prop}`);
+  console.log(`OK: ${options.slug} output varies for ${options.element}.props.${options.prop} (${options.signature}, diff ratio ${ratio.toFixed(3)})`);
 }
 
 main().catch((error) => {
