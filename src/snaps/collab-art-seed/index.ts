@@ -113,31 +113,82 @@ function mulberry32(seed: number) {
   };
 }
 
-function shapeMask(shape: ShapeKey, x: number, y: number, rand: () => number): number {
-  const cx = Math.abs(x - 0.5) * 2;
-  const cy = Math.abs(y - 0.5) * 2;
-  const dist = Math.sqrt(cx * cx + cy * cy);
+type ShapeVariant = {
+  shiftX: number;
+  shiftY: number;
+  wobble: number;
+  width: number;
+  height: number;
+  density: number;
+  notch: number;
+};
+
+function variantFromSeed(seed: number): ShapeVariant {
+  const rand = mulberry32(seed ^ 0x9e3779b9);
+  return {
+    shiftX: (rand() - 0.5) * 0.16,
+    shiftY: (rand() - 0.5) * 0.12,
+    wobble: 0.015 + rand() * 0.055,
+    width: 0.86 + rand() * 0.28,
+    height: 0.86 + rand() * 0.24,
+    density: 0.35 + rand() * 0.45,
+    notch: rand(),
+  };
+}
+
+function warpPoint(x: number, y: number, variant: ShapeVariant): { x: number; y: number } {
+  const wave = Math.sin((y * 5.5 + variant.notch * 3) * Math.PI) * variant.wobble;
+  return {
+    x: Math.max(0, Math.min(1, x + variant.shiftX + wave)),
+    y: Math.max(0, Math.min(1, y + variant.shiftY - wave / 2)),
+  };
+}
+
+function shapeMask(shape: ShapeKey, x: number, y: number, rand: () => number, variant: ShapeVariant): number {
+  const point = warpPoint(x, y, variant);
+  const px = point.x;
+  const py = point.y;
+  const cx = Math.abs(px - 0.5) * 2;
+  const cy = Math.abs(py - 0.5) * 2;
+  const dist = Math.sqrt((cx / variant.width) ** 2 + (cy / variant.height) ** 2);
+  const texture = rand();
+
   if (shape === "creature") {
-    const body = dist < 0.8 && y > 0.12 && y < 0.92;
-    const ears = (Math.abs(x - 0.28) < 0.09 || Math.abs(x - 0.72) < 0.09) && y < 0.22;
-    return body || ears ? 1 + Math.floor(rand() * 4) : 0;
+    const belly = dist < 0.72 + variant.density * 0.2 && py > 0.14 && py < 0.94;
+    const head = Math.sqrt(((px - 0.5) / (0.28 + variant.wobble)) ** 2 + ((py - 0.27) / 0.2) ** 2) < 1;
+    const earSpread = 0.2 + variant.notch * 0.16;
+    const ears = (Math.abs(px - (0.5 - earSpread)) < 0.06 + variant.wobble || Math.abs(px - (0.5 + earSpread)) < 0.06 + variant.wobble) && py < 0.24 + variant.shiftY;
+    const feet = py > 0.82 && (Math.abs(px - 0.34) < 0.11 || Math.abs(px - 0.66) < 0.11);
+    const cutout = texture > 0.93 && py > 0.35 && py < 0.78;
+    return (belly || head || ears || feet) && !cutout ? 1 + Math.floor(rand() * 4) : 0;
   }
+
   if (shape === "garden") {
-    const stem = Math.abs(x - 0.5) < 0.08 && y > 0.35;
-    const bloom = Math.abs(dist - 0.46) < 0.18 && y < 0.62;
-    const soil = y > 0.82 && rand() > 0.25;
-    return stem || bloom || soil ? 1 + Math.floor(rand() * 4) : 0;
+    const stem = Math.abs(px - (0.48 + variant.shiftX / 2)) < 0.05 + variant.wobble && py > 0.35;
+    const bloomCenter = 0.37 + variant.shiftY;
+    const bloom = Math.abs(Math.sqrt(((px - 0.5) / variant.width) ** 2 + ((py - bloomCenter) / variant.height) ** 2) - (0.34 + variant.density * 0.18)) < 0.1 + variant.wobble;
+    const petals = Math.sin((px * 18 + variant.notch * 8) * Math.PI) > 0.15 && py < 0.68;
+    const soil = py > 0.78 + variant.shiftY && texture > 0.12 + variant.notch * 0.2;
+    return stem || (bloom && petals) || soil ? 1 + Math.floor(rand() * 4) : 0;
   }
+
   if (shape === "skyline") {
-    const towerHeight = 0.22 + Math.floor((x * 7 + rand() * 3) % 5) * 0.11;
-    const building = y > 1 - towerHeight;
-    const window = building && Math.floor(x * 16) % 3 === 1 && Math.floor(y * 12) % 2 === 0;
-    return building ? (window ? 1 : 2 + Math.floor(rand() * 3)) : 0;
+    const column = Math.floor(px * 8);
+    const heightSeed = hashText(`${column}:${variant.notch.toFixed(3)}:${variant.width.toFixed(3)}`);
+    const towerRand = mulberry32(heightSeed);
+    const towerHeight = 0.2 + towerRand() * 0.54;
+    const roof = py > 1 - towerHeight - 0.06 && py <= 1 - towerHeight && Math.abs((px * 8) % 1 - 0.5) < 0.36 + variant.wobble;
+    const building = py > 1 - towerHeight;
+    const window = building && Math.floor(px * 16 + variant.notch * 3) % 3 === 1 && Math.floor(py * 12) % 2 === 0;
+    return building || roof ? (window ? 1 : 2 + Math.floor(rand() * 3)) : 0;
   }
-  const ring = Math.abs(dist - 0.52) < 0.12;
-  const slash = Math.abs(x - y) < 0.08 || Math.abs(1 - x - y) < 0.08;
-  const core = dist < 0.22;
-  return ring || slash || core ? 1 + Math.floor(rand() * 4) : 0;
+
+  const ring = Math.abs(dist - (0.43 + variant.density * 0.18)) < 0.08 + variant.wobble;
+  const slashA = Math.abs(px - py + variant.shiftX) < 0.05 + variant.wobble;
+  const slashB = Math.abs(1 - px - py + variant.shiftY) < 0.05 + variant.wobble;
+  const core = dist < 0.13 + variant.notch * 0.16;
+  const chip = texture > 0.9 && dist < 0.82;
+  return (ring || slashA || slashB || core || chip) ? 1 + Math.floor(rand() * 4) : 0;
 }
 
 export function buildSeedArt(prompt: string, paletteKey: PaletteKey, shape: ShapeKey, maker: number): SeedArt {
@@ -145,19 +196,19 @@ export function buildSeedArt(prompt: string, paletteKey: PaletteKey, shape: Shap
   const shapeInfo = SHAPES[shape];
   const seed = hashText(`${prompt}|${paletteKey}|${shape}|${maker || "anon"}`);
   const rand = mulberry32(seed);
+  const variant = variantFromSeed(seed);
   const cols = 16;
   const rows = 12;
   const cells: Cell[] = [];
 
   for (let row = 0; row < rows; row += 1) {
     for (let col = 0; col < cols; col += 1) {
-      const mirrorCol = col < cols / 2 ? col : cols - 1 - col;
-      const noiseSeed = hashText(`${seed}:${row}:${mirrorCol}`);
+      const noiseSeed = hashText(`${seed}:${row}:${col}`);
       const localRand = mulberry32(noiseSeed);
-      const x = (mirrorCol + 0.5) / cols;
+      const x = (col + 0.5) / cols;
       const y = (row + 0.5) / rows;
-      const colorIndex = shapeMask(shape, x, y, localRand);
-      const sparkle = localRand() > 0.92 ? 1 : 0;
+      const colorIndex = shapeMask(shape, x, y, localRand, variant);
+      const sparkle = localRand() > 0.94 ? 1 : 0;
       const color = palette.colors[Math.min(colorIndex + sparkle, palette.colors.length - 1)] ?? "#111827";
       cells.push({ row, col, color: colorIndex === 0 && sparkle === 0 ? palette.colors[0] ?? "#ffffff" : color });
     }
