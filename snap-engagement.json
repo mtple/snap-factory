@@ -1,6 +1,35 @@
 {
   "snaps": [
     {
+      "name": "onchain-score-guess",
+      "cast_hash": "0x04dc32a92fb4a58dfb1858bf1b78f389f5a4b6cb",
+      "posted_at": "2026-07-11T14:14:49Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "game",
+        "base",
+        "farcaster-native",
+        "personalized",
+        "fid",
+        "slider",
+        "progress",
+        "item_group",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateful",
+        "turso",
+        "blue"
+      ]
+    },
+    {
       "name": "channel-weather",
       "cast_hash": "0xfce41ee46d0dc3d5729bb56a1e9bf80694184f50",
       "posted_at": "2026-07-10T14:13:50Z",

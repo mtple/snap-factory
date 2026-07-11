@@ -177,10 +177,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 120 | collab-art-seed | Collaborative pixel-art seed generator — pick a prompt, palette, and shape to grow a decorative snap-native mosaic others can remix/share. | /snaps/collab-art-seed | 0x57ffe41c77c8c9327bfa9d5e7212458a69306371 | 2026-07-09 | creative, collaborative, art, input, toggle_group, cell_grid, badge, submit, compose_cast, stateless, purple |
 | 121 | channel-weather | Channel Weather — pick /snaps, /base, or /farcaster and get a tiny daily mood forecast from one signal cast, with a view-cast jump. | /snaps/channel-weather | 0xfce41ee46d0dc3d5729bb56a1e9bf80694184f50 | 2026-07-10 | discovery, social, farcaster-native, channel, toggle_group, bar_chart, badge, view_cast, submit, compose_cast, stateless, teal |
 
+| 122 | onchain-score-guess | Base Score Guess — guess your playful Base onchain score 1–100, reveal this week’s deterministic score, and track per-FID accuracy streaks via Turso. | /snaps/onchain-score-guess | 0x04dc32a92fb4a58dfb1858bf1b78f389f5a4b6cb | 2026-07-11 | game, base, farcaster-native, personalized, fid, slider, progress, item_group, badge, submit, compose_cast, stateful, turso, blue |
+
 ## Stats
 
-- Total snaps built: 121
-- Live snaps: 116
+- Total snaps built: 122
+- Live snaps: 117
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
