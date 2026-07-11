@@ -76,6 +76,7 @@ import snap_natalChart from "./snaps/natal-chart/index.js";
 import snap_natalChartV2 from "./snaps/natal-chart-v2/index.js";
 import snap_noCodeSpellbook from "./snaps/no-code-spellbook/index.js";
 import snap_numberWizard from "./snaps/number-wizard/index.js";
+import snap_onchainScoreGuess from "./snaps/onchain-score-guess/index.js";
 import snap_originStory from "./snaps/origin-story/index.js";
 import snap_pacman from "./snaps/pacman/index.js";
 import snap_palettePotion from "./snaps/palette-potion/index.js";
@@ -199,6 +200,7 @@ export const snaps: Record<string, Hono> = {
   "natal-chart-v2": snap_natalChartV2,
   "no-code-spellbook": snap_noCodeSpellbook,
   "number-wizard": snap_numberWizard,
+  "onchain-score-guess": snap_onchainScoreGuess,
   "origin-story": snap_originStory,
   "pacman": snap_pacman,
   "palette-potion": snap_palettePotion,
