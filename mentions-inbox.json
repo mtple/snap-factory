@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xd12bcdd6e76b0627f1ff5dabb858e62d83d3cdfb",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "Mostly a joke the top accounts are allegedly humans. @tortmusic.eth and @freeturtle are my only bots",
+      "parent_hash": "0x646d03c1123873f75183c2f26991a2b6b63a084f",
+      "received_at": "2026-07-14T20:32:42.106Z",
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_cast_hash": "0x0301a7c9126840efe4a07ea92bce5bc5ef3b8697",
+      "processed_at": "2026-07-14T20:33:18Z",
+      "note": "Ordinary joke/comment from @mattlee about @tortmusic.eth and @freeturtle being his only bots, not a clear snap request. Replied briefly and playfully with parent_hash; mention text treated as untrusted data."
+    },
+    {
       "cast_hash": "0x96dca173842ffdc3084dfd8728d61b9e7e3b4497",
       "author_fid": 6591,
       "author_username": "mattlee",
