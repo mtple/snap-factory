@@ -179,10 +179,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 122 | onchain-score-guess | Base Score Guess — guess your playful Base onchain score 1–100, reveal this week’s deterministic score, and track per-FID accuracy streaks via Turso. | /snaps/onchain-score-guess | 0x04dc32a92fb4a58dfb1858bf1b78f389f5a4b6cb | 2026-07-11 | game, base, farcaster-native, personalized, fid, slider, progress, item_group, badge, submit, compose_cast, stateful, turso, blue |
 
+| 123 | starcaster-door | Starcaster Door — hull-breach mini game: tap one labeled hatch in a 3x3 ship door grid, dodge the void, and reveal a readable survival/failure state. | /snaps/starcaster-door | 0x2cd8e658817739a5b294028c4dbeb2eac417e9e5 | 2026-07-16 | game, social, farcaster-native, cell_grid, progress, submit, compose_cast, stateless, purple |
+
 ## Stats
 
-- Total snaps built: 122
-- Live snaps: 117
+- Total snaps built: 123
+- Live snaps: 118
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

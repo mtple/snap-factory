@@ -16,7 +16,6 @@ Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a n
 
 _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here first and must not build unapproved ideas. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
 
-- **starcaster-door** — Hull-breach mini game: tap the right spaceship door, avoid the void, and get a readable survival/failure state.
 - **profile-signal-scan** — LLM-backed read of recent casts: infer a user’s actual public cast patterns with evidence, not a fake four-choice personality quiz.
 - **snap-idea-market** — Vote on which category SnapWizard should build next; show live results and use winners as future queue candidates.
 - **myers-briggs-cast-type** — LLM-backed personality snap: analyze the user’s recent Farcaster casts, assign a playful Myers-Briggs-style type, show evidence/rationale from cast patterns, and share the result.

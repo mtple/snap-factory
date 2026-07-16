@@ -1,6 +1,30 @@
 {
   "snaps": [
     {
+      "name": "starcaster-door",
+      "cast_hash": "0x2cd8e658817739a5b294028c4dbeb2eac417e9e5",
+      "posted_at": "2026-07-16T14:05:49Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "game",
+        "social",
+        "farcaster-native",
+        "cell_grid",
+        "progress",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "onchain-score-guess",
       "cast_hash": "0x04dc32a92fb4a58dfb1858bf1b78f389f5a4b6cb",
       "posted_at": "2026-07-11T14:14:49Z",
