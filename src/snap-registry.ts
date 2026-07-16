@@ -103,6 +103,7 @@ import snap_snapShowcase from "./snaps/snap-showcase/index.js";
 import snap_snapVendingMachine from "./snaps/snap-vending-machine/index.js";
 import snap_snapagotchiHouse from "./snaps/snapagotchi-house/index.js";
 import snap_snapathon from "./snaps/snapathon/index.js";
+import snap_starcasterDoor from "./snaps/starcaster-door/index.js";
 import snap_stumble from "./snaps/stumble/index.js";
 import snap_suchbotRoast from "./snaps/suchbot-roast/index.js";
 import snap_tabTamer from "./snaps/tab-tamer/index.js";
@@ -227,6 +228,7 @@ export const snaps: Record<string, Hono> = {
   "snap-vending-machine": snap_snapVendingMachine,
   "snapagotchi-house": snap_snapagotchiHouse,
   "snapathon": snap_snapathon,
+  "starcaster-door": snap_starcasterDoor,
   "stumble": snap_stumble,
   "suchbot-roast": snap_suchbotRoast,
   "tab-tamer": snap_tabTamer,
