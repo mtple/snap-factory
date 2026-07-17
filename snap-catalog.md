@@ -181,10 +181,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 123 | starcaster-door | Starcaster Door — hull-breach mini game: tap one labeled hatch in a 3x3 ship door grid, dodge the void, and reveal a readable survival/failure state. | /snaps/starcaster-door | 0x2cd8e658817739a5b294028c4dbeb2eac417e9e5 | 2026-07-16 | game, social, farcaster-native, cell_grid, progress, submit, compose_cast, stateless, purple |
 
+| 124 | profile-signal-scan | LLM-backed profile signal scanner — scans recent public Farcaster casts for grounded patterns, evidence bullets, and one next-cast prompt. | /snaps/profile-signal-scan | 0x3ee3a7d3a138ec9bd82002ca624ef933adb345ac | 2026-07-17 | utility, social, farcaster-native, personalized, fid, neynar-api, llm, input, progress, item_group, badge, view_profile, submit, compose_cast, stateless, teal |
+
 ## Stats
 
-- Total snaps built: 123
-- Live snaps: 118
+- Total snaps built: 124
+- Live snaps: 119
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
