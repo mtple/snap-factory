@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-07-17T07:01:21.213Z_
+_Last updated: 2026-07-18T07:00:31.214Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -8,9 +8,10 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 
 | # | Snap | Score | Likes | Recasts | Replies | Tags |
 |---:|------|------:|------:|--------:|--------:|------|
-| 1 | starcaster-door | 8 | 1 | 1 | 0 | game, social, farcaster-native, cell_grid, progress, submit, compose_cast, stateless, purple |
-| 2 | community-call-bingo | 6 | 2 | 0 | 0 | game, social, farcaster-native, bingo, cell_grid, badge, submit, compose_cast, stateless, purple |
-| 3 | channel-weather | 2 | 0 | 0 | 1 | discovery, social, farcaster-native, channel, toggle_group, bar_chart, badge, view_cast, submit, compose_cast, stateless, teal |
+| 1 | profile-signal-scan | 11 | 2 | 1 | 0 | utility, social, farcaster-native, personalized, fid, neynar-api, llm, input, progress, item_group, badge, view_profile, submit, compose_cast, stateless, teal |
+| 2 | starcaster-door | 8 | 1 | 1 | 0 | game, social, farcaster-native, cell_grid, progress, submit, compose_cast, stateless, purple |
+| 3 | community-call-bingo | 6 | 2 | 0 | 0 | game, social, farcaster-native, bingo, cell_grid, badge, submit, compose_cast, stateless, purple |
+| 4 | channel-weather | 2 | 0 | 0 | 1 | discovery, social, farcaster-native, channel, toggle_group, bar_chart, badge, view_cast, submit, compose_cast, stateless, teal |
 
 ## Patterns observed
 
@@ -32,10 +33,10 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | quiz | 35.8 | 5 |
 | lore | 28.5 | 2 |
 | prompt | 27.0 | 2 |
-| item_group | 25.6 | 22 |
 | multi-page | 25.3 | 7 |
-| personalized | 23.4 | 7 |
-| view_profile | 22.1 | 9 |
+| item_group | 25.0 | 23 |
+| meta | 22.0 | 3 |
+| personalized | 21.9 | 8 |
 
 ## What to try next
 
