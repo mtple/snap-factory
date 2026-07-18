@@ -99,6 +99,7 @@ import snap_rugFloorIsLava from "./snaps/rug-floor-is-lava/index.js";
 import snap_setlistSpell from "./snaps/setlist-spell/index.js";
 import snap_shipCheck from "./snaps/ship-check/index.js";
 import snap_snap101 from "./snaps/snap-101/index.js";
+import snap_snapIdeaMarket from "./snaps/snap-idea-market/index.js";
 import snap_snapRadio from "./snaps/snap-radio/index.js";
 import snap_snapShowcase from "./snaps/snap-showcase/index.js";
 import snap_snapVendingMachine from "./snaps/snap-vending-machine/index.js";
@@ -225,6 +226,7 @@ export const snaps: Record<string, Hono> = {
   "setlist-spell": snap_setlistSpell,
   "ship-check": snap_shipCheck,
   "snap-101": snap_snap101,
+  "snap-idea-market": snap_snapIdeaMarket,
   "snap-radio": snap_snapRadio,
   "snap-showcase": snap_snapShowcase,
   "snap-vending-machine": snap_snapVendingMachine,
