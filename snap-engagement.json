@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "snap-idea-market",
+      "cast_hash": "0x09a6d501ebcea3f295c1dce0b014e93af8b46a06",
+      "posted_at": "2026-07-18T14:08:49Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "social",
+        "poll",
+        "meta",
+        "farcaster-native",
+        "toggle_group",
+        "bar_chart",
+        "badge",
+        "submit",
+        "compose_cast",
+        "stateful",
+        "turso",
+        "purple"
+      ]
+    },
+    {
       "name": "profile-signal-scan",
       "cast_hash": "0x3ee3a7d3a138ec9bd82002ca624ef933adb345ac",
       "posted_at": "2026-07-17T14:16:00Z",
