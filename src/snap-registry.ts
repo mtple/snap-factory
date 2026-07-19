@@ -72,6 +72,7 @@ import snap_morningRitual from "./snaps/morning-ritual/index.js";
 import snap_movieEmoji from "./snaps/movie-emoji/index.js";
 import snap_musicCollab from "./snaps/music-collab/index.js";
 import snap_mvrShowcase from "./snaps/mvr-showcase/index.js";
+import snap_myersBriggsCastType from "./snaps/myers-briggs-cast-type/index.js";
 import snap_natalChart from "./snaps/natal-chart/index.js";
 import snap_natalChartV2 from "./snaps/natal-chart-v2/index.js";
 import snap_noCodeSpellbook from "./snaps/no-code-spellbook/index.js";
@@ -199,6 +200,7 @@ export const snaps: Record<string, Hono> = {
   "movie-emoji": snap_movieEmoji,
   "music-collab": snap_musicCollab,
   "mvr-showcase": snap_mvrShowcase,
+  "myers-briggs-cast-type": snap_myersBriggsCastType,
   "natal-chart": snap_natalChart,
   "natal-chart-v2": snap_natalChartV2,
   "no-code-spellbook": snap_noCodeSpellbook,
