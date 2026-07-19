@@ -63,9 +63,9 @@ function clampText(raw: unknown, fallback: string, max = 300): string {
   return value.length <= max ? value : `${value.slice(0, max - 1)}…`;
 }
 
-function parseTargetFid(raw: unknown, viewerFid: number): number | null {
+function parseTargetFid(raw: unknown, viewerFid?: number): number | null {
   const text = String(raw ?? "").trim();
-  if (!text) return viewerFid;
+  if (!text) return Number.isSafeInteger(viewerFid) && viewerFid! > 0 ? viewerFid! : null;
   const match = text.match(/\d{1,10}/);
   if (!match) return null;
   const fid = Number(match[0]);
@@ -361,9 +361,9 @@ registerSnapHandler(
 
     if (url.searchParams.get("action") !== "analyze") return startPage(self);
 
-    const viewerFid = ctx.action.user.fid;
+    const viewerFid = ctx.action.user?.fid ?? (ctx.action as { fid?: number }).fid;
     const targetFid = parseTargetFid(ctx.action.inputs?.fid, viewerFid);
-    if (!targetFid) return startPage(self, "Enter a numeric FID, or leave it blank to type yourself.");
+    if (!targetFid) return startPage(self, "Enter a numeric FID. Farcaster did not attach your viewer FID to this press.");
 
     try {
       const bundle = await fetchRecentCasts(targetFid);
