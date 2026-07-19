@@ -16,7 +16,6 @@ Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a n
 
 _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here first and must not build unapproved ideas. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
 
-- **myers-briggs-cast-type** — LLM-backed personality snap: analyze the user’s recent Farcaster casts, assign a playful Myers-Briggs-style type, show evidence/rationale from cast patterns, and share the result.
 - **taste-passport** — Build a playful taste profile from prompts; generate a walkout song / movie / album / book / vibe card, compare with friends, and share a taste badge.
 - **mini-app-sampler** — Pick a vibe (focus/social/shop/play); get one curated mini app + open_mini_app button.
 - **tiny-tap-test** — Tap a 5×5 grid as fast as you can in 3 seconds; score = taps and accuracy. Stateless.

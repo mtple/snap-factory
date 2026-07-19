@@ -1,6 +1,37 @@
 {
   "snaps": [
     {
+      "name": "myers-briggs-cast-type",
+      "cast_hash": "0xe07397bcfd644ae13c4633565785c633e5035f48",
+      "posted_at": "2026-07-19T14:07:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "social",
+        "farcaster-native",
+        "personalized",
+        "fid",
+        "neynar-api",
+        "llm",
+        "input",
+        "progress",
+        "item_group",
+        "badge",
+        "view_profile",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "purple"
+      ]
+    },
+    {
       "name": "snap-idea-market",
       "cast_hash": "0x09a6d501ebcea3f295c1dce0b014e93af8b46a06",
       "posted_at": "2026-07-18T14:08:49Z",

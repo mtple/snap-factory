@@ -185,10 +185,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 125 | snap-idea-market | Daily SnapWizard idea-market poll — vote on which non-music snap category should be built next, then see the live crowd split. | /snaps/snap-idea-market | 0x09a6d501ebcea3f295c1dce0b014e93af8b46a06 | 2026-07-18 | social, poll, meta, farcaster-native, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, purple |
 
+| 126 | myers-briggs-cast-type | LLM-backed Farcaster cast personality typer — scans recent public casts for a playful 4-letter type, axis receipts, evidence, and a next-cast prompt. | /snaps/myers-briggs-cast-type | 0xe07397bcfd644ae13c4633565785c633e5035f48 | 2026-07-19 | utility, social, farcaster-native, personalized, fid, neynar-api, llm, input, progress, item_group, badge, view_profile, submit, compose_cast, stateless, purple |
+
 ## Stats
 
-- Total snaps built: 125
-- Live snaps: 120
+- Total snaps built: 126
+- Live snaps: 121
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
