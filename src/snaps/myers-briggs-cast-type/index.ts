@@ -264,7 +264,7 @@ function shareButton(self: string, text = "Find your playful Farcaster cast type
 }
 
 function startPage(self: string, error?: string): SnapHandlerResult {
-  const children = error ? ["title", "intro", "error", "me_btn", "fid_btn", "share_btn"] : ["title", "intro", "me_btn", "fid_btn", "share_btn"];
+  const children = error ? ["title", "intro", "error", "fid", "actions"] : ["title", "intro", "fid", "actions"];
   const elements: Elements = {
     page: { type: "stack", props: { direction: "vertical", gap: "md" }, children },
     title: { type: "text", props: { content: "Myers-Briggs Cast Type", weight: "bold", align: "center" } },
@@ -276,40 +276,14 @@ function startPage(self: string, error?: string): SnapHandlerResult {
         align: "center",
       },
     },
-    me_btn: {
-      type: "button",
-      props: { label: "Type my casts (wait)", variant: "primary" },
-      on: { press: { action: "submit", params: { target: `${self}?action=me` } } },
-    },
-    fid_btn: {
-      type: "button",
-      props: { label: "Type a FID", variant: "secondary" },
-      on: { press: { action: "submit", params: { target: `${self}?action=fid-form` } } },
-    },
-    share_btn: shareButton(self),
-  };
-  if (error) elements.error = { type: "text", props: { content: error, size: "sm", align: "center" } };
-  return { version: "2.0", theme: { accent: "purple" }, ui: { root: "page", elements } };
-}
-
-function fidFormPage(self: string, error?: string): SnapHandlerResult {
-  const children = error ? ["title", "intro", "error", "fid", "analyze_btn", "back_btn", "share_btn"] : ["title", "intro", "fid", "analyze_btn", "back_btn", "share_btn"];
-  const elements: Elements = {
-    page: { type: "stack", props: { direction: "vertical", gap: "md" }, children },
-    title: { type: "text", props: { content: "Type another caster", weight: "bold", align: "center" } },
-    intro: { type: "text", props: { content: "Enter a numeric FID. After tapping Analyze, wait 5–10 seconds for the result card.", size: "sm", align: "center" } },
-    fid: { type: "input", props: { name: "fid", label: "FID", placeholder: "e.g. 3", maxLength: 20 } },
+    fid: { type: "input", props: { name: "fid", label: "Optional FID", placeholder: "e.g. 3", maxLength: 20 } },
     analyze_btn: {
       type: "button",
-      props: { label: "Analyze FID (wait)", variant: "primary" },
+      props: { label: "Type my casts (wait)", variant: "primary" },
       on: { press: { action: "submit", params: { target: `${self}?action=analyze` } } },
     },
-    back_btn: {
-      type: "button",
-      props: { label: "Back", variant: "secondary" },
-      on: { press: { action: "submit", params: { target: `${self}?reset=1` } } },
-    },
     share_btn: shareButton(self),
+    actions: { type: "stack", props: { direction: "horizontal", gap: "sm" }, children: ["analyze_btn", "share_btn"] },
   };
   if (error) elements.error = { type: "text", props: { content: error, size: "sm", align: "center" } };
   return { version: "2.0", theme: { accent: "purple" }, ui: { root: "page", elements } };
@@ -385,17 +359,11 @@ registerSnapHandler(
       return startPage(self);
     }
 
-    const action = url.searchParams.get("action");
-    if (action === "fid-form") return fidFormPage(self);
-    if (action !== "me" && action !== "analyze") return startPage(self);
+    if (url.searchParams.get("action") !== "analyze") return startPage(self);
 
     const viewerFid = ctx.action.user?.fid ?? (ctx.action as { fid?: number }).fid;
-    const targetFid = action === "me" ? viewerFid : parseTargetFid(ctx.action.inputs?.fid, viewerFid);
-    if (!targetFid) {
-      return action === "me"
-        ? startPage(self, "Farcaster did not attach your viewer FID. Tap Type a FID and enter it manually.")
-        : fidFormPage(self, "Enter a numeric FID first.");
-    }
+    const targetFid = parseTargetFid(ctx.action.inputs?.fid, viewerFid);
+    if (!targetFid) return startPage(self, "Enter a numeric FID. Farcaster did not attach your viewer FID to this press.");
 
     try {
       const bundle = await fetchRecentCasts(targetFid);
