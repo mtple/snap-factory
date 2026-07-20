@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "mini-app-sampler",
+      "cast_hash": "0xd7099fdc02970c97033e70ddb3ef5e7057540533",
+      "posted_at": "2026-07-20T14:05:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "discovery",
+        "utility",
+        "miniapp",
+        "farcaster-native",
+        "toggle_group",
+        "item_group",
+        "badge",
+        "open_mini_app",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "myers-briggs-cast-type",
       "cast_hash": "0xe07397bcfd644ae13c4633565785c633e5035f48",
       "posted_at": "2026-07-19T14:07:00Z",

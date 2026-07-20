@@ -187,10 +187,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 126 | myers-briggs-cast-type | LLM-backed Farcaster cast personality typer — scans recent public casts for a playful 4-letter type, axis receipts, evidence, and a next-cast prompt. | /snaps/myers-briggs-cast-type | 0xe07397bcfd644ae13c4633565785c633e5035f48 | 2026-07-19 | utility, social, farcaster-native, personalized, fid, neynar-api, llm, input, progress, item_group, badge, view_profile, submit, compose_cast, stateless, purple |
 
+| 127 | mini-app-sampler | Mini App Sampler — pick focus/social/shop/play and get one curated non-music Farcaster Mini App door with a why-now receipt and tiny mission. | /snaps/mini-app-sampler | 0xd7099fdc02970c97033e70ddb3ef5e7057540533 | 2026-07-20 | discovery, utility, miniapp, farcaster-native, toggle_group, item_group, badge, open_mini_app, submit, compose_cast, stateless, teal |
+
 ## Stats
 
-- Total snaps built: 126
-- Live snaps: 121
+- Total snaps built: 127
+- Live snaps: 122
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
