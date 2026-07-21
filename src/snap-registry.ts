@@ -119,6 +119,7 @@ import snap_timelineTalisman from "./snaps/timeline-talisman/index.js";
 import snap_tinyBravery from "./snaps/tiny-bravery/index.js";
 import snap_tinyLaunchChecklist from "./snaps/tiny-launch-checklist/index.js";
 import snap_tinyQuest from "./snaps/tiny-quest/index.js";
+import snap_tinyTapTest from "./snaps/tiny-tap-test/index.js";
 import snap_tipCalculator from "./snaps/tip-calculator/index.js";
 import snap_tokenType from "./snaps/token-type/index.js";
 import snap_trendingCast from "./snaps/trending-cast/index.js";
@@ -248,6 +249,7 @@ export const snaps: Record<string, Hono> = {
   "tiny-bravery": snap_tinyBravery,
   "tiny-launch-checklist": snap_tinyLaunchChecklist,
   "tiny-quest": snap_tinyQuest,
+  "tiny-tap-test": snap_tinyTapTest,
   "tip-calculator": snap_tipCalculator,
   "token-type": snap_tokenType,
   "trending-cast": snap_trendingCast,
