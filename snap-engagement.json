@@ -1,6 +1,33 @@
 {
   "snaps": [
     {
+      "name": "channel-hop",
+      "cast_hash": "0x26c637ff39723f3dcbebd9091473872fef0c92b8",
+      "posted_at": "2026-07-22T14:04:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "discovery",
+        "social",
+        "farcaster-native",
+        "channel",
+        "toggle_group",
+        "item_group",
+        "badge",
+        "open_url",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "tiny-tap-test",
       "cast_hash": "0xadc4507803f58adee97ae76376a67a049cbb404c",
       "posted_at": "2026-07-21T14:05:27Z",

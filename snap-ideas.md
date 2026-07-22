@@ -18,7 +18,6 @@ _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pu
 
 - **taste-passport** — Build a playful taste profile from prompts; generate a walkout song / movie / album / book / vibe card, compare with friends, and share a taste badge.
 - **fid-anniversary** — Tap to reveal your FID's first-cast era + personalised "X years on Farcaster" badge.
-- **channel-hop** — Pick a vibe (learn/build/laugh/spam); get one recommended Farcaster channel + open_url.
 - **inbox-cleanup-quest** — Mark 9 fake inbox items keep/close/reply; get a tiny cleanup receipt.
 - **snack-oracle** — Pick a snack craving (salty/sweet/umami/spicy); get a tiny snack suggestion + recipe open_url.
 - **base-name-expiry** — Paste a Base name; get a tiny expiry forecast + renewal CTA.

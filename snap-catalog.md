@@ -190,10 +190,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 | 127 | mini-app-sampler | Mini App Sampler — pick focus/social/shop/play and get one curated non-music Farcaster Mini App door with a why-now receipt and tiny mission. | /snaps/mini-app-sampler | 0xd7099fdc02970c97033e70ddb3ef5e7057540533 | 2026-07-20 | discovery, utility, miniapp, farcaster-native, toggle_group, item_group, badge, open_mini_app, submit, compose_cast, stateless, teal |
 | 128 | tiny-tap-test | Tiny Tap Test — tap green cells in a 5x5 reaction grid, dodge decoys, and beat the timer goblin with hits/accuracy score. | /snaps/tiny-tap-test | 0xadc4507803f58adee97ae76376a67a049cbb404c | 2026-07-21 | game, social, farcaster-native, cell_grid, progress, badge, submit, compose_cast, stateless, purple |
 
+| 129 | channel-hop | Channel Hop — pick learn, build, laugh, or chaos and get one Farcaster channel plus a tiny mission. | /snaps/channel-hop | 0x26c637ff39723f3dcbebd9091473872fef0c92b8 | 2026-07-22 | discovery, social, farcaster-native, channel, toggle_group, item_group, badge, open_url, submit, compose_cast, stateless, teal |
+
 ## Stats
 
-- Total snaps built: 128
-- Live snaps: 123
+- Total snaps built: 129
+- Live snaps: 124
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
