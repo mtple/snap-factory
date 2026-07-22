@@ -305,37 +305,41 @@ function shareButton(self: string, text = "Channel Hop picked my next Farcaster 
 }
 
 function startPage(self: string): SnapHandlerResult {
+  const vibeButton = (vibe: Vibe): SnapElementInput => ({
+    type: "button",
+    props: { label: VIBES[vibe].label, variant: vibe === "learn" ? "primary" : "secondary" },
+    on: { press: { action: "submit", params: { target: `${self}?action=hop&vibe=${vibe}` } } },
+  });
+
   const elements: Elements = {
     page: {
       type: "stack",
       props: { direction: "vertical", gap: "md" },
-      children: ["title", "intro", "picker", "actions"],
+      children: ["title", "intro", "vibe_prompt", "vibe_buttons", "share_btn"],
     },
     title: { type: "text", props: { content: "Channel Hop", weight: "bold", align: "center" } },
     intro: {
       type: "text",
       props: {
-        content: "Pick the timeline room you need: learn, build, laugh, or controlled chaos. The wizard draws from 24 curated channels, each with a tiny mission.",
+        content: "Choose your mood, then hop to one of 24 curated Farcaster channels with a tiny mission.",
         size: "sm",
         align: "center",
       },
     },
-    picker: {
-      type: "toggle_group",
-      props: {
-        name: "vibe",
-        label: "Choose a vibe",
-        defaultValue: "learn",
-        options: Object.entries(VIBES).map(([value, vibe]) => ({ label: vibe.label, value, description: vibe.intro })),
-      },
+    vibe_prompt: {
+      type: "text",
+      props: { content: "Pick a vibe: Learn, Build, Laugh, or Chaos.", size: "sm", weight: "bold", align: "center" },
     },
-    hop_btn: {
-      type: "button",
-      props: { label: "Hop channels", variant: "primary" },
-      on: { press: { action: "submit", params: { target: `${self}?action=hop` } } },
+    learn_btn: vibeButton("learn"),
+    build_btn: vibeButton("build"),
+    laugh_btn: vibeButton("laugh"),
+    spam_btn: { ...vibeButton("spam"), props: { label: "Chaos", variant: "secondary" } },
+    vibe_buttons: {
+      type: "stack",
+      props: { direction: "horizontal", gap: "sm" },
+      children: ["learn_btn", "build_btn", "laugh_btn", "spam_btn"],
     },
     share_btn: shareButton(self),
-    actions: { type: "stack", props: { direction: "horizontal", gap: "sm" }, children: ["hop_btn", "share_btn"] },
   };
 
   return { version: "2.0", theme: { accent: "teal" }, ui: { root: "page", elements } };
