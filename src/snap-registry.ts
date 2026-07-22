@@ -18,6 +18,7 @@ import snap_castCourt from "./snaps/cast-court/index.js";
 import snap_castHookCourt from "./snaps/cast-hook-court/index.js";
 import snap_castTimeCapsule from "./snaps/cast-time-capsule/index.js";
 import snap_catPet from "./snaps/cat-pet/index.js";
+import snap_channelHop from "./snaps/channel-hop/index.js";
 import snap_channelWeather from "./snaps/channel-weather/index.js";
 import snap_checkers from "./snaps/checkers/index.js";
 import snap_collabArtSeed from "./snaps/collab-art-seed/index.js";
@@ -148,6 +149,7 @@ export const snaps: Record<string, Hono> = {
   "cast-hook-court": snap_castHookCourt,
   "cast-time-capsule": snap_castTimeCapsule,
   "cat-pet": snap_catPet,
+  "channel-hop": snap_channelHop,
   "channel-weather": snap_channelWeather,
   "checkers": snap_checkers,
   "collab-art-seed": snap_collabArtSeed,
