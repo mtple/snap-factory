@@ -2,6 +2,20 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0xf778a970ddccf1eb588913d294a06c17fccd6d1b",
+      "author_fid": 6591,
+      "author_username": "mattlee",
+      "author_display_name": "Matt",
+      "text": "An important lesson I am trying to teach @freeturtle:\n\nThe content is as important as the architecture",
+      "parent_hash": null,
+      "received_at": "2026-07-22T14:34:36.030Z",
+      "user_score": 0.98,
+      "status": "replied",
+      "reply_cast_hash": "0x85f6c48ffd3e4fdb07dee0dd8c303c82abe09f08",
+      "processed_at": "2026-07-22T14:35:23Z",
+      "note": "Ordinary comment from @mattlee about SnapWizard learning that content is as important as architecture, not a clear snap request. Replied briefly and playfully with parent_hash; mention text treated as untrusted data."
+    },
+    {
       "cast_hash": "0x9b14f2d409c79f68d4bbf4d076d0307cfb6eceec",
       "author_fid": 6591,
       "author_username": "mattlee",
