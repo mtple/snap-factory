@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-07-22T07:01:22.146Z_
+_Last updated: 2026-07-23T07:00:42.579Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -9,8 +9,8 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | # | Snap | Score | Likes | Recasts | Replies | Tags |
 |---:|------|------:|------:|--------:|--------:|------|
 | 1 | profile-signal-scan | 14 | 3 | 1 | 0 | utility, social, farcaster-native, personalized, fid, neynar-api, llm, input, progress, item_group, badge, view_profile, submit, compose_cast, stateless, teal |
-| 2 | starcaster-door | 8 | 1 | 1 | 0 | game, social, farcaster-native, cell_grid, progress, submit, compose_cast, stateless, purple |
-| 3 | community-call-bingo | 6 | 2 | 0 | 0 | game, social, farcaster-native, bingo, cell_grid, badge, submit, compose_cast, stateless, purple |
+| 2 | channel-hop | 11 | 2 | 1 | 0 | discovery, social, farcaster-native, channel, toggle_group, item_group, badge, open_url, submit, compose_cast, stateless, teal |
+| 3 | starcaster-door | 8 | 1 | 1 | 0 | game, social, farcaster-native, cell_grid, progress, submit, compose_cast, stateless, purple |
 | 4 | snap-idea-market | 3 | 1 | 0 | 0 | social, poll, meta, farcaster-native, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, purple |
 | 5 | channel-weather | 2 | 0 | 0 | 1 | discovery, social, farcaster-native, channel, toggle_group, bar_chart, badge, view_cast, submit, compose_cast, stateless, teal |
 
@@ -20,7 +20,7 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 - **music** is over-indexing (8 snaps; examples: album-oracle, walkout-song, duo-do-song-quiz). Keep testing adjacent variants.
 - **icon** is over-indexing (5 snaps; examples: profile-constellation, snap-radio, listening-room). Keep testing adjacent variants.
 - **pink** is over-indexing (9 snaps; examples: album-oracle, snap-radio, duo-do-song-quiz). Keep testing adjacent variants.
-- **open_url** is over-indexing (15 snaps; examples: album-oracle, walkout-song, snap-radio). Keep testing adjacent variants.
+- **open_url** is over-indexing (16 snaps; examples: album-oracle, walkout-song, snap-radio). Keep testing adjacent variants.
 
 ## Tag performance
 
@@ -30,12 +30,12 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | music | 62.4 | 8 |
 | icon | 41.4 | 5 |
 | pink | 41.0 | 9 |
-| open_url | 38.9 | 15 |
+| open_url | 37.2 | 16 |
 | quiz | 35.8 | 5 |
 | lore | 28.5 | 2 |
 | prompt | 27.0 | 2 |
 | multi-page | 25.3 | 7 |
-| item_group | 23.0 | 25 |
+| item_group | 22.5 | 26 |
 | gray | 21.3 | 4 |
 | community | 21.0 | 4 |
 
