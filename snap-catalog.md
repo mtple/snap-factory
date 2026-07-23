@@ -192,10 +192,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 129 | channel-hop | Channel Hop — pick learn, build, laugh, or chaos and get one Farcaster channel plus a tiny mission. | /snaps/channel-hop | 0x26c637ff39723f3dcbebd9091473872fef0c92b8 | 2026-07-22 | discovery, social, farcaster-native, channel, toggle_group, item_group, badge, open_url, submit, compose_cast, stateless, teal |
 
+| 130 | inbox-cleanup-quest | Inbox Cleanup Quest — select tiny inbox goblins to handle now, then print a keep/close/reply cleanup receipt. | /snaps/inbox-cleanup-quest | 0x27a9fa000afd054b6f6d33be94bfc130183aeee8 | 2026-07-23 | utility, productivity, daily-life, cell_grid, badge, progress, submit, compose_cast, stateless, teal |
+
 ## Stats
 
-- Total snaps built: 129
-- Live snaps: 124
+- Total snaps built: 130
+- Live snaps: 125
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

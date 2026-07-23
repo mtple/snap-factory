@@ -1,6 +1,31 @@
 {
   "snaps": [
     {
+      "name": "inbox-cleanup-quest",
+      "cast_hash": "0x27a9fa000afd054b6f6d33be94bfc130183aeee8",
+      "posted_at": "2026-07-23T14:06:00Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "productivity",
+        "daily-life",
+        "cell_grid",
+        "badge",
+        "progress",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "channel-hop",
       "cast_hash": "0x26c637ff39723f3dcbebd9091473872fef0c92b8",
       "posted_at": "2026-07-22T14:04:00Z",
