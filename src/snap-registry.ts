@@ -59,6 +59,7 @@ import snap_helloFarcaster from "./snaps/hello-farcaster/index.js";
 import snap_hooksmith from "./snaps/hooksmith/index.js";
 import snap_icebreakerAnvil from "./snaps/icebreaker-anvil/index.js";
 import snap_impactSwap from "./snaps/impact-swap/index.js";
+import snap_inboxCleanupQuest from "./snaps/inbox-cleanup-quest/index.js";
 import snap_inboxWeather from "./snaps/inbox-weather/index.js";
 import snap_kreditaRunebornLore from "./snaps/kredita-runeborn-lore/index.js";
 import snap_listeningRoom from "./snaps/listening-room/index.js";
@@ -190,6 +191,7 @@ export const snaps: Record<string, Hono> = {
   "hooksmith": snap_hooksmith,
   "icebreaker-anvil": snap_icebreakerAnvil,
   "impact-swap": snap_impactSwap,
+  "inbox-cleanup-quest": snap_inboxCleanupQuest,
   "inbox-weather": snap_inboxWeather,
   "kredita-runeborn-lore": snap_kreditaRunebornLore,
   "listening-room": snap_listeningRoom,
