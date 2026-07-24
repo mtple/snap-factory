@@ -194,10 +194,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 130 | inbox-cleanup-quest | Inbox Cleanup Quest — select tiny inbox goblins to handle now, then print a keep/close/reply cleanup receipt. | /snaps/inbox-cleanup-quest | 0x27a9fa000afd054b6f6d33be94bfc130183aeee8 | 2026-07-23 | utility, productivity, daily-life, cell_grid, badge, progress, submit, compose_cast, stateless, teal |
 
+| 131 | snack-oracle | Snack Oracle — pick salty/sweet/umami/spicy, set effort, choose pantry-only mode, and get one tiny snack plan with prep steps plus a recipe jump. | /snaps/snack-oracle | 0x21987489250d82abe6a9716f1423498bb64dc494 | 2026-07-24 | utility, daily-life, food, toggle_group, slider, switch, progress, badge, open_url, submit, compose_cast, stateless, amber |
+
 ## Stats
 
-- Total snaps built: 130
-- Live snaps: 125
+- Total snaps built: 131
+- Live snaps: 126
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray

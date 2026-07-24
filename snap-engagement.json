@@ -1,6 +1,34 @@
 {
   "snaps": [
     {
+      "name": "snack-oracle",
+      "cast_hash": "0x21987489250d82abe6a9716f1423498bb64dc494",
+      "posted_at": "2026-07-24T14:05:21Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "daily-life",
+        "food",
+        "toggle_group",
+        "slider",
+        "switch",
+        "progress",
+        "badge",
+        "open_url",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "amber"
+      ]
+    },
+    {
       "name": "inbox-cleanup-quest",
       "cast_hash": "0x27a9fa000afd054b6f6d33be94bfc130183aeee8",
       "posted_at": "2026-07-23T14:06:00Z",
