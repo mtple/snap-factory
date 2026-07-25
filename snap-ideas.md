@@ -17,7 +17,6 @@ Whenever the active approved queue has 5 or fewer buildable ideas, send Matt a n
 _Approved ideas to build next. Matt approves and adds to the top. Snap Wizard pulls from here first and must not build unapproved ideas. If this list has 5 or fewer buildable ideas, propose 20 fresh candidates to Matt for approval._
 
 - **taste-passport** — Build a playful taste profile from prompts; generate a walkout song / movie / album / book / vibe card, compare with friends, and share a taste badge.
-- **base-name-expiry** — Paste a Base name; get a tiny expiry forecast + renewal CTA.
 - **farcaster-time-machine** — Tap to peek at your timeline from one week / month / year ago — tiny era snapshots via view_cast.
 
 ### Held — build only on Matt's explicit request

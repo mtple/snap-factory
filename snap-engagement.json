@@ -1,6 +1,32 @@
 {
   "snaps": [
     {
+      "name": "base-name-expiry",
+      "cast_hash": "0x4012da3fa2f916a6ab5a099d417ae63c258e9a1f",
+      "posted_at": "2026-07-25T14:05:34Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "utility",
+        "base",
+        "farcaster-native",
+        "input",
+        "progress",
+        "badge",
+        "open_url",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "blue"
+      ]
+    },
+    {
       "name": "snack-oracle",
       "cast_hash": "0x21987489250d82abe6a9716f1423498bb64dc494",
       "posted_at": "2026-07-24T14:05:21Z",
