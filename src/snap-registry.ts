@@ -10,6 +10,7 @@ import snap_alphaMine from "./snaps/alpha-mine/index.js";
 import snap_appIdeaSpeedrun from "./snaps/app-idea-speedrun/index.js";
 import snap_b20NameSmith from "./snaps/b20-name-smith/index.js";
 import snap_baseInOne from "./snaps/base-in-one/index.js";
+import snap_baseNameExpiry from "./snaps/base-name-expiry/index.js";
 import snap_beautifulThing from "./snaps/beautiful-thing/index.js";
 import snap_botOrNot from "./snaps/bot-or-not/index.js";
 import snap_bugSquasher from "./snaps/bug-squasher/index.js";
@@ -143,6 +144,7 @@ export const snaps: Record<string, Hono> = {
   "app-idea-speedrun": snap_appIdeaSpeedrun,
   "b20-name-smith": snap_b20NameSmith,
   "base-in-one": snap_baseInOne,
+  "base-name-expiry": snap_baseNameExpiry,
   "beautiful-thing": snap_beautifulThing,
   "bot-or-not": snap_botOrNot,
   "bug-squasher": snap_bugSquasher,
