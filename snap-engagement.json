@@ -1,6 +1,37 @@
 {
   "snaps": [
     {
+      "name": "farcaster-time-machine",
+      "cast_hash": "0x8ea00c999f7dafc62c8c88e55219a5470cf9b4ce",
+      "posted_at": "2026-07-26T14:06:57Z",
+      "last_checked": null,
+      "stats": {
+        "likes": 0,
+        "recasts": 0,
+        "replies": 0,
+        "unique_interactors": 0
+      },
+      "score": 0,
+      "tags": [
+        "discovery",
+        "social",
+        "farcaster-native",
+        "personalized",
+        "fid",
+        "neynar-api",
+        "input",
+        "progress",
+        "item_group",
+        "badge",
+        "view_cast",
+        "view_profile",
+        "submit",
+        "compose_cast",
+        "stateless",
+        "teal"
+      ]
+    },
+    {
       "name": "base-name-expiry",
       "cast_hash": "0x4012da3fa2f916a6ab5a099d417ae63c258e9a1f",
       "posted_at": "2026-07-25T14:05:34Z",

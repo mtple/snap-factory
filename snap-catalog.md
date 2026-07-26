@@ -198,10 +198,12 @@ The `Cast Hash` column is filled in by `mcp__nanoclaw__post_farcaster_cast` afte
 
 | 132 | base-name-expiry | Base Name Expiry — paste a Basename, get a public-profile renewal forecast with urgency meter and Base Names CTA. | /snaps/base-name-expiry | 0x4012da3fa2f916a6ab5a099d417ae63c258e9a1f | 2026-07-25 | utility, base, farcaster-native, input, progress, badge, open_url, submit, compose_cast, stateless, blue |
 
+| 133 | farcaster-time-machine | Farcaster Time Machine — enter a FID or @username, choose one week/month/year ago, and jump to the nearest public timeline cast. | /snaps/farcaster-time-machine | 0x8ea00c999f7dafc62c8c88e55219a5470cf9b4ce | 2026-07-26 | discovery, social, farcaster-native, personalized, fid, neynar-api, input, progress, item_group, badge, view_cast, view_profile, submit, compose_cast, stateless, teal |
+
 ## Stats
 
-- Total snaps built: 132
-- Live snaps: 127
+- Total snaps built: 133
+- Live snaps: 128
 - Components used so far: stack, text, button, progress, toggle_group, bar_chart, slider, item_group, item, separator, input, cell_grid, badge, switch, image, icon
 - Actions used so far: open_url, submit, view_profile, compose_cast, open_mini_app, view_cast, open_snap
 - Accent colors used: teal, purple, pink, red, blue, green, amber, gray
