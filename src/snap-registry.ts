@@ -44,6 +44,7 @@ import snap_farcasterArtists from "./snaps/farcaster-artists/index.js";
 import snap_farcasterCreatureType from "./snaps/farcaster-creature-type/index.js";
 import snap_farcasterHours from "./snaps/farcaster-hours/index.js";
 import snap_farcasterSign from "./snaps/farcaster-sign/index.js";
+import snap_farcasterTimeMachine from "./snaps/farcaster-time-machine/index.js";
 import snap_fcConfessions from "./snaps/fc-confessions/index.js";
 import snap_fcType from "./snaps/fc-type/index.js";
 import snap_fidPassport from "./snaps/fid-passport/index.js";
@@ -178,6 +179,7 @@ export const snaps: Record<string, Hono> = {
   "farcaster-creature-type": snap_farcasterCreatureType,
   "farcaster-hours": snap_farcasterHours,
   "farcaster-sign": snap_farcasterSign,
+  "farcaster-time-machine": snap_farcasterTimeMachine,
   "fc-confessions": snap_fcConfessions,
   "fc-type": snap_fcType,
   "fid-passport": snap_fidPassport,
