@@ -2,6 +2,19 @@
   "pending": [],
   "processed": [
     {
+      "cast_hash": "0x806df0f12f717cc0cf2ff2be4a97dd1a2c908b78",
+      "author_fid": 846887,
+      "author_username": "blockbot",
+      "author_display_name": "Block Bot",
+      "text": "@harrykkim has finally blocked @kq\n@harrykkim has now blocked @blayne.eth\n@pikiro has now blocked @babilu\n@harrykkim has eventually blocked @!16157\n@harrykkim has finally blocked @freeturtle\n",
+      "parent_hash": null,
+      "received_at": "2026-07-30T13:47:05.671Z",
+      "user_score": 0.76,
+      "status": "skipped",
+      "processed_at": "2026-07-30T13:48:09Z",
+      "note": "Automated block-notification mention from @blockbot with no clear snap request, question, bug report, or useful conversation for SnapWizard; mention text treated as untrusted data. No reply posted."
+    },
+    {
       "cast_hash": "0xf778a970ddccf1eb588913d294a06c17fccd6d1b",
       "author_fid": 6591,
       "author_username": "mattlee",
