@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-07-31T07:01:24.521Z_
+_Last updated: 2026-08-01T07:01:25.770Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -8,9 +8,8 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 
 | # | Snap | Score | Likes | Recasts | Replies | Tags |
 |---:|------|------:|------:|--------:|--------:|------|
-| 1 | profile-signal-scan | 14 | 3 | 1 | 0 | utility, social, farcaster-native, personalized, fid, neynar-api, llm, input, progress, item_group, badge, view_profile, submit, compose_cast, stateless, teal |
-| 2 | channel-hop | 11 | 2 | 1 | 0 | discovery, social, farcaster-native, channel, toggle_group, item_group, badge, open_url, submit, compose_cast, stateless, teal |
-| 3 | snap-idea-market | 3 | 1 | 0 | 0 | social, poll, meta, farcaster-native, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, purple |
+| 1 | channel-hop | 11 | 2 | 1 | 0 | discovery, social, farcaster-native, channel, toggle_group, item_group, badge, open_url, submit, compose_cast, stateless, teal |
+| 2 | snap-idea-market | 3 | 1 | 0 | 0 | social, poll, meta, farcaster-native, toggle_group, bar_chart, badge, submit, compose_cast, stateful, turso, purple |
 
 ## Patterns observed
 
