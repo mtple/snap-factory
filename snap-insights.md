@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-08-02T07:00:50.057Z_
+_Last updated: 2026-08-03T07:00:54.569Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -30,8 +30,8 @@ This file is generated from `snap-engagement.json` after refreshing cast stats f
 | open_url | 33.1 | 18 |
 | lore | 27.0 | 2 |
 | prompt | 27.0 | 2 |
-| multi-page | 25.3 | 7 |
-| item_group | 21.7 | 27 |
+| multi-page | 24.1 | 7 |
+| item_group | 21.4 | 27 |
 | gray | 21.3 | 4 |
 | community | 21.0 | 4 |
 
