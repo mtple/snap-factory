@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://docs.kalshi.com/welcome",
+      "title": "Kalshi API Introduction",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 2,
+      "url": "https://docs.kalshi.com/getting_started/api_environments",
+      "title": "Kalshi API Environments",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 3,
+      "url": "https://docs.kalshi.com/getting_started/rate_limits",
+      "title": "Kalshi API Rate Limits",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 4,
+      "url": "https://docs.kalshi.com/getting_started/historical_data",
+      "title": "Kalshi Historical Data",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 5,
+      "url": "https://docs.kalshi.com/getting_started/demo_env",
+      "title": "Kalshi Demo Environment",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 6,
+      "url": "https://docs.kalshi.com/margin",
+      "title": "Kalshi Perps API Overview",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 7,
+      "url": "https://api.elections.kalshi.com/trade-api/v2/markets?status=open&limit=1000",
+      "title": "Kalshi Open Markets API",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 8,
+      "url": "https://www.interactivebrokers.com/predictionmarkets/en/home.php",
+      "title": "IBKR ForecastTrader",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 9,
+      "url": "https://forecastex.com/markets",
+      "title": "ForecastEx Markets",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 10,
+      "url": "https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/guides/orders",
+      "title": "Coinbase Advanced Trade Order Management",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 11,
+      "url": "https://docs.cdp.coinbase.com/coinbase-app/advanced-trade-apis/guides/futures",
+      "title": "Coinbase Advanced Trade US Derivatives",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 12,
+      "url": "https://api.coinbase.com/api/v3/brokerage/market/products?product_type=FUTURE",
+      "title": "Coinbase Public Futures Products API",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 13,
+      "url": "https://docs.cdp.coinbase.com/coinbase-for-agents/overview",
+      "title": "Coinbase for Agents",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 14,
+      "url": "https://docs.base.org/agents/guides/swap-tokens",
+      "title": "Base Agent Token Swap Guide",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 15,
+      "url": "https://0x.org/docs/developer-resources/supported-chains",
+      "title": "0x Supported Chains",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 16,
+      "url": "https://dev.jup.ag/docs",
+      "title": "Jupiter Developer Platform",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 17,
+      "url": "https://docs.robinhood.com/crypto/trading",
+      "title": "Robinhood Crypto Trading API",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 18,
+      "url": "https://www.kraken.com/features/futures",
+      "title": "Kraken US Perpetual Futures",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 19,
+      "url": "https://bitnomial.com/exchange/docs/api/overview",
+      "title": "Bitnomial Exchange API",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 20,
+      "url": "https://botanical.finance",
+      "title": "Botanical US Perpetual Futures",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 21,
+      "url": "https://hyperfoundation.org/termsOfService",
+      "title": "Hyper Foundation Terms",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 22,
+      "url": "https://www.dydx.xyz/legal/terms-of-use",
+      "title": "dYdX Terms of Use",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 23,
+      "url": "https://docs.polymarket.com/api-reference/geoblock",
+      "title": "Polymarket Geographic Restrictions",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 24,
+      "url": "https://github.com/search?q=kalshi+trading+bot&type=repositories",
+      "title": "GitHub Kalshi Trading Bot Search",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 25,
+      "url": "https://docs.kraken.com/api-reference/trading/add-order",
+      "title": "Kraken Spot Add Order API",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 26,
+      "url": "https://www.kraken.com/features/fee-schedule",
+      "title": "Kraken Fee Schedule",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 27,
+      "url": "https://docs.gemini.com/rest-api",
+      "title": "Gemini REST API",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 28,
+      "url": "https://www.gemini.com/fees/activetrader-fee-schedule",
+      "title": "Gemini ActiveTrader Fees",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 29,
+      "url": "https://docs.binance.us",
+      "title": "Binance.US API Documentation",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 30,
+      "url": "https://docs.alpaca.markets/us/docs/crypto-trading",
+      "title": "Alpaca Crypto Trading",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 31,
+      "url": "https://raw.githubusercontent.com/Uniswap/docs/main/content/trading/swapping-api/supported-chains.mdx",
+      "title": "Uniswap API Supported Chains",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 32,
+      "url": "https://docs.kraken.com/exchange/guides/futures/introduction",
+      "title": "Kraken Derivatives API Introduction",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 33,
+      "url": "https://www.interactivebrokers.com/predictionmarkets/app",
+      "title": "IBKR Prediction Markets App",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 34,
+      "url": "https://www.nadex.com/pricing",
+      "title": "Nadex Pricing",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 35,
+      "url": "https://www.nadex.com/company",
+      "title": "Nadex Company and US Regulatory Status",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 36,
+      "url": "https://external-api.kalshi.com/trade-api/v2/margin/markets",
+      "title": "Kalshi Perps Live Markets API",
+      "accessed": "2026-08-07"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.quotient.social",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 2,
+      "url": "https://signal.quotient.social",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 3,
+      "url": "https://www.quotient.social/proof-of-edge",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 4,
+      "url": "https://www.quotient.social/research",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 5,
+      "url": "https://www.quotient.social/token",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 6,
+      "url": "https://dev.quotient.social/docs",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 7,
+      "url": "https://dev.quotient.social/openapi.json",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 8,
+      "url": "https://quotient-api-gateway.onrender.com/api/public/pricing",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 9,
+      "url": "https://app.quotient.social/performance",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 10,
+      "url": "https://app.quotient.social/api/performance",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 11,
+      "url": "https://www.quotient.social/reports/experts-index/iran-coverage-held-up",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 12,
+      "url": "https://www.quotient.social/reports/cftc-prediction-markets",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 13,
+      "url": "https://www.quotient.social/proof-of-edge/hormuz",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 14,
+      "url": "https://dev.quotient.social/skill/skill.md",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 15,
+      "url": "https://dev.quotient.social/skill/references/perps-signals.md",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 16,
+      "url": "https://dev.quotient.social/skill/references/workflows.md",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 17,
+      "url": "https://dev.quotient.social/llms.txt",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 18,
+      "url": "https://q-api.quotient.social/api/public/pricing",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 19,
+      "url": "https://farcaster.xyz/bankr/0x567cb4cca6e3af4b1cefdbc34940d4a802e73bc1",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 20,
+      "url": "https://farcaster.xyz/quotient/0xcfff4fda9ea1c47efed8ff1aa2a59c445dd0a8bc",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 21,
+      "url": "https://signal.quotient.social/performance",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 22,
+      "url": "https://signal.quotient.social/signals/d265104e-2b6e-4346-b387-a1527d9e374a",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 23,
+      "url": "https://www.quotient.social/proof-of-edge/unfreeze-assets",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 24,
+      "url": "https://dev.quotient.social/pricing",
+      "title": "",
+      "accessed": "2026-08-07"
+    },
+    {
+      "id": 25,
+      "url": "https://docs.bankr.bot/token-launching/overview",
+      "title": "",
+      "accessed": "2026-08-07"
+    }
+  ]
+}
