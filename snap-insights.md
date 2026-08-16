@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-08-15T07:00:55.935Z_
+_Last updated: 2026-08-16T07:01:20.601Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
