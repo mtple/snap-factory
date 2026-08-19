@@ -1,6 +1,6 @@
 # Snap Insights
 
-_Last updated: 2026-08-18T07:01:38.403Z_
+_Last updated: 2026-08-19T07:00:51.227Z_
 
 This file is generated from `snap-engagement.json` after refreshing cast stats from Neynar. **Read this file first during ideation** — it is the current memory of what the audience actually likes.
 
@@ -22,14 +22,14 @@ _(none yet — no scored snaps in the last 14 days)_
 |-----|----------:|------:|
 | tortoise | 70.4 | 7 |
 | music | 62.4 | 8 |
-| icon | 41.4 | 5 |
-| pink | 41.0 | 9 |
+| icon | 42.0 | 5 |
+| pink | 41.7 | 9 |
 | quiz | 35.8 | 5 |
-| open_url | 33.1 | 18 |
+| open_url | 33.2 | 18 |
 | lore | 27.0 | 2 |
 | prompt | 27.0 | 2 |
-| multi-page | 24.1 | 7 |
-| item_group | 21.4 | 27 |
+| multi-page | 24.6 | 7 |
+| item_group | 21.6 | 27 |
 | gray | 21.3 | 4 |
 | community | 21.0 | 4 |
 
